@@ -882,9 +882,6 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <div style="page-break-before: always;"></div>
 
-### 2.3.5. As-Is Scenario Mapping
-[IMAGEN ADJUNTADA AQUÍ]
-
 ### 2.4. Ubiquitous Language.
 
 
@@ -912,10 +909,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 # Capítulo III: Requirements Specification
 
-## 3.1. To-Be Scenario Mapping
-[DESARROLLO TO BE SCENARIO MAPPING]
-
-## 3.2. User Stories.
+## 3.1. User Stories.
 
 ### Epics
 
@@ -933,7 +927,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 | EP10 | Gestión de energía en tiempo real | Como Desarrollador, quiero implementar un sistema de monitoreo energético, para que los usuarios puedan consultar el uso de energía en sus espacios. |
 | EP11 | Gestión de usuarios | Como desarrollador, quiero gestionar a los usuarios de la plataforma, para asegurar un control adecuado de accesos, roles y permisos |
 
-### 3.2.1. User Stories
+### 3.1.1. User Stories
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
@@ -1413,7 +1407,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
     <tr><td colspan="4"><strong>Escenario 1: Selecciona la opción "Cerrar Sesión"</strong><br>Dado que el usuario tiene una sesión activa.<br>Cuando selecciona la opción "Cerrar Sesión".<br>Entonces el sistema invalida su acceso actual y lo redirige a la página de inicio o login pública.</td></tr>
 </table>
 
-### 3.2.2. Technical Stories
+### 3.1.2. Technical Stories
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
@@ -1677,7 +1671,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
     <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se realiza una petición a un recurso protegido con un header Authorization: Bearer {token}.<br>Cuando la API verifica la firma y fecha del token.<br>Entonces la API permite el acceso y devuelve el recurso solicitado.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que el token está caducado o malformado.<br>Cuando la API intenta decodificarlo.<br>Entonces la API responde con **401 Unauthorized** o **403 Forbidden**.</td></tr>
 </table>
 
-## 3.3. Product Backlog
+## 3.2. Product Backlog
 
 A continuación, se presenta el Product Backlog, el cual reúne las historias de usuario y las tareas técnicas priorizadas para el desarrollo del proyecto. Cada elemento incluye su identificador, título, descripción y la estimación correspondiente en puntos de historia.
 
@@ -1762,7 +1756,7 @@ Link de colaboración en trello: https://shorturl.at/FrDjk
 
 ---
 
-### 3.4. Impact Mapping.
+### 3.3. Impact Mapping.
 
 El Impact Mapping es una metodología visual que permite alinear los objetivos estratégicos de un negocio con las acciones concretas de los usuarios y las funcionalidades de un producto digital. A través de una estructura jerárquica en forma de árbol, esta técnica evidencia cómo las metas empresariales se traducen en cambios de comportamiento esperados en los actores clave, así como en los entregables que hacen posible dichos cambios.
 
@@ -2819,28 +2813,7 @@ El diagrama de despliegue de esta etapa representa:
 ![Deploy Diagram](https://i.ibb.co/WYbfcRR/Deploy-Diagram.png)
 
 ## 5.2. Product Implementation & Deployment
-
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-
 ### 5.2.1. Sprint Backlogs
-
 ## 5.2.1.1. Sprint Backlog 1
 
 | Story ID | ID Task | Titulo | Descripción | Estimación (Horas) | Assigned To | Status |
@@ -2923,47 +2896,59 @@ El diagrama de despliegue de esta etapa representa:
 | TS20 | TK20 | Cancelar suscripción | Como desarrollador, quiero solicitar la cancelación de la suscripción activa, para detener la renovación automática y finalizar el servicio al terminar el ciclo. | 3 | Brayan Roberto Ccarita Cruz | Done |
 | US37 | TK21 | Acceder a Ayuda y Soporte | Como usuario, quiero acceder a una sección de ayuda y soporte, para resolver dudas o problemas relacionados con el uso de la aplicación. | 5 | Jhosep Jamil Argomedo Camacho | Done |
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-
 ### 5.2.2. Implemented Landing Page Evidence
 
+La landing page fue implementada y posteriormente desplegada mediante GitHub Pages, permitiendo publicar la aplicación web y verificar su funcionamiento en un entorno accesible desde Internet. En esta sección se presenta la evidencia correspondiente al proceso de configuración, despliegue y visualización final de la página.
 
+#### Configuración de GitHub Pages
+Como primer paso, se configuró el repositorio del proyecto en GitHub y se habilitó el servicio GitHub Pages desde la configuración del repositorio. Para ello, se accedió a la sección Settings > Pages, donde se estableció la fuente de despliegue correspondiente a la rama y carpeta que contienen los archivos de la aplicación.
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+**Repositorio - Landing Page**
+
+![Repositorio Landing Page](assets/chapther-4/implemented-landing_page-evidence/landing_page-repository.png)
+
+**Configuración para despliegue - Landing Page**
+
+![Configuración despliegue](assets/chapther-4/implemented-landing_page-evidence/landing_page-deployment-settings.png)
+
+#### Proceso de despliegue
+Una vez configurada la fuente de publicación, se realizó el despliegue de la aplicación. GitHub Pages procesó los archivos del repositorio y generó la versión publicada de la landing page. El estado de despliegue permitió comprobar que la aplicación fue publicada correctamente y que se encontraba disponible mediante la URL proporcionada por GitHub Pages.
+
+**Enlace:** https://ccaritatech-upc.github.io/ccarita-tech.website/
+
+![Despliegue de Landing Page](assets/chapther-4/implemented-landing_page-evidence/evidence-landing_page-deployment.png)
+
+#### Visualización de la landing page
+Finalmente, se accedió a la URL pública generada por GitHub Pages para verificar la implementación de la landing page. La página presenta la estructura, estilos, componentes y contenido definidos durante la etapa de desarrollo.
+
+##### Hero - Inicio
+![Inicio-Landing_Page](assets/chapther-4/implemented-landing_page-evidence/views/hero.png)
+
+##### Benefits  - Beneficios
+![Beneficios-Landing_page](assets/chapther-4/implemented-landing_page-evidence/views/benefits.png)
+
+##### Features - Características
+![Características-Landing_Page](assets/chapther-4/implemented-landing_page-evidence/views/features.png)
+
+##### Social Proof - Testimonios
+![Testimonios-Landing_Page](assets/chapther-4/implemented-landing_page-evidence/views/social-proof.png)
+
+##### Pricing - Precio
+![Precio-Landing_Page](assets/chapther-4/implemented-landing_page-evidence/views/pricing.png)
+
+##### CTA - Llamado a la acción
+![CTA-Landing_Page](assets/chapther-4/implemented-landing_page-evidence/views/CTA.png)
+
+##### Footer - Pie de Página
+![Pie_de_Página-Landing_Page](assets/chapther-4/implemented-landing_page-evidence/views/footer.png)
+
+##### About Us - Sobre Nostros
+![Sobre_Nosotros_Landing-Page](assets/chapther-4/implemented-landing_page-evidence/views/about_us.png)
+
+##### FAQ - Preguntas frecuentes
+![Preguntas_Frecuentes-Landing_Page](assets/chapther-4/implemented-landing_page-evidence/views/faq.png)
+
+En conjunto, estas evidencias permiten verificar que la landing page fue correctamente configurada, desplegada y publicada mediante GitHub Pages, así como comprobar visualmente que la versión disponible en línea corresponde con la implementación desarrollada para el proyecto.
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 

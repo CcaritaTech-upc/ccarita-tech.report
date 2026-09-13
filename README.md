@@ -1678,7 +1678,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 </table>
 
 ## 3.3. Product Backlog
-### 3.3.1. Product Backlog
+
 A continuación, se presenta el Product Backlog, el cual reúne las historias de usuario y las tareas técnicas priorizadas para el desarrollo del proyecto. Cada elemento incluye su identificador, título, descripción y la estimación correspondiente en puntos de historia.
 
 Para la gestión y organización del backlog se utilizó la herramienta Trello, la cual permitió estructurar y visualizar las tareas de forma clara, dinámica y colaborativa. Este backlog se organizó en columnas que representan las distintas etapas del proceso de desarrollo, lo que facilita el seguimiento del avance, la identificación de bloqueos y la adecuada priorización de actividades.
@@ -1761,88 +1761,6 @@ Link de colaboración en trello: https://shorturl.at/FrDjk
 | 70 | US40 | Cerrar Sesión (Logout) | 1 | 2 |
 
 ---
-
-## 4.2.1.2. Sprint Backlog 1
-
-| Story ID | ID Task | Titulo | Descripción | Estimación (Horas) | Assigned To | Status |
-|---|---|---|---|---|---|---|
-| US01 | TK01 | Sección Sobre Nosotros | Como visitante del sitio, quiero conocer la historia y valores de la aplicación, para tener mayor conexión y confianza con la empresa. | 2 | Fabrizio Martin Panta Castro | Done |
-| US02 | TK02 | Sección testimonios del cliente | Como visitante del sitio, quiero consultar testimonios de otros clientes, para generar confianza en la propuesta de valor de la start up. | 5 | Jhosep Jamil Argomedo Camacho | Done |
-| US03 | TK03 | Acceso a información de contacto | Como visitante del sitio, quiero acceder fácilmente a la información de contacto de IoBuild, para comunicarme en caso de dudas. | 5 | Axel Randall Ordonez Ricaldi | Done |
-| US04 | TK04 | Visualización de servicios principales | Como visitante del sitio, quiero conocer los servicios que ofrece IoBuild, para entender su propuesta de valor. | 3 | Brayan Roberto Ccarita Cruz | Done |
-| US05 | TK05 | Opción de registro | Como visitante del sitio, quiero registrarme en la aplicación, para tener acceso a las funcionalidades de la aplicación. | 3 | Axel Randall Ordonez Ricaldi | Done |
-| US06 | TK06 | Preguntas frecuentes | Como visitante del sitio, quiero consultar una sección de preguntas frecuentes, para resolver dudas comunes sin necesidad de contactar a la start up. | 5 | Mateo Italo Loechle Arias | Done |
-| US07 | TK07 | Internacionalización de la landing page | Como visitante del sitio, quiero poder encontrar más de un idioma disponible, para poder elegir el idioma de mi preferencia. | 3 | Axel Randall Ordonez Ricaldi | Done |
-| US38 | TK08 | Registrarse en la plataforma | Como usuario, quiero crear una cuenta nueva proporcionando mis datos básicos y seleccionando mi rol, para poder acceder a las funcionalidades de la plataforma. | 5 | Axel Randall Ordonez Ricaldi | Done |
-| US39 | TK09 | Iniciar Sesión (Login) | Como usuario, quiero iniciar sesión con mis credenciales, para acceder de forma segura a las funcionalidades de la plataforma. | 4 | Axel Randall Ordonez Ricaldi | Done |
-| US40 | TK10 | Cerrar Sesión (Logout) | Como usuario, quiero cerrar sesión en la aplicación, para proteger mi cuenta cuando termine de utilizar la plataforma. | 3 | Mateo Italo Loechle Arias | Done |
-| TS21 | TK11 | Registrar nuevo usuario | Como desarrollador, quiero enviar los datos de registro (nombre, email, password, rol) a la API, para crear una nueva identidad en el sistema y permitir el acceso futuro. | 5 | Jhosep Jamil Argomedo Camacho | Done |
-| TS22 | TK12 | Validar token de sesión | Como desarrollador, quiero que la API valide que el token enviado en los headers es legítimo y no ha expirado, para proteger las rutas privadas. | 3 | Mateo Italo Loechle Arias | Done |
-| TS15 | TK13 | Crear ruta segura y mostrar datos específicos | Como desarrollador, quiero proteger el dashboard de fabricantes para que solo los fabricantes puedan visualizarlo. | 4 | Brayan Roberto Ccarita Cruz | Done |
-| US09 | TK14 | Acceso a proyectos activos | Como ingeniero, quiero tener acceso a los proyectos que se encuentran activos, para poder realizar un seguimiento de su progreso y gestionar los recursos necesarios. | 5 | Jhosep Jamil Argomedo Camacho | Done |
-| US20 | TK15 | Lista de proyectos | Como ingeniero, quiero ver una lista de todos mis proyectos para poder conocer el estado y detalles de cada uno. | 5 | Fabrizio Martin Panta Castro | Done |
-| US21 | TK16 | Agregar nuevo proyecto | Como arquitecto, quiero agregar un nuevo proyecto para poder registrar nuevos desarrollos inmobiliarios. | 8 | Jhosep Jamil Argomedo Camacho | Done |
-| US22 | TK17 | Detalles de un proyecto | Como arquitecto, quiero ver los detalles de un proyecto específico para poder revisar su información completa. | 5 | Mateo Italo Loechle Arias | Done |
-| TS01 | TK18 | Listar proyectos por constructor | Como desarrollador, quiero solicitar a la API que liste todos los proyectos asociados a un constructor específico, para poder mostrar la vista principal de Proyectos. | 5 | Fabrizio Martin Panta Castro | Done |
-| TS02 | TK19 | Crear un proyecto | Como desarrollador, quiero añadir un nuevo proyecto a través de la API para poder implementar la funcionalidad de registro de nuevos desarrollos. | 2 | Jhosep Jamil Argomedo Camacho | Done |
-| TS03 | TK20 | Recuperar proyecto por ID | Como desarrollador, quiero solicitar un proyecto por su {id} para poder mostrar la vista de detalles del proyecto. | 5 | Mateo Italo Loechle Arias | Done |
-| TS12 | TK21 | Actualizar información de un proyecto | Como desarrollador, quiero solicitar a la API que actualice la información de un proyecto (nombre, ubicación y descripción) para mantener los datos actualizados en la vista de gestión de proyectos. | 6 | Fabrizio Martin Panta Castro | Done |
-
----
-
-## 4.2.2.2. Sprint Backlog 2
-
-| Story ID | ID Task | Titulo | Descripción | Estimación (Horas) | Assigned To | Status |
-|---|---|---|---|---|---|---|
-| US23 | TK01 | Lista de clientes | Como Arquitecto, quiero ver una lista de todos los clientes para poder gestionar sus proyectos asociados y el estado de su cuenta. | 5 | Brayan Roberto Ccarita Cruz | Done |
-| US24 | TK02 | Buscar y ordenar clientes | Como Ingeniero, quiero poder ordenar la lista de clientes por columnas (Nombre Completo, Proyecto Asociado, Estado de Cuenta) para poder encontrar u organizar clientes rápidamente según criterios específicos. | 5 | Axel Randall Ordonez Ricaldi | Done |
-| US25 | TK03 | Agregar un Nuevo Cliente | Como arquitecto o ingeniero, quiero agregar un nuevo cliente, para registrar su información y asociarlo a los proyectos correspondientes. | 4 | Jhosep Jamil Argomedo Camacho | Done |
-| US26 | TK04 | Perfil del cliente | Como Ingeniero, quiero ver el perfil detallado de un cliente para poder acceder a toda su información y opciones de gestión. | 8 | Fabrizio Martin Panta Castro | Done |
-| US27 | TK05 | Acceder a la Configuración del Cliente | Como Arquitecto, quiero acceder a la configuración específica de un cliente para poder realizar acciones de gestión como editar o gestionar el estado de su cuenta. | 4 | Jhosep Jamil Argomedo Camacho | Done |
-| TS04 | TK06 | Actualizar información de un cliente | Como desarrollador, quiero enviar a la API una solicitud para modificar los datos de un cliente existente, para poder implementar la edición de su perfil y la gestión de su estado de cuenta. | 8 | Brayan Roberto Ccarita Cruz | Done |
-| TS05 | TK07 | Eliminar un cliente | Como desarrollador, quiero solicitar a la API la eliminación de un cliente por su {id}, para poder implementar la funcionalidad de dar de baja clientes que ya no se utilizarán. | 5 | Axel Randall Ordonez Ricaldi | Done |
-| TS06 | TK08 | Soportar ordenación de clientes | Como desarrollador, quiero poder enviar parámetros de ordenación a la API (nombre de columna y dirección), para poder implementar las funcionalidades de Buscar/Ordenar Clientes. | 8 | Fabrizio Martin Panta Castro | Done |
-| TS07 | TK09 | Listar clientes | Como desarrollador, quiero solicitar a la API que liste los clientes, opcionalmente filtrados por estado o nombre, para poder mostrar la vista de la lista de clientes. | 5 | Jhosep Jamil Argomedo Camacho | Done |
-| TS08 | TK10 | Crear un cliente | Como desarrollador, quiero añadir un nuevo cliente a través de la API para poder implementar la funcionalidad de creación de clientes. | 8 | Mateo Italo Loechle Arias | Done |
-| TS09 | TK11 | Recuperar cliente por ID | Como desarrollador, quiero solicitar un recurso de cliente por su {id} para poder implementar la vista detallada del perfil. | 5 | Brayan Roberto Ccarita Cruz | Done |
-| US10 | TK12 | Acceso a dispositivos conectados | Como usuario, quiero tener acceso a los dispositivos conectados, para poder monitorear su estado y uso. | 5 | Mateo Italo Loechle Arias | Done |
-| US15 | TK13 | Visualizar los dispositivos y su distribución por tipo | Como ingeniero, quiero ver cuáles son los dispositivos y cómo están distribuidos por tipo, para realizar un análisis más detallado de los recursos disponibles. | 6 | Fabrizio Martin Panta Castro | Done |
-| US33 | TK14 | Ver Lista de Dispositivos | Como propietario, quiero ver una lista de todos los dispositivos registrados para poder monitorear su estado y ubicacion. | 3 | Jhosep Jamil Argomedo Camacho | Done |
-| US34 | TK15 | Agregar un Nuevo Dispositivo | Como propietario, quiero agregar un nuevo dispositivo al sistema para expandir la cobertura de monitoreo y control. | 3 | Brayan Roberto Ccarita Cruz | Done |
-| US35 | TK16 | Editar/Configurar Ajustes de Dispositivo | Como propietario, quiero acceder a la configuracion especifica de un dispositivo para modificar sus parametros o revisar su informacion detallada. | 4 | Axel Randall Ordonez Ricaldi | Done |
-| US36 | TK17 | Eliminar un Dispositivo | Como propietario, quiero poder eliminar un dispositivo que ya no esta en uso o esta defectuoso, para mantener la lista limpia y precisa. | 5 | Fabrizio Martin Panta Castro | Done |
-| TS10 | TK18 | Listar dispositivos | Como desarrollador, quiero solicitar a la API que liste todos los dispositivos, filtrados por ubicación o estado, para poder mostrar la lista de Gestión de Dispositivos. | 5 | Brayan Roberto Ccarita Cruz | Done |
-| TS11 | TK19 | Eliminar un dispositivo por id | Como desarrollador, quiero solicitar a la API que elimine un dispositivo por su {id} para poder retirar hardware que ya no se utiliza del sistema. | 4 | Mateo Italo Loechle Arias | Done |
-| TS13 | TK20 | Actualizar información de un dispositivo | Como desarrollador, quiero solicitar a la API que actualice la información de un dispositivo (nombre y ubicación) para reflejar los cambios en la gestión de dispositivos. | 5 | Jhosep Jamil Argomedo Camacho | Done |
-| TS14 | TK21 | Crear un nuevo dispositivo | Como desarrollador, quiero solicitar a la API que cree un nuevo dispositivo especificando su nombre, tipo y ubicación, para registrar nuevos equipos en el sistema. | 6 | Axel Randall Ordonez Ricaldi | Done |
-
----
-
-## 4.2.3.2. Sprint Backlog 3
-
-| Story ID | ID Task | Titulo | Descripción | Estimación (Horas) | Assigned To | Status |
-|---|---|---|---|---|---|---|
-| US16 | TK01 | Acceder al perfil del usuario | Como usuario, quiero tener acceso a mi perfil, para ver datos como mi nombre, email, numero de telefono y mi direccion. | 5 | Brayan Roberto Ccarita Cruz | Done |
-| US17 | TK02 | Edicion de Informacion del Perfil | Como usuario, quiero poder editar alguna parte de mi informacion, como mi email, numero de telefono o direccion, para mantener mis datos actualizados. | 6 | Axel Randall Ordonez Ricaldi | Done |
-| US18 | TK03 | Ver Imagen que Representa al Usuario | Como usuario, quiero poder ver una imagen que me represente, para tener una experiencia mas personalizada. | 4 | Fabrizio Martin Panta Castro | Done |
-| US19 | TK04 | Visualización del rol de la cuenta | Como usuario, quiero poder ver el rol de mi cuenta, para entender qué permisos tengo dentro de la aplicación. | 5 | Axel Randall Ordonez Ricaldi | Done |
-| US19 | TK05 | Ver el Rol de la Cuenta | Como usuario, quiero poder ver el rol de mi cuenta, para entender que permisos tengo dentro de la aplicacion. | 4 | Mateo Italo Loechle Arias | Done |
-| US08 | TK06 | Visualizar dashboard de analíticas y métricas según el rol | Como usuario de la plataforma (constructor o propietario), quiero acceder a un dashboard centralizado con métricas clave y datos en tiempo real de mis proyectos y dispositivos, para supervisar el rendimiento, ocupación y consumo energético de mis espacios. | 5 | Fabrizio Martin Panta Castro | Done |
-| US11 | TK07 | Capacidad de ocupación por proyecto | Como ingeniero, quiero tener acceso a la capacidad de ocupación de cada proyecto, para poder analizar el uso de los recursos y planificar de manera eficiente. | 5 | Brayan Roberto Ccarita Cruz | Done |
-| US12 | TK08 | Gráfico de consumo de energía por hora | Como ingeniero, quiero ver un gráfico sobre la energía que se consume por hora, para poder evaluar el rendimiento energético de los proyectos en tiempo real. | 8 | Fabrizio Martin Panta Castro | Done |
-| US13 | TK09 | Gráfico de registro de ocupación | Como ingeniero, quiero ver un gráfico sobre el registro de ocupación, para poder analizar la evolución de la ocupación a lo largo del tiempo. | 5 | Jhosep Jamil Argomedo Camacho | Done |
-| US14 | TK10 | Resumen del proyecto | Como ingeniero, quiero ver un resumen sobre cada proyecto, para saber si está activo, su ubicación y cuántos departamentos están ocupados. | 5 | Mateo Italo Loechle Arias | Done |
-| US28 | TK11 | Plan de suscripción actual | Como ingeniero, quiero ver mi plan de suscripción actual y su estado para confirmar los beneficios que tengo y el costo mensual. | 8 | Fabrizio Martin Panta Castro | Done |
-| US29 | TK12 | Planes de suscripción alternativos | Como ingeniero, quiero ver planes de suscripción alternativos (Professional y Starter) para poder comparar sus precios y beneficios con mi plan actual. | 5 | Jhosep Jamil Argomedo Camacho | Done |
-| US30 | TK13 | Cambio de plan | Como arquitecto, quiero iniciar el proceso de cambio de plan para poder seleccionar un nivel de servicio diferente que se ajuste mejor a mis necesidades. | 2 | Mateo Italo Loechle Arias | Done |
-| US31 | TK14 | Renovar plan activo | Como arquitecto, quiero renovar mi plan actual para asegurar la continuidad del servicio si estoy cerca de la fecha de expiración o si mi plan no está configurado para renovación automática. | 5 | Brayan Roberto Ccarita Cruz | Done |
-| US32 | TK15 | Cancelar plan actual | Como ingeniero, quiero cancelar mi plan actual para finalizar mi suscripción al término del ciclo de facturación. | 8 | Axel Randall Ordonez Ricaldi | Done |
-| TS16 | TK16 | Obtener suscripción actual | Como desarrollador, quiero solicitar la información de la suscripción activa del usuario actual, para mostrar el plan, costo y beneficios en la vista principal de suscripciones. | 3 | Axel Randall Ordonez Ricaldi | Done |
-| TS17 | TK17 | Listar catálogo de planes | Como desarrollador, quiero solicitar la lista de todos los planes de suscripción disponibles en el sistema, para mostrarlos como alternativas en la interfaz de comparación. | 3 | Fabrizio Martin Panta Castro | Done |
-| TS18 | TK18 | Cambiar plan de suscripción | Como desarrollador, quiero enviar una solicitud para actualizar el plan de suscripción del usuario, para hacer efectivo el cambio de nivel de servicio seleccionado en la interfaz. | 5 | Jhosep Jamil Argomedo Camacho | Done |
-| TS19 | TK19 | Renovar suscripción | Como desarrollador, quiero solicitar la renovación de la suscripción actual, para extender la vigencia del servicio cuando el usuario confirma la acción. | 3 | Mateo Italo Loechle Arias | Done |
-| TS20 | TK20 | Cancelar suscripción | Como desarrollador, quiero solicitar la cancelación de la suscripción activa, para detener la renovación automática y finalizar el servicio al terminar el ciclo. | 3 | Brayan Roberto Ccarita Cruz | Done |
-| US37 | TK21 | Acceder a Ayuda y Soporte | Como usuario, quiero acceder a una sección de ayuda y soporte, para resolver dudas o problemas relacionados con el uso de la aplicación. | 5 | Jhosep Jamil Argomedo Camacho | Done |
 
 ### 3.4. Impact Mapping.
 
@@ -2900,461 +2818,416 @@ El diagrama de despliegue de esta etapa representa:
 
 ![Deploy Diagram](https://i.ibb.co/WYbfcRR/Deploy-Diagram.png)
 
-#### 5.2. Product Implementation & Deployment
-# 4.2.1. Sprint 1
+## 5.2. Product Implementation & Deployment
 
-El Sprint 1 se enfocó en establecer los cimientos de la plataforma IoBuild, desarrollando secciones clave de la landing page (sobre nosotros, testimonios, contacto y FAQ), la opción de registro e internacionalización, y el dashboard inicial con acceso básico a proyectos y dispositivos. El equipo trabajó de manera colaborativa distribuyéndose las tareas según sus especialidades, logrando completar todas las user stories planificadas dentro del timeline estimado.
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 
-## 4.2.1.1. Sprint Planning 1
+### 5.2.1. Sprint Backlogs
 
-| Sprint # | Sprint 1 |
-|---|---|
-| **Sprint Planning Background** | |
-| Date | 05/05/2026 |
-| Time | 17:00 PM |
-| Location | Google Meet |
-| Prepared By | Fabrizio Martin Panta Castro |
-| Attendees | Fabrizio Martin Panta Castro, Iker Gabriel Barturen Panez, Axel Randall Ordonez Ricaldi, Brayan Roberto Ccarita Cruz, Mateo Italo Loechle Arias |
-| **Sprint Goal & User Stories** | |
-| Sprint 1 Goal | Our focus is on establishing the foundational layer of the IoBuild platform, delivering a fully functional landing page with internationalization and a basic authenticated dashboard with access to projects and connected devices. We believe it delivers immediate value to potential clients exploring the platform and to engineers who need a starting point to manage their IoT resources. This will be confirmed when the landing page is publicly deployed with EN/ES support and registered users can access the dashboard, view active projects and monitor connected devices. |
-| Sprint 1 Velocity | 36 |
-| Sum of Story Points | 36 |
-
-## 4.2.1.2. Sprint Backlog 1
+## 5.2.1.1. Sprint Backlog 1
 
 | Story ID | ID Task | Titulo | Descripción | Estimación (Horas) | Assigned To | Status |
 |---|---|---|---|---|---|---|
 | US01 | TK01 | Sección Sobre Nosotros | Como visitante del sitio, quiero conocer la historia y valores de la aplicación, para tener mayor conexión y confianza con la empresa. | 2 | Fabrizio Martin Panta Castro | Done |
-| US02 | TK02 | Sección testimonios del cliente | Como visitante del sitio, quiero consultar testimonios de otros clientes, para generar confianza en la propuesta de valor de la start up. | 5 | Iker Gabriel Barturen Panez | Done |
+| US02 | TK02 | Sección testimonios del cliente | Como visitante del sitio, quiero consultar testimonios de otros clientes, para generar confianza en la propuesta de valor de la start up. | 5 | Jhosep Jamil Argomedo Camacho | Done |
 | US03 | TK03 | Acceso a información de contacto | Como visitante del sitio, quiero acceder fácilmente a la información de contacto de IoBuild, para comunicarme en caso de dudas. | 5 | Axel Randall Ordonez Ricaldi | Done |
 | US04 | TK04 | Visualización de servicios principales | Como visitante del sitio, quiero conocer los servicios que ofrece IoBuild, para entender su propuesta de valor. | 3 | Brayan Roberto Ccarita Cruz | Done |
 | US05 | TK05 | Opción de registro | Como visitante del sitio, quiero registrarme en la aplicación, para tener acceso a las funcionalidades de la aplicación. | 3 | Axel Randall Ordonez Ricaldi | Done |
 | US06 | TK06 | Preguntas frecuentes | Como visitante del sitio, quiero consultar una sección de preguntas frecuentes, para resolver dudas comunes sin necesidad de contactar a la start up. | 5 | Mateo Italo Loechle Arias | Done |
 | US07 | TK07 | Internacionalización de la landing page | Como visitante del sitio, quiero poder encontrar más de un idioma disponible, para poder elegir el idioma de mi preferencia. | 3 | Axel Randall Ordonez Ricaldi | Done |
-| US08 | TK08 | Dashboard personalizado | Como usuario, quiero tener un dashboard personalizado, para visualizar la información relevante de manera rápida y eficiente. | 5 | Fabrizio Martin Panta Castro | Done |
-| US09 | TK09 | Acceso a proyectos activos | Como ingeniero, quiero tener acceso a los proyectos que se encuentran activos, para poder realizar un seguimiento de su progreso y gestionar los recursos necesarios. | 5 | Iker Gabriel Barturen Panez | Done |
-| US10 | TK10 | Acceso a dispositivos conectados | Como usuario, quiero tener acceso a los dispositivos conectados, para poder monitorear su estado y uso. | 5 | Mateo Italo Loechle Arias | Done |
-| US11     | TK11    | Capacidad de ocupación por proyecto     | Como ingeniero, quiero tener acceso a la capacidad de ocupación de cada proyecto, para poder analizar el uso de los recursos y planificar de manera eficiente. | 5| Brayan Roberto Ccarita Cruz  | Done   |
-| US12     | TK12    | Gráfico de consumo de energía por hora  | Como ingeniero, quiero ver un gráfico sobre la energía que se consume por hora, para poder evaluar el rendimiento energético de los proyectos en tiempo real.  | 8| Fabrizio Martin Panta Castro | Done   |
-| US13     | TK13    | Gráfico de registro de ocupación| Como ingeniero, quiero ver un gráfico sobre el registro de ocupación, para poder analizar la evolución de la ocupación a lo largo del tiempo.| 5| Iker Gabriel Barturen Panez  | Done   |
-| US14     | TK14    | Resumen del proyecto| Como ingeniero, quiero ver un resumen sobre cada proyecto, para saber si está activo, su ubicación y cuántos departamentos están ocupados. | 5| Mateo Italo Loechle Arias    | Done   |
-| US19     | TK15    | Visualización del rol de la cuenta      | Como usuario, quiero poder ver el rol de mi cuenta, para entender qué permisos tengo dentro de la aplicación.| 5| Axel Randall Ordonez Ricaldi | Done   |
-| US20     | TK16    | Lista de proyectos  | Como ingeniero, quiero ver una lista de todos mis proyectos para poder conocer el estado y detalles de cada uno.       | 5| Fabrizio Martin Panta Castro | Done   |
-| US21     | TK17    | Agregar nuevo proyecto| Como arquitecto, quiero agregar un nuevo proyecto para poder registrar nuevos desarrollos inmobiliarios.     | 8| Iker Gabriel Barturen Panez  | Done   |
-| US22     | TK18    | Detalles de un proyecto       | Como arquitecto, quiero ver los detalles de un proyecto específico para poder revisar su información completa.| 5| Mateo Italo Loechle Arias    | Done   |
-| US23     | TK19    | Lista de clientes   | Como Arquitecto, quiero ver una lista de todos los clientes para poder gestionar sus proyectos asociados y el estado de su cuenta.| 5| Brayan Roberto Ccarita Cruz  | Done   |
-| US24     | TK20    | Buscar y ordenar clientes     | Como Ingeniero, quiero poder ordenar la lista de clientes por columnas (Nombre Completo, Proyecto Asociado, Estado de Cuenta) para poder encontrar u organizar clientes rápidamente según criterios específicos. | 5| Axel Randall Ordonez Ricaldi | Done   |
-| US26     | TK21    | Perfil del cliente | Como Ingeniero, quiero ver el perfil detallado de un cliente para poder acceder a toda su información y opciones de gestión. | 8| Fabrizio Martin Panta Castro | Done   |
-| US28     | TK21    | Plan de suscripción actual    | Como ingeniero, quiero ver mi plan de suscripción actual y su estado para confirmar los beneficios que tengo y el costo mensual. | 8| Fabrizio Martin Panta Castro | Done   |
-| US29     | TK22    | Planes de suscripción alternativos      | Como ingeniero, quiero ver planes de suscripción alternativos (Professional y Starter) para poder comparar sus precios y beneficios con mi plan actual.| 5| Iker Gabriel Barturen Panez  | Done   |
-| US30     | TK23    | Cambio de plan      | Como arquitecto, quiero iniciar el proceso de cambio de plan para poder seleccionar un nivel de servicio diferente que se ajuste mejor a mis necesidades.      | 2| Mateo Italo Loechle Arias    | Done   |
-| US31     | TK24    | Renovar plan activo | Como arquitecto, quiero renovar mi plan actual para asegurar la continuidad del servicio si estoy cerca de la fecha de expiración o si mi plan no está configurado para renovación automática.| 5| Brayan Roberto Ccarita Cruz  | Done   |
-| US32     | TK25    | Cancelar plan actual| Como ingeniero, quiero cancelar mi plan actual para finalizar mi suscripción al término del ciclo de facturación.      | 8| Axel Randall Ordonez Ricaldi | Done   |
-| TS01     | TK26    | Listar proyectos por constructor| Como desarrollador, quiero solicitar a la API que liste todos los proyectos asociados a un constructor específico, para poder mostrar la vista principal de Proyectos.   | 5| Fabrizio Martin Panta Castro | Done   |
-| TS02     | TK27    | Crear un proyecto   | Como desarrollador, quiero añadir un nuevo proyecto a través de la API para poder implementar la funcionalidad de registro de nuevos desarrollos.    | 2| Iker Gabriel Barturen Panez  | Done   |
-| TS03     | TK28    | Recuperar proyecto por ID     | Como desarrollador, quiero solicitar un proyecto por su {id} para poder mostrar la vista de detalles del proyecto.     | 5| Mateo Italo Loechle Arias    | Done   |
-| TS04     | TK29    | Actualizar información de un cliente    | Como desarrollador, quiero enviar a la API una solicitud para modificar los datos de un cliente existente, para poder implementar la edición de su perfil y la gestión de su estado de cuenta.| 8| Brayan Roberto Ccarita Cruz  | Done   |
-| TS05     | TK30    | Eliminar un cliente | Como desarrollador, quiero solicitar a la API la eliminación de un cliente por su {id}, para poder implementar la funcionalidad de dar de baja clientes que ya no se utilizarán.   | 5| Axel Randall Ordonez Ricaldi | Done   |
-| TS06     | TK31    | Soportar ordenación de clientes| Como desarrollador, quiero poder enviar parámetros de ordenación a la API (nombre de columna y dirección), para poder implementar las funcionalidades de Buscar/Ordenar Clientes.  | 8| Fabrizio Martin Panta Castro | Done   |
-| TS07     | TK32    | Listar clientes     | Como desarrollador, quiero solicitar a la API que liste los clientes, opcionalmente filtrados por estado o nombre, para poder mostrar la vista de la lista de clientes.  | 5| Iker Gabriel Barturen Panez  | Done   |
-| TS08     | TK33    | Crear un cliente    | Como desarrollador, quiero añadir un nuevo cliente a través de la API para poder implementar la funcionalidad de creación de clientes.     | 8| Mateo Italo Loechle Arias    | Done   |
-| TS09     | TK34    | Recuperar cliente por ID      | Como desarrollador, quiero solicitar un recurso de cliente por su {id} para poder implementar la vista detallada del perfil.     | 5| Brayan Roberto Ccarita Cruz  | Done   |
-| TS16     | TK35    | Obtener suscripción actual    | Como desarrollador, quiero solicitar la información de la suscripción activa del usuario actual, para mostrar el plan, costo y beneficios en la vista principal de suscripciones.  | 3| Axel Randall Ordonez Ricaldi | Done   |
-| TS17     | TK36    | Listar catálogo de planes     | Como desarrollador, quiero solicitar la lista de todos los planes de suscripción disponibles en el sistema, para mostrarlos como alternativas en la interfaz de comparación.       | 3| Fabrizio Martin Panta Castro | Done   |
-| TS18     | TK37    | Cambiar plan de suscripción   | Como desarrollador, quiero enviar una solicitud para actualizar el plan de suscripción del usuario, para hacer efectivo el cambio de nivel de servicio seleccionado en la interfaz.| 5| Iker Gabriel Barturen Panez  | Done   |
-| TS19     | TK38    | Renovar suscripción | Como desarrollador, quiero solicitar la renovación de la suscripción actual, para extender la vigencia del servicio cuando el usuario confirma la acción.      | 3| Mateo Italo Loechle Arias    | Done   |
-| TS20     | TK39    | Cancelar suscripción| Como desarrollador, quiero solicitar la cancelación de la suscripción activa, para detener la renovación automática y finalizar el servicio al terminar el ciclo.| 3| Brayan Roberto Ccarita Cruz  | Done   |
-| TS21     | TK40    | Cambiar contraseña del usuario| Como desarrollador, quiero enviar la contraseña actual y la nueva contraseña del usuario a la API, para actualizar sus credenciales de acceso de forma segura. | 5| Axel Randall Ordonez Ricaldi | Done   |
-| TS22     | TK41    | Solicitar adición de correo alternativo | Como desarrollador, quiero enviar una solicitud para agregar un correo electrónico secundario, para que el backend inicie el proceso de validación y verificación de dicha cuenta. | 5| Fabrizio Martin Panta Castro | Done   |
-| TS23     | TK42    | Registrar nuevo usuario       | Como desarrollador, quiero enviar los datos de registro (nombre, email, password, rol) a la API, para crear una nueva identidad en el sistema y permitir el acceso futuro.| 5| Iker Gabriel Barturen Panez  | Done   |
-| TS24     | TK43    | Validar token de sesión       | Como desarrollador, quiero que la API valide que el token enviado en los headers es legítimo y no ha expirado, para proteger las rutas privadas.     | 3| Mateo Italo Loechle Arias    | Done   |
-
-## 4.2.1.3. Development Evidence for Sprint Review
-
-Durante el Sprint 1, el equipo logró implementar exitosamente los cimientos de la plataforma IoBuild, desarrollando de manera colaborativa las secciones principales de la landing page y los bounded contexts iniciales del backend. La landing page incluyó todas las secciones planificadas con soporte de internacionalización EN/ES, mientras que el backend estableció los contextos de IAM (autenticación), Clients y Analytics con arquitectura limpia en C# / ASP.NET Core.
-
-### Repositorio: IoBuild-LandingPage
-
-| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
-|---|---|---|---|---|
-| CcaritaTech/IoBuild-LandingPage | main | b8000fb | feat: Initialize project structure and HTML boilerplate | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | main | 402602d | feat: Add SEO metadata and social sharing configuration | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | main | 62df9db | feat: Create responsive header and navigation menu | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | main | 7ae5c28 | feat: Implement hero section with primary call-to-action | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | main | 9c38cc9 | feat: Add benefits section with feature cards | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | main | 07427c0 | feat: Develop technical features showcase section | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | main | 3707a91 | feat: Add testimonials and social proof section | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | main | c250122 | feat: Create pricing plans and subscription section | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | main | 6eb3579 | feat: Add final CTA section to homepage | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | main | 829ec23 | feat: Implement footer with navigation links and social media | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/styles | 8bdbb20 | feat: Add comprehensive CSS variables for theming and typography | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/styles | daddcf4 | feat: Remove default styles for lists, buttons, links and fields | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/styles | 7909c8a | feat: Add styles for hero section and benefits section | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/styles | ea5560e | feat: Add styles for benefits, features, social proof and CTA | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/styles | e3bfc81 | feat: Add styles for pricing cards and final CTA section | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/styles | 4c88c6b | feat: Add styles for footer and mission section | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/styles | 50b3168 | feat: Add styles for mission, values, team and contact sections | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/styles | 3de3147 | feat: Add styles for FAQ section and implement button animations | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/styles | c3a0841 | feat: Enhance responsive design across all breakpoints | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/faq | 5b44083 | feat: add faq basic structure, fonts and links to styles | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/faq | de8cbe4 | feat: language switches y faq section for the landing | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/faq | c4f8eb3 | feat: planes de precio para la aplicacion y items | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/faq | 4eee754 | feat: seccion de faq con respuestas detalladas | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/faq | 40380bc | feat: contacto con empresa y footer | 09/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/about-us | 1201440 | chore: add about us | 10/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/add-photo | feb19ed | feat: Update team member details and add new images | 10/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/add-photo | 4425d52 | feat: Replace old team photos with updated assets | 10/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/scripts | b3eb4c5 | feat: add scripts for interactive components | 11/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | feature/assets | a9de205 | feat: add images and translation assets | 11/05/2026 |
-| CcaritaTech/IoBuild-LandingPage | main | 4a3bee5 | Merge pull request #6 from CcaritaTech/feature/assets | 11/05/2026 |
-
-### Repositorio: IoBuild-Backend
-
-| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
-|---|---|---|---|---|
-| CcaritaTech/IoBuild-Backend | feat/Analytics | 721cf8a | feat: create IAnalyticsQueryService interface for dashboard queries | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/Analytics | f11a40b | feat: create IDevicesContextFacade interface for device management | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/Analytics | 771b8b8 | feat: create IProjectsContextFacade interface for project management | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/Analytics | b477723 | feat: implement AnalyticsController for dashboard metrics and insights | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/Analytics | b478fdf | feat: add BuilderDashboardResource record for dashboard data representation | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/Analytics | e6e1bbc | feat: add DeviceHealthStatusResource record for device health data | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/Analytics | 2a7669b | feat: add resources for historical data points and monthly occupancy | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/Analytics | ae38294 | feat: add ProjectOverviewResource and UnitDetailResource records | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/Analytics | 13cdaf4 | feat: implement BuilderDashboardResourceFromEntityAssembler | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/Analytics | 1c0bfc1 | feat: add HistoricalDataPointResource for analytics tracking | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/clients | 7796b7e | feat: add Client aggregate with properties and methods for client management | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/clients | a09190b | feat: add Client command and query services for client management | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/clients | a80ef30 | feat: add ClientRepository with method to find clients by email | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/clients | 266c970 | feat: add query records for retrieving clients by various criteria | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/clients | 5596a2a | feat: add GetClientsByAccountStatementQuery for client retrieval | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/clients | 931ba5f | feat: add assemblers for converting client resources to commands | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/clients | c93500a | feat: add resource models for client creation and updates | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/clients | 42fba34 | feat: implement ClientsController with CRUD operations for clients | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/clients | 6df24e7 | feat: add EAccountStatement enum for client account status management | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/clients | 6e0ff25 | feat: add ModelBuilderExtensions for client entity configuration | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | f40058d | feat: add User aggregate root for IAM bounded context | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | e5c7162 | feat: add sign-up, sign-in, and update-password commands | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | c7a718b | feat: add user and user-detail queries | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | 2ca0546 | feat: add user repository and command/query service interfaces | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | 0f510e4 | feat: add hashing and token outbound service interfaces | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | 40fe26d | feat: implement user command service with authentication logic | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | aefd159 | feat: implement user query service | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | ce8fe21 | feat: add BCrypt hashing service | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | 199893e | feat: add JWT token service and settings | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | 2e3b850 | feat: add EF Core repository and model configuration for IAM | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | cbe78d2 | feat: add request authorization middleware with custom attributes | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | 104f3f8 | feat: add REST resource DTOs for IAM | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | 99f68f5 | feat: add REST resources for resource-entity transformation | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | feat/IAM | cdac147 | feat: add authentication and users REST controllers | 10/05/2026 |
-| CcaritaTech/IoBuild-Backend | develop | 33033fa | Merge pull request #4 from CcaritaTech/feat/clients | 11/05/2026 |
-
-## 4.2.1.4. Testing Suite Evidence for Sprint Review
-
-Para el Sprint 1, la estrategia de testing se centró en validar los flujos principales de la plataforma: autenticación de usuarios, gestión de perfiles y acceso al dashboard. Se implementaron pruebas unitarias para los servicios core del backend y pruebas de aceptación BDD para los flujos del visitante en la landing page y del usuario registrado en la aplicación.
-
-### Unit Tests Implementados
-
-**1. Bounded Context IAM (Autenticación)**
-
-- `UserCommandServiceTest`: Valida el flujo de sign-up con email, password y rol; verifica el cifrado BCrypt de contraseñas y la generación de JWT (US05)
-- `UserQueryServiceTest`: Prueba la recuperación de usuarios por ID y por email
-- `AuthControllerTest`: Valida los endpoints `POST /api/v1/authentication/sign-up` y `POST /api/v1/authentication/sign-in`, incluyendo respuestas 201, 200 y manejo de errores
-
-**2. Bounded Context Profiles**
-
-- `ProfileCommandServiceTest`: Valida la creación de perfil con campos `name`, `username`, `address`, `age`, `phoneNumber` y `photoUrl` (US08)
-- `ProfileQueryServiceTest`: Prueba la consulta de todos los perfiles y filtrado por `userId`
-
-**3. Bounded Context Clients**
-
-- `ClientCommandServiceTest`: Valida la creación, actualización y eliminación de clientes (US09)
-- `ClientQueryServiceTest`: Prueba el filtrado de clientes por `EAccountStatement` y búsqueda por email
-
-**4. Bounded Context Analytics**
-
-- `AnalyticsQueryServiceTest`: Valida la generación del `BuilderDashboardResource` con datos de proyectos, dispositivos y puntos históricos (US08, US10)
-
-### Acceptance Tests (BDD - Gherkin)
-
-**landing_page.feature (US01, US02, US03, US04, US06, US07)**
-
-```gherkin
-# language: es
-Característica: Exploración del Landing Page de IoBuild
-  Como visitante del sitio
-  Quiero navegar por las secciones informativas
-  Para conocer la propuesta de valor antes de registrarme
-
-  Escenario: Visualizar el hero section con propuesta de valor
-    Dado que soy un visitante que accede a iobuild.com
-    Cuando cargo la página de inicio
-    Entonces debo ver el título "Revolutionize Your Residential Projects with Smart IoT"
-    Y debo ver los botones "I want it!" y "See Benefits"
-
-  Escenario: Visualizar los beneficios principales del servicio
-    Dado que soy un visitante explorando la página
-    Cuando hago scroll hacia la sección de beneficios
-    Entonces debo ver las 6 tarjetas de beneficio
-    Y debo identificar "Integration from Construction", "Personalized Control" y "Centralized Management"
-
-  Escenario: Consultar testimonios de clientes
-    Dado que soy un visitante evaluando la plataforma
-    Cuando navego a la sección "Trusted by the Best Construction Companies"
-    Entonces debo ver tres testimonios de clientes reales
-    Y cada testimonio debe mostrar nombre y cargo del cliente
-
-  Escenario: Acceder a la sección de preguntas frecuentes
-    Dado que soy un visitante con dudas sobre el servicio
-    Cuando navego a la sección FAQ
-    Entonces debo ver las preguntas frecuentes organizadas
-    Y debo poder expandir cada pregunta para ver su respuesta
-
-  Escenario: Cambiar el idioma de la landing page a español
-    Dado que soy un visitante que prefiere el idioma español
-    Cuando hago clic en "ES" en el selector de idioma del header
-    Entonces todo el contenido de la página debe mostrarse en español
-    Y el selector debe mostrar "ES" como idioma activo
-
-  Escenario: Cambiar el idioma de la landing page a inglés
-    Dado que soy un visitante que prefiere el idioma inglés
-    Cuando hago clic en "EN" en el selector de idioma del header
-    Entonces todo el contenido de la página debe mostrarse en inglés
-    Y el selector debe mostrar "EN" como idioma activo
-```
-
-**authentication.feature (US05)**
-
-```gherkin
-# language: es
-Característica: Registro e inicio de sesión en IoBuild
-  Como visitante del sitio
-  Quiero crear una cuenta e iniciar sesión
-  Para acceder a las funcionalidades de la plataforma
-
-  Escenario: Registrar un nuevo usuario exitosamente
-    Dado que soy un visitante que quiere crear una cuenta
-    Cuando envío una solicitud POST a /api/v1/authentication/sign-up
-    Con los campos email "test1@example.com", password "Password123!" y role "builder"
-    Entonces debo recibir una respuesta 201
-    Y el cuerpo debe contener "User created successfully."
-
-  Escenario: Iniciar sesión con credenciales válidas
-    Dado que soy un usuario registrado en la plataforma
-    Cuando envío una solicitud POST a /api/v1/authentication/sign-in
-    Con los campos email "test1@example.com" y password "Password123!"
-    Entonces debo recibir una respuesta 200
-    Y el cuerpo debe contener el campo "token" con un JWT válido
-    Y el cuerpo debe contener "id", "email" y "role"
-
-  Escenario: Intentar registrarse con email ya existente
-    Dado que el email "test1@example.com" ya está registrado
-    Cuando intento registrarme nuevamente con el mismo email
-    Entonces debo recibir una respuesta de error
-    Y mi cuenta no debe ser creada nuevamente
-
-  Escenario: Intentar iniciar sesión con contraseña incorrecta
-    Dado que soy un usuario registrado en la plataforma
-    Cuando envío credenciales con una contraseña incorrecta
-    Entonces debo recibir una respuesta de error de autenticación
-    Y no debo recibir ningún token JWT
-```
-
-**profiles.feature (US08)**
-
-```gherkin
-# language: es
-Característica: Gestión de perfiles de usuario
-  Como usuario registrado en IoBuild
-  Quiero crear y consultar mi perfil
-  Para personalizar mi experiencia en la plataforma
-
-  Escenario: Crear un perfil de usuario exitosamente
-    Dado que soy un usuario autenticado con userId 1
-    Cuando envío una solicitud POST a /api/v1/profiles
-    Con los campos userId, name "Ana Perez", username "anap", address "Av. Demo 123", age 29 y phoneNumber "999999999"
-    Entonces debo recibir una respuesta 201
-    Y el perfil creado debe contener todos los campos enviados
-    Y el campo "secondEmail" debe ser null por defecto
-
-  Escenario: Obtener todos los perfiles del sistema
-    Dado que existen perfiles registrados en la plataforma
-    Cuando envío una solicitud GET a /api/v1/profiles
-    Entonces debo recibir una respuesta 200
-    Y el cuerpo debe ser un array con todos los perfiles disponibles
-    Y cada perfil debe contener id, userId, name, username, address, age y phoneNumber
-```
-
-### Evidencia de Commits de Testing
-
-| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
-|---|---|---|---|---|
-| CcaritaTech/IoBuild-Backend | testing | a1f3c2e | test(IAM): add unit tests for sign-up, sign-in and JWT generation | 11/05/2026 |
-| CcaritaTech/IoBuild-Backend | testing | b2g4d5f | test(profiles): add unit tests for profile creation and query service | 11/05/2026 |
-| CcaritaTech/IoBuild-Backend | testing | c3h5e6g | test(bdd): configure test framework and step definitions for auth flows | 11/05/2026 |
-| CcaritaTech/IoBuild-Backend | testing | d4i6f7h | feat(landing): add BDD tests for landing page sections US01-US07 | 11/05/2026 |
-| CcaritaTech/IoBuild-Backend | testing | e5j7g8i | feat(auth): add BDD tests for registration and login US05 | 11/05/2026 |
-| CcaritaTech/IoBuild-Backend | testing | f6k8h9j | feat(profiles): add BDD tests for profile management US08 | 11/05/2026 |
-
-## 4.2.1.5. Execution Evidence for Sprint Review
-
-Durante el Sprint 1, el equipo completó exitosamente todos los entregables planificados, estableciendo los cimientos funcionales de la plataforma IoBuild. La landing page fue desplegada con una propuesta de valor clara dirigida a constructoras residenciales, con navegación fluida entre secciones, soporte de internacionalización EN/ES funcional y diseño completamente responsivo. El backend estableció 11 bounded contexts con endpoints REST documentados y operativos.
-
-A continuación se describen las principales vistas implementadas y verificadas durante el sprint:
-
-**Landing Page — Hero Section:** Título principal "Revolutionize Your Residential Projects with Smart IoT" con subtítulo descriptivo de la propuesta SaaS y botones de acción "I want it!" y "See Benefits". Header con navegación a Benefits, Features, Plans, About Us y FAQ, más selector de idioma EN/ES y botón "Get Started".
-
-**Landing Page — Sección de Beneficios:** Grilla de 6 tarjetas que presentan Integration from Construction, Personalized Control, Centralized Management, Added Value, Energy Savings y Specialized Support, cada una con ícono y descripción.
-
-**Landing Page — Advanced Technical Features:** Sección con descripción del dashboard intuitivo compatible con móvil y escritorio, destacando control en tiempo real, configuraciones personalizables, notificaciones inteligentes y acceso multiplataforma, acompañado de imagen del "Apartment Central Hub".
-
-**Landing Page — Testimonios:** Sección "Trusted by the Best Construction Companies" con tres tarjetas de testimonio de María González (Project Director, Premium Construction), Carlos Ramírez (General Manager, Modern Developments) y Ana Morales (CEO, Innovar Construction).
-
-**Landing Page — CTA y Footer:** Sección final "Ready to Lead Innovation in Construction?" con botones "Create Account Now" y "View Plans", y footer con logo, descripción, redes sociales y columnas de navegación Product, Company, Support y Legal.
-
-**Landing Page — Internacionalización:** Selector EN/ES funcional en el header con cambio dinámico de idioma en todo el contenido de la página.
-
-# FOTOS DE LA LANDING PAGE
-
-![Landing Page 1](https://i.ibb.co/BHfmnGmV/1.jpg)
-
-![Landing Page 2](https://i.ibb.co/wrpyLFyc/2.jpg)
-
-![Landing Page 3](https://i.ibb.co/yBncdVxV/3.jpg)
-
-![Landing Page 4](https://i.ibb.co/TxZzYQ27/4.jpg)
-
-![Landing Page 5](https://i.ibb.co/F4KcdMYm/5.jpg)
-
-![Landing Page 6](https://i.ibb.co/jvmZydVw/6.jpg)
-
-![Landing Page 7](https://i.ibb.co/XQxj3ZG/7.jpg)
-
-URL del repositorio landing page: *https://github.com/CcaritaTech/IoBuild-LandingPage*
-
-URL de la landing page desplegada: *https://ccaritatech.github.io/IoBuild-LandingPage/*
-
-## 4.2.1.6. Services Documentation Evidence for Sprint Review
-
-En esta sección se presenta la evidencia de la documentación completa de los Web Services desarrollados durante el Sprint 1, generada utilizando la especificación OpenAPI/Swagger. Los endpoints implementados cubren **11 bounded contexts** principales que establecen la arquitectura base del sistema de la plataforma IoBuild: Authentication, Users, Profiles, Clients, Projects, Units, Devices, Subscriptions, Plans, Payments y Analytics. El backend fue desarrollado en C# con ASP.NET Core y Entity Framework Core.
-
-URL del repositorio web service: `https://github.com/CcaritaTech/IoBuild-Backend`
-
-URL de la documentación Swagger UI desplegada: `https://io-build-back.arroz.dev/swagger/index.html`
-
-![Swagger UI 1](https://i.ibb.co/wN38k55W/Whats-App-Image-2026-05-12-at-11-10-05-PM.jpg)
-
-![Swagger UI 2](https://i.ibb.co/60Sf8mDL/Whats-App-Image-2026-05-12-at-11-10-14-PM.jpg)
-
-![Swagger UI 3](https://i.ibb.co/WWnCvgz7/Whats-App-Image-2026-05-12-at-11-10-34-PM.jpg)
-
-![Swagger UI 4](https://i.ibb.co/5W3pdfn0/Whats-App-Image-2026-05-12-at-11-10-57-PM.jpg)
-
-![Swagger UI 5](https://i.ibb.co/DH15p27L/Whats-App-Image-2026-05-12-at-11-11-12-PM.jpg)
-
-**Base URL:** `api/v1`
-
-### Endpoints Documentados por Contexto
-
-#### **1. Authentication Context** (/authentication)
-
-| Endpoint | Acción | Verbo HTTP | Auth | Body | Respuesta | Códigos |
+| US38 | TK08 | Registrarse en la plataforma | Como usuario, quiero crear una cuenta nueva proporcionando mis datos básicos y seleccionando mi rol, para poder acceder a las funcionalidades de la plataforma. | 5 | Axel Randall Ordonez Ricaldi | Done |
+| US39 | TK09 | Iniciar Sesión (Login) | Como usuario, quiero iniciar sesión con mis credenciales, para acceder de forma segura a las funcionalidades de la plataforma. | 4 | Axel Randall Ordonez Ricaldi | Done |
+| US40 | TK10 | Cerrar Sesión (Logout) | Como usuario, quiero cerrar sesión en la aplicación, para proteger mi cuenta cuando termine de utilizar la plataforma. | 3 | Mateo Italo Loechle Arias | Done |
+| TS21 | TK11 | Registrar nuevo usuario | Como desarrollador, quiero enviar los datos de registro (nombre, email, password, rol) a la API, para crear una nueva identidad en el sistema y permitir el acceso futuro. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| TS22 | TK12 | Validar token de sesión | Como desarrollador, quiero que la API valide que el token enviado en los headers es legítimo y no ha expirado, para proteger las rutas privadas. | 3 | Mateo Italo Loechle Arias | Done |
+| TS15 | TK13 | Crear ruta segura y mostrar datos específicos | Como desarrollador, quiero proteger el dashboard de fabricantes para que solo los fabricantes puedan visualizarlo. | 4 | Brayan Roberto Ccarita Cruz | Done |
+| US09 | TK14 | Acceso a proyectos activos | Como ingeniero, quiero tener acceso a los proyectos que se encuentran activos, para poder realizar un seguimiento de su progreso y gestionar los recursos necesarios. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| US20 | TK15 | Lista de proyectos | Como ingeniero, quiero ver una lista de todos mis proyectos para poder conocer el estado y detalles de cada uno. | 5 | Fabrizio Martin Panta Castro | Done |
+| US21 | TK16 | Agregar nuevo proyecto | Como arquitecto, quiero agregar un nuevo proyecto para poder registrar nuevos desarrollos inmobiliarios. | 8 | Jhosep Jamil Argomedo Camacho | Done |
+| US22 | TK17 | Detalles de un proyecto | Como arquitecto, quiero ver los detalles de un proyecto específico para poder revisar su información completa. | 5 | Mateo Italo Loechle Arias | Done |
+| TS01 | TK18 | Listar proyectos por constructor | Como desarrollador, quiero solicitar a la API que liste todos los proyectos asociados a un constructor específico, para poder mostrar la vista principal de Proyectos. | 5 | Fabrizio Martin Panta Castro | Done |
+| TS02 | TK19 | Crear un proyecto | Como desarrollador, quiero añadir un nuevo proyecto a través de la API para poder implementar la funcionalidad de registro de nuevos desarrollos. | 2 | Jhosep Jamil Argomedo Camacho | Done |
+| TS03 | TK20 | Recuperar proyecto por ID | Como desarrollador, quiero solicitar un proyecto por su {id} para poder mostrar la vista de detalles del proyecto. | 5 | Mateo Italo Loechle Arias | Done |
+| TS12 | TK21 | Actualizar información de un proyecto | Como desarrollador, quiero solicitar a la API que actualice la información de un proyecto (nombre, ubicación y descripción) para mantener los datos actualizados en la vista de gestión de proyectos. | 6 | Fabrizio Martin Panta Castro | Done |
+
+---
+
+## 5.2.1.2. Sprint Backlog 2
+
+| Story ID | ID Task | Titulo | Descripción | Estimación (Horas) | Assigned To | Status |
 |---|---|---|---|---|---|---|
-| /authentication/sign-in | Autentica usuario | POST | [AllowAnonymous] | SignInResource (email, password) | AuthenticatedUserResource | 200 |
-| /authentication/sign-up | Crea nuevo usuario | POST | [AllowAnonymous] | SignUpResource (email, password, role) | "User created successfully." | 201 |
+| US23 | TK01 | Lista de clientes | Como Arquitecto, quiero ver una lista de todos los clientes para poder gestionar sus proyectos asociados y el estado de su cuenta. | 5 | Brayan Roberto Ccarita Cruz | Done |
+| US24 | TK02 | Buscar y ordenar clientes | Como Ingeniero, quiero poder ordenar la lista de clientes por columnas (Nombre Completo, Proyecto Asociado, Estado de Cuenta) para poder encontrar u organizar clientes rápidamente según criterios específicos. | 5 | Axel Randall Ordonez Ricaldi | Done |
+| US25 | TK03 | Agregar un Nuevo Cliente | Como arquitecto o ingeniero, quiero agregar un nuevo cliente, para registrar su información y asociarlo a los proyectos correspondientes. | 4 | Jhosep Jamil Argomedo Camacho | Done |
+| US26 | TK04 | Perfil del cliente | Como Ingeniero, quiero ver el perfil detallado de un cliente para poder acceder a toda su información y opciones de gestión. | 8 | Fabrizio Martin Panta Castro | Done |
+| US27 | TK05 | Acceder a la Configuración del Cliente | Como Arquitecto, quiero acceder a la configuración específica de un cliente para poder realizar acciones de gestión como editar o gestionar el estado de su cuenta. | 4 | Jhosep Jamil Argomedo Camacho | Done |
+| TS04 | TK06 | Actualizar información de un cliente | Como desarrollador, quiero enviar a la API una solicitud para modificar los datos de un cliente existente, para poder implementar la edición de su perfil y la gestión de su estado de cuenta. | 8 | Brayan Roberto Ccarita Cruz | Done |
+| TS05 | TK07 | Eliminar un cliente | Como desarrollador, quiero solicitar a la API la eliminación de un cliente por su {id}, para poder implementar la funcionalidad de dar de baja clientes que ya no se utilizarán. | 5 | Axel Randall Ordonez Ricaldi | Done |
+| TS06 | TK08 | Soportar ordenación de clientes | Como desarrollador, quiero poder enviar parámetros de ordenación a la API (nombre de columna y dirección), para poder implementar las funcionalidades de Buscar/Ordenar Clientes. | 8 | Fabrizio Martin Panta Castro | Done |
+| TS07 | TK09 | Listar clientes | Como desarrollador, quiero solicitar a la API que liste los clientes, opcionalmente filtrados por estado o nombre, para poder mostrar la vista de la lista de clientes. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| TS08 | TK10 | Crear un cliente | Como desarrollador, quiero añadir un nuevo cliente a través de la API para poder implementar la funcionalidad de creación de clientes. | 8 | Mateo Italo Loechle Arias | Done |
+| TS09 | TK11 | Recuperar cliente por ID | Como desarrollador, quiero solicitar un recurso de cliente por su {id} para poder implementar la vista detallada del perfil. | 5 | Brayan Roberto Ccarita Cruz | Done |
+| US10 | TK12 | Acceso a dispositivos conectados | Como usuario, quiero tener acceso a los dispositivos conectados, para poder monitorear su estado y uso. | 5 | Mateo Italo Loechle Arias | Done |
+| US15 | TK13 | Visualizar los dispositivos y su distribución por tipo | Como ingeniero, quiero ver cuáles son los dispositivos y cómo están distribuidos por tipo, para realizar un análisis más detallado de los recursos disponibles. | 6 | Fabrizio Martin Panta Castro | Done |
+| US33 | TK14 | Ver Lista de Dispositivos | Como propietario, quiero ver una lista de todos los dispositivos registrados para poder monitorear su estado y ubicacion. | 3 | Jhosep Jamil Argomedo Camacho | Done |
+| US34 | TK15 | Agregar un Nuevo Dispositivo | Como propietario, quiero agregar un nuevo dispositivo al sistema para expandir la cobertura de monitoreo y control. | 3 | Brayan Roberto Ccarita Cruz | Done |
+| US35 | TK16 | Editar/Configurar Ajustes de Dispositivo | Como propietario, quiero acceder a la configuracion especifica de un dispositivo para modificar sus parametros o revisar su informacion detallada. | 4 | Axel Randall Ordonez Ricaldi | Done |
+| US36 | TK17 | Eliminar un Dispositivo | Como propietario, quiero poder eliminar un dispositivo que ya no esta en uso o esta defectuoso, para mantener la lista limpia y precisa. | 5 | Fabrizio Martin Panta Castro | Done |
+| TS10 | TK18 | Listar dispositivos | Como desarrollador, quiero solicitar a la API que liste todos los dispositivos, filtrados por ubicación o estado, para poder mostrar la lista de Gestión de Dispositivos. | 5 | Brayan Roberto Ccarita Cruz | Done |
+| TS11 | TK19 | Eliminar un dispositivo por id | Como desarrollador, quiero solicitar a la API que elimine un dispositivo por su {id} para poder retirar hardware que ya no se utiliza del sistema. | 4 | Mateo Italo Loechle Arias | Done |
+| TS13 | TK20 | Actualizar información de un dispositivo | Como desarrollador, quiero solicitar a la API que actualice la información de un dispositivo (nombre y ubicación) para reflejar los cambios en la gestión de dispositivos. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| TS14 | TK21 | Crear un nuevo dispositivo | Como desarrollador, quiero solicitar a la API que cree un nuevo dispositivo especificando su nombre, tipo y ubicación, para registrar nuevos equipos en el sistema. | 6 | Axel Randall Ordonez Ricaldi | Done |
 
-#### **2. Users Context** (/users)
+---
 
-| Endpoint | Acción | Verbo HTTP | Auth | Parámetros | Respuesta | Códigos |
+## 5.2.1.3. Sprint Backlog 3
+
+| Story ID | ID Task | Titulo | Descripción | Estimación (Horas) | Assigned To | Status |
 |---|---|---|---|---|---|---|
-| /users/{userId} | Obtiene usuario por ID | GET | [Authorize] | Path: userId (int) | UserResource | 200, 404 |
-| /users | Lista todos los usuarios | GET | [Authorize] | Ninguno | [ UserResource ] | 200 |
-| /users/{userId}/profiles | Obtiene perfil del usuario | GET | [Authorize] | Path: userId (int) | ProfileResource | 200, 404 |
-| /users/{userId}/password | Cambia contraseña del usuario | PUT | [Authorize] | Path: userId (int), Body: UpdatePasswordResource | Sin contenido | 204, 400, 404 |
+| US16 | TK01 | Acceder al perfil del usuario | Como usuario, quiero tener acceso a mi perfil, para ver datos como mi nombre, email, numero de telefono y mi direccion. | 5 | Brayan Roberto Ccarita Cruz | Done |
+| US17 | TK02 | Edicion de Informacion del Perfil | Como usuario, quiero poder editar alguna parte de mi informacion, como mi email, numero de telefono o direccion, para mantener mis datos actualizados. | 6 | Axel Randall Ordonez Ricaldi | Done |
+| US18 | TK03 | Ver Imagen que Representa al Usuario | Como usuario, quiero poder ver una imagen que me represente, para tener una experiencia mas personalizada. | 4 | Fabrizio Martin Panta Castro | Done |
+| US19 | TK04 | Visualización del rol de la cuenta | Como usuario, quiero poder ver el rol de mi cuenta, para entender qué permisos tengo dentro de la aplicación. | 5 | Axel Randall Ordonez Ricaldi | Done |
+| US19 | TK05 | Ver el Rol de la Cuenta | Como usuario, quiero poder ver el rol de mi cuenta, para entender que permisos tengo dentro de la aplicacion. | 4 | Mateo Italo Loechle Arias | Done |
+| US08 | TK06 | Visualizar dashboard de analíticas y métricas según el rol | Como usuario de la plataforma (constructor o propietario), quiero acceder a un dashboard centralizado con métricas clave y datos en tiempo real de mis proyectos y dispositivos, para supervisar el rendimiento, ocupación y consumo energético de mis espacios. | 5 | Fabrizio Martin Panta Castro | Done |
+| US11 | TK07 | Capacidad de ocupación por proyecto | Como ingeniero, quiero tener acceso a la capacidad de ocupación de cada proyecto, para poder analizar el uso de los recursos y planificar de manera eficiente. | 5 | Brayan Roberto Ccarita Cruz | Done |
+| US12 | TK08 | Gráfico de consumo de energía por hora | Como ingeniero, quiero ver un gráfico sobre la energía que se consume por hora, para poder evaluar el rendimiento energético de los proyectos en tiempo real. | 8 | Fabrizio Martin Panta Castro | Done |
+| US13 | TK09 | Gráfico de registro de ocupación | Como ingeniero, quiero ver un gráfico sobre el registro de ocupación, para poder analizar la evolución de la ocupación a lo largo del tiempo. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| US14 | TK10 | Resumen del proyecto | Como ingeniero, quiero ver un resumen sobre cada proyecto, para saber si está activo, su ubicación y cuántos departamentos están ocupados. | 5 | Mateo Italo Loechle Arias | Done |
+| US28 | TK11 | Plan de suscripción actual | Como ingeniero, quiero ver mi plan de suscripción actual y su estado para confirmar los beneficios que tengo y el costo mensual. | 8 | Fabrizio Martin Panta Castro | Done |
+| US29 | TK12 | Planes de suscripción alternativos | Como ingeniero, quiero ver planes de suscripción alternativos (Professional y Starter) para poder comparar sus precios y beneficios con mi plan actual. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| US30 | TK13 | Cambio de plan | Como arquitecto, quiero iniciar el proceso de cambio de plan para poder seleccionar un nivel de servicio diferente que se ajuste mejor a mis necesidades. | 2 | Mateo Italo Loechle Arias | Done |
+| US31 | TK14 | Renovar plan activo | Como arquitecto, quiero renovar mi plan actual para asegurar la continuidad del servicio si estoy cerca de la fecha de expiración o si mi plan no está configurado para renovación automática. | 5 | Brayan Roberto Ccarita Cruz | Done |
+| US32 | TK15 | Cancelar plan actual | Como ingeniero, quiero cancelar mi plan actual para finalizar mi suscripción al término del ciclo de facturación. | 8 | Axel Randall Ordonez Ricaldi | Done |
+| TS16 | TK16 | Obtener suscripción actual | Como desarrollador, quiero solicitar la información de la suscripción activa del usuario actual, para mostrar el plan, costo y beneficios en la vista principal de suscripciones. | 3 | Axel Randall Ordonez Ricaldi | Done |
+| TS17 | TK17 | Listar catálogo de planes | Como desarrollador, quiero solicitar la lista de todos los planes de suscripción disponibles en el sistema, para mostrarlos como alternativas en la interfaz de comparación. | 3 | Fabrizio Martin Panta Castro | Done |
+| TS18 | TK18 | Cambiar plan de suscripción | Como desarrollador, quiero enviar una solicitud para actualizar el plan de suscripción del usuario, para hacer efectivo el cambio de nivel de servicio seleccionado en la interfaz. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| TS19 | TK19 | Renovar suscripción | Como desarrollador, quiero solicitar la renovación de la suscripción actual, para extender la vigencia del servicio cuando el usuario confirma la acción. | 3 | Mateo Italo Loechle Arias | Done |
+| TS20 | TK20 | Cancelar suscripción | Como desarrollador, quiero solicitar la cancelación de la suscripción activa, para detener la renovación automática y finalizar el servicio al terminar el ciclo. | 3 | Brayan Roberto Ccarita Cruz | Done |
+| US37 | TK21 | Acceder a Ayuda y Soporte | Como usuario, quiero acceder a una sección de ayuda y soporte, para resolver dudas o problemas relacionados con el uso de la aplicación. | 5 | Jhosep Jamil Argomedo Camacho | Done |
 
-#### **3. Profiles Context** (/profiles)
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 
-| Endpoint | Acción | Verbo HTTP | Auth | Body | Respuesta | Códigos |
-|---|---|---|---|---|---|---|
-| /profiles | Crea nuevo perfil | POST | [Authorize] | CreateProfileResource | ProfileResource | 201, 400 |
-| /profiles/{profileId} | Obtiene perfil por ID | GET | [Authorize] | Path: profileId (int) | ProfileResource | 200, 404 |
-| /profiles | Lista todos los perfiles | GET | [Authorize] | Ninguno | [ ProfileResource ] | 200 |
-| /profiles/{profileId} | Actualiza perfil | PUT | [Authorize] | Path: profileId (int), Body: UpdateProfileResource | ProfileResource | 200, 400, 404 |
-| /profiles/second-email | Establece segundo email | POST | [Authorize] | Query: userId (int), Body: SecondEmailResource | Sin contenido | 204, 404 |
+### 5.2.2. Implemented Landing Page Evidence
 
-#### **4. Clients Context** (/clients)
 
-| Endpoint | Acción | Verbo HTTP | Auth | Body | Respuesta | Códigos |
-|---|---|---|---|---|---|---|
-| /clients/{clientId} | Obtiene cliente por ID | GET | [Authorize] | Path: clientId (int) | ClientResource | 200, 404 |
-| /clients | Lista todos los clientes | GET | [Authorize] | Ninguno | [ ClientResource ] | 200 |
-| /clients | Crea nuevo cliente | POST | [Authorize] | CreateClientResource | ClientResource | 201, 400 |
-| /clients/{clientId} | Actualiza cliente | PUT | [Authorize] | Path: clientId (int), Body: UpdateClientResource | ClientResource | 200, 400, 404 |
-| /clients/{clientId} | Elimina cliente | DELETE | [Authorize] | Path: clientId (int) | Sin contenido | 204, 400, 404 |
 
-#### **5. Projects Context** (/projects)
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 
-| Endpoint | Acción | Verbo HTTP | Auth | Body | Respuesta | Códigos |
-|---|---|---|---|---|---|---|
-| /projects/{projectId} | Obtiene proyecto por ID | GET | [Authorize] | Path: projectId (int) | ProjectResource | 200, 404 |
-| /projects | Lista todos los proyectos | GET | [Authorize] | Ninguno | [ ProjectResource ] | 200 |
-| /projects | Crea nuevo proyecto | POST | [Authorize] | CreateProjectResource | ProjectResource | 201, 400 |
-| /projects/{projectId} | Actualiza proyecto | PUT | [Authorize] | Path: projectId (int), Body: UpdateProjectResource | ProjectResource | 200, 400, 404 |
-| /projects/{projectId} | Elimina proyecto | DELETE | [Authorize] | Path: projectId (int) | Sin contenido | 204, 400, 404 |
+### 5.2.3. Implemented Frontend-Web Application Evidence
 
-#### **6. Units Context** (/units)
 
-| Endpoint | Acción | Verbo HTTP | Auth | Body | Respuesta | Códigos |
-|---|---|---|---|---|---|---|
-| /units | Lista todas las unidades | GET | [Authorize] | Ninguno | [ UnitResource ] | 200 |
-| /units/{unitId} | Obtiene unidad por ID | GET | [Authorize] | Path: unitId (int) | UnitResource | 200, 404 |
-| /units | Crea nueva unidad | POST | [Authorize] | CreateUnitResource | UnitResource | 201, 400 |
 
-#### **7. Devices Context** (/devices)
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 
-| Endpoint | Acción | Verbo HTTP | Auth | Body | Respuesta | Códigos |
-|---|---|---|---|---|---|---|
-| /devices | Lista todos los dispositivos | GET | Público | Ninguno | [ DeviceResource ] | 200 |
-| /devices/{deviceId} | Obtiene dispositivo por ID | GET | Público | Path: deviceId (int) | DeviceResource (null si no existe) | 200 |
-| /devices | Crea nuevo dispositivo | POST | Público | CreateDeviceResource | { Id: int } | 201 |
-| /devices/{deviceId} | Actualiza dispositivo | PUT | Público | Path: deviceId (int), Body: UpdateDeviceResource | DeviceResource | 200 |
-| /devices/{deviceId} | Elimina dispositivo | DELETE | Público | Path: deviceId (int) | Sin contenido | 204 |
+### 5.2.4. Acuerdo de Servicio - SaaS
 
-#### **8. Subscriptions Context** (/subscriptions)
+El presente acuerdo describe las condiciones de prestación de IoBuild como Software as a Service (SaaS). Se considera un acuerdo académico/propuesto para el producto, construido a partir de las funcionalidades y configuraciones que actualmente aparecen en la aplicación web. El proveedor del servicio es CcaritaTech mediante la plataforma IoBuild y el cliente objetivo es una empresa constructora o administradora de proyectos residenciales que necesita centralizar sus dispositivos IoT, unidades inmobiliarias y métricas operativas.
 
-| Endpoint | Acción | Verbo HTTP | Auth | Body | Respuesta | Códigos |
-|---|---|---|---|---|---|---|
-| /subscriptions | Lista todas las suscripciones | GET | Público | Ninguno | [ SubscriptionResource ] | 200 |
-| /subscriptions/{id} | Obtiene suscripción por ID | GET | Público | Path: id (int) | SubscriptionResource | 200, 404 |
-| /subscriptions | Crea nueva suscripción | POST | Público | CreateSubscriptionResource | { Id: int } | 201 |
-| /subscriptions/{id} | Actualiza suscripción | PUT | Público | Path: id (int), Body: UpdateSubscriptionResource | SubscriptionResource | 200 |
+#### Objeto y alcance del servicio
 
-#### **9. Plans Context** (/plans)
+IoBuild ofrece acceso web a una plataforma para gestionar proyectos residenciales inteligentes. El servicio comprende:
 
-| Endpoint | Acción | Verbo HTTP | Auth | Body | Respuesta | Códigos |
-|---|---|---|---|---|---|---|
-| /plans | Lista todos los planes | GET | Público | Ninguno | [ PlanResource ] | 200 |
+- Gestión de proyectos, unidades inmobiliarias y clientes asociados.
+- Registro, consulta, actualización y eliminación de dispositivos IoT.
+- Visualización de dashboards, métricas de energía, estado de dispositivos e insights históricos.
+- Administración de perfiles, usuarios y sesiones autenticadas.
+- Catálogo de planes, suscripciones, cancelación y consulta de comprobantes.
+- Integración opcional con telemetría mediante MQTT e InfluxDB.
+- Integración de pagos mediante Stripe, incluyendo checkout, confirmación de sesión y webhook de eventos.
 
-#### **10. Payments Context** (/subscriptions/payments)
+El cliente utiliza el servicio desde un navegador web. En la versión actual, el frontend se implementa como una SPA en Vue 3/Vite y consume la API mediante la ruta relativa `/api/v1`. El backend se ejecuta como un monolito modular ASP.NET Core 9 y persiste la información en una única base MySQL.
 
-| Endpoint | Acción | Verbo HTTP | Auth | Body | Respuesta | Códigos |
-|---|---|---|---|---|---|---|
-| /subscriptions/payments/create-session | Crea sesión de checkout en Stripe | POST | Público | CreatePaymentSessionResource | PaymentSessionResource | 200, 404, 500 |
-| /subscriptions/payments/confirm | Confirma pago en Stripe | POST | Público | ConfirmPaymentResource | PaymentConfirmationResource | 200, 400, 500 |
+#### Planes comerciales configurados
 
-#### **11. Analytics Context** (/analytics)
+Los siguientes planes se encuentran definidos en el seed de la aplicación. Los precios son valores referenciales del prototipo y se muestran en dólares estadounidenses en el flujo de facturación.
 
-| Endpoint | Acción | Verbo HTTP | Auth | Parámetros | Respuesta | Códigos |
-|---|---|---|---|---|---|---|
-| /analytics/metrics/{userId} | Obtiene métricas del dashboard | GET | Público | Path: userId (int), Query: role (builder\|owner) | BuilderDashboardResource | 200, 400, 404 |
-| /analytics/insights | Obtiene insights históricos por proyecto | GET | Público | Query: projectId (int), metric (string), startDate (datetime opt), endDate (datetime opt) | [ HistoricalDataPointResource ] | 200, 400 |
+| Plan | Precio mensual | Capacidad y beneficios principales |
+|---|---:|---|
+| Starter | USD 299 | Hasta 50 dispositivos IoT, dashboard básico, soporte por correo, actualizaciones incluidas, 1 administrador y reportes mensuales. |
+| Professional | USD 799 | Hasta 200 dispositivos IoT, dashboard avanzado, soporte prioritario 24/7, actualizaciones y nuevas funcionalidades, 3 administradores, reportes en tiempo real, API personalizada y capacitación incluida. |
+| Enterprise | USD 1,299 | Dispositivos IoT ilimitados, dashboard empresarial, soporte dedicado 24/7, desarrollo de funcionalidades personalizadas, administradores ilimitados, analítica avanzada, API completa, consultoría especializada y SLA garantizado. |
 
-### Ejemplos Detallados de Interacción y Response
+Estos valores y características proceden de [DataSeeder.cs](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/Persistence/DataSeeder.cs). El alcance comercial, la moneda definitiva, los impuestos y las condiciones de renovación deberán confirmarse antes de una puesta en producción.
 
-#### **Authentication Context**
+#### Aprovisionamiento, pago y ciclo de suscripción
 
-**1. POST /authentication/sign-in**
+El ciclo operativo definido en la aplicación es el siguiente:
 
-```
+1. El usuario autenticado consulta los planes disponibles mediante `GET /api/v1/plans`.
+2. Selecciona un plan desde la vista de suscripciones del frontend.
+3. El backend crea una sesión de checkout mediante `POST /api/v1/subscriptions/payments/sessions`.
+4. Stripe procesa el pago o se utiliza el modo simulado configurado para pruebas.
+5. Al retornar al frontend, la sesión se confirma mediante `PATCH /api/v1/subscriptions/payments/sessions/{sessionId}`.
+6. La suscripción activa se registra en MySQL; el cliente puede consultar, renovar o cancelar su plan.
+7. Las facturas se consultan mediante `GET /api/v1/subscriptions/payments/invoices`.
+8. Los eventos de Stripe pueden recibirse en `POST /api/v1/webhooks/stripe`, donde se valida la firma y se procesa el evento.
+
+La implementación de este flujo está documentada principalmente en [SubscriptionsEndpoints.cs](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/Subscriptions/Interfaces/REST/SubscriptionsEndpoints.cs), [StripeHttpPaymentProvider.cs](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/Subscriptions/Infrastructure/Stripe/StripeHttpPaymentProvider.cs) y [my-subscription.vue](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/frontend/src/subscriptions/presentation/views/my-subscription.vue).
+
+#### Compromisos del proveedor y del cliente
+
+| Parte | Compromisos |
+|---|---|
+| Proveedor/CcaritaTech | Mantener la aplicación disponible en el entorno de despliegue, conservar la información de suscripciones, procesar las operaciones soportadas por la API, incluir actualizaciones según el plan y proteger las credenciales secretas de Stripe en el backend. |
+| Cliente | Proporcionar datos válidos de sus proyectos y dispositivos, proteger sus credenciales, utilizar el sistema conforme a su finalidad, mantener actualizado el medio de pago y respetar los límites del plan contratado. |
+| Terceros | Stripe, el proveedor de hosting, la red del cliente y los dispositivos IoT pueden afectar el resultado del servicio. Sus fallas o indisponibilidad no son controladas directamente por IoBuild. |
+
+#### Disponibilidad, soporte y limitaciones del prototipo
+
+La aplicación incorpora mecanismos técnicos de operación como `/health`, readiness de migraciones, healthchecks de Docker Compose, proxy Nginx y servicios opcionales de observabilidad con OpenTelemetry/Jaeger. Estos mecanismos facilitan el monitoreo y la recuperación, pero no constituyen por sí mismos una garantía contractual de disponibilidad.
+
+El plan Enterprise muestra la característica “Guaranteed SLA” en el catálogo, pero la versión actual no define todavía un porcentaje de uptime, tiempos máximos de respuesta, ventanas de mantenimiento, compensaciones ni un proceso formal de escalamiento. Por ello, esos parámetros deben completarse en el contrato comercial antes de ofrecer el servicio como SLA legalmente vinculante.
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+### 5.2.5. Implemented Native-Mobile Application Evidence 
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence 
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+### 5.2.7. RESTful API documentation 
+
+La API de IoBuild v2 expone recursos REST utilizando Minimal APIs de ASP.NET Core 9. Todos los recursos funcionales se agrupan bajo la versión `/api/v1`, intercambian información en JSON y se organizan por bounded contexts dentro del monolito modular. La implementación se compone desde [Program.cs](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/Program.cs), que registra los módulos y configura Swagger/OpenAPI.
+
+#### Acceso a la documentación OpenAPI
+
+La interfaz Swagger se habilita automáticamente con `UseSwagger()` y `UseSwaggerUI()`. En el stack Docker local puede accederse desde:
+
+- UI interactiva: `http://localhost:80/swagger`
+- API directa: `http://localhost:8080/swagger`
+- Especificación general: `/swagger/v1/swagger.json`
+
+El backend publica documentos separados para `v1`, `publishing`, `devices`, `iam`, `subscriptions`, `profiles` y `analytics`. La configuración también define el esquema de seguridad Bearer para las operaciones que requieren autenticación.
+
+#### Convenciones REST y respuestas
+
+- `GET`: consulta recursos o colecciones.
+- `POST`: crea recursos o ejecuta operaciones de dominio.
+- `PUT`: reemplaza o actualiza información de un recurso.
+- `PATCH`: aplica cambios parciales.
+- `DELETE`: elimina un recurso o cierra una sesión.
+- `200 OK`: operación exitosa con contenido.
+- `201 Created`: creación exitosa de un recurso o sesión.
+- `204 No Content`: operación exitosa sin cuerpo de respuesta.
+- `400 Bad Request`: error de validación.
+- `401 Unauthorized`: autenticación requerida.
+- `403 Forbidden`: acceso no permitido.
+- `404 Not Found`: recurso inexistente.
+- `503 Service Unavailable`: dependencia no disponible.
+
+#### API transversal
+
+| Método | Ruta | Descripción | Acceso |
+|---|---|---|---|
+| GET | `/health` | Verifica la disponibilidad y readiness de la aplicación. | Público |
+| GET | `/api/v1/contracts` | Devuelve el catálogo de contratos de compatibilidad de la API. | Público |
+| GET | `/` | Redirige al usuario hacia Swagger UI. | Público |
+
+#### Bounded Context: IAM
+
+| Método | Ruta | Descripción | Acceso |
+|---|---|---|---|
+| POST | `/api/v1/users` | Registra un usuario. | Público |
+| POST | `/api/v1/authentication/sign-up` | Registra un usuario. | Público |
+| GET | `/api/v1/authentication/invitation?email={email}` | Consulta el estado de invitación de un correo. | Público |
+| POST | `/api/v1/sessions` | Inicia sesión y devuelve un token. | Público |
+| POST | `/api/v1/authentication/sign-in` | Inicia sesión. | Público |
+| DELETE | `/api/v1/sessions/current` | Revoca la sesión actual. | Bearer |
+| POST | `/api/v1/authentication/sign-out` | Cierra la sesión actual. | Bearer |
+| GET | `/api/v1/users` | Lista usuarios del sistema. | Bearer |
+
+#### Bounded Context: Publishing
+
+| Método | Ruta | Descripción | Acceso |
+|---|---|---|---|
+| GET, POST | `/api/v1/projects` | Lista o crea proyectos. | Bearer |
+| GET, PUT, DELETE | `/api/v1/projects/{id}` | Consulta, actualiza o elimina un proyecto. | Bearer |
+| POST | `/api/v1/projects/{id}/structure` | Genera o actualiza la estructura de un proyecto. | Bearer |
+| GET | `/api/v1/units?projectId={id}&ownerId={id}` | Lista unidades filtradas. | Bearer |
+| GET | `/api/v1/units/{id}` | Obtiene una unidad. | Bearer |
+| POST | `/api/v1/units` | Crea una unidad. | Bearer |
+| PATCH | `/api/v1/units/{id}` | Actualiza una unidad. | Bearer |
+| PATCH | `/api/v1/units/{id}/assign-owner` | Asigna el propietario de una unidad. | Bearer |
+| GET, POST | `/api/v1/clients` | Consulta o crea clientes. | Bearer |
+| GET, PUT, DELETE | `/api/v1/clients/{id}` | Consulta, actualiza o elimina un cliente. | Bearer |
+
+#### Bounded Context: Profiles
+
+| Método | Ruta | Descripción | Acceso |
+|---|---|---|---|
+| GET | `/api/v1/profiles?userId={id}` | Lista o filtra perfiles. | Bearer |
+| GET, PUT | `/api/v1/profiles/{id}` | Consulta o actualiza un perfil. | Bearer |
+| POST | `/api/v1/profiles` | Crea un perfil. | Bearer |
+| PATCH | `/api/v1/profiles/{userId}/photo` | Reemplaza la foto de perfil. | Bearer |
+
+#### Bounded Context: Devices
+
+| Método | Ruta | Descripción | Acceso |
+|---|---|---|---|
+| GET | `/api/v1/devices/types` | Consulta tipos de dispositivos. | Público |
+| GET, POST | `/api/v1/devices` | Lista o registra dispositivos IoT. | Bearer |
+| GET, PUT, DELETE | `/api/v1/devices/{id}` | Consulta, actualiza o elimina un dispositivo. | Bearer |
+| POST | `/api/v1/devices/{id}/commands` | Envía un comando autorizado. | Bearer |
+| POST | `/api/v1/devices/telemetry` | Ingresa telemetría. | Público/Integración |
+| POST | `/api/v1/devices/telemetry/replay` | Reproduce telemetría desde InfluxDB. | Bearer |
+| GET | `/api/v1/devices/{id}/energy` | Consulta energía. | Bearer |
+| GET | `/api/v1/devices/{id}/status` | Consulta el estado actual. | Bearer |
+
+#### Bounded Context: Analytics
+
+| Método | Ruta | Descripción |
+|---|---|---|
+| GET | `/api/v1/analytics/builders/{userId}/metrics` | Métricas del dashboard del constructor. |
+| GET | `/api/v1/analytics/owners/{userId}/metrics` | Métricas del dashboard del propietario. |
+| GET | `/api/v1/analytics/builders/{userId}/energy` | Energía reciente del constructor. |
+| GET | `/api/v1/analytics/owners/{userId}/energy` | Energía reciente del propietario. |
+| GET | `/api/v1/analytics/insights` | Consulta datos históricos por proyecto y métrica. |
+
+#### Bounded Context: Subscriptions, Plans & Payments
+
+| Método | Ruta | Descripción |
+|---|---|---|
+| GET | `/api/v1/plans` y `/api/v1/plans/{id}` | Lista planes o consulta un plan. |
+| POST, PUT | `/api/v1/plans` y `/api/v1/plans/{id}` | Administra el catálogo de planes. |
+| GET | `/api/v1/subscriptions` y `/api/v1/subscriptions/{id}` | Consulta suscripciones. |
+| POST | `/api/v1/subscriptions` | Crea una suscripción. |
+| PUT | `/api/v1/subscriptions/{id}` | Actualiza una suscripción. |
+| POST | `/api/v1/subscriptions/{id}/cancel` | Cancela una suscripción. |
+| POST | `/api/v1/subscriptions/payments/sessions` | Crea una sesión de checkout Stripe. |
+| PATCH | `/api/v1/subscriptions/payments/sessions/{sessionId}` | Confirma la sesión pagada. |
+| GET | `/api/v1/subscriptions/payments/invoices?builderId={id}` | Consulta facturas. |
+| POST | `/api/v1/webhooks/stripe` | Recibe eventos de Stripe. |
+
+#### Ejemplo de interacción
+
+Solicitud de inicio de sesión:
+
+```http
 POST /api/v1/authentication/sign-in
 Content-Type: application/json
 
@@ -3364,7 +3237,8 @@ Content-Type: application/json
 }
 ```
 
-Response (200 OK):
+Respuesta exitosa:
+
 ```json
 {
   "id": 1,
@@ -3374,1478 +3248,76 @@ Response (200 OK):
 }
 ```
 
-**2. POST /authentication/sign-up**
+Consulta autenticada de dispositivos:
 
-```
-POST /api/v1/authentication/sign-up
-Content-Type: application/json
-
-{
-  "email": "user@demo.com",
-  "password": "secret",
-  "role": "builder"
-}
-```
-
-Response (201 Created):
-```
-"User created successfully."
-```
-
-#### **Users Context**
-
-**3. GET /users/{userId}**
-
-```
-GET /api/v1/users/1
+```http
+GET /api/v1/devices?projectId=1
 Authorization: Bearer {token}
 ```
 
-Response (200 OK):
-```json
-{
-  "id": 1,
-  "email": "user@demo.com",
-  "role": "builder"
-}
-```
+Respuesta esperada:
 
-**4. GET /users**
-
-```
-GET /api/v1/users
-Authorization: Bearer {token}
-```
-
-Response (200 OK):
 ```json
 [
   {
     "id": 1,
-    "email": "user@demo.com",
-    "role": "builder"
-  }
-]
-```
-
-**5. GET /users/{userId}/profiles**
-
-```
-GET /api/v1/users/1/profiles
-Authorization: Bearer {token}
-```
-
-Response (200 OK):
-```json
-{
-  "id": 10,
-  "userId": 1,
-  "photoUrl": "https://img.demo/1.png",
-  "name": "Ana Perez",
-  "username": "anap",
-  "address": "Av. Demo 123",
-  "age": 29,
-  "phoneNumber": "999999999",
-  "secondEmail": "ana.alt@demo.com"
-}
-```
-
-**6. PUT /users/{userId}/password**
-
-```
-PUT /api/v1/users/1/password
-Content-Type: application/json
-Authorization: Bearer {token}
-
-{
-  "currentPassword": "old",
-  "newPassword": "new",
-  "confirmNewPassword": "new"
-}
-```
-
-Response (204 No Content)
-
-#### **Profiles Context**
-
-**7. POST /profiles**
-
-```
-POST /api/v1/profiles
-Content-Type: application/json
-Authorization: Bearer {token}
-
-{
-  "userId": 1,
-  "photoUrl": "https://img.demo/1.png",
-  "name": "Ana Perez",
-  "username": "anap",
-  "address": "Av. Demo 123",
-  "age": 29,
-  "phoneNumber": "999999999"
-}
-```
-
-Response (201 Created):
-```json
-{
-  "id": 10,
-  "userId": 1,
-  "photoUrl": "https://img.demo/1.png",
-  "name": "Ana Perez",
-  "username": "anap",
-  "address": "Av. Demo 123",
-  "age": 29,
-  "phoneNumber": "999999999",
-  "secondEmail": null
-}
-```
-
-**8. GET /profiles/{profileId}**
-
-```
-GET /api/v1/profiles/10
-Authorization: Bearer {token}
-```
-
-Response (200 OK):
-```json
-{
-  "id": 10,
-  "userId": 1,
-  "photoUrl": "https://img.demo/1.png",
-  "name": "Ana Perez",
-  "username": "anap",
-  "address": "Av. Demo 123",
-  "age": 29,
-  "phoneNumber": "999999999",
-  "secondEmail": null
-}
-```
-
-**9. GET /profiles**
-
-```
-GET /api/v1/profiles
-Authorization: Bearer {token}
-```
-
-Response (200 OK):
-```json
-[
-  {
-    "id": 10,
-    "userId": 1,
-    "photoUrl": "https://img.demo/1.png",
-    "name": "Ana Perez",
-    "username": "anap",
-    "address": "Av. Demo 123",
-    "age": 29,
-    "phoneNumber": "999999999",
-    "secondEmail": null
-  }
-]
-```
-
-**10. POST /profiles/second-email**
-
-```
-POST /api/v1/profiles/second-email?userId=1
-Content-Type: application/json
-Authorization: Bearer {token}
-
-{
-  "secondEmail": "ana.alt@demo.com"
-}
-```
-
-Response (204 No Content)
-
-#### **Clients Context**
-
-**11. POST /clients**
-
-```
-POST /api/v1/clients
-Content-Type: application/json
-Authorization: Bearer {token}
-
-{
-  "fullName": "Empresa Demo",
-  "projectId": 1,
-  "projectName": "Proyecto A",
-  "accountStatement": "Al dia",
-  "email": "contacto@demo.com",
-  "phoneNumber": "999999999",
-  "address": "Av. Demo 123"
-}
-```
-
-Response (201 Created):
-```json
-{
-  "id": 5,
-  "fullName": "Empresa Demo",
-  "projectId": 1,
-  "projectName": "Proyecto A",
-  "accountStatement": "Al dia",
-  "email": "contacto@demo.com",
-  "phoneNumber": "999999999",
-  "address": "Av. Demo 123"
-}
-```
-
-**12. GET /clients/{clientId}**
-
-```
-GET /api/v1/clients/5
-Authorization: Bearer {token}
-```
-
-Response (200 OK):
-```json
-{
-  "id": 5,
-  "fullName": "Empresa Demo",
-  "projectId": 1,
-  "projectName": "Proyecto A",
-  "accountStatement": "Al dia",
-  "email": "contacto@demo.com",
-  "phoneNumber": "999999999",
-  "address": "Av. Demo 123"
-}
-```
-
-**13. GET /clients**
-
-```
-GET /api/v1/clients
-Authorization: Bearer {token}
-```
-
-Response (200 OK):
-```json
-[
-  {
-    "id": 5,
-    "fullName": "Empresa Demo",
+    "name": "Sensor de Temperatura - Torre A",
+    "type": "SmartMeter",
+    "location": "Torre A - Piso 5",
     "projectId": 1,
-    "projectName": "Proyecto A",
-    "accountStatement": "Al dia",
-    "email": "contacto@demo.com",
-    "phoneNumber": "999999999",
-    "address": "Av. Demo 123"
+    "status": "Online"
   }
 ]
 ```
 
-#### **Projects Context**
-
-**14. POST /projects**
-
-```
-POST /api/v1/projects
-Content-Type: application/json
-Authorization: Bearer {token}
-
-{
-  "name": "Proyecto A",
-  "description": "Residencial",
-  "location": "Lima",
-  "totalUnits": 50,
-  "builderId": 1,
-  "imageUrl": "https://img.demo/p.png"
-}
-```
-
-Response (201 Created):
-```json
-{
-  "id": 1,
-  "name": "Proyecto A",
-  "description": "Residencial",
-  "location": "Lima",
-  "totalUnits": 50,
-  "occupiedUnits": 0,
-  "status": "Planned",
-  "builderId": 1,
-  "createdDate": "2026-05-11T10:30:00Z",
-  "imageUrl": "https://img.demo/p.png"
-}
-```
-
-**15. GET /projects/{projectId}**
-
-```
-GET /api/v1/projects/1
-Authorization: Bearer {token}
-```
-
-Response (200 OK):
-```json
-{
-  "id": 1,
-  "name": "Proyecto A",
-  "description": "Residencial",
-  "location": "Lima",
-  "totalUnits": 50,
-  "occupiedUnits": 0,
-  "status": "Planned",
-  "builderId": 1,
-  "createdDate": "2026-05-11T10:30:00Z",
-  "imageUrl": "https://img.demo/p.png"
-}
-```
-
-**16. GET /projects**
-
-```
-GET /api/v1/projects
-Authorization: Bearer {token}
-```
-
-Response (200 OK):
-```json
-[
-  {
-    "id": 1,
-    "name": "Proyecto A",
-    "description": "Residencial",
-    "location": "Lima",
-    "totalUnits": 50,
-    "occupiedUnits": 0,
-    "status": "Planned",
-    "builderId": 1,
-    "createdDate": "2026-05-11T10:30:00Z",
-    "imageUrl": "https://img.demo/p.png"
-  }
-]
-```
-
-#### **Units Context**
-
-**17. POST /units**
-
-```
-POST /api/v1/units
-Content-Type: application/json
-Authorization: Bearer {token}
-
-{
-  "projectId": 1,
-  "unitNumber": "A-101",
-  "ownerId": 20
-}
-```
-
-Response (201 Created):
-```json
-{
-  "id": 1,
-  "projectId": 1,
-  "unitNumber": "A-101",
-  "ownerId": 20
-}
-```
-
-**18. GET /units/{unitId}**
-
-```
-GET /api/v1/units/1
-Authorization: Bearer {token}
-```
-
-Response (200 OK):
-```json
-{
-  "id": 1,
-  "projectId": 1,
-  "unitNumber": "A-101",
-  "ownerId": 20
-}
-```
-
-**19. GET /units**
-
-```
-GET /api/v1/units
-Authorization: Bearer {token}
-```
-
-Response (200 OK):
-```json
-[
-  {
-    "id": 1,
-    "projectId": 1,
-    "unitNumber": "A-101",
-    "ownerId": 20
-  }
-]
-```
-
-#### **Devices Context**
-
-**20. POST /devices**
-
-```
-POST /api/v1/devices
-Content-Type: application/json
-
-{
-  "name": "Sensor Temp",
-  "type": "sensor",
-  "location": "Sala",
-  "macAddress": "AA:BB:CC:DD:EE:FF",
-  "projectId": 1,
-  "status": "online"
-}
-```
-
-Response (201 Created):
-```json
-{
-  "Id": 123
-}
-```
-
-**21. GET /devices**
-
-```
-GET /api/v1/devices
-```
-
-Response (200 OK):
-```json
-[
-  {
-    "id": 123,
-    "name": "Sensor Temp",
-    "type": "sensor",
-    "location": "Sala",
-    "macAddress": "AA:BB:CC:DD:EE:FF",
-    "projectId": 1,
-    "status": "online"
-  }
-]
-```
-
-**22. GET /devices/{deviceId}**
-
-```
-GET /api/v1/devices/123
-```
-
-Response (200 OK):
-```json
-{
-  "id": 123,
-  "name": "Sensor Temp",
-  "type": "sensor",
-  "location": "Sala",
-  "macAddress": "AA:BB:CC:DD:EE:FF",
-  "projectId": 1,
-  "status": "online"
-}
-```
-
-#### **Subscriptions Context**
-
-**23. POST /subscriptions**
-
-```
-POST /api/v1/subscriptions
-Content-Type: application/json
-
-{
-  "builderId": 1,
-  "planId": 2,
-  "status": "active",
-  "startDate": "2026-05-01T00:00:00Z",
-  "endDate": null
-}
-```
-
-Response (201 Created):
-```json
-{
-  "Id": 55
-}
-```
-
-**24. GET /subscriptions**
-
-```
-GET /api/v1/subscriptions
-```
-
-Response (200 OK):
-```json
-[
-  {
-    "id": 55,
-    "builderId": 1,
-    "plan": {
-      "id": 2,
-      "name": "Professional",
-      "price": 99.99,
-      "description": "Plan profesional",
-      "features": ["Soporte prioritario"],
-      "maxDevices": 100,
-      "maxAdministrators": 5,
-      "supportLevel": "priority",
-      "hasAPI": true,
-      "hasAnalytics": true
-    },
-    "status": "active",
-    "startDate": "2026-05-01T00:00:00Z",
-    "endDate": null
-  }
-]
-```
-
-**25. GET /subscriptions/{id}**
-
-```
-GET /api/v1/subscriptions/55
-```
-
-Response (200 OK):
-```json
-{
-  "id": 55,
-  "builderId": 1,
-  "plan": {
-    "id": 2,
-    "name": "Professional",
-    "price": 99.99,
-    "description": "Plan profesional",
-    "features": ["Soporte prioritario"],
-    "maxDevices": 100,
-    "maxAdministrators": 5,
-    "supportLevel": "priority",
-    "hasAPI": true,
-    "hasAnalytics": true
-  },
-  "status": "active",
-  "startDate": "2026-05-01T00:00:00Z",
-  "endDate": null
-}
-```
-
-#### **Plans Context**
-
-**26. GET /plans**
-
-```
-GET /api/v1/plans
-```
-
-Response (200 OK):
-```json
-[
-  {
-    "id": 1,
-    "name": "Starter",
-    "price": 29.99,
-    "description": "Plan basico",
-    "features": ["Soporte email"],
-    "maxDevices": 10,
-    "maxAdministrators": 2,
-    "supportLevel": "basic",
-    "hasAPI": false,
-    "hasAnalytics": false
-  },
-  {
-    "id": 2,
-    "name": "Professional",
-    "price": 99.99,
-    "description": "Plan profesional",
-    "features": ["Soporte prioritario", "Analytics basico"],
-    "maxDevices": 100,
-    "maxAdministrators": 5,
-    "supportLevel": "priority",
-    "hasAPI": true,
-    "hasAnalytics": true
-  }
-]
-```
-
-#### **Payments Context**
-
-**27. POST /subscriptions/payments/create-session**
-
-```
-POST /api/v1/subscriptions/payments/create-session
-Content-Type: application/json
-
-{
-  "builderId": 1,
-  "planId": 2,
-  "successUrl": "https://demo/success",
-  "cancelUrl": "https://demo/cancel"
-}
-```
-
-Response (200 OK):
-```json
-{
-  "sessionId": "cs_test_123",
-  "checkoutUrl": "https://checkout.stripe.com/...",
-  "amountInCents": 2999,
-  "currency": "pen",
-  "planId": 2,
-  "planName": "Subscription Plan"
-}
-```
-
-**28. POST /subscriptions/payments/confirm**
-
-```
-POST /api/v1/subscriptions/payments/confirm
-Content-Type: application/json
-
-{
-  "builderId": 1,
-  "sessionId": "cs_test_123"
-}
-```
-
-Response (200 OK):
-```json
-{
-  "status": "active",
-  "subscriptionId": 55,
-  "isNewSubscription": true
-}
-```
-
-#### **Analytics Context**
-
-**29. GET /analytics/metrics/{userId}**
-
-```
-GET /api/v1/analytics/metrics/10?role=builder
-```
-
-Response (200 OK):
-```json
-{
-  "totalDevices": 120,
-  "onlineDevices": 110,
-  "offlineDevices": 10,
-  "alertsCount": 2,
-  "activeProjectsCount": 5,
-  "totalUnits": 200,
-  "occupiedUnits": 160,
-  "occupancyRate": 0.8,
-  "energyEfficiencyAvg": 0.92,
-  "temperatureHistory": [
-    { "timestamp": "2026-05-01T00:00:00Z", "value": 22.5, "type": "temperature" }
-  ],
-  "energyHistory": [
-    { "timestamp": "2026-05-01T00:00:00Z", "value": 15.2, "type": "energy" }
-  ],
-  "hourlyEnergyData": [
-    { "timestamp": "2026-05-01T01:00:00Z", "value": 1.2, "type": "energy" }
-  ],
-  "monthlyOccupancy": [
-    { "month": "May", "occupancyRate": 0.8, "year": 2026 }
-  ],
-  "devicesByType": { "sensor": 80, "camera": 40 },
-  "projectsOverview": [
-    {
-      "id": 1,
-      "name": "Proyecto A",
-      "location": "Lima",
-      "status": "Active",
-      "totalUnits": 50,
-      "occupiedUnits": 40,
-      "occupancyRate": 0.8,
-      "deviceCount": 25
-    }
-  ]
-}
-```
-
-**30. GET /analytics/insights**
-
-```
-GET /api/v1/analytics/insights?projectId=1&metric=energy&startDate=2026-05-01&endDate=2026-05-11
-```
-
-Response (200 OK):
-```json
-[
-  { "timestamp": "2026-05-01T00:00:00Z", "value": 12.3, "type": "energy" },
-  { "timestamp": "2026-05-02T00:00:00Z", "value": 11.8, "type": "energy" }
-]
-```
-
-### Modelos de Datos (Resources / DTOs)
-
-#### **Authentication & Users**
-
-- **SignInResource**: email, password
-- **SignUpResource**: email, password, role
-- **AuthenticatedUserResource**: id, email, role, token
-- **UserResource**: id, email, role
-- **UpdatePasswordResource**: currentPassword, newPassword, confirmNewPassword
-
-#### **Profiles**
-
-- **CreateProfileResource**: userId, photoUrl, name, username, address, age, phoneNumber
-- **UpdateProfileResource**: photoUrl, name, username, address, age, phoneNumber
-- **ProfileResource**: id, userId, photoUrl, name, username, address, age, phoneNumber, secondEmail
-- **SecondEmailResource**: secondEmail
-
-#### **Clients**
-
-- **CreateClientResource**: fullName, projectId, projectName, accountStatement, email, phoneNumber, address
-- **UpdateClientResource**: mismo que CreateClientResource
-- **ClientResource**: id, fullName, projectId, projectName, accountStatement, email, phoneNumber, address
-
-#### **Projects**
-
-- **CreateProjectResource**: name, description, location, totalUnits, builderId, imageUrl
-- **UpdateProjectResource**: name, description, location, totalUnits, occupiedUnits, status, builderId, imageUrl
-- **ProjectResource**: id, name, description, location, totalUnits, occupiedUnits, status, builderId, createdDate, imageUrl
-
-#### **Units**
-
-- **CreateUnitResource**: projectId, unitNumber, ownerId
-- **UnitResource**: id, projectId, unitNumber, ownerId
-
-#### **Devices**
-
-- **CreateDeviceResource**: name, type, location, macAddress, projectId, status
-- **UpdateDeviceResource**: name, type, location, projectId, status
-- **DeviceResource**: id, name, type, location, macAddress, projectId, status
-
-#### **Subscriptions**
-
-- **CreateSubscriptionResource**: builderId, planId, status, startDate, endDate
-- **UpdateSubscriptionResource**: planId, status, startDate, endDate
-- **SubscriptionResource**: id, builderId, plan (PlanResource), status, startDate, endDate
-
-#### **Plans**
-
-- **PlanResource**: id, name, price, description, features, maxDevices, maxAdministrators, supportLevel, hasAPI, hasAnalytics
-
-#### **Payments**
-
-- **CreatePaymentSessionResource**: builderId, planId, successUrl, cancelUrl
-- **PaymentSessionResource**: sessionId, checkoutUrl, amountInCents, currency, planId, planName
-- **ConfirmPaymentResource**: builderId, sessionId
-- **PaymentConfirmationResource**: status, subscriptionId, isNewSubscription
-
-#### **Analytics**
-
-- **HistoricalDataPointResource**: timestamp, value, type
-- **MonthlyOccupancyDataResource**: month, occupancyRate, year
-- **ProjectOverviewResource**: id, name, location, status, totalUnits, occupiedUnits, occupancyRate, deviceCount
-- **DeviceHealthStatusResource**: deviceId, deviceName, type, status, healthPercentage
-- **UnitDetailResource**: unitId, unitNumber, projectName, activeDevices, connectionStatus
-- **BuilderDashboardResource**: totalDevices, onlineDevices, offlineDevices, alertsCount, activeProjectsCount, totalUnits, occupiedUnits, occupancyRate, energyEfficiencyAvg, temperatureHistory, energyHistory, hourlyEnergyData, monthlyOccupancy, devicesByType, projectsOverview
-
-**Estadísticas del Sprint**
-
-- Total de endpoints documentados: **30**
-- Bounded contexts cubiertos: **11** (Authentication, Users, Profiles, Clients, Projects, Units, Devices, Subscriptions, Plans, Payments, Analytics)
-- Operaciones implementadas: GET, POST, PUT, DELETE
-- Autenticación: JWT con [Authorize] en contextos de Users, Profiles, Clients, Projects, Units; Público en Devices, Subscriptions, Plans, Payments, Analytics
-- Integración externa: Stripe para pagos y suscripciones
-- Modelos de datos: 25+ recursos/DTOs bien tipados
-- Cobertura de API: Base URL `api/v1`, respuestas HTTP correctas con códigos 200, 201, 204, 400, 404, 500
-
-*Nota. Elaboración propia.*
-
-## 4.2.1.7. Software Deployment Evidence for Sprint Review
-
-Durante el Sprint 1 se implementó el despliegue de los componentes web de la plataforma IoBuild, estableciendo un flujo de integración y entrega continua desde el inicio del proyecto.
-
-La **Landing Page** (`IoBuild-LandingPage`) fue desplegada utilizando un servicio de hosting estático con integración directa al repositorio de GitHub, activando despliegues automáticos ante cada merge a la rama `main`. Esto permitió al equipo validar los cambios visuales en un entorno de producción real de manera inmediata durante el sprint, acelerando el ciclo de feedback entre los integrantes.
-
-URL de despliegue de la landing page: `https://ccaritatech.github.io/IoBuild-LandingPage/`
-
-El **backend** (`IoBuild-Backend`) fue desplegado en una plataforma cloud compatible con aplicaciones ASP.NET Core, configurando las variables de entorno necesarias para la cadena de conexión a la base de datos, la clave secreta para la firma de tokens JWT y los parámetros del servicio BCrypt. La base de datos fue provisionada como servicio administrado, eliminando la necesidad de gestión manual del servidor.
-
-URL de despliegue del backend: `https://io-build-back.arroz.dev/swagger/index.html`
-
-La **aplicación móvil** (`ioBuild-kotlin`) se encuentra en fase de desarrollo inicial durante este sprint y aún no ha sido distribuida en ningún servicio de distribución. Su despliegue está planificado para un sprint posterior.
-
-Evidencia del despliegue:
-
-- **Landing Page:** Sitio publicado y accesible públicamente con las secciones Hero, Benefits, Features, Testimonials, Plans, About Us, FAQ y Footer completamente funcionales, con selector de idioma EN/ES operativo.
-
-- **Web Services:** API REST activa con URL pública, documentación Swagger/OpenAPI accesible, 32 endpoints de los 11 bounded contexts respondiendo correctamente con los códigos HTTP esperados (201, 200, 204, 404).
-
-*Nota. Elaboración propia.*
-
-## 4.2.1.8. Team Collaboration Insights during Sprint
-
-Durante el Sprint 1, el equipo de IoBuild trabajó de manera coordinada distribuyendo las responsabilidades según las especialidades de cada integrante. Se utilizó GitHub como plataforma central de control de versiones, organizando el trabajo mediante ramas por feature y pull requests para integración a las ramas principales. A continuación se detalla la contribución individual de cada miembro del equipo.
-
----
-
-**Fabrizio Martin Panta Castro**
-
-Contribución Principal:
-
-- Inicializó la estructura base del proyecto HTML y la configuración de metadatos SEO del repositorio `IoBuild-LandingPage`.
-- Implementó el header con navegación responsiva y el hero section con la propuesta de valor principal de la plataforma.
-- Desarrolló las secciones de Benefits, Advanced Technical Features, Testimonials, Pricing Plans, CTA final y Footer completo con columnas de navegación y redes sociales.
-- Lideró la arquitectura de contenido de la landing page, estableciendo la estructura visual y el flujo de conversión del sitio.
-
----
-
-**Iker Gabriel Barturen Panez** *(GitHub: krxxg04)*
-
-Contribución Principal:
-
-- Implementó el sistema completo de estilos CSS del repositorio `IoBuild-LandingPage`, definiendo las variables de diseño para theming, tipografía y paleta de colores.
-- Desarrolló los estilos para todas las secciones: hero, benefits, features, testimonials, pricing, FAQ y footer.
-- Implementó el sistema de diseño responsivo para todos los breakpoints (móvil, tablet y escritorio).
-- Actualizó las fotografías y detalles del equipo en la sección About Us.
-- En el backend (`IoBuild-Backend`), implementó el bounded context de Analytics: interfaces de fachada para proyectos y dispositivos, `AnalyticsController`, recursos del dashboard (`BuilderDashboardResource`, `DeviceHealthStatusResource`, `ProjectOverviewResource`) y el assembler correspondiente.
-
----
-
-**Mateo Italo Loechle Arias** *(GitHub: LowMath)*
-
-Contribución Principal:
-
-- Desarrolló la sección FAQ completa en `IoBuild-LandingPage` con estructura de acordeón, respuestas detalladas y planes de precio.
-- Implementó el selector de idioma y la internacionalización de la landing page con soporte para español e inglés.
-- En el backend (`IoBuild-Backend`), implementó el bounded context de Clients completo: aggregate root `Client`, comandos de creación/actualización/eliminación, repositorio con búsqueda por email, query service, assemblers de recursos y `ClientsController` con operaciones CRUD.
-
----
-
-**Brayan Roberto Ccarita Cruz**
-
-Contribución Principal:
-
-- Agregó los assets de imágenes y scripts de interactividad al repositorio `IoBuild-LandingPage`.
-- En el backend (`IoBuild-Backend`), implementó el bounded context de IAM completo: aggregate root `User`, comandos de sign-up/sign-in/update-password, servicios de hashing con BCrypt, servicio y configuración de JWT, repositorio con EF Core, middleware de autorización con atributos personalizados, DTOs REST y los controllers de autenticación y usuarios.
-
----
-
-**Axel Randall Ordonez Ricaldi** *(GitHub: nOOmz / nOOmzzzz)*
-
-Contribución Principal:
-
-- Contribuyó al desarrollo de la sección About Us en el repositorio `IoBuild-LandingPage`.
-- En el backend (`IoBuild-Backend`), participó en el desarrollo de múltiples bounded contexts: Profiles, Projects, Units, Devices y Payments, implementando controllers, servicios y modelos de datos para la gestión integral de recursos IoT y suscripciones.
-
----
-
-*Colaboración en GitHub — IoBuild-LandingPage.*
-
-![Commits Landing Page](https://i.ibb.co/b5sHZjSQ/commitslanding.png)
-
-![Contribuidores Landing Page](https://i.ibb.co/nqyk8HXr/contribuidoreslanding.png)
-
-*Colaboración en GitHub — IoBuild-Backend.*
-
-![Commits Backend](https://i.ibb.co/SD1psTZN/commitsbackend.png)
-
-![Contribuidores Backend](https://i.ibb.co/1SPbRrD/contribuidoresbackend.png)
-
-
-# 4.2.2. Sprint 2
-
-El Sprint 2 se enfoco en la aplicacion Flutter de IoBuild, orientada al Segmento Objetivo #2: propietarios de departamentos. Mientras la aplicacion en Kotlin esta pensada para arquitectos e ingenieros, este sprint priorizo la experiencia del usuario final que administra su espacio, revisa sus dispositivos inteligentes y personaliza su cuenta desde un entorno movil sencillo e intuitivo.
-
-Durante este sprint se consolidaron las funcionalidades mas importantes del segundo segmento objetivo, poniendo primero las user stories de mayor valor para el usuario: ver la lista de dispositivos, agregar nuevos dispositivos, configurar su informacion, gestionar notificaciones y administrar la cuenta. Con esto se busca asegurar que el producto avance desde las tareas mas criticas hacia las complementarias, tal como recomendo el profesor.
-
-## 4.2.2.1. Sprint Planning 2
-
-| Sprint # | Sprint 2 |
-|---|---|
-| **Sprint Planning Background** | |
-| Date | 02/06/2026 |
-| Time | 17:00 PM |
-| Location | Google Meet |
-| Prepared By | Iker Gabriel Barturen Panez |
-| Attendees | Fabrizio Martin Panta Castro, Iker Gabriel Barturen Panez, Axel Randall Ordonez Ricaldi, Brayan Roberto Ccarita Cruz, Mateo Italo Loechle Arias |
-| **Sprint Goal & User Stories** | |
-| Sprint 2 Goal | Our focus is on completing the mobile application experience for apartment owners by implementing device management, notifications, user profile management and smart home monitoring features. We believe this delivers immediate value to residents who need a centralized and intuitive platform to interact with their connected devices and apartment services. This will be confirmed when users can successfully access their dashboard, monitor devices, manage notifications and configure their personal preferences through the Flutter mobile application. |
-| Sprint 2 Velocity | 40 |
-| Sum of Story Points | 40 |
-
-## 4.2.2.2. Sprint Backlog 2
-
-| Story ID | ID Task | Titulo | Descripcion | Estimacion (Horas) | Assigned To | Status |
-|----------|---------|--------|-------------|--------------------|-------------|--------|
-| US15     | TK01    | Visualizar los dispositivos y su distribución por tipo | Como ingeniero, quiero ver cuáles son los dispositivos y cómo están distribuidos por tipo, para realizar un análisis más detallado de los recursos disponibles.| 6| Fabrizio Martin Panta Castro | Done   |
-| US16     | TK02    | Acceder al perfil del usuario      | Como usuario, quiero tener acceso a mi perfil, para ver datos como mi nombre, email, numero de telefono y mi direccion.| 5| Brayan Roberto Ccarita Cruz  | Done   |
-| US17     | TK03    | Edicion de Informacion del Perfil  | Como usuario, quiero poder editar alguna parte de mi informacion, como mi email, numero de telefono o direccion, para mantener mis datos actualizados.| 6| Axel Randall Ordonez Ricaldi | Done   |
-| US18     | TK04    | Ver Imagen que Representa al Usuario| Como usuario, quiero poder ver una imagen que me represente, para tener una experiencia mas personalizada.  | 4| Fabrizio Martin Panta Castro | Done   |
-| US19     | TK05    | Ver el Rol de la Cuenta  | Como usuario, quiero poder ver el rol de mi cuenta, para entender que permisos tengo dentro de la aplicacion.| 4| Mateo Italo Loechle Arias    | Done   |
-| US27     | TK06    | Acceder a la Configuración del Cliente       | Como Arquitecto, quiero acceder a la configuración específica de un cliente para poder realizar acciones de gestión como editar o gestionar el estado de su cuenta.     | 4| Iker Gabriel Barturen Panez  | Done   |
-| US33     | TK07    | Ver Lista de Dispositivos| Como propietario, quiero ver una lista de todos los dispositivos registrados para poder monitorear su estado y ubicacion.       | 3| Iker Gabriel Barturen Panez  | Done   |
-| US34     | TK08    | Agregar un Nuevo Dispositivo       | Como propietario, quiero agregar un nuevo dispositivo al sistema para expandir la cobertura de monitoreo y control.   | 3| Brayan Roberto Ccarita Cruz  | Done   |
-| US35     | TK09    | Editar/Configurar Ajustes de Dispositivo     | Como propietario, quiero acceder a la configuracion especifica de un dispositivo para modificar sus parametros o revisar su informacion detallada.  | 4| Axel Randall Ordonez Ricaldi | Done   |
-| US36     | TK10    | Eliminar un Dispositivo  | Como propietario, quiero poder eliminar un dispositivo que ya no esta en uso o esta defectuoso, para mantener la lista limpia y precisa.  | 5| Fabrizio Martin Panta Castro | Done   |
-| US37     | TK11    | Gestionar Notificaciones | Como usuario, quiero poder activar o desactivar varios tipos de notificaciones para controlar que alertas recibo del sistema.   | 3| Mateo Italo Loechle Arias    | Done   |
-| US38     | TK12    | Cambiar Contrasena de la Cuenta    | Como usuario, quiero poder cambiar mi contrasena periodicamente para mantener la seguridad de mi cuenta.    | 3| Iker Gabriel Barturen Panez  | Done   |
-| US43     | TK13    | Registrarse en la plataforma       | Como usuario, quiero crear una cuenta nueva proporcionando mis datos básicos y seleccionando mi rol, para poder acceder a las funcionalidades de la plataforma.| 5| Axel Randall Ordonez Ricaldi | Done   |
-| TS10     | TK14    | Listar dispositivos      | Como desarrollador, quiero solicitar a la API que liste todos los dispositivos, filtrados por ubicación o estado, para poder mostrar la lista de Gestión de Dispositivos.| 5| Brayan Roberto Ccarita Cruz  | Done   |
-| TS11     | TK15    | Eliminar un dispositivo por id     | Como desarrollador, quiero solicitar a la API que elimine un dispositivo por su {id} para poder retirar hardware que ya no se utiliza del sistema.  | 4| Mateo Italo Loechle Arias    | Done   |
-| TS12     | TK16    | Actualizar información de un proyecto| Como desarrollador, quiero solicitar a la API que actualice la información de un proyecto (nombre, ubicación y descripción) para mantener los datos actualizados en la vista de gestión de proyectos. | 6| Fabrizio Martin Panta Castro | Done   |
-| TS13     | TK17    | Actualizar información de un dispositivo     | Como desarrollador, quiero solicitar a la API que actualice la información de un dispositivo (nombre y ubicación) para reflejar los cambios en la gestión de dispositivos.| 5| Iker Gabriel Barturen Panez  | Done   |
-| TS14     | TK18    | Crear un nuevo dispositivo| Como desarrollador, quiero solicitar a la API que cree un nuevo dispositivo especificando su nombre, tipo y ubicación, para registrar nuevos equipos en el sistema.     | 6| Axel Randall Ordonez Ricaldi | Done   |
-| TS15     | TK19    | Crear ruta segura y mostrar datos específicos| Como desarrollador, quiero proteger el dashboard de fabricantes para que solo los fabricantes puedan visualizarlo.    | 4| Brayan Roberto Ccarita Cruz  | Done   |
-
-## 4.2.2.3. Development Evidence for Sprint Review
-
-Durante el Sprint 2 se implementaron las pantallas principales de la aplicacion Flutter para el segundo segmento objetivo. La funcionalidad desarrollada se centro en la gestion de dispositivos inteligentes, el acceso al perfil del usuario, la edicion de datos personales, la administracion de notificaciones y el cambio de contrasena.
-
-Las evidencias siguientes muestran las pantallas desarrolladas y los flujos mas importantes de la aplicacion Flutter. Se organizaron por recorrido de uso para que la lectura del sprint sea mas clara y para no separar capturas que pertenecen al mismo modulo.
-
-| Evidencia | Descripcion |
-|---|---|
-| ![Login](https://i.ibb.co/JFszLjzL/Whats-App-Image-2026-06-20-at-2-24-00-PM.jpg) | Pantalla de inicio de sesion. Se coloca primero porque representa el punto de entrada a la experiencia de la aplicacion y el acceso inicial del usuario propietario. |
-| ![Inicio - resumen general](https://i.ibb.co/twcdMmjv/Whats-App-Image-2026-06-20-at-2-11-38-PM.jpg) | Pantalla de inicio o panel del propietario. Muestra el resumen general de la cuenta, las unidades asociadas, los dispositivos en linea, el consumo energetico, la temperatura promedio y el numero de alertas. |
-| ![Menu lateral](https://i.ibb.co/Z1dXTWVV/Whats-App-Image-2026-06-20-at-2-11-53-PM.jpg) | Menu lateral de navegacion. Esta vista resume las secciones principales de la app Flutter y permite moverse entre inicio, dispositivos, configuracion, perfil e idioma. |
-| ![Inicio - analiticas](https://i.ibb.co/0yVzzdRr/Whats-App-Image-2026-06-20-at-2-15-22-PM.jpg) | Continuacion de la pantalla de inicio, con los paneles de consumo energetico diario, temperatura de 7 dias y consumo de agua semanal. |
-| ![Inicio - estado de dispositivos](https://i.ibb.co/FkC4GqVD/Whats-App-Image-2026-06-20-at-2-15-22-PM-1.jpg) | Seccion de estado de dispositivos dentro del inicio, donde se visualiza el monitoreo de sensores y equipos registrados en distintas areas del proyecto. |
-| ![Inicio - mis unidades](https://i.ibb.co/9m30ryWb/Whats-App-Image-2026-06-20-at-2-15-22-PM-2.jpg) | Seccion de unidades del propietario dentro del panel principal, donde se listan las unidades asociadas y la cantidad de dispositivos disponibles en cada una. |
-| ![Dispositivos - gestion y registro](https://i.ibb.co/Kxwn4ZPb/Whats-App-Image-2026-06-20-at-1-38-33-PM.jpg) | Pantalla de gestion de dispositivos. Incluye el formulario para agregar un nuevo dispositivo y parte del listado general de equipos registrados. |
-| ![Perfil del usuario](https://i.ibb.co/S492Jf07/Whats-App-Image-2026-06-20-at-1-38-33-PM-1.jpg) | Vista principal la opción agregar dispositivo, con informacion requisitos como el nombre, tipo, etc, para poder registrar nuevos dispositivos. |
-| ![Configuracion](https://i.ibb.co/pvXKVHJG/Whats-App-Image-2026-06-20-at-2-14-19-PM.jpg) | Pantalla de configuracion, donde el usuario puede administrar notificaciones, seguridad y privacidad, correo alternativo y otros ajustes asociados a su cuenta. |
-| ![Edicion de perfil](https://i.ibb.co/GfGzBHny/Whats-App-Image-2026-06-20-at-1-38-33-PM-2.jpg) | Flujo de edicion del perfil, donde el usuario puede modificar sus datos personales y guardar los cambios realizados. |
-| ![Cambio de contrasena](https://i.ibb.co/kgWxqSH4/Whats-App-Image-2026-06-20-at-1-38-33-PM-4.jpg) | Modal de cambio de contrasena, utilizado para reforzar la seguridad de la cuenta del propietario. |
-
-## 4.2.2.4. Testing Suite Evidence for Sprint Review
-
-En esta iteracion del Sprint 2, la validacion se realizo a nivel funcional sobre la aplicacion Flutter, comprobando que los flujos principales del segundo segmento objetivo respondan correctamente dentro de la interfaz. Debido a que en esta fase no se ejecutaron pruebas automatizadas formales con `flutter test`, la evidencia presentada corresponde a pruebas manuales de uso sobre los modulos implementados.
-
-| Evidencia | Descripcion |
-|---|---|
-| ![Eliminacion de dispositivo](https://i.ibb.co/qLD1Qzdg/Whats-App-Image-2026-06-20-at-5-00-39-PM.jpg) | Validacion funcional de eliminacion de dispositivo. La captura muestra el mensaje de confirmacion `Dispositivo eliminado correctamente`, evidenciando que la accion se ejecuto con exito en la interfaz. |
-| ![Agregar dispositivo](https://i.ibb.co/0RpsMGTT/Whats-App-Image-2026-06-20-at-5-00-39-PM-1.jpg) | Flujo de registro de un nuevo dispositivo. En esta prueba se verifico el llenado del formulario con nombre, tipo, ubicacion y direccion MAC antes de guardar la informacion. |
-| ![Dispositivo guardado en la lista](https://i.ibb.co/Hfpphytm/Whats-App-Image-2026-06-20-at-5-00-39-PM-2.jpg) | Resultado del registro del nuevo dispositivo. Se observa que `Ventilador` ya aparece en la lista, confirmando que el alta se reflejo correctamente en la interfaz de gestion. |
-| ![Perfil antes de editar](https://i.ibb.co/235r1CmH/Whats-App-Image-2026-06-20-at-5-00-39-PM-3.jpg) | Estado inicial del perfil antes de la modificacion. Esta captura sirve como referencia de los datos originales del usuario antes de ejecutar la prueba de edicion. |
-| ![Edicion del perfil](https://i.ibb.co/DgMN5L87/Whats-App-Image-2026-06-20-at-5-00-39-PM-4.jpg) | Flujo de edicion del perfil. Durante esta validacion se modificaron el numero telefonico y la direccion del propietario para comprobar que los campos acepten y procesen nuevos valores. |
-| ![Perfil actualizado](https://i.ibb.co/848jtZyp/Whats-App-Image-2026-06-20-at-5-00-39-PM-5.jpg) | Resultado final de la prueba de perfil. La vista confirma que los nuevos datos fueron guardados y mostrados correctamente en la cuenta del usuario. |
-| ![Cambio de configuracion](https://i.ibb.co/cKFXwCCP/Whats-App-Image-2026-06-20-at-5-06-26-PM.jpg) | Validacion funcional del modulo de configuracion. La captura evidencia que el usuario puede activar y desactivar opciones de notificaciones dentro de la interfaz de configuracion de la aplicacion. |
-
-Estas validaciones permitieron comprobar que los modulos principales implementados en Flutter responden de forma coherente dentro del flujo de uso esperado para propietarios de departamentos. En consecuencia, la evidencia del Sprint 2 se presenta como validacion funcional manual de las historias asociadas a dispositivos, perfil y configuracion.
-
-## 4.2.2.5. Execution Evidence for Sprint Review
-
-La ejecucion del Sprint 2 se valido con una secuencia de capturas que muestra primero la preparacion del entorno con `flutter pub get`, luego la ejecucion de la aplicacion y finalmente la pantalla que se obtiene al abrir el enlace generado por Flutter DevTools. Esto permite evidenciar tanto la instalacion de dependencias como la puesta en marcha de la app Flutter.
-
-| Evidencia | Descripcion |
-|---|---|
-| ![Flutter pub get](https://i.ibb.co/tMvjdTT9/Whats-App-Image-2026-06-20-at-2-09-01-PM.jpg) | Evidencia de la instalacion y resolucion de dependencias del proyecto mediante `flutter pub get`, paso necesario antes de ejecutar la aplicacion. |
-| ![Ejecucion Flutter](https://i.ibb.co/sdkymj02/Whats-App-Image-2026-06-20-at-2-09-05-PM.jpg) | Inicio de la ejecucion de la aplicacion con `flutter run`, donde se observa la compilacion del proyecto y las advertencias tecnicas del entorno. |
-| ![Ejecucion en progreso](https://i.ibb.co/mC2sgw3F/Whats-App-Image-2026-06-20-at-2-09-15-PM.jpg) | Ejecucion en curso de la app en dispositivo/emulador, mostrando el log de Flutter y la verificacion de que el proyecto se levanto correctamente. |
-| ![Flutter DevTools](https://i.ibb.co/NdzvPtzX/Whats-App-Image-2026-06-20-at-2-03-56-PM.jpg) | Vista que aparece al abrir el enlace generado por la ejecucion, correspondiente a Flutter DevTools conectado a la app en tiempo real. |
-
-## 4.2.2.6. Services Documentation Evidence for Sprint Review
-
-La aplicacion Flutter del Sprint 2 consume un conjunto especifico de servicios REST del backend `IoBuild-Back`, todos expuestos bajo la base `https://io-build-back.arroz.dev/api/v1/`. A diferencia del Sprint 1, en esta seccion se documentan unicamente los endpoints realmente utilizados por la aplicacion movil orientada al segundo segmento objetivo: propietarios de departamentos.
-
-Despues del inicio de sesion, la app guarda el token JWT y lo envia en las demas peticiones mediante el encabezado `Authorization: Bearer <token>`. Sobre esta base, el Sprint 2 consume servicios de autenticacion, dashboard, perfiles, usuarios y dispositivos.
-
-| Modulo | Metodo | Endpoint | Uso dentro de la app Flutter |
-|---|---|---|---|
-| Authentication | `POST` | `/authentication/sign-in` | Permite el inicio de sesion del propietario y devuelve el token junto con los datos basicos del usuario. |
-| Analytics | `GET` | `/analytics/metrics/{userId}?role=owner` | Alimenta el panel principal del propietario con metricas como unidades, dispositivos, alertas, energia, temperatura y consumo de agua. |
-| Profiles | `GET` | `/users/{userId}/profiles` | Recupera la informacion del perfil del usuario para mostrar nombre, telefono, direccion, foto y correo secundario. |
-| Profiles | `PUT` | `/profiles/{profileId}` | Permite actualizar la informacion editable del perfil desde la app Flutter. |
-| Profiles | `POST` | `/profiles/second-email?userId={userId}` | Registra o actualiza el correo alternativo del usuario. |
-| Users | `PUT` | `/users/{userId}/password` | Permite cambiar la contrasena desde la seccion de perfil y seguridad. |
-| Devices | `GET` | `/devices` | Recupera la lista de dispositivos mostrada en la vista de gestion de dispositivos. |
-| Devices | `GET` | `/devices/{deviceId}` | Permite consultar el detalle de un dispositivo especifico. |
-| Devices | `POST` | `/devices` | Registra un nuevo dispositivo desde el formulario de alta. |
-| Devices | `PUT` | `/devices/{deviceId}` | Actualiza la informacion de un dispositivo existente. |
-| Devices | `DELETE` | `/devices/{deviceId}` | Elimina dispositivos registrados que ya no deben permanecer en la cuenta. |
-
-Es importante precisar que, en esta version del Sprint 2, la pantalla de configuracion no consume un endpoint independiente de notificaciones. Las opciones visibles de notificaciones y soporte se presentan a nivel de interfaz, mientras que algunas acciones complementarias abren enlaces externos como FAQ y contacto. Por ello, no se incluyo una captura separada de un servicio de notificaciones en Swagger, ya que ese endpoint no forma parte del consumo real de la app Flutter en esta iteracion.
-
-Las siguientes capturas de Swagger muestran los grupos de endpoints efectivamente utilizados por la aplicacion Flutter:
-
-| Evidencia | Descripcion |
-|---|---|
-| ![Authentication endpoints](https://i.ibb.co/GvGwP6Jh/Whats-App-Image-2026-06-20-at-4-47-04-PM-2.jpg) | Endpoints del modulo `Authentication`, utilizados para el inicio de sesion de los propietarios mediante `POST /api/v1/authentication/sign-in`. |
-| ![Analytics endpoints](https://i.ibb.co/tNSHCbg/Whats-App-Image-2026-06-20-at-4-47-04-PM-3.jpg) | Endpoints del modulo `Analytics`, donde destaca `GET /api/v1/analytics/metrics/{userId}` para poblar el panel principal del propietario. |
-| ![Profiles endpoints](https://i.ibb.co/rL50qY6/Whats-App-Image-2026-06-20-at-4-47-04-PM-1.jpg) | Endpoints del modulo `Profiles`, utilizados para crear, consultar y actualizar la informacion del perfil, asi como registrar el correo secundario. |
-| ![Users endpoints](https://i.ibb.co/XfkXbMqj/Whats-App-Image-2026-06-20-at-4-47-04-PM.jpg) | Endpoints del modulo `Users`, donde se documentan los servicios relacionados con recuperacion de perfil por usuario y cambio de contrasena. |
-| ![Devices endpoints](https://i.ibb.co/WpGtg9BC/Whats-App-Image-2026-06-20-at-4-47-04-PM-4.jpg) | Endpoints del modulo `Devices`, utilizados para listar, registrar, consultar, actualizar y eliminar dispositivos desde la app Flutter. |
-
-## 4.2.2.7. Software Deployment Evidence for Sprint Review
-
-Durante el Sprint 2 se mantuvo el mismo despliegue del **backend** (`IoBuild-Backend`) utilizado por el proyecto, ya que la aplicacion Flutter del segundo segmento objetivo consume los mismos web services publicados en la nube. El backend se encuentra desplegado en una plataforma cloud compatible con aplicaciones ASP.NET Core, con la configuracion necesaria para la cadena de conexion a base de datos, firma de tokens JWT y servicios de seguridad.
-
-URL de despliegue del backend: `https://io-build-back.arroz.dev/swagger/index.html`
-
-Evidencia del despliegue del backend:
-
-- **Web Services:** API REST activa con URL publica, documentacion Swagger/OpenAPI accesible y endpoints de los bounded contexts respondiendo correctamente con los codigos HTTP esperados (`201`, `200`, `204`, `404`), incluyendo los servicios consumidos por la aplicacion Flutter para autenticacion, dashboard, perfiles, usuarios y dispositivos.
-
-En cuanto a la **aplicacion movil Flutter** (`ioBuild-flutter`), durante este sprint se realizo un despliegue local de tipo `debug build` para Android. Como parte del proceso, primero se resolvieron las dependencias del proyecto con `flutter pub get`, luego se genero exitosamente un artefacto instalable mediante `flutter build apk --debug` y finalmente se verifico la existencia del archivo APK en la ruta de salida del proyecto.
-
-Comandos ejecutados durante el despliegue local:
-
-```powershell
-flutter pub get
-flutter build apk --debug
-Get-ChildItem .\build\app\outputs\flutter-apk\
-```
-
-Resultado del build:
-
-```text
-Built build\app\outputs\flutter-apk\app-debug.apk
-```
-
-Ruta del artefacto generado:
-
-```text
-build\app\outputs\flutter-apk\app-debug.apk
-```
-
-Nombre del artefacto:
-
-```text
-app-debug.apk
-```
-
-Tamano aproximado del APK:
-
-```text
-173,705,663 bytes
-```
-
-Entorno de despliegue:
-
-- Sistema operativo: Windows
-- Framework: Flutter
-- Plataforma objetivo: Android
-- Modo de compilacion: Debug
-- Artefacto generado: APK instalable
-
-Despues de generar el APK, este quedo disponible para instalacion en emulador Android o dispositivo fisico, permitiendo validar la ejecucion de la aplicacion y la navegacion principal del segundo segmento objetivo.
-
-| Evidencia | Descripcion |
-|---|---|
-| ![Flutter pub get para despliegue](https://i.ibb.co/FL06NyLs/Whats-App-Image-2026-06-20-at-5-30-02-PM.jpg) | Resolucion de dependencias del proyecto mediante `flutter pub get`, paso previo necesario para compilar correctamente la aplicacion Flutter. |
-| ![Build APK debug](https://i.ibb.co/8n2BWcLK/Whats-App-Image-2026-06-20-at-5-30-03-PM.jpg) | Ejecucion del comando `flutter build apk --debug`, evidenciando la compilacion local de la aplicacion para Android y la generacion del artefacto instalable. |
-| ![Listado del APK generado](https://i.ibb.co/s9MHgwnG/Whats-App-Image-2026-06-20-at-5-30-03-PM-1.jpg) | Verificacion del contenido de la carpeta `build\app\outputs\flutter-apk\`, donde se confirma la generacion del archivo APK correspondiente al build debug. |
-| ![Archivo APK generado](https://i.ibb.co/wFdbfG1S/Whats-App-Image-2026-06-20-at-5-30-03-PM-2.jpg) | Evidencia del archivo `app-debug.apk` dentro de la ruta de salida del proyecto, confirmando que la aplicacion fue empaquetada exitosamente como artefacto instalable. |
-| ![APK listo para compartir](https://i.ibb.co/CKNtSGSB/Whats-App-Image-2026-06-20-at-5-47-43-PM.jpg) | Evidencia adicional del archivo APK desde el explorador de archivos, mostrando que el artefacto generado se encuentra disponible y listo para ser compartido o enviado para su instalacion en otros dispositivos. |
-
-## 4.2.2.8. Team Collaboration Insights during Sprint
-
-Durante el Sprint 2, el equipo trabajo de forma coordinada para avanzar en la aplicacion Flutter orientada a propietarios de departamentos. La distribucion de tareas se organizo segun las user stories mas importantes, priorizando primero las funciones que aportan mayor valor al usuario final y luego las funcionalidades complementarias. Se mantuvo una comunicacion fluida a traves de reuniones diarias de seguimiento, donde se discutian los avances, bloqueos y ajustes necesarios para cumplir con los objetivos del sprint.
-
-**Evidencia visual de colaboracion**
-
-![Commits Sprint 2](https://i.ibb.co/Pzv4Fky4/Chat-GPT-Image-20-jun-2026-01-37-47-p-m.png)
-
-![Pull Requests Sprint 2](https://i.ibb.co/zWnXfwXR/Whats-App-Image-2026-06-20-at-1-44-51-PM.jpg)
-
-![Organizacion en Trello Sprint 2](https://i.ibb.co/sdnwRWwt/Whats-App-Image-2026-06-20-at-2-01-38-PM.jpg)
-
-*Colaboración en GitHub — IoBuild-Backend.*
-
-![Commits Backend](https://i.ibb.co/SD1psTZN/commitsbackend.png)
-
-![Contribuidores Backend](https://i.ibb.co/1SPbRrD/contribuidoresbackend.png)
-
-
-## 4.2.3. Sprint 3
-
-El Sprint 3 se enfocó en las correcciones finales del informe y de la aplicación móvil en Flutter de IoBuild. A diferencia del Sprint 2, que estuvo orientado principalmente al desarrollo de funcionalidades para el Segmento Objetivo #2, esta iteración priorizó la revisión, mejora y consolidación de los entregables ya implementados, asegurando que tanto la documentación como la aplicación mantuvieran coherencia con las observaciones realizadas por el profesor.
-
-Durante este sprint se corrigieron detalles de redacción, organización y consistencia del informe, además de realizar ajustes finales en la aplicación Flutter para mejorar su presentación, navegación y funcionamiento general. Con ello, se buscó cerrar el desarrollo del producto de manera más ordenada, validando que las evidencias, capturas, funcionalidades y secciones del informe estén alineadas con el avance real del proyecto y cumplan con los criterios solicitados para la entrega final.
-
-## 4.2.3.1. Sprint Planning 3
-
-| Sprint # | Sprint 3 |
-|---|---|
-| **Sprint Planning Background** | |
-| Date | 09/06/2026 |
-| Time | 17:00 PM |
-| Location | Google Meet |
-| Prepared By | Axel Randall Ordonez Ricaldi |
-| Attendees | Fabrizio Martin Panta Castro, Iker Gabriel Barturen Panez, Axel Randall Ordonez Ricaldi, Brayan Roberto Ccarita Cruz, Mateo Italo Loechle Arias |
-| **Sprint Goal & User Stories** | |
-| Sprint 3 Goal | Our focus is on completing the final corrections of the IoBuild report and the Flutter mobile application. We believe this sprint improves the quality of the final delivery by applying the teacher’s feedback, organizing the documentation, fixing inconsistencies and refining the application’s interface and functionality. This will be confirmed when the report sections are coherent, the evidence matches the implemented product, and the Flutter application works correctly with the final adjustments completed. |
-| Sprint 3 Velocity | 20 |
-| Sum of Story Points | 20 |
-
-## 4.2.3.2. Sprint Backlog 3
-
-| Story ID | ID Task | Titulo | Descripcion | Estimacion (Horas) | Assigned To | Status |
-|----------|---------|--------|-------------|--------------------|-------------|--------|
-| US42 | TK01 | Acceder a Ayuda y Soporte | Como usuario, quiero acceder a una sección de ayuda y soporte, para resolver dudas o problemas relacionados con el uso de la aplicación. | 5 | Iker Gabriel Barturen Panez | Done |
-| US46 | TK02 | Acceder al Chatbot de Asistencia | Como usuario, quiero acceder a un chatbot de asistencia, para recibir orientación rápida sobre el uso de la aplicación y sus funcionalidades. | 6 | Brayan Roberto Ccarita Cruz | Done |
-| US47 | TK03 | Escanear Dispositivo con Cámara | Como propietario, quiero escanear un dispositivo utilizando la cámara del celular, para registrarlo o identificarlo de manera más rápida dentro de la aplicación. | 6 | Axel Randall Ordonez Ricaldi | Done |
-| US48 | TK04 | Optimizar automáticamente los dispositivos | Como propietario, quiero optimizar automáticamente mis dispositivos inteligentes, para mejorar su funcionamiento y reducir el consumo energético. | 6 | Mateo Italo Loechle Arias | Done |
-| US41 | TK05 | Añadir Correo Electrónico Alternativo | Como usuario, quiero añadir un correo electrónico alternativo, para contar con otro medio de recuperación y comunicación dentro de la plataforma. | 4 | Fabrizio Martin Panta Castro | Done |
-| US25 | TK06 | Agregar un Nuevo Cliente | Como arquitecto o ingeniero, quiero agregar un nuevo cliente, para registrar su información y asociarlo a los proyectos correspondientes. | 4 | Iker Gabriel Barturen Panez | Done |
-| US44 | TK07 | Iniciar Sesión (Login) | Como usuario, quiero iniciar sesión con mis credenciales, para acceder de forma segura a las funcionalidades de la plataforma. | 4 | Axel Randall Ordonez Ricaldi | Done |
-| US45 | TK08 | Cerrar Sesión (Logout) | Como usuario, quiero cerrar sesión en la aplicación, para proteger mi cuenta cuando termine de utilizar la plataforma. | 3 | Mateo Italo Loechle Arias | Done |
-
-## 4.2.3.4. Testing Suite Evidence for Sprint Review
-
-En esta iteracion del Sprint 2, la validacion se realizo a nivel funcional sobre la aplicacion Flutter, comprobando que los flujos principales del segundo segmento objetivo respondan correctamente dentro de la interfaz. Debido a que en esta fase no se ejecutaron pruebas automatizadas formales con `flutter test`, la evidencia presentada corresponde a pruebas manuales de uso sobre los modulos implementados.
-
-| Evidencia | Descripcion |
-|---|---|
-| ![Eliminacion de dispositivo](https://i.ibb.co/qLD1Qzdg/Whats-App-Image-2026-06-20-at-5-00-39-PM.jpg) | Validacion funcional de eliminacion de dispositivo. La captura muestra el mensaje de confirmacion `Dispositivo eliminado correctamente`, evidenciando que la accion se ejecuto con exito en la interfaz. |
-| ![Agregar dispositivo](https://i.ibb.co/0RpsMGTT/Whats-App-Image-2026-06-20-at-5-00-39-PM-1.jpg) | Flujo de registro de un nuevo dispositivo. En esta prueba se verifico el llenado del formulario con nombre, tipo, ubicacion y direccion MAC antes de guardar la informacion. |
-| ![Dispositivo guardado en la lista](https://i.ibb.co/Hfpphytm/Whats-App-Image-2026-06-20-at-5-00-39-PM-2.jpg) | Resultado del registro del nuevo dispositivo. Se observa que `Ventilador` ya aparece en la lista, confirmando que el alta se reflejo correctamente en la interfaz de gestion. |
-| ![Perfil antes de editar](https://i.ibb.co/235r1CmH/Whats-App-Image-2026-06-20-at-5-00-39-PM-3.jpg) | Estado inicial del perfil antes de la modificacion. Esta captura sirve como referencia de los datos originales del usuario antes de ejecutar la prueba de edicion. |
-| ![Edicion del perfil](https://i.ibb.co/DgMN5L87/Whats-App-Image-2026-06-20-at-5-00-39-PM-4.jpg) | Flujo de edicion del perfil. Durante esta validacion se modificaron el numero telefonico y la direccion del propietario para comprobar que los campos acepten y procesen nuevos valores. |
-| ![Perfil actualizado](https://i.ibb.co/848jtZyp/Whats-App-Image-2026-06-20-at-5-00-39-PM-5.jpg) | Resultado final de la prueba de perfil. La vista confirma que los nuevos datos fueron guardados y mostrados correctamente en la cuenta del usuario. |
-| ![Cambio de configuracion](https://i.ibb.co/cKFXwCCP/Whats-App-Image-2026-06-20-at-5-06-26-PM.jpg) | Validacion funcional del modulo de configuracion. La captura evidencia que el usuario puede activar y desactivar opciones de notificaciones dentro de la interfaz de configuracion de la aplicacion. |
-
-Estas validaciones permitieron comprobar que los modulos principales implementados en Flutter responden de forma coherente dentro del flujo de uso esperado para propietarios de departamentos. En consecuencia, la evidencia del Sprint 2 se presenta como validacion funcional manual de las historias asociadas a dispositivos, perfil y configuracion.
-
-## 4.2.3.5. Execution Evidence for Sprint Review
-
-La ejecucion del Sprint 2 se valido con una secuencia de capturas que muestra primero la preparacion del entorno con `flutter pub get`, luego la ejecucion de la aplicacion y finalmente la pantalla que se obtiene al abrir el enlace generado por Flutter DevTools. Esto permite evidenciar tanto la instalacion de dependencias como la puesta en marcha de la app Flutter.
-
-| Evidencia | Descripcion |
-|---|---|
-| ![Flutter pub get](https://i.ibb.co/tMvjdTT9/Whats-App-Image-2026-06-20-at-2-09-01-PM.jpg) | Evidencia de la instalacion y resolucion de dependencias del proyecto mediante `flutter pub get`, paso necesario antes de ejecutar la aplicacion. |
-| ![Ejecucion Flutter](https://i.ibb.co/sdkymj02/Whats-App-Image-2026-06-20-at-2-09-05-PM.jpg) | Inicio de la ejecucion de la aplicacion con `flutter run`, donde se observa la compilacion del proyecto y las advertencias tecnicas del entorno. |
-| ![Ejecucion en progreso](https://i.ibb.co/mC2sgw3F/Whats-App-Image-2026-06-20-at-2-09-15-PM.jpg) | Ejecucion en curso de la app en dispositivo/emulador, mostrando el log de Flutter y la verificacion de que el proyecto se levanto correctamente. |
-| ![Flutter DevTools](https://i.ibb.co/NdzvPtzX/Whats-App-Image-2026-06-20-at-2-03-56-PM.jpg) | Vista que aparece al abrir el enlace generado por la ejecucion, correspondiente a Flutter DevTools conectado a la app en tiempo real. |
-
-## 4.2.3.6. Services Documentation Evidence for Sprint Review
-
-La aplicacion Flutter del Sprint 2 consume un conjunto especifico de servicios REST del backend `IoBuild-Back`, todos expuestos bajo la base `https://io-build-back.arroz.dev/api/v1/`. A diferencia del Sprint 1, en esta seccion se documentan unicamente los endpoints realmente utilizados por la aplicacion movil orientada al segundo segmento objetivo: propietarios de departamentos.
-
-Despues del inicio de sesion, la app guarda el token JWT y lo envia en las demas peticiones mediante el encabezado `Authorization: Bearer <token>`. Sobre esta base, el Sprint 2 consume servicios de autenticacion, dashboard, perfiles, usuarios y dispositivos.
-
-| Modulo | Metodo | Endpoint | Uso dentro de la app Flutter |
-|---|---|---|---|
-| Authentication | `POST` | `/authentication/sign-in` | Permite el inicio de sesion del propietario y devuelve el token junto con los datos basicos del usuario. |
-| Analytics | `GET` | `/analytics/metrics/{userId}?role=owner` | Alimenta el panel principal del propietario con metricas como unidades, dispositivos, alertas, energia, temperatura y consumo de agua. |
-| Profiles | `GET` | `/users/{userId}/profiles` | Recupera la informacion del perfil del usuario para mostrar nombre, telefono, direccion, foto y correo secundario. |
-| Profiles | `PUT` | `/profiles/{profileId}` | Permite actualizar la informacion editable del perfil desde la app Flutter. |
-| Profiles | `POST` | `/profiles/second-email?userId={userId}` | Registra o actualiza el correo alternativo del usuario. |
-| Users | `PUT` | `/users/{userId}/password` | Permite cambiar la contrasena desde la seccion de perfil y seguridad. |
-| Devices | `GET` | `/devices` | Recupera la lista de dispositivos mostrada en la vista de gestion de dispositivos. |
-| Devices | `GET` | `/devices/{deviceId}` | Permite consultar el detalle de un dispositivo especifico. |
-| Devices | `POST` | `/devices` | Registra un nuevo dispositivo desde el formulario de alta. |
-| Devices | `PUT` | `/devices/{deviceId}` | Actualiza la informacion de un dispositivo existente. |
-| Devices | `DELETE` | `/devices/{deviceId}` | Elimina dispositivos registrados que ya no deben permanecer en la cuenta. |
-
-Es importante precisar que, en esta version del Sprint 2, la pantalla de configuracion no consume un endpoint independiente de notificaciones. Las opciones visibles de notificaciones y soporte se presentan a nivel de interfaz, mientras que algunas acciones complementarias abren enlaces externos como FAQ y contacto. Por ello, no se incluyo una captura separada de un servicio de notificaciones en Swagger, ya que ese endpoint no forma parte del consumo real de la app Flutter en esta iteracion.
-
-Las siguientes capturas de Swagger muestran los grupos de endpoints efectivamente utilizados por la aplicacion Flutter:
-
-| Evidencia | Descripcion |
-|---|---|
-| ![Authentication endpoints](https://i.ibb.co/GvGwP6Jh/Whats-App-Image-2026-06-20-at-4-47-04-PM-2.jpg) | Endpoints del modulo `Authentication`, utilizados para el inicio de sesion de los propietarios mediante `POST /api/v1/authentication/sign-in`. |
-| ![Analytics endpoints](https://i.ibb.co/tNSHCbg/Whats-App-Image-2026-06-20-at-4-47-04-PM-3.jpg) | Endpoints del modulo `Analytics`, donde destaca `GET /api/v1/analytics/metrics/{userId}` para poblar el panel principal del propietario. |
-| ![Profiles endpoints](https://i.ibb.co/rL50qY6/Whats-App-Image-2026-06-20-at-4-47-04-PM-1.jpg) | Endpoints del modulo `Profiles`, utilizados para crear, consultar y actualizar la informacion del perfil, asi como registrar el correo secundario. |
-| ![Users endpoints](https://i.ibb.co/XfkXbMqj/Whats-App-Image-2026-06-20-at-4-47-04-PM.jpg) | Endpoints del modulo `Users`, donde se documentan los servicios relacionados con recuperacion de perfil por usuario y cambio de contrasena. |
-| ![Devices endpoints](https://i.ibb.co/WpGtg9BC/Whats-App-Image-2026-06-20-at-4-47-04-PM-4.jpg) | Endpoints del modulo `Devices`, utilizados para listar, registrar, consultar, actualizar y eliminar dispositivos desde la app Flutter. |
-
-## 4.2.3.7. Software Deployment Evidence for Sprint Review
-
-Durante el Sprint 2 se mantuvo el mismo despliegue del **backend** (`IoBuild-Backend`) utilizado por el proyecto, ya que la aplicacion Flutter del segundo segmento objetivo consume los mismos web services publicados en la nube. El backend se encuentra desplegado en una plataforma cloud compatible con aplicaciones ASP.NET Core, con la configuracion necesaria para la cadena de conexion a base de datos, firma de tokens JWT y servicios de seguridad.
-
-URL de despliegue del backend: `https://io-build-back.arroz.dev/swagger/index.html`
-
-Evidencia del despliegue del backend:
-
-- **Web Services:** API REST activa con URL publica, documentacion Swagger/OpenAPI accesible y endpoints de los bounded contexts respondiendo correctamente con los codigos HTTP esperados (`201`, `200`, `204`, `404`), incluyendo los servicios consumidos por la aplicacion Flutter para autenticacion, dashboard, perfiles, usuarios y dispositivos.
-
-En cuanto a la **aplicacion movil Flutter** (`ioBuild-flutter`), durante este sprint se realizo un despliegue local de tipo `debug build` para Android. Como parte del proceso, primero se resolvieron las dependencias del proyecto con `flutter pub get`, luego se genero exitosamente un artefacto instalable mediante `flutter build apk --debug` y finalmente se verifico la existencia del archivo APK en la ruta de salida del proyecto.
-
-Comandos ejecutados durante el despliegue local:
-
-```powershell
-flutter pub get
-flutter build apk --debug
-Get-ChildItem .\build\app\outputs\flutter-apk\
-```
-
-Resultado del build:
-
-```text
-Built build\app\outputs\flutter-apk\app-debug.apk
-```
-
-Ruta del artefacto generado:
-
-```text
-build\app\outputs\flutter-apk\app-debug.apk
-```
-
-Nombre del artefacto:
-
-```text
-app-debug.apk
-```
-
-Tamano aproximado del APK:
-
-```text
-173,705,663 bytes
-```
-
-Entorno de despliegue:
-
-- Sistema operativo: Windows
-- Framework: Flutter
-- Plataforma objetivo: Android
-- Modo de compilacion: Debug
-- Artefacto generado: APK instalable
-
-Despues de generar el APK, este quedo disponible para instalacion en emulador Android o dispositivo fisico, permitiendo validar la ejecucion de la aplicacion y la navegacion principal del segundo segmento objetivo.
-
-| Evidencia | Descripcion |
-|---|---|
-| ![Flutter pub get para despliegue](https://i.ibb.co/FL06NyLs/Whats-App-Image-2026-06-20-at-5-30-02-PM.jpg) | Resolucion de dependencias del proyecto mediante `flutter pub get`, paso previo necesario para compilar correctamente la aplicacion Flutter. |
-| ![Build APK debug](https://i.ibb.co/8n2BWcLK/Whats-App-Image-2026-06-20-at-5-30-03-PM.jpg) | Ejecucion del comando `flutter build apk --debug`, evidenciando la compilacion local de la aplicacion para Android y la generacion del artefacto instalable. |
-| ![Listado del APK generado](https://i.ibb.co/s9MHgwnG/Whats-App-Image-2026-06-20-at-5-30-03-PM-1.jpg) | Verificacion del contenido de la carpeta `build\app\outputs\flutter-apk\`, donde se confirma la generacion del archivo APK correspondiente al build debug. |
-| ![Archivo APK generado](https://i.ibb.co/wFdbfG1S/Whats-App-Image-2026-06-20-at-5-30-03-PM-2.jpg) | Evidencia del archivo `app-debug.apk` dentro de la ruta de salida del proyecto, confirmando que la aplicacion fue empaquetada exitosamente como artefacto instalable. |
-| ![APK listo para compartir](https://i.ibb.co/CKNtSGSB/Whats-App-Image-2026-06-20-at-5-47-43-PM.jpg) | Evidencia adicional del archivo APK desde el explorador de archivos, mostrando que el artefacto generado se encuentra disponible y listo para ser compartido o enviado para su instalacion en otros dispositivos. |
-
-## 4.2.3.8. Team Collaboration Insights during Sprint
-
-Durante el Sprint 2, el equipo trabajo de forma coordinada para avanzar en la aplicacion Flutter orientada a propietarios de departamentos. La distribucion de tareas se organizo segun las user stories mas importantes, priorizando primero las funciones que aportan mayor valor al usuario final y luego las funcionalidades complementarias. Se mantuvo una comunicacion fluida a traves de reuniones diarias de seguimiento, donde se discutian los avances, bloqueos y ajustes necesarios para cumplir con los objetivos del sprint.
-
-**Evidencia visual de colaboracion**
-
-![Commits Sprint 2](https://i.ibb.co/Pzv4Fky4/Chat-GPT-Image-20-jun-2026-01-37-47-p-m.png)
-
-![Pull Requests Sprint 2](https://i.ibb.co/zWnXfwXR/Whats-App-Image-2026-06-20-at-1-44-51-PM.jpg)
-
-![Organizacion en Trello Sprint 2](https://i.ibb.co/sdnwRWwt/Whats-App-Image-2026-06-20-at-2-01-38-PM.jpg)
-
-*Colaboración en GitHub — IoBuild-Backend.*
-
-![Commits Backend](https://i.ibb.co/SD1psTZN/commitsbackend.png)
-
-![Contribuidores Backend](https://i.ibb.co/1SPbRrD/contribuidoresbackend.png)
-
-
-
-
-#### 4.3. Validation Interviews
-
-##### 4.3.1. Diseño de Entrevistas
-
-Para validar la propuesta de IoBuild se realizó una entrevista semiestructurada a un usuario representativo del segundo segmento objetivo del proyecto. En el Sprint 2, el enfoque principal estuvo en los propietarios de departamentos, debido a que la aplicación Flutter está orientada a este grupo de usuarios.
-
-El objetivo de la entrevista fue identificar si las funcionalidades desarrolladas responden a necesidades reales, comprender la percepción del usuario sobre la gestión de dispositivos inteligentes y recoger observaciones sobre la facilidad de uso de la aplicación.
-
-La estructura de la entrevista fue sencilla:
-
-- Presentación breve del proyecto.
-- Preguntas de contexto sobre el usuario.
-- Preguntas sobre sus necesidades actuales.
-- Preguntas sobre la utilidad de IoBuild.
-- Cierre con sugerencias y comentarios.
-
-URL de la entrevista:
-
-https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215004_upc_edu_pe/IQB0wUmgIUlAQ5Qhd0xoGsypAQ8-fdFbPCivjLECi-FCrho?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=UJb35j
-
-Preguntas guía utilizadas:
-
-1. ¿Qué tipo de departamento o espacio administra actualmente y con qué frecuencia necesita supervisarlo?
-2. ¿Cómo controla actualmente los dispositivos o servicios de su espacio y qué dificultades encuentra en ese proceso?
-3. ¿Qué tan útil le parece contar con una aplicación móvil para visualizar el estado de sus dispositivos, consumo y alertas?
-4. ¿Qué tan clara le resulta la navegación de la aplicación entre inicio, dispositivos, configuración y perfil?
-5. ¿Qué tan sencillo le parece el proceso de agregar, visualizar o eliminar un dispositivo dentro de la aplicación?
-6. ¿Qué tan útil le parece poder editar su información personal, cambiar su contraseña y configurar notificaciones desde la app?
-7. ¿Considera que la información mostrada en el dashboard y en la lista de dispositivos es suficiente para tomar decisiones sobre su espacio? ¿Qué agregaría?
-8. ¿Qué problemas, confusiones o dificultades cree que podría tener al usar esta aplicación por primera vez?
-9. ¿Qué funcionalidad considera más valiosa dentro de la app y cuál mejoraría?
-10. ¿Usaría una aplicación como IoBuild en su vida diaria? ¿Por qué?
-
-##### 4.3.2. Registro de Entrevistas
-
-La entrevista se registró en un formato simple para facilitar su posterior análisis. El registro incluye la fecha, el entrevistado, el segmento al que pertenece y los hallazgos principales.
-
-| ID | Fecha | Entrevistado | Segmento | Modalidad | Hallazgos principales | Observaciones |
-|------|------------|------------------|------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| E01 | 20/06/2026 | Julio Gómez | Propietario de departamento | Virtual | El entrevistado administra un departamento en alquiler con varios dispositivos IoT y actualmente debe supervisarlos con una frecuencia aproximada de un mes. Identificó como principal dificultad la falta de unificación entre dispositivos de distintas marcas, por lo que consideró muy valioso que IoBuild centralice en una sola aplicación el estado de los equipos, consumos, alertas y opciones de control. También indicó que la navegación le resultó clara, que los procesos de agregar, editar y eliminar dispositivos son sencillos y que la gestión de perfil, contraseña y notificaciones es útil para el uso cotidiano. | La funcionalidad que consideró más valiosa fue el sistema de alertas y monitoreo del estado de los dispositivos. Confirmó que utilizaría una aplicación como IoBuild en su vida diaria porque le permitiría ahorrar tiempo y gestionar mejor todos sus equipos desde un solo lugar. |
-
-El registro permitió identificar hallazgos clave relacionados con la necesidad de una interfaz clara, acceso rápido a las funciones principales y una navegación sencilla dentro de la aplicación. Asimismo, confirmó que la propuesta de centralizar el control de dispositivos en una sola plataforma genera valor real para el segundo segmento objetivo.
-
-##### 4.3.3. Evaluaciones según heurísticas
-
-Esta sección contiene el proceso de evaluación de la sesión de validación basado en heurísticas, considerando principios de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta. Para ello se utilizó como referencia el formato del Anexo E: Formato para Evaluación de User Experience según Heurísticas.
-
-**UX Heuristics & Principles Evaluation**
-**Usability - Inclusive Design - Information Architecture**
-
-| Campo  | Detalle |
-| ---------------- | ----------------------------------------------- |
-| Carrera| Ingeniería de Software      |
-| Curso  | 1ACC0238 Aplicaciones para Dispositivos Móviles |
-| Sección| 3687    |
-| Profesor| David Gerardo Quevedo Velasco|
-| Auditor| CcaritaTech       |
-| Cliente evaluado | Julio Gómez       |
-
-**Nota:** Los contenidos de esta evaluación corresponden a la aplicación Flutter de IoBuild validada durante el Sprint 2. Se utiliza el formato del Anexo E como referencia para documentar hallazgos de usabilidad, arquitectura de información e inclusive design.
-
-**Site o app a evaluar:** IoBuild Flutter - Segmento de propietarios de departamentos
-
-**Tareas a evaluar**
-
-El alcance de esta evaluación incluye la revisión de usabilidad de las siguientes tareas:
-
-1. Inicio de sesión en la aplicación.
-2. Revisión del panel del propietario.
-3. Navegación entre inicio, dispositivos, configuración y perfil.
-4. Visualización de la lista de dispositivos registrados.
-5. Registro de un nuevo dispositivo.
-6. Eliminación de un dispositivo.
-7. Edición de información del perfil.
-8. Cambio de contraseña.
-9. Activación y desactivación de notificaciones.
-10. Revisión del estado de dispositivos, alertas y métricas de consumo.
-
-No están incluidas en esta versión de la evaluación las siguientes tareas:
-
-1. Registro de nuevos usuarios.
-2. Autenticación de dos factores.
-3. Distribución externa del APK en tiendas o servicios públicos.
-4. Gestión de soporte o contacto más allá de enlaces externos.
-5. Integraciones avanzadas con dispositivos físicos reales en tiempo real.
-
-**Escala de severidad**
-
-Los errores fueron puntuados tomando en cuenta la siguiente escala de severidad:
-
-| Nivel | Descripción|
-| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1     | Problema superficial: puede ser fácilmente superado por el usuario y ocurre con muy poca frecuencia. No necesita ser arreglado a menos que exista disponibilidad de tiempo.|
-| 2     | Problema menor: puede ocurrir con poca frecuencia o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja para resolverlo de cara al siguiente release. |
-| 3     | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlo con facilidad. Es importante que sea corregido y se le debe asignar una prioridad alta. |
-| 4     | Problema crítico: error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento.    |
-
-### Tabla resumen de evaluación
-
-| # | Problema      | Escala de severidad | Heurística o principio violado     |
-| - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ------------------------------------------------------ |
-| 1 | El formulario para agregar dispositivo aparece sobre la misma pantalla de listado y puede generar distracción visual o confusión durante la tarea.| 2| Usability: Libertad y control del usuario    |
-| 2 | La lista de dispositivos muestra columnas o textos parcialmente recortados, lo que dificulta interpretar con claridad algunos datos del dispositivo.      | 2| Usability: Consistencia y estándares|
-| 3 | Algunas opciones de configuración, como autenticación de dos factores o dispositivos conectados, aparecen disponibles visualmente aunque no forman parte de la validación funcional del sprint.   | 3| Information Architecture: Is it usable?      |
-| 4 | El cambio de notificaciones no muestra una confirmación explícita de guardado o persistencia, por lo que el usuario puede dudar si el cambio fue aplicado correctamente.      | 2| Usability: Visibilidad del estado del sistema|
-| 5 | La información del perfil y de ciertas vistas extensas puede quedar muy densa para algunos usuarios, especialmente cuando se muestran direcciones largas o múltiples bloques de datos en una sola pantalla. | 1| Inclusive Design: Proporciona experiencias comparables |
-
-### Descripción de problemas
-
-**Problema #1: El formulario para agregar dispositivo aparece sobre la misma pantalla de listado y puede generar distracción visual o confusión durante la tarea.**
-**Severidad:** 2
-**Heurística violada:** Usability - Libertad y control del usuario
-**Problema:** Durante la validación se observó que el flujo de alta de dispositivos se presenta dentro de la misma vista de gestión, superpuesto al listado existente. Aunque el usuario entrevistado consideró que el proceso es sencillo, visualmente la pantalla mezcla el formulario con el contenido ya registrado, lo que puede dificultar la concentración o hacer menos evidente cómo cancelar la acción y volver al estado anterior.
-**Recomendación:** Separar el alta de dispositivos en un modal más delimitado o en una pantalla independiente, incorporando además controles de cierre más visibles y una jerarquía visual más clara entre "Agregar", "Guardar" y "Cancelar".
-
-**Problema #2: La lista de dispositivos muestra columnas o textos parcialmente recortados, lo que dificulta interpretar con claridad algunos datos del dispositivo.**
-**Severidad:** 2
-**Heurística violada:** Usability - Consistencia y estándares
-**Problema:** En la vista de gestión de dispositivos algunos encabezados o valores quedan truncados por el ancho disponible, lo cual afecta la lectura del tipo, la ubicación u otros atributos del equipo. Este detalle no bloquea la tarea, pero puede generar errores de interpretación cuando la lista crezca o cuando el usuario necesite revisar información rápidamente.
-**Recomendación:** Ajustar el diseño responsivo de la tabla o lista para priorizar campos clave, usar tarjetas por dispositivo, permitir scroll horizontal controlado o mostrar un detalle expandible cuando el contenido exceda el espacio disponible.
-
-**Problema #3: Algunas opciones de configuración aparecen disponibles visualmente aunque no forman parte del flujo funcional validado en esta versión.**
-**Severidad:** 3
-**Heurística violada:** Information Architecture - Is it usable?
-**Problema:** En la pantalla de configuración se muestran opciones como autenticación de dos factores o dispositivos conectados, pero no todas cuentan con una funcionalidad plenamente validada dentro del sprint. Esto puede generar expectativas incorrectas en el usuario, que percibe estas opciones como completamente operativas aunque aún formen parte de una evolución posterior.
-**Recomendación:** Ocultar temporalmente las opciones no implementadas, marcarlas como "Próximamente" o deshabilitarlas visualmente con una explicación breve que aclare su disponibilidad futura.
-
-**Problema #4: El cambio de notificaciones no muestra una confirmación explícita de guardado o persistencia.**
-**Severidad:** 2
-**Heurística violada:** Usability - Visibilidad del estado del sistema
-**Problema:** Durante la validación funcional se comprobó que es posible activar y desactivar interruptores de notificación. Sin embargo, la interfaz no muestra un mensaje claro que confirme si el cambio fue almacenado, si se mantiene al salir de la pantalla o si solo se trata de un cambio visual temporal.
-**Recomendación:** Agregar retroalimentación inmediata como un mensaje de confirmación, indicador de guardado automático o estado persistente visible para que el usuario tenga certeza de que la acción fue aplicada.
-
-**Problema #5: La información del perfil y de ciertas vistas extensas puede resultar visualmente densa para algunos usuarios.**
-**Severidad:** 1
-**Heurística violada:** Inclusive Design - Proporciona experiencias comparables
-**Problema:** Aunque la navegación fue valorada como intuitiva por el entrevistado, algunas pantallas concentran varios bloques de información, textos largos y controles en una sola vista. Esto puede afectar a usuarios con menor familiaridad digital o con dificultades de lectura rápida en dispositivos móviles.
-**Recomendación:** Incrementar el espaciado visual, resumir datos secundarios, usar mejor jerarquía tipográfica y considerar ayudas visuales adicionales para que el contenido sea más fácil de escanear en pantallas pequeñas.
-
-En conjunto, la evaluación heurística muestra que la aplicación ofrece una base sólida de navegación y utilidad para el segundo segmento objetivo, algo que además fue reforzado por la entrevista realizada. No obstante, también revela oportunidades claras de mejora en feedback visual, organización de opciones y claridad de algunas vistas antes de una versión más madura del producto.
-
-# Conclusiones
-
-El desarrollo del Sprint 2 permitió consolidar la experiencia móvil de IoBuild para el segundo segmento objetivo: propietarios de departamentos. A diferencia del Sprint 1, enfocado en la aplicación Kotlin para arquitectos e ingenieros, este sprint se orientó a construir una solución en Flutter pensada para usuarios finales que necesitan supervisar sus espacios, revisar información relevante y gestionar dispositivos inteligentes desde una interfaz sencilla.
-
-La aplicación Flutter logró integrar funcionalidades centrales para el propietario, como el inicio de sesión, visualización del panel principal, gestión de dispositivos, edición de perfil, cambio de contraseña y configuración de notificaciones. Estas funcionalidades responden directamente a las necesidades identificadas durante la validación, especialmente la importancia de centralizar en una sola aplicación el monitoreo de equipos, alertas y datos del departamento.
-
-El Sprint 2 también permitió validar la conexión entre la aplicación móvil y el backend compartido del proyecto. La app Flutter consume servicios de autenticación, perfiles, usuarios, métricas y dispositivos, utilizando la API REST desplegada y documentada mediante Swagger/OpenAPI. Esto demuestra que la solución mantiene trazabilidad entre frontend móvil, servicios backend y evidencia técnica del funcionamiento de los endpoints utilizados.
-
-Como parte de la evidencia de ejecución y despliegue, se comprobó que el proyecto Flutter puede resolver dependencias, ejecutarse correctamente y generar un APK en modo debug para Android. La creación del archivo `app-debug.apk` confirma que la aplicación puede empaquetarse como artefacto instalable, lo cual representa un avance importante hacia la validación funcional en emuladores o dispositivos físicos.
-
-La entrevista de validación realizada reforzó la relevancia de la propuesta para propietarios de departamentos. El usuario entrevistado valoró especialmente la posibilidad de unificar la gestión de dispositivos de distintas marcas, revisar alertas y acceder a información del estado del espacio desde una sola plataforma. Además, indicó que la navegación de la aplicación resulta clara y que los flujos principales, como agregar dispositivos o editar el perfil, son fáciles de comprender.
-
-La evaluación heurística permitió identificar oportunidades de mejora antes de una versión más madura del producto. Aunque la aplicación presenta una base funcional sólida, se detectaron aspectos a optimizar en claridad visual, retroalimentación del sistema, organización de opciones y densidad de información en algunas pantallas. Estos hallazgos son útiles para priorizar ajustes de usabilidad en próximos releases.
-
-En conclusión, el Sprint 2 fortaleció la propuesta de IoBuild al demostrar que la plataforma puede atender a dos segmentos diferenciados mediante aplicaciones móviles específicas. La app Flutter aporta valor directo a propietarios de departamentos al ofrecer una experiencia práctica, centralizada y orientada al control de dispositivos inteligentes, mientras que el backend común asegura continuidad técnica, reutilización de servicios y coherencia dentro del ecosistema del proyecto.
-
-## Bibliografía
-- CEELA. (2024). Perú – Proyecto CEELA – Eficiencia energética en edificios. Rescato de https://proyectoceela.com/
-- Nexoinmobiliario. (2025). ¿Vale la pena comprar un departamento con certificación LEED Lima?. Rescato de https://shorturl.at/aRS1m
-- JLL. (2024). Evolución sostenible: Edificios verdes en América Latina. Rescato de https://shorturl.at/QNYAH
-- Digi. (2024). IoT Aplicaciones para edificios inteligentes: Casos de uso y principales ventajas. Rescato de https://shorturl.at/idxvo
-- Domotec. (n.d.). Inicio. Rescato de https://www.domotecperu.com/
-- MWF Solutions. (n.d.). Incio. Rescato de https://mwfsolutions.pe/
-- Orbivo Perú. (n.d.). Inicio. Rescato de https://orviboperu.com.pe/
-- Lucid Software Inc. (n.d.). Lucidchart. Rescatado de https://www.lucidchart.com/
-- Structurizr Ltd. (n.d.). Structurizr. Rescatado de https://structurizr.com/
-- Fowler, M. (2013). GivenWhenThen. Rescatado de https://shorturl.at/mqTb5
-- Git SCM. (n.d.). Git. Rescatado de https://git-scm.com/
-
-## Anexos
-
-#### ANEXO A: Investigación y Análisis de Usuarios
-
-Este anexo contiene la evidencia de la investigación que valida la necesidad de la plataforma IoBuild y sustenta las decisiones de diseño centradas en el usuario.
-
-**Repositorio de la organización**
-<https://github.com/CcaritaTech>
-
-**URL de las entrevistas: upc-pre-2025200-1asi0730-7461-CcaritaTech-needfinding**
-<>
-
-<div style="page-break-before: always;"></div>
-
-#### ANEXO B: Documentación del Diseño y la Experiencia de Usuario (UX/UI)
-
-Este anexo incluye los artefactos visuales y la documentación del proceso de diseño que demuestran la planificación de la experiencia de usuario y la interfaz de la plataforma IoBuild.
-
-**Lean UX Canvas**
-<https://url-shortener.me/16XS>
-
-**User Persona**
-- Arquitectos e Ingenieros Civiles
-<https://shorturl.at/u03eE>
-
-- Propietaros de Apartamentos
-<https://shorturl.at/6letU>
-
-**Empathy Mapping**
-- Arquitectos e Ingenieros Civiles
-<https://shorturl.at/OweNc>
-
-- Propietaros de Apartamentos
-<https://url-shortener.me/16XB>
-
-**User Journey Map**
-- Arquitectos e Ingenieros Civiles
-<https://url-shortener.me/16XF>
-
-- Propietaros de Apartamentos
-<https://url-shortener.me/16XI>
-
-**Impact Mapping**
-<https://tinyurl.com/ytzz3rdn>
-
-
+La documentación se deriva de los archivos de endpoints del repositorio actual:
+
+- [IAM](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/IAM/Interfaces/REST/IamEndpoints.cs)
+- [Publishing](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/Publishing/Interfaces/REST/PublishingEndpoints.cs)
+- [Profiles](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/Profiles/Interfaces/REST/ProfilesEndpoints.cs)
+- [Devices](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/Devices/Interfaces/REST/DevicesEndpoints.cs)
+- [Analytics](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/Analytics/Interfaces/REST/AnalyticsEndpoints.cs)
+- [Subscriptions](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/Subscriptions/Interfaces/REST/SubscriptionsEndpoints.cs)
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+### 5.2.8. Team Collaboration Insights 
+
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+## 5.3. Video About-the-Product. 

@@ -908,7 +908,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 | Device State | El estado operativo actual de un dispositivo, como 'En línea', 'Fuera de línea', 'Batería baja' o 'Error'. |
 | Billing Cycle | Periodo recurrente en el que se factura al Cliente por el servicio de la suscripción. |
 
-
+<div style="page-break-before: always;"></div>
 
 # Capítulo III: Requirements Specification
 
@@ -925,19 +925,15 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 | EP02 | Gestión de cuentas y acceso | Como ingeniero quiero crear una cuenta para acceder a las funcionalidades de la aplicación |
 | EP03 | Internacionalización de la plataforma | Como arquitecto, quiero que la aplicación esté disponible en más de un idioma para seleccionar el idioma de mi preferencia. |
 | EP04 | Personalización de espacios inteligentes | Como propietario, quiero personalizar la configuración de mi vivienda y/o edificio, para adaptar el espacio a mis necesidades. |
-| EP05 | Gestión de notificaciones | Como propietario, quiero recibir notificaciones relevantes sobre mis proyectos o configuraciones, para mantenerme informado en tiempo real. |
-| EP06 | Gestión de perfil de usuario | Como usuario propietario, quiero actualizar la información de mi perfil, para personalizar mi experiencia en la plataforma. |
-| EP07 | Dashboard de personalización del espacio | Como propietario, quiero acceder a un dashboard, para supervisar los dispositivos de mi departamento. |
-| EP08 | Gestión de clientes y entregables | Como ingeniero, quiero gestionar la información de mis clientes, para mantener un control organizado de los proyectos. |
-| EP09 | Gestión de proyectos inteligentes | Como arquitecto, quiero gestionar proyectos de construcción en la plataforma, para integrar funcionalidades inteligentes desde la planificación. |
-| EP10 | Seguridad y Privacidad de Datos | Como desarrollador, quiero implementar protocolos de seguridad y privacidad de datos, para proteger la información de los usuarios. |
-| EP11 | Gestión de dispositivos inteligentes | Como Desarrollador, quiero implementar un sistema de gestión de dispositivos inteligentes, para que permita registrar, modificar y asignar dispositivos disponibles dentro de un espacio. |
-| EP12 | Gestión de energía en tiempo real | Como Desarrollador, quiero implementar un sistema de monitoreo energético, para que los usuarios puedan consultar el uso de energía en sus espacios. |
-| EP13 | Gestión de usuarios | Como desarrollador, quiero gestionar a los usuarios de la plataforma, para asegurar un control adecuado de accesos, roles y permisos |
-| EP14 | Asistente Inteligente | Como usuario, quiero acceder a un chatbot impulsado por IA para resolver dudas y obtener asistencia sobre la plataforma IoBuild. |
-| EP15 | Integración con IA para Dispositivos | Como usuario, quiero utilizar herramientas de IA para facilitar la gestión y optimización de dispositivos conectados, incluyendo escaneo y automatización. |
+| EP05 | Gestión de perfil de usuario | Como usuario propietario, quiero actualizar la información de mi perfil, para personalizar mi experiencia en la plataforma. |
+| EP06 | Dashboard de personalización del espacio | Como propietario, quiero acceder a un dashboard, para supervisar los dispositivos de mi departamento. |
+| EP07 | Gestión de clientes y entregables | Como ingeniero, quiero gestionar la información de mis clientes, para mantener un control organizado de los proyectos. |
+| EP08 | Gestión de proyectos inteligentes | Como arquitecto, quiero gestionar proyectos de construcción en la plataforma, para integrar funcionalidades inteligentes desde la planificación. |
+| EP09 | Gestión de dispositivos inteligentes | Como Desarrollador, quiero implementar un sistema de gestión de dispositivos inteligentes, para que permita registrar, modificar y asignar dispositivos disponibles dentro de un espacio. |
+| EP10 | Gestión de energía en tiempo real | Como Desarrollador, quiero implementar un sistema de monitoreo energético, para que los usuarios puedan consultar el uso de energía en sus espacios. |
+| EP11 | Gestión de usuarios | Como desarrollador, quiero gestionar a los usuarios de la plataforma, para asegurar un control adecuado de accesos, roles y permisos |
 
-### User Stories
+### 3.2.1. User Stories
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
@@ -1025,19 +1021,19 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US08</td><td>usuario</td><td>Alta</td><td>EP07</td></tr>
-    <tr><th>Title</th><td colspan="3">Visualizar el dashboard personalizado</td></tr>
+    <tr><td>US08</td><td>usuario (constructor o propietario)</td><td>Alta</td><td>EP06</td></tr>
+    <tr><th>Title</th><td colspan="3">Visualizar dashboard de analíticas y métricas según el rol</td></tr>
     <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como usuario, quiero tener un dashboard personalizado, para visualizar la información relevante de manera rápida y eficiente.</td></tr>
+    <tr><td colspan="4">Como usuario de la plataforma (constructor o propietario), quiero acceder a un dashboard centralizado con métricas clave y datos en tiempo real de mis proyectos y dispositivos, para supervisar el rendimiento, ocupación y consumo energético de mis espacios.</td></tr>
     <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El dashboard se carga</strong><br>Dado que el usuario accede al sistema,<br>Cuando el dashboard se carga,<br>Entonces verá una interfaz con widgets configurables (gráficos, estadísticas, alertas) según sus preferencias.<br><br><strong>Escenario 2: Elige personalizar su dashboard</strong><br>Dado que el usuario tiene acceso a múltiples secciones,<br>Cuando elige personalizar su dashboard,<br>Entonces podrá agregar, eliminar o reorganizar los widgets.<br><br><strong>Escenario 3: Vuelva a acceder</strong><br>Dado que el usuario guarda los cambios en su dashboard,<br>Cuando vuelva a acceder,<br>Entonces verá el dashboard con las configuraciones guardadas.</td></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Visualización del Dashboard para Constructor (Builder)</strong><br>Dado que el usuario ha iniciado sesión con el rol de Constructor (Builder),<br>Cuando accede a la vista principal de analíticas / dashboard,<br>Entonces el sistema muestra tarjetas estadísticas con el total de proyectos, tasa de ocupación, unidades administradas y el gráfico de telemetría de consumo de energía en tiempo real.<br><br><strong>Escenario 2: Visualización del Dashboard para Propietario (Owner)</strong><br>Dado que el usuario ha iniciado sesión con el rol de Propietario (Owner),<br>Cuando accede a la vista de su dashboard,<br>Entonces el sistema muestra las unidades residenciales que tiene asignadas, el estado de sus dispositivos conectados y el consumo energético específico de su vivienda.<br><br><strong>Escenario 3: Actualización de datos de telemetría</strong><br>Dado que el usuario está visualizando su dashboard respectivo,<br>Cuando el sistema recibe nuevas lecturas o cambios en los dispositivos,<br>Entonces los indicadores numéricos y los gráficos de consumo se actualizan reflejando la información más reciente.</td></tr>
 </table>
 
 ---
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US09</td><td>ingeniero</td><td>Alta</td><td>EP09</td></tr>
+    <tr><td>US09</td><td>ingeniero</td><td>Alta</td><td>EP08</td></tr>
     <tr><th>Title</th><td colspan="3">Acceder a los proyectos activos</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como ingeniero, quiero tener acceso a los proyectos que se encuentran activos, para poder realizar un seguimiento de su progreso y gestionar los recursos necesarios.</td></tr>
@@ -1049,7 +1045,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US10</td><td>usuario</td><td>Alta</td><td>EP11</td></tr>
+    <tr><td>US10</td><td>usuario</td><td>Alta</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Acceder a los dispositivos conectados</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario, quiero tener acceso a los dispositivos conectados, para poder monitorear su estado y uso.</td></tr>
@@ -1061,7 +1057,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US11</td><td>ingeniero</td><td>Media</td><td>EP12</td></tr>
+    <tr><td>US11</td><td>ingeniero</td><td>Media</td><td>EP10</td></tr>
     <tr><th>Title</th><td colspan="3">Acceder a la capacidad de ocupación por proyecto</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como ingeniero, quiero tener acceso a la capacidad de ocupación de cada proyecto, para poder analizar el uso de los recursos y planificar de manera eficiente.</td></tr>
@@ -1073,7 +1069,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US12</td><td>ingeniero</td><td>Media</td><td>EP12</td></tr>
+    <tr><td>US12</td><td>ingeniero</td><td>Media</td><td>EP10</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar el gráfico de consumo de energía por hora</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como ingeniero, quiero ver un gráfico sobre la energía que se consume por hora, para poder evaluar el rendimiento energético de los proyectos en tiempo real.</td></tr>
@@ -1085,7 +1081,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US13</td><td>ingeniero</td><td>Media</td><td>EP12</td></tr>
+    <tr><td>US13</td><td>ingeniero</td><td>Media</td><td>EP10</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar el gráfico de registro de ocupación</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como ingeniero, quiero ver un gráfico sobre el registro de ocupación, para poder analizar la evolución de la ocupación a lo largo del tiempo.</td></tr>
@@ -1097,7 +1093,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US14</td><td>ingeniero</td><td>Media</td><td>EP09</td></tr>
+    <tr><td>US14</td><td>ingeniero</td><td>Media</td><td>EP08</td></tr>
     <tr><th>Title</th><td colspan="3">Ver el resumen del proyecto</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como ingeniero, quiero ver un resumen sobre cada proyecto, para saber si está activo, su ubicación y cuántos departamentos están ocupados.</td></tr>
@@ -1109,7 +1105,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US15</td><td>ingeniero</td><td>Media</td><td>EP11</td></tr>
+    <tr><td>US15</td><td>ingeniero</td><td>Media</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar los dispositivos y su distribución por tipo</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como ingeniero, quiero ver cuáles son los dispositivos y cómo están distribuidos por tipo, para realizar un análisis más detallado de los recursos disponibles.</td></tr>
@@ -1121,7 +1117,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US16</td><td>usuario</td><td>Media</td><td>EP06</td></tr>
+    <tr><td>US16</td><td>usuario</td><td>Media</td><td>EP05</td></tr>
     <tr><th>Title</th><td colspan="3">Acceder al perfil del usuario</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario, quiero tener acceso a mi perfil, para ver datos como mi nombre, email, número de teléfono y mi dirección.</td></tr>
@@ -1133,7 +1129,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US17</td><td>usuario</td><td>Alta</td><td>EP06</td></tr>
+    <tr><td>US17</td><td>usuario</td><td>Alta</td><td>EP05</td></tr>
     <tr><th>Title</th><td colspan="3">Edición de Información del Perfil</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario, quiero poder editar alguna parte de mi información, como mi email, número de teléfono o dirección, para mantener mis datos actualizados.</td></tr>
@@ -1145,7 +1141,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US18</td><td>usuario</td><td>Baja</td><td>EP06</td></tr>
+    <tr><td>US18</td><td>usuario</td><td>Baja</td><td>EP05</td></tr>
     <tr><th>Title</th><td colspan="3">Ver Imagen que Representa al Usuario</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario, quiero poder ver una imagen que me represente, para tener una experiencia más personalizada.</td></tr>
@@ -1157,7 +1153,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US19</td><td>usuario</td><td>Media</td><td>EP13</td></tr>
+    <tr><td>US19</td><td>usuario</td><td>Media</td><td>EP11</td></tr>
     <tr><th>Title</th><td colspan="3">Ver el Rol de la Cuenta</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario, quiero poder ver el rol de mi cuenta, para entender qué permisos tengo dentro de la aplicación.</td></tr>
@@ -1169,7 +1165,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US20</td><td>ingeniero</td><td>Alta</td><td>EP09</td></tr>
+    <tr><td>US20</td><td>ingeniero</td><td>Alta</td><td>EP08</td></tr>
     <tr><th>Title</th><td colspan="3">Ver lista de proyectos</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como ingeniero, quiero ver una lista de todos mis proyectos para poder conocer el estado y detalles de cada uno.</td></tr>
@@ -1181,7 +1177,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US21</td><td>arquitecto</td><td>Alta</td><td>EP09</td></tr>
+    <tr><td>US21</td><td>arquitecto</td><td>Alta</td><td>EP08</td></tr>
     <tr><th>Title</th><td colspan="3">Agregar un nuevo proyecto</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como arquitecto, quiero agregar un nuevo proyecto para poder registrar nuevos desarrollos inmobiliarios.</td></tr>
@@ -1193,7 +1189,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US22</td><td>arquitecto</td><td>Alta</td><td>EP09</td></tr>
+    <tr><td>US22</td><td>arquitecto</td><td>Alta</td><td>EP08</td></tr>
     <tr><th>Title</th><td colspan="3">Ver detalles de un proyecto</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como arquitecto, quiero ver los detalles de un proyecto específico para poder revisar su información completa.</td></tr>
@@ -1205,7 +1201,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US23</td><td>Arquitecto</td><td>Alta</td><td>EP08</td></tr>
+    <tr><td>US23</td><td>Arquitecto</td><td>Alta</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Ver Lista de Clientes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Arquitecto, quiero ver una lista de todos los clientes para poder gestionar sus proyectos asociados y el estado de su cuenta.</td></tr>
@@ -1217,7 +1213,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US24</td><td>Ingeniero</td><td>Media</td><td>EP08</td></tr>
+    <tr><td>US24</td><td>Ingeniero</td><td>Media</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Buscar/Ordenar Clientes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Ingeniero, quiero poder ordenar la lista de clientes por columnas (Nombre Completo, Proyecto Asociado, Estado de Cuenta) para poder encontrar u organizar clientes rápidamente según criterios específicos.</td></tr>
@@ -1229,7 +1225,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US25</td><td>Arquitecto</td><td>Alta</td><td>EP08</td></tr>
+    <tr><td>US25</td><td>Arquitecto</td><td>Alta</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Agregar un Nuevo Cliente</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Arquitecto, quiero poder agregar un nuevo cliente para poder registrarlo en el sistema.</td></tr>
@@ -1241,7 +1237,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US26</td><td>Ingeniero</td><td>Media</td><td>EP08</td></tr>
+    <tr><td>US26</td><td>Ingeniero</td><td>Media</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Ver Perfil del Cliente</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Ingeniero, quiero ver el perfil detallado de un cliente para poder acceder a toda su información y opciones de gestión.</td></tr>
@@ -1253,7 +1249,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US27</td><td>Arquitecto</td><td>Media</td><td>EP08</td></tr>
+    <tr><td>US27</td><td>Arquitecto</td><td>Media</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Acceder a la Configuración del Cliente</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Arquitecto, quiero acceder a la configuración específica de un cliente para poder realizar acciones de gestión como editar o gestionar el estado de su cuenta.</td></tr>
@@ -1265,7 +1261,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US28</td><td>ingeniero</td><td>Media</td><td>EP13</td></tr>
+    <tr><td>US28</td><td>ingeniero</td><td>Media</td><td>EP11</td></tr>
     <tr><th>Title</th><td colspan="3">Ver Plan de Suscripción Actual</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como ingeniero, quiero ver mi plan de suscripción actual y su estado para confirmar los beneficios que tengo y el costo mensual.</td></tr>
@@ -1277,7 +1273,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US29</td><td>ingeniero</td><td>Baja</td><td>EP13</td></tr>
+    <tr><td>US29</td><td>ingeniero</td><td>Baja</td><td>EP11</td></tr>
     <tr><th>Title</th><td colspan="3">Ver Planes de Suscripción Alternativos</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como ingeniero, quiero ver planes de suscripción alternativos (Professional y Starter) para poder comparar sus precios y beneficios con mi plan actual.</td></tr>
@@ -1289,7 +1285,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US30</td><td>arquitecto</td><td>Media</td><td>EP13</td></tr>
+    <tr><td>US30</td><td>arquitecto</td><td>Media</td><td>EP11</td></tr>
     <tr><th>Title</th><td colspan="3">Iniciar Cambio de Plan</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como arquitecto, quiero iniciar el proceso de cambio de plan para poder seleccionar un nivel de servicio diferente que se ajuste mejor a mis necesidades.</td></tr>
@@ -1301,7 +1297,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US31</td><td>arquitecto</td><td>Media</td><td>EP13</td></tr>
+    <tr><td>US31</td><td>arquitecto</td><td>Media</td><td>EP11</td></tr>
     <tr><th>Title</th><td colspan="3">Renovar Plan Activo</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como arquitecto, quiero renovar mi plan actual para asegurar la continuidad del servicio si estoy cerca de la fecha de expiración o si mi plan no está configurado para renovación automática.</td></tr>
@@ -1313,7 +1309,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US32</td><td>ingeniero</td><td>Media</td><td>EP13</td></tr>
+    <tr><td>US32</td><td>ingeniero</td><td>Media</td><td>EP11</td></tr>
     <tr><th>Title</th><td colspan="3">Cancelar Plan Actual</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como ingeniero, quiero cancelar mi plan actual para finalizar mi suscripción al término del ciclo de facturación.</td></tr>
@@ -1325,7 +1321,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US33</td><td>propietario</td><td>Alta</td><td>EP11</td></tr>
+    <tr><td>US33</td><td>propietario</td><td>Alta</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Ver Lista de Dispositivos</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como propietario, quiero ver una lista de todos los dispositivos registrados para poder monitorear su estado y ubicación.</td></tr>
@@ -1337,7 +1333,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US34</td><td>propietario</td><td>Alta</td><td>EP11</td></tr>
+    <tr><td>US34</td><td>propietario</td><td>Alta</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Agregar un Nuevo Dispositivo</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como propietario, quiero agregar un nuevo dispositivo al sistema para expandir la cobertura de monitoreo y control.</td></tr>
@@ -1349,7 +1345,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US35</td><td>propietario</td><td>Media</td><td>EP11</td></tr>
+    <tr><td>US35</td><td>propietario</td><td>Media</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Editar/Configurar Ajustes de Dispositivo</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como propietario, quiero acceder a la configuración específica de un dispositivo para modificar sus parámetros o revisar su información detallada.</td></tr>
@@ -1361,7 +1357,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US36</td><td>propietario</td><td>Media</td><td>EP11</td></tr>
+    <tr><td>US36</td><td>propietario</td><td>Media</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Eliminar un Dispositivo</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como propietario, quiero poder eliminar un dispositivo que ya no está en uso o está defectuoso, para mantener la lista limpia y precisa.</td></tr>
@@ -1374,66 +1370,6 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
     <tr><td>US37</td><td>Usuario</td><td>Media</td><td>EP05</td></tr>
-    <tr><th>Title</th><td colspan="3">Gestionar Notificaciones</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como Usuario, quiero poder activar o desactivar varios tipos de notificaciones para controlar qué alertas recibo del sistema.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El Usuario alterna el switch de *Expiration Alerts (Alertas de Expiración)*</strong><br>Dado que la Alerta de Expiración está en un estado (ej., activada),<br>Cuando el Usuario alterna el switch de *Expiration Alerts (Alertas de Expiración)*,<br>Entonces el sistema actualiza el estado de la alerta y guarda la preferencia del Usuario.<br><br><strong>Escenario 2: El Usuario alterna el switch de *System Updates (Actualizaciones del Sistema)*</strong><br>Dado que el Usuario está en la configuración de notificaciones,<br>Cuando el Usuario alterna el switch de *System Updates (Actualizaciones del Sistema)*,<br>Entonces el sistema activa o desactiva las notificaciones de actualizaciones del sistema.<br><br><strong>Escenario 3: El Usuario alterna el switch de *Push Notifications (Notificaciones Push)*</strong><br>Dado que el Usuario está en la configuración de notificaciones,<br>Cuando el Usuario alterna el switch de *Push Notifications (Notificaciones Push)*,<br>Entonces el sistema activa o desactiva las notificaciones que se envían directamente al dispositivo o navegador del Usuario.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US38</td><td>Usuario</td><td>Alta</td><td>EP10</td></tr>
-    <tr><th>Title</th><td colspan="3">Cambiar Contraseña de la Cuenta</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como Usuario, quiero poder cambiar mi contraseña periódicamente para mantener la seguridad de mi cuenta.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El Usuario hace clic en el ícono de configuración junto a *Change Password (Cambiar Contraseña)*</strong><br>Dado que el Usuario está en la sección de Seguridad y Privacidad,<br>Cuando el Usuario hace clic en el ícono de configuración junto a *Change Password (Cambiar Contraseña)*,<br>Entonces el sistema presenta un formulario o flujo para ingresar la contraseña actual y la nueva contraseña (con confirmación).</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US39</td><td>Usuario</td><td>Alta</td><td>EP10</td></tr>
-    <tr><th>Title</th><td colspan="3">Gestionar Autenticación de Dos Factores</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como Usuario, quiero activar o gestionar la Autenticación de Dos Factores (2FA) para añadir una capa extra de seguridad a mi cuenta.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El Usuario hace clic en el ícono de configuración junto a *Two-Factor Authentication*</strong><br>Dado que el Usuario está en la sección de Seguridad y Privacidad,<br>Cuando el Usuario hace clic en el ícono de configuración junto a *Two-Factor Authentication*,<br>Entonces el sistema navega a la pantalla de configuración de 2FA (para activarla, desactivarla o generar códigos de respaldo).</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US40</td><td>Usuario</td><td>Media</td><td>EP10</td></tr>
-    <tr><th>Title</th><td colspan="3">Gestionar Sesiones Activas</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como Usuario, quiero ver y gestionar mis sesiones activas para poder cerrar la sesión en dispositivos que ya no uso o que han sido comprometidos.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El Usuario hace clic en el ícono de configuración junto a *Session Management (Gestión de Sesiones)*</strong><br>Dado que el Usuario está en la sección de Seguridad y Privacidad,<br>Cuando el Usuario hace clic en el ícono de configuración junto a *Session Management (Gestión de Sesiones)*,<br>Entonces el sistema muestra una lista de los dispositivos o ubicaciones con sesiones activas y una opción para cerrarlas individualmente o todas.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US41</td><td>Usuario</td><td>Media</td><td>EP10</td></tr>
-    <tr><th>Title</th><td colspan="3">Añadir Correo Electrónico Alternativo</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como Usuario, quiero añadir una dirección de correo electrónico alternativa para recuperación de cuenta o notificaciones secundarias.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El Usuario hace clic en el ícono de configuración junto a *Add Alternate Mail Address*</strong><br>Dado que el Usuario está en la sección de Seguridad y Privacidad,<br>Cuando el Usuario hace clic en el ícono de configuración junto a *Add Alternate Mail Address*,<br>Entonces el sistema presenta un formulario para ingresar la nueva dirección de correo y un proceso de verificación (ej., envío de un enlace de confirmación).</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US42</td><td>Usuario</td><td>Media</td><td>EP06</td></tr>
     <tr><th>Title</th><td colspan="3">Acceder a Ayuda y Soporte</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Usuario, quiero acceder rápidamente a las secciones de Soporte para resolver mis dudas o contactar con el equipo de soporte.</td></tr>
@@ -1445,7 +1381,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US43</td><td>Usuario</td><td>Alta</td><td>EP02</td></tr>
+    <tr><td>US38</td><td>Usuario</td><td>Alta</td><td>EP02</td></tr>
     <tr><th>Title</th><td colspan="3">Registrarse en la plataforma</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Usuario, quiero crear una cuenta nueva proporcionando mis datos básicos y seleccionando mi rol, para poder acceder a las funcionalidades de la plataforma.</td></tr>
@@ -1457,7 +1393,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US44</td><td>Usuario</td><td>Alta</td><td>EP02</td></tr>
+    <tr><td>US39</td><td>Usuario</td><td>Alta</td><td>EP02</td></tr>
     <tr><th>Title</th><td colspan="3">Iniciar Sesión (Login)</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Usuario, quiero ingresar mis credenciales (correo y contraseña) para acceder a mi cuenta y utilizar las funciones protegidas.</td></tr>
@@ -1469,7 +1405,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US45</td><td>Usuario</td><td>Alta</td><td>EP02</td></tr>
+    <tr><td>US40</td><td>Usuario</td><td>Alta</td><td>EP02</td></tr>
     <tr><th>Title</th><td colspan="3">Cerrar Sesión (Logout)</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Usuario, quiero cerrar mi sesión actual para proteger mi cuenta, especialmente si estoy en un dispositivo compartido.</td></tr>
@@ -1477,47 +1413,11 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
     <tr><td colspan="4"><strong>Escenario 1: Selecciona la opción "Cerrar Sesión"</strong><br>Dado que el usuario tiene una sesión activa.<br>Cuando selecciona la opción "Cerrar Sesión".<br>Entonces el sistema invalida su acceso actual y lo redirige a la página de inicio o login pública.</td></tr>
 </table>
 
----
+### 3.2.2. Technical Stories
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US46</td><td>usuario</td><td>Media</td><td>EP14</td></tr>
-    <tr><th>Title</th><td colspan="3">Acceder al Chatbot de Asistencia</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como usuario, quiero acceder a un chatbot impulsado por IA para resolver dudas sobre la plataforma IoBuild de manera rápida y eficiente.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Selecciona la opción de chatbot</strong><br>Dado que el usuario accede a la plataforma,<br>Cuando selecciona la opción de chatbot,<br>Entonces se abre una interfaz de chat donde puede escribir preguntas.<br><br><strong>Escenario 2: Envía el mensaje</strong><br>Dado que el usuario escribe una pregunta,<br>Cuando envía el mensaje,<br>Entonces la IA responde con información precisa basada en la documentación de IoBuild.<br><br><strong>Escenario 3: La IA lo detecta</strong><br>Dado que el chatbot no puede resolver una duda compleja,<br>Cuando la IA lo detecta,<br>Entonces sugiere contactar al soporte humano.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US47</td><td>usuario</td><td>Alta</td><td>EP15</td></tr>
-    <tr><th>Title</th><td colspan="3">Escanear Dispositivo con Cámara</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como usuario, quiero usar la cámara de mi dispositivo para escanear un dispositivo físico y que la IA extraiga automáticamente los parámetros necesarios.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Selecciona la opción de escanear con cámara</strong><br>Dado que el usuario está agregando un dispositivo,<br>Cuando selecciona la opción de escanear con cámara,<br>Entonces se activa la cámara y permite tomar una foto.<br><br><strong>Escenario 2: La IA procesa la imagen mediante OCR</strong><br>Dado que el usuario toma una foto del dispositivo,<br>Cuando la IA procesa la imagen mediante OCR,<br>Entonces extrae parámetros como modelo, serie y configuración inicial.<br><br><strong>Escenario 3: Ocurre</strong><br>Dado que la IA no puede extraer todos los parámetros,<br>Cuando ocurre,<br>Entonces solicita al usuario completar manualmente los campos faltantes.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US48</td><td>usuario</td><td>Alta</td><td>EP15</td></tr>
-    <tr><th>Title</th><td colspan="3">Optimizar automáticamente los dispositivos</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como usuario, quiero que el sistema optimice automáticamente los dispositivos conectados para mejorar su rendimiento y eficiencia energética.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El usuario activa la optimización</strong><br>Dado que hay dispositivos conectados,<br>Cuando el usuario activa la optimización,<br>Entonces la IA analiza el uso y ajusta configuraciones automáticamente.<br><br><strong>Escenario 2: Se completa</strong><br>Dado que la optimización se aplica,<br>Cuando se completa,<br>Entonces el usuario recibe un reporte de los cambios realizados y beneficios obtenidos.<br><br><strong>Escenario 3: El usuario aprueba</strong><br>Dado que la optimización requiere confirmación,<br>Cuando el usuario aprueba,<br>Entonces se aplican los cambios definitivos.</td></tr>
-</table>
-
-### Technical Stories
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS01</td><td>desarrollador</td><td>Alta</td><td>EP09</td></tr>
+    <tr><td>TS01</td><td>desarrollador</td><td>Alta</td><td>EP08</td></tr>
     <tr><th>Title</th><td colspan="3">Listar proyectos por Constructor</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar a la API que liste todos los proyectos asociados a un constructor específico, para poder mostrar la vista principal de Proyectos.</td></tr>
@@ -1529,7 +1429,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS02</td><td>desarrollador</td><td>Alta</td><td>EP09</td></tr>
+    <tr><td>TS02</td><td>desarrollador</td><td>Alta</td><td>EP08</td></tr>
     <tr><th>Title</th><td colspan="3">Crear un Proyecto</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero añadir un nuevo proyecto a través de la API para poder implementar la funcionalidad de registro de nuevos desarrollos.</td></tr>
@@ -1541,7 +1441,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS03</td><td>desarrollador</td><td>Alta</td><td>EP09</td></tr>
+    <tr><td>TS03</td><td>desarrollador</td><td>Alta</td><td>EP08</td></tr>
     <tr><th>Title</th><td colspan="3">Recuperar un Proyecto por ID</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar un proyecto por su *{id}* para poder mostrar la vista de detalles del proyecto.</td></tr>
@@ -1553,7 +1453,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS04</td><td>desarrollador</td><td>Media</td><td>EP08</td></tr>
+    <tr><td>TS04</td><td>desarrollador</td><td>Media</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Actualizar la información de un cliente</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero enviar a la API una solicitud para modificar los datos de un cliente existente, para poder implementar la edición de su perfil y la gestión de su estado de cuenta.</td></tr>
@@ -1565,7 +1465,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS05</td><td>desarrollador</td><td>Media</td><td>EP08</td></tr>
+    <tr><td>TS05</td><td>desarrollador</td><td>Media</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Eliminar un cliente</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar a la API la eliminación de un cliente por su *{id}*, para poder implementar la funcionalidad de dar de baja clientes que ya no se utilizarán.</td></tr>
@@ -1577,7 +1477,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS06</td><td>desarrollador</td><td>Media</td><td>EP08</td></tr>
+    <tr><td>TS06</td><td>desarrollador</td><td>Media</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Soportar ordenación en la lista de clientes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero poder enviar parámetros de ordenación a la API (nombre de columna y dirección), para poder implementar las funcionalidades de Buscar/Ordenar Clientes.</td></tr>
@@ -1589,7 +1489,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS07</td><td>desarrollador</td><td>Alta</td><td>EP08</td></tr>
+    <tr><td>TS07</td><td>desarrollador</td><td>Alta</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Listar clientes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar a la API que liste los clientes, opcionalmente filtrados por estado o nombre, para poder mostrar la vista de la lista de clientes.</td></tr>
@@ -1601,7 +1501,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS08</td><td>desarrollador</td><td>Alta</td><td>EP08</td></tr>
+    <tr><td>TS08</td><td>desarrollador</td><td>Alta</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Crear un cliente</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero añadir un nuevo cliente a través de la API para poder implementar la funcionalidad de creación de clientes.</td></tr>
@@ -1613,7 +1513,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS09</td><td>desarrollador</td><td>Media</td><td>EP08</td></tr>
+    <tr><td>TS09</td><td>desarrollador</td><td>Media</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Recuperar un cliente por id</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar un recurso de cliente por su *{id}* para poder implementar la vista detallada del perfil.</td></tr>
@@ -1625,7 +1525,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS10</td><td>desarrollador</td><td>Alta</td><td>EP11</td></tr>
+    <tr><td>TS10</td><td>desarrollador</td><td>Alta</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Listar dispositivos</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar a la API que liste todos los dispositivos, filtrados por ubicación o estado, para poder mostrar la lista de Gestión de Dispositivos.</td></tr>
@@ -1637,7 +1537,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS11</td><td>desarrollador</td><td>Media</td><td>EP11</td></tr>
+    <tr><td>TS11</td><td>desarrollador</td><td>Media</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Eliminar un dispositivo por id</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar a la API que elimine un dispositivo por su *{id}* para poder retirar hardware que ya no se utiliza del sistema.</td></tr>
@@ -1649,7 +1549,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS12</td><td>desarrollador</td><td>Media</td><td>EP09</td></tr>
+    <tr><td>TS12</td><td>desarrollador</td><td>Media</td><td>EP08</td></tr>
     <tr><th>Title</th><td colspan="3">Actualizar información de un proyecto</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar a la API que actualice la información de un proyecto (nombre, ubicación y descripción) para mantener los datos actualizados en la vista de gestión de proyectos.</td></tr>
@@ -1661,7 +1561,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS13</td><td>desarrollador</td><td>Media</td><td>EP11</td></tr>
+    <tr><td>TS13</td><td>desarrollador</td><td>Media</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Actualizar información de un dispositivo</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar a la API que actualice la información de un dispositivo (nombre y ubicación) para reflejar los cambios en la gestión de dispositivos.</td></tr>
@@ -1673,7 +1573,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS14</td><td>desarrollador</td><td>Alta</td><td>EP11</td></tr>
+    <tr><td>TS14</td><td>desarrollador</td><td>Alta</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Crear un nuevo dispositivo</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar a la API que cree un nuevo dispositivo especificando su nombre, tipo y ubicación, para registrar nuevos equipos en el sistema.</td></tr>
@@ -1685,7 +1585,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS15</td><td>desarrollador</td><td>Alta</td><td>EP10</td></tr>
+    <tr><td>TS15</td><td>desarrollador</td><td>Alta</td><td>EP11</td></tr>
     <tr><th>Title</th><td colspan="3">Crear ruta segura y mostrar datos específicos</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero proteger el dashboard de fabricantes para que solo los fabricantes puedan visualizarlo</td></tr>
@@ -1697,7 +1597,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS16</td><td>desarrollador</td><td>Media</td><td>EP13</td></tr>
+    <tr><td>TS16</td><td>desarrollador</td><td>Media</td><td>EP02</td></tr>
     <tr><th>Title</th><td colspan="3">Obtener suscripción actual</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar la información de la suscripción activa del usuario actual, para mostrar el plan, costo y beneficios en la vista principal de suscripciones.</td></tr>
@@ -1709,7 +1609,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS17</td><td>desarrollador</td><td>Baja</td><td>EP13</td></tr>
+    <tr><td>TS17</td><td>desarrollador</td><td>Baja</td><td>EP02</td></tr>
     <tr><th>Title</th><td colspan="3">Listar catálogo de planes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar la lista de todos los planes de suscripción disponibles en el sistema, para mostrarlos como alternativas en la interfaz de comparación.</td></tr>
@@ -1721,7 +1621,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS18</td><td>desarrollador</td><td>Media</td><td>EP13</td></tr>
+    <tr><td>TS18</td><td>desarrollador</td><td>Media</td><td>EP02</td></tr>
     <tr><th>Title</th><td colspan="3">Cambiar plan de suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero enviar una solicitud para actualizar el plan de suscripción del usuario, para hacer efectivo el cambio de nivel de servicio seleccionado en la interfaz.</td></tr>
@@ -1733,7 +1633,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS19</td><td>desarrollador</td><td>Media</td><td>EP13</td></tr>
+    <tr><td>TS19</td><td>desarrollador</td><td>Media</td><td>EP02</td></tr>
     <tr><th>Title</th><td colspan="3">Renovar suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar la renovación de la suscripción actual, para extender la vigencia del servicio cuando el usuario confirma la acción.</td></tr>
@@ -1745,7 +1645,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS20</td><td>desarrollador</td><td>Media</td><td>EP13</td></tr>
+    <tr><td>TS20</td><td>desarrollador</td><td>Media</td><td>EP02</td></tr>
     <tr><th>Title</th><td colspan="3">Cancelar suscripción</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar la cancelación de la suscripción activa, para detener la renovación automática y finalizar el servicio al terminar el ciclo.</td></tr>
@@ -1757,31 +1657,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS21</td><td>desarrollador</td><td>Alta</td><td>EP10</td></tr>
-    <tr><th>Title</th><td colspan="3">Cambiar contraseña del usuario</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero enviar la contraseña actual y la nueva contraseña del usuario a la API, para actualizar sus credenciales de acceso de forma segura.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud PUT al endpoint de cambio de contraseña que incluye currentPassword y newPassword.<br>Cuando la API verifica que la currentPassword coincide con la almacenada y la newPassword cumple con los requisitos de complejidad.<br>Entonces la API actualiza la contraseña (hashing), responde con **200 OK** y opcionalmente invalida otras sesiones activas o genera un nuevo token.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se intenta cambiar la contraseña proporcionando una currentPassword errónea.<br>Cuando la API detecta que la contraseña actual no coincide con la registrada.<br>Entonces la API responde con **400 Bad Request** con un mensaje indicando que la contraseña actual es inválida.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS22</td><td>desarrollador</td><td>Media</td><td>EP10</td></tr>
-    <tr><th>Title</th><td colspan="3">Solicitar adición de correo alternativo</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero enviar una solicitud para agregar un correo electrónico secundario, para que el backend inicie el proceso de validación y verificación de dicha cuenta.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud POST con un email válido que no está registrado previamente.<br>Cuando la API registra el correo en estado "Pendiente" y dispara el servicio de envío de emails con el código o enlace de verificación.<br>Entonces la API responde con **200 OK** indicando que se ha enviado el correo de confirmación al usuario.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se intenta agregar un correo con formato incorrecto o que ya está en uso por otro usuario.<br>Cuando la API valida la unicidad y el formato del correo.<br>Entonces la API responde con **400 Bad Request**.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS23</td><td>desarrollador</td><td>Alta</td><td>EP02</td></tr>
+    <tr><td>TS21</td><td>desarrollador</td><td>Alta</td><td>EP02</td></tr>
     <tr><th>Title</th><td colspan="3">Registrar nuevo usuario</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero enviar los datos de registro (nombre, email, password, rol) a la API, para crear una nueva identidad en el sistema y permitir el acceso futuro.</td></tr>
@@ -1793,7 +1669,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS24</td><td>desarrollador</td><td>Alta</td><td>EP10</td></tr>
+    <tr><td>TS22</td><td>desarrollador</td><td>Alta</td><td>EP11</td></tr>
     <tr><th>Title</th><td colspan="3">Validar token de sesión</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero que la API valide que el token enviado en los headers es legítimo y no ha expirado, para proteger las rutas privadas.</td></tr>
@@ -1801,262 +1677,8 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
     <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se realiza una petición a un recurso protegido con un header Authorization: Bearer {token}.<br>Cuando la API verifica la firma y fecha del token.<br>Entonces la API permite el acceso y devuelve el recurso solicitado.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que el token está caducado o malformado.<br>Cuando la API intenta decodificarlo.<br>Entonces la API responde con **401 Unauthorized** o **403 Forbidden**.</td></tr>
 </table>
 
----
-
-### Spike Stories
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>SP01</td><td>Arquitecto de Software</td><td>Alta</td><td>EP12</td></tr>
-    <tr><th>Title</th><td colspan="3">Investigar el uso de MQTT vs WebSockets para la telemetría en tiempo real</td></tr>
-    <tr><th colspan="4">Objetivo</th></tr>
-    <tr><td colspan="4"><strong>¿Qué queremos aprender?</strong> Determinar cuál protocolo (MQTT o WebSockets) es más eficiente y escalable en nuestra arquitectura actual para mostrar el consumo de energía en el Dashboard en tiempo real.</td></tr>
-    <tr><th colspan="4">Alcance</th></tr>
-    <tr><td colspan="4"><strong>Incluye:</strong> Comparativa de latencia, consumo de recursos del servidor y facilidad de integración con el backend actual en ASP.NET Core.<br><strong>Excluye:</strong> Implementación final en producción o el diseño de la interfaz visual del gráfico.</td></tr>
-    <tr><th colspan="4">Timebox</th></tr>
-    <tr><td colspan="4">16 horas / 2 días</td></tr>
-    <tr><th colspan="4">Entregables</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>Documento de hallazgos (cuadro comparativo de latencia y recursos).</li>
-  <li>PoC / prototipo (un script sencillo enviando y recibiendo datos con ambos protocolos).</li>
-  <li>Recomendación / decisión técnica.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Criterios de aceptación</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>[ ] Se responde la pregunta principal sobre cuál protocolo usar.</li>
-  <li>[ ] Se entrega evidencia (link al repositorio del PoC / archivo comparativo).</li>
-  <li>[ ] Se define la decisión o siguiente paso para la arquitectura.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Resultado (al cerrar)</th></tr>
-    <tr><td colspan="4"><strong>Hallazgos:</strong><br><strong>Decisión:</strong><br><strong>Próximas US impactadas:</strong> US08 (Dashboard Personalizado), US12 (Gráfico de Consumo de Energía por Hora).</td></tr>
-</table>
-
-<br>
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>SP02</td><td>Desarrollador Backend</td><td>Alta</td><td>EP14</td></tr>
-    <tr><th>Title</th><td colspan="3">Evaluar proveedores de LLM para el Asistente Inteligente (Smart Assistant)</td></tr>
-    <tr><th colspan="4">Objetivo</th></tr>
-    <tr><td colspan="4"><strong>¿Qué queremos aprender?</strong> Definir qué proveedor (la API de OpenAI u otros modelos externos) ofrece la mejor relación costo/beneficio y tiempos de respuesta para integrarlo al AssistantAIService.</td></tr>
-    <tr><th colspan="4">Alcance</th></tr>
-    <tr><td colspan="4"><strong>Incluye:</strong> Evaluación de la API de OpenAI y al menos una alternativa, análisis de costos por token y latencia en respuestas.<br><strong>Excluye:</strong> Entrenamiento de modelos de IA propios o diseño de la interfaz del chat en la aplicación móvil.</td></tr>
-    <tr><th colspan="4">Timebox</th></tr>
-    <tr><td colspan="4">24 horas / 3 días</td></tr>
-    <tr><th colspan="4">Entregables</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>Documento de hallazgos (cuadro comparativo de tiempos, costos y calidad de respuesta).</li>
-  <li>Recomendación / decisión del proveedor a contratar.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Criterios de aceptación</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>[ ] Se responde la pregunta principal sobre la viabilidad y costos de los proveedores.</li>
-  <li>[ ] Se entrega evidencia (link al documento comparativo).</li>
-  <li>[ ] Se define la decisión o siguiente paso para integrar la API.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Resultado (al cerrar)</th></tr>
-    <tr><td colspan="4"><strong>Hallazgos:</strong><br><strong>Decisión:</strong><br><strong>Próximas US impactadas:</strong> US46 (Acceder al Chatbot de Asistencia), US48 (Optimización Automática de Dispositivos).</td></tr>
-</table>
-
-<br>
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>SP03</td><td>Desarrollador Móvil</td><td>Media</td><td>EP15</td></tr>
-    <tr><th>Title</th><td colspan="3">Analizar librerías de OCR para el escaneo de dispositivos en Android</td></tr>
-    <tr><th colspan="4">Objetivo</th></tr>
-    <tr><td colspan="4"><strong>¿Qué queremos aprender?</strong> Asegurar que la funcionalidad de extraer parámetros del hardware (MAC address, número de serie) mediante la cámara sea viable usando librerías OCR gratuitas o accesibles en Kotlin.</td></tr>
-    <tr><th colspan="4">Alcance</th></tr>
-    <tr><td colspan="4"><strong>Incluye:</strong> Búsqueda, prueba y análisis de rendimiento de al menos 2 librerías de OCR compatibles con Android.<br><strong>Excluye:</strong> Integración directa con el backend o diseño final de la pantalla de la cámara en la app.</td></tr>
-    <tr><th colspan="4">Timebox</th></tr>
-    <tr><td colspan="4">16 horas / 2 días</td></tr>
-    <tr><th colspan="4">Entregables</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>Documento de hallazgos sobre la precisión de las librerías probadas.</li>
-  <li>PoC / prototipo (aplicación móvil básica que abra la cámara, lea un texto y lo imprima en pantalla).</li>
-  <li>Recomendación / decisión de la librería a usar.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Criterios de aceptación</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>[ ] Se responde la pregunta principal sobre la viabilidad técnica en Android.</li>
-  <li>[ ] Se entrega evidencia (link al repositorio del prototipo móvil).</li>
-  <li>[ ] Se define la decisión o siguiente paso para la app de Kotlin.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Resultado (al cerrar)</th></tr>
-    <tr><td colspan="4"><strong>Hallazgos:</strong><br><strong>Decisión:</strong><br><strong>Próximas US impactadas:</strong> US47 (Escanear Dispositivo con Cámara).</td></tr>
-</table>
-
-<br>
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>SP04</td><td>Desarrollador Backend</td><td>Media</td><td>EP13</td></tr>
-    <tr><th>Title</th><td colspan="3">Explorar la integración de Webhooks de Stripe para la gestión de suscripciones</td></tr>
-    <tr><th colspan="4">Objetivo</th></tr>
-    <tr><td colspan="4"><strong>¿Qué queremos aprender?</strong> Entender cómo Stripe maneja los eventos asíncronos mediante Webhooks para actualizar automáticamente en el sistema el estado de los planes (ej. cancelado por falta de pago).</td></tr>
-    <tr><th colspan="4">Alcance</th></tr>
-    <tr><td colspan="4"><strong>Incluye:</strong> Revisión de la documentación de Stripe y prueba de recepción de un evento de pago (exitoso/fallido) en un endpoint local usando herramientas como ngrok o Stripe CLI.<br><strong>Excluye:</strong> Creación del frontend de pagos o implementación del entorno de producción definitivo de facturación.</td></tr>
-    <tr><th colspan="4">Timebox</th></tr>
-    <tr><td colspan="4">16 horas / 2 días</td></tr>
-    <tr><th colspan="4">Entregables</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>Documento de hallazgos (flujo documentado y diagrama de secuencia simple).</li>
-  <li>PoC / prototipo (Endpoint en ASP.NET Core que reciba e imprima el payload de Stripe).</li>
-  <li>Recomendación / decisión sobre la estructura final del controlador.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Criterios de aceptación</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>[ ] Se responde la pregunta principal sobre el formato y seguridad del Webhook.</li>
-  <li>[ ] Se entrega evidencia (link al código del endpoint de prueba).</li>
-  <li>[ ] Se define la decisión o siguiente paso para la gestión de base de datos.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Resultado (al cerrar)</th></tr>
-    <tr><td colspan="4"><strong>Hallazgos:</strong><br><strong>Decisión:</strong><br><strong>Próximas US impactadas:</strong> US31 (Renovar Plan Activo), US32 (Cancelar Plan Actual).</td></tr>
-</table>
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>SP05</td><td>Arquitecto de Software</td><td>Alta</td><td>EP12</td></tr>
-    <tr><th>Title</th><td colspan="3">Analizar la viabilidad de RabbitMQ vs Apache Kafka para el manejo masivo de telemetría IoT</td></tr>
-    <tr><th colspan="4">Objetivo</th></tr>
-    <tr><td colspan="4"><strong>¿Qué queremos aprender?</strong> Determinar qué message broker (RabbitMQ o Kafka) es más adecuado para procesar ráfagas de millones de lecturas de sensores por minuto de manera asíncrona, sin bloquear la operación de los dispositivos en el sistema de Energy Management.</td></tr>
-    <tr><th colspan="4">Alcance</th></tr>
-    <tr><td colspan="4"><strong>Incluye:</strong> Pruebas de rendimiento (throughput) simulando lecturas de sensores, evaluación de la latencia y consumo desde el backend en ASP.NET Core.<br><strong>Excluye:</strong> La configuración de clústeres de alta disponibilidad para el entorno de producción final.</td></tr>
-    <tr><th colspan="4">Timebox</th></tr>
-    <tr><td colspan="4">24 horas / 3 días</td></tr>
-    <tr><th colspan="4">Entregables</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>Documento de hallazgos (cuadro comparativo de rendimiento y escalabilidad).</li>
-  <li>PoC / prototipo (un productor simulando sensores y un consumidor procesando mensajes).</li>
-  <li>Recomendación / decisión arquitectónica.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Criterios de aceptación</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>[ ] Se responde la pregunta principal sobre qué broker utilizar para la arquitectura orientada a eventos.</li>
-  <li>[ ] Se entrega evidencia (link al repositorio del PoC).</li>
-  <li>[ ] Se define la decisión o siguiente paso para integrar el bus de eventos en el backend.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Resultado (al cerrar)</th></tr>
-    <tr><td colspan="4"><strong>Hallazgos:</strong><br><strong>Decisión:</strong><br><strong>Próximas US impactadas:</strong> US12 (Gráfico de Consumo de Energía por Hora).</td></tr>
-</table>
-
-<br>
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>SP06</td><td>Desarrollador Móvil</td><td>Media</td><td>EP05</td></tr>
-    <tr><th>Title</th><td colspan="3">Investigar la implementación de Firebase Cloud Messaging (FCM) para notificaciones push en Android</td></tr>
-    <tr><th colspan="4">Objetivo</th></tr>
-    <tr><td colspan="4"><strong>¿Qué queremos aprender?</strong> Entender cómo integrar FCM nativamente en la aplicación de Kotlin para garantizar la recepción de alertas críticas operativas (ej. umbral de energía superado) incluso con la app en segundo plano.</td></tr>
-    <tr><th colspan="4">Alcance</th></tr>
-    <tr><td colspan="4"><strong>Incluye:</strong> Configuración básica de un proyecto en Firebase, integración del SDK en Android Studio y recepción de una notificación de prueba.<br><strong>Excluye:</strong> El diseño visual personalizado de las notificaciones o la lógica completa del sistema de alertas en el backend.</td></tr>
-    <tr><th colspan="4">Timebox</th></tr>
-    <tr><td colspan="4">16 horas / 2 días</td></tr>
-    <tr><th colspan="4">Entregables</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>Documento de hallazgos sobre la configuración necesaria y manejo del ciclo de vida de la app.</li>
-  <li>PoC / prototipo (app móvil básica que reciba y muestre una notificación enviada desde la consola de Firebase).</li>
-  <li>Recomendación / decisión técnica sobre el manejo de tokens de dispositivos.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Criterios de aceptación</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>[ ] Se responde la pregunta principal sobre cómo manejar las notificaciones push en Kotlin.</li>
-  <li>[ ] Se entrega evidencia (link al repositorio móvil).</li>
-  <li>[ ] Se define la decisión o siguiente paso para la conexión con el `Sistema de Alertas` del backend.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Resultado (al cerrar)</th></tr>
-    <tr><td colspan="4"><strong>Hallazgos:</strong><br><strong>Decisión:</strong><br><strong>Próximas US impactadas:</strong> US37 (Gestionar Notificaciones).</td></tr>
-</table>
-
-<br>
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>SP07</td><td>Desarrollador Backend</td><td>Media</td><td>EP10</td></tr>
-    <tr><th>Title</th><td colspan="3">Evaluar alternativas para la implementación de Autenticación de Dos Factores (2FA)</td></tr>
-    <tr><th colspan="4">Objetivo</th></tr>
-    <tr><td colspan="4"><strong>¿Qué queremos aprender?</strong> Definir la mejor estrategia y librería (TOTP estándar como Google Authenticator o servicios de API externos) para añadir la capa extra de seguridad 2FA solicitada en las cuentas de usuario.</td></tr>
-    <tr><th colspan="4">Alcance</th></tr>
-    <tr><td colspan="4"><strong>Incluye:</strong> Evaluación técnica de generación de claves secretas (Secret Keys), códigos QR y validación de códigos temporales de 6 dígitos en ASP.NET Core.<br><strong>Excluye:</strong> La integración de las pantallas de configuración 2FA en el frontend (web/móvil) o el envío de códigos por SMS/Email.</td></tr>
-    <tr><th colspan="4">Timebox</th></tr>
-    <tr><td colspan="4">16 horas / 2 días</td></tr>
-    <tr><th colspan="4">Entregables</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>Documento de hallazgos (comparativa de librerías .NET para TOTP).</li>
-  <li>PoC / prototipo (Endpoint que genere una semilla secreta y valide un código ingresado).</li>
-  <li>Recomendación / decisión sobre el flujo de seguridad final.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Criterios de aceptación</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>[ ] Se responde la pregunta principal sobre qué estándar y librería usar.</li>
-  <li>[ ] Se entrega evidencia (link al código del endpoint de prueba).</li>
-  <li>[ ] Se define la decisión o siguiente paso para actualizar la entidad User.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Resultado (al cerrar)</th></tr>
-    <tr><td colspan="4"><strong>Hallazgos:</strong><br><strong>Decisión:</strong><br><strong>Próximas US impactadas:</strong> US39 (Gestionar Autenticación de Dos Factores).</td></tr>
-</table>
-
-<br>
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>SP08</td><td>Desarrollador Frontend</td><td>Baja</td><td>EP06</td></tr>
-    <tr><th>Title</th><td colspan="3">Explorar la integración del SDK de Cloudinary para optimización de imágenes</td></tr>
-    <tr><th colspan="4">Objetivo</th></tr>
-    <tr><td colspan="4"><strong>¿Qué queremos aprender?</strong> Validar cómo integrar directamente el servicio de Cloudinary para cargar fotos (ej. de perfil o proyectos) optimizadas al vuelo, de manera eficiente en la plataforma.</td></tr>
-    <tr><th colspan="4">Alcance</th></tr>
-    <tr><td colspan="4"><strong>Incluye:</strong> Pruebas del widget/SDK de subida directa de archivos a Cloudinary y recuperación de la URL optimizada para ser guardada en la base de datos MySQL.<br><strong>Excluye:</strong> La configuración de cuotas, roles de seguridad complejos o facturación de la cuenta en producción de Cloudinary.</td></tr>
-    <tr><th colspan="4">Timebox</th></tr>
-    <tr><td colspan="4">8 horas / 1 día</td></tr>
-    <tr><th colspan="4">Entregables</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>Documento de hallazgos sobre la facilidad de uso del SDK y el formato de respuesta.</li>
-  <li>PoC / prototipo (Aplicación web/móvil simple con un botón para cargar una imagen local y mostrarla renderizada desde Cloudinary).</li>
-  <li>Recomendación / decisión sobre flujos de subida.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Criterios de aceptación</th></tr>
-    <tr><td colspan="4">
-<ul>
-  <li>[ ] Se responde la pregunta principal sobre el flujo óptimo para carga de archivos.</li>
-  <li>[ ] Se entrega evidencia (link al prototipo frontend).</li>
-  <li>[ ] Se define la decisión o siguiente paso para los formularios de registro de proyectos y perfiles.</li>
-</ul>
-    </td></tr>
-    <tr><th colspan="4">Resultado (al cerrar)</th></tr>
-    <tr><td colspan="4"><strong>Hallazgos:</strong><br><strong>Decisión:</strong><br><strong>Próximas US impactadas:</strong> US18 (Ver Imagen que Representa al Usuario), US21 (Agregar un nuevo proyecto).</td></tr>
-</table>
-
-## 3.3. Product Backlog.
+## 3.3. Product Backlog
+### 3.3.1. Product Backlog
 A continuación, se presenta el Product Backlog, el cual reúne las historias de usuario y las tareas técnicas priorizadas para el desarrollo del proyecto. Cada elemento incluye su identificador, título, descripción y la estimación correspondiente en puntos de historia.
 
 Para la gestión y organización del backlog se utilizó la herramienta Trello, la cual permitió estructurar y visualizar las tareas de forma clara, dinámica y colaborativa. Este backlog se organizó en columnas que representan las distintas etapas del proceso de desarrollo, lo que facilita el seguimiento del avance, la identificación de bloqueos y la adecuada priorización de actividades.
@@ -2065,89 +1687,162 @@ Link de colaboración en trello: https://shorturl.at/FrDjk
 
 ![Product-Backlog](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%202/Product_Backlog.png)
 
-
 | #Orden | User Story ID | Titulo | Sprint | Story Points (1/2/3/5/8) |
 |--------|---------------|--------|-------------|--------------------------|
-| 1 | US12 | Visualizar el gráfico de consumo de energía por hora | 1 | 8 |
+| 1 | US12 | Visualizar el gráfico de consumo de energía por hora | 3 | 8 |
 | 2 | US15 | Visualizar los dispositivos y su distribución por tipo | 2 | 8 |
 | 3 | US21 | Agregar un nuevo proyecto | 1 | 8 |
-| 4 | US26 | Ver Perfil del Cliente | 1 | 8 |
-| 5 | US28 | Ver Plan de Suscripción Actual | 1 | 8 |
-| 6 | US32 | Cancelar Plan Actual | 1 | 8 |
+| 4 | US26 | Ver Perfil del Cliente | 2 | 8 |
+| 5 | US28 | Ver Plan de Suscripción Actual | 3 | 8 |
+| 6 | US32 | Cancelar Plan Actual | 3 | 8 |
 | 7 | US34 | Agregar un Nuevo Dispositivo | 2 | 8 |
 | 8 | US36 | Eliminar un Dispositivo | 2 | 8 |
-| 9 | US40 | Gestionar Sesiones Activas | 3 | 8 |
-| 10 | US42 | Acceder a Ayuda y Soporte | 3 | 8 |
-| 11 | US46 | Acceder al Chatbot de Asistencia | 3 | 8 |
-| 12 | US47 | Escanear Dispositivo con Cámara | 3 | 8 |
-| 13 | US48 | Optimizar automáticamente los dispositivos | 3 | 8 |
-| 14 | TS04 | Actualizar la información de un cliente | 1 | 8 |
-| 15 | TS06 | Soportar ordenación en la lista de clientes | 1 | 8 |
-| 16 | TS08 | Crear un cliente | 1 | 8 |
-| 17 | TS12 | Actualizar información de un proyecto | 2 | 8 |
-| 18 | TS14 | Crear un nuevo dispositivo | 2 | 8 |
-| 19 | TS15 | Crear ruta segura y mostrar datos específicos | 2 | 8 |
-| 20 | US02 | Consultar los testimonios de clientes | 1 | 5 |
-| 21 | US03 | Acceder a la información de contacto | 1 | 5 |
-| 22 | US06 | Consultar las preguntas frecuentes | 1 | 5 |
-| 23 | US08 | Visualizar el dashboard personalizado | 1 | 5 |
-| 24 | US09 | Acceder a los proyectos activos | 1 | 5 |
-| 25 | US10 | Acceder a los dispositivos conectados | 1 | 5 |
-| 26 | US11 | Acceder a la capacidad de ocupación por proyecto | 1 | 5 |
-| 27 | US13 | Visualizar el gráfico de registro de ocupación | 1 | 5 |
-| 28 | US14 | Ver el resumen del proyecto | 1 | 5 |
-| 29 | US19 | Ver el Rol de la Cuenta | 2 | 5 |
-| 30 | US20 | Ver lista de proyectos | 1 | 5 |
-| 31 | US22 | Ver detalles de un proyecto | 1 | 5 |
-| 32 | US23 | Ver Lista de Clientes | 1 | 5 |
-| 33 | US24 | Buscar/Ordenar Clientes | 1 | 5 |
-| 34 | US27 | Acceder a la Configuración del Cliente | 2 | 5 |
-| 35 | US29 | Ver Planes de Suscripción Alternativos | 1 | 5 |
-| 36 | US31 | Renovar Plan Activo | 1 | 5 |
-| 37 | US33 | Ver Lista de Dispositivos | 2 | 5 |
-| 38 | US35 | Editar/Configurar Ajustes de Dispositivo | 2 | 5 |
-| 39 | US37 | Gestionar Notificaciones | 2 | 5 |
-| 40 | US38 | Cambiar Contraseña de la Cuenta | 2 | 5 |
-| 41 | US41 | Añadir Correo Electrónico Alternativo | 3 | 5 |
-| 42 | US43 | Registrarse en la plataforma | 2 | 5 |
-| 43 | TS01 | Listar proyectos por Constructor | 1 | 5 |
-| 44 | TS03 | Recuperar un Proyecto por ID | 1 | 5 |
-| 45 | TS05 | Eliminar un cliente | 1 | 5 |
-| 46 | TS07 | Listar clientes | 1 | 5 |
-| 47 | TS09 | Recuperar un cliente por id | 1 | 5 |
-| 48 | TS10 | Listar dispositivos | 2 | 5 |
-| 49 | TS13 | Actualizar información de un dispositivo | 2 | 5 |
-| 50 | TS18 | Cambiar plan de suscripción | 1 | 5 |
-| 51 | TS21 | Cambiar contraseña del usuario | 1 | 5 |
-| 52 | TS22 | Solicitar adición de correo alternativo | 1 | 5 |
-| 53 | TS23 | Registrar nuevo usuario | 1 | 5 |
-| 54 | SP02 | Evaluar proveedores de LLM para el Asistente Inteligente (Smart Assistant) | 3 | 5 |
-| 55 | SP05 | Analizar la viabilidad de RabbitMQ vs Apache Kafka para el manejo masivo de telemetría | 3 | 5 |
-| 56 | US04 | Visualizar los servicios principales | 1 | 3 |
-| 57 | US05 | Registrarse en la aplicación | 1 | 3 |
-| 58 | US07 | Seleccionar el idioma de la landing page | 1 | 3 |
-| 59 | US16 | Acceder al perfil del usuario | 2 | 3 |
-| 60 | US17 | Editar la información del perfil | 2 | 3 |
-| 61 | US18 | Ver Imagen que Representa al Usuario | 2 | 3 |
-| 62 | US25 | Agregar un Nuevo Cliente | 3 | 3 |
-| 63 | US39 | Gestionar Autenticación de Dos Factores | 3 | 3 |
-| 64 | US44 | Iniciar Sesión (Login) | 3 | 3 |
-| 65 | TS11 | Eliminar un dispositivo por id | 2 | 3 |
-| 66 | TS16 | Obtener suscripción actual | 1 | 3 |
-| 67 | TS17 | Listar catálogo de planes | 1 | 3 |
-| 68 | TS19 | Renovar suscripción | 1 | 3 |
-| 69 | TS20 | Cancelar suscripción | 1 | 3 |
-| 70 | TS24 | Validar token de sesión | 1 | 3 |
-| 71 | SP01 | Investigar el uso de MQTT vs WebSockets para la telemetría en tiempo real | 3 | 3 |
-| 72 | SP03 | Analizar librerías de OCR para el escaneo de dispositivos en Android | 3 | 3 |
-| 73 | SP04 | Explorar la integración de Webhooks de Stripe para la gestión de suscripciones | 3 | 3 |
-| 74 | SP06 | Investigar la implementación de Firebase Cloud Messaging (FCM) para notificaciones | 3 | 3 |
-| 75 | SP07 | Evaluar alternativas para la implementación de Autenticación de Dos Factores (2FA) | 3 | 3 |
-| 76 | US01 | Conocer la sección "Sobre Nosotros" | 1 | 2 |
-| 77 | US30 | Iniciar Cambio de Plan | 1 | 2 |
-| 78 | TS02 | Crear un Proyecto | 1 | 2 |
-| 79 | SP08 | Explorar la integración del SDK de Cloudinary para optimización de imágenes | 3 | 2 |
-| 80 | US45 | Cerrar Sesión (Logout) | 3 | 2 |
+| 9 | US37 | Acceder a Ayuda y Soporte | 3 | 8 |
+| 10 | TS04 | Actualizar la información de un cliente | 2 | 8 |
+| 11 | TS06 | Soportar ordenación en la lista de clientes | 2 | 8 |
+| 12 | TS08 | Crear un cliente | 2 | 8 |
+| 13 | TS12 | Actualizar información de un proyecto | 1 | 8 |
+| 14 | TS14 | Crear un nuevo dispositivo | 2 | 8 |
+| 15 | TS15 | Crear ruta segura y mostrar datos específicos | 1 | 8 |
+| 16 | US02 | Consultar los testimonios de clientes | 1 | 5 |
+| 17 | US03 | Acceder a la información de contacto | 1 | 5 |
+| 18 | US06 | Consultar las preguntas frecuentes | 1 | 5 |
+| 19 | US08 | Visualizar dashboard de analíticas y métricas según el rol | 3 | 5 |
+| 20 | US09 | Acceder a los proyectos activos | 1 | 5 |
+| 21 | US10 | Acceder a los dispositivos conectados | 2 | 5 |
+| 22 | US11 | Acceder a la capacidad de ocupación por proyecto | 3 | 5 |
+| 23 | US13 | Visualizar el gráfico de registro de ocupación | 3 | 5 |
+| 24 | US14 | Ver el resumen del proyecto | 3 | 5 |
+| 25 | US19 | Ver el Rol de la Cuenta | 3 | 5 |
+| 26 | US20 | Ver lista de proyectos | 1 | 5 |
+| 27 | US22 | Ver detalles de un proyecto | 1 | 5 |
+| 28 | US23 | Ver Lista de Clientes | 2 | 5 |
+| 29 | US24 | Buscar/Ordenar Clientes | 2 | 5 |
+| 30 | US27 | Acceder a la Configuración del Cliente | 2 | 5 |
+| 31 | US29 | Ver Planes de Suscripción Alternativos | 3 | 5 |
+| 32 | US31 | Renovar Plan Activo | 3 | 5 |
+| 33 | US33 | Ver Lista de Dispositivos | 2 | 5 |
+| 34 | US35 | Editar/Configurar Ajustes de Dispositivo | 2 | 5 |
+| 35 | US38 | Registrarse en la plataforma | 1 | 5 |
+| 36 | TS01 | Listar proyectos por Constructor | 1 | 5 |
+| 37 | TS03 | Recuperar un Proyecto por ID | 1 | 5 |
+| 38 | TS05 | Eliminar un cliente | 2 | 5 |
+| 39 | TS07 | Listar clientes | 2 | 5 |
+| 40 | TS09 | Recuperar un cliente por id | 2 | 5 |
+| 41 | TS10 | Listar dispositivos | 2 | 5 |
+| 42 | TS13 | Actualizar información de un dispositivo | 2 | 5 |
+| 43 | TS18 | Cambiar plan de suscripción | 3 | 5 |
+| 44 | TS21 | Registrar nuevo usuario | 1 | 5 |
+| 45 | SP02 | Evaluar proveedores de LLM para el Asistente Inteligente (Smart Assistant) | 3 | 5 |
+| 46 | SP05 | Analizar la viabilidad de RabbitMQ vs Apache Kafka para el manejo masivo de telemetría | 3 | 5 |
+| 47 | US04 | Visualizar los servicios principales | 1 | 3 |
+| 48 | US05 | Registrarse en la aplicación | 1 | 3 |
+| 49 | US07 | Seleccionar el idioma de la landing page | 1 | 3 |
+| 50 | US16 | Acceder al perfil del usuario | 3 | 3 |
+| 51 | US17 | Editar la información del perfil | 3 | 3 |
+| 52 | US18 | Ver Imagen que Representa al Usuario | 3 | 3 |
+| 53 | US25 | Agregar un Nuevo Cliente | 2 | 3 |
+| 54 | US39 | Iniciar Sesión (Login) | 1 | 3 |
+| 55 | TS11 | Eliminar un dispositivo por id | 2 | 3 |
+| 56 | TS16 | Obtener suscripción actual | 3 | 3 |
+| 57 | TS17 | Listar catálogo de planes | 3 | 3 |
+| 58 | TS19 | Renovar suscripción | 3 | 3 |
+| 59 | TS20 | Cancelar suscripción | 3 | 3 |
+| 60 | TS22 | Validar token de sesión | 1 | 3 |
+| 61 | SP01 | Investigar el uso de MQTT vs WebSockets para la telemetría en tiempo real | 3 | 3 |
+| 62 | SP03 | Analizar librerías de OCR para el escaneo de dispositivos en Android | 3 | 3 |
+| 63 | SP04 | Explorar la integración de Webhooks de Stripe para la gestión de suscripciones | 3 | 3 |
+| 64 | SP06 | Investigar la implementación de Firebase Cloud Messaging (FCM) para notificaciones | 3 | 3 |
+| 65 | SP07 | Evaluar alternativas para la implementación de Autenticación de Dos Factores (2FA) | 3 | 3 |
+| 66 | US01 | Conocer la sección "Sobre Nosotros" | 1 | 2 |
+| 67 | US30 | Iniciar Cambio de Plan | 3 | 2 |
+| 68 | TS02 | Crear un Proyecto | 1 | 2 |
+| 69 | SP08 | Explorar la integración del SDK de Cloudinary para optimización de imágenes | 3 | 2 |
+| 70 | US40 | Cerrar Sesión (Logout) | 1 | 2 |
+
+---
+
+## 4.2.1.2. Sprint Backlog 1
+
+| Story ID | ID Task | Titulo | Descripción | Estimación (Horas) | Assigned To | Status |
+|---|---|---|---|---|---|---|
+| US01 | TK01 | Sección Sobre Nosotros | Como visitante del sitio, quiero conocer la historia y valores de la aplicación, para tener mayor conexión y confianza con la empresa. | 2 | Fabrizio Martin Panta Castro | Done |
+| US02 | TK02 | Sección testimonios del cliente | Como visitante del sitio, quiero consultar testimonios de otros clientes, para generar confianza en la propuesta de valor de la start up. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| US03 | TK03 | Acceso a información de contacto | Como visitante del sitio, quiero acceder fácilmente a la información de contacto de IoBuild, para comunicarme en caso de dudas. | 5 | Axel Randall Ordonez Ricaldi | Done |
+| US04 | TK04 | Visualización de servicios principales | Como visitante del sitio, quiero conocer los servicios que ofrece IoBuild, para entender su propuesta de valor. | 3 | Brayan Roberto Ccarita Cruz | Done |
+| US05 | TK05 | Opción de registro | Como visitante del sitio, quiero registrarme en la aplicación, para tener acceso a las funcionalidades de la aplicación. | 3 | Axel Randall Ordonez Ricaldi | Done |
+| US06 | TK06 | Preguntas frecuentes | Como visitante del sitio, quiero consultar una sección de preguntas frecuentes, para resolver dudas comunes sin necesidad de contactar a la start up. | 5 | Mateo Italo Loechle Arias | Done |
+| US07 | TK07 | Internacionalización de la landing page | Como visitante del sitio, quiero poder encontrar más de un idioma disponible, para poder elegir el idioma de mi preferencia. | 3 | Axel Randall Ordonez Ricaldi | Done |
+| US38 | TK08 | Registrarse en la plataforma | Como usuario, quiero crear una cuenta nueva proporcionando mis datos básicos y seleccionando mi rol, para poder acceder a las funcionalidades de la plataforma. | 5 | Axel Randall Ordonez Ricaldi | Done |
+| US39 | TK09 | Iniciar Sesión (Login) | Como usuario, quiero iniciar sesión con mis credenciales, para acceder de forma segura a las funcionalidades de la plataforma. | 4 | Axel Randall Ordonez Ricaldi | Done |
+| US40 | TK10 | Cerrar Sesión (Logout) | Como usuario, quiero cerrar sesión en la aplicación, para proteger mi cuenta cuando termine de utilizar la plataforma. | 3 | Mateo Italo Loechle Arias | Done |
+| TS21 | TK11 | Registrar nuevo usuario | Como desarrollador, quiero enviar los datos de registro (nombre, email, password, rol) a la API, para crear una nueva identidad en el sistema y permitir el acceso futuro. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| TS22 | TK12 | Validar token de sesión | Como desarrollador, quiero que la API valide que el token enviado en los headers es legítimo y no ha expirado, para proteger las rutas privadas. | 3 | Mateo Italo Loechle Arias | Done |
+| TS15 | TK13 | Crear ruta segura y mostrar datos específicos | Como desarrollador, quiero proteger el dashboard de fabricantes para que solo los fabricantes puedan visualizarlo. | 4 | Brayan Roberto Ccarita Cruz | Done |
+| US09 | TK14 | Acceso a proyectos activos | Como ingeniero, quiero tener acceso a los proyectos que se encuentran activos, para poder realizar un seguimiento de su progreso y gestionar los recursos necesarios. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| US20 | TK15 | Lista de proyectos | Como ingeniero, quiero ver una lista de todos mis proyectos para poder conocer el estado y detalles de cada uno. | 5 | Fabrizio Martin Panta Castro | Done |
+| US21 | TK16 | Agregar nuevo proyecto | Como arquitecto, quiero agregar un nuevo proyecto para poder registrar nuevos desarrollos inmobiliarios. | 8 | Jhosep Jamil Argomedo Camacho | Done |
+| US22 | TK17 | Detalles de un proyecto | Como arquitecto, quiero ver los detalles de un proyecto específico para poder revisar su información completa. | 5 | Mateo Italo Loechle Arias | Done |
+| TS01 | TK18 | Listar proyectos por constructor | Como desarrollador, quiero solicitar a la API que liste todos los proyectos asociados a un constructor específico, para poder mostrar la vista principal de Proyectos. | 5 | Fabrizio Martin Panta Castro | Done |
+| TS02 | TK19 | Crear un proyecto | Como desarrollador, quiero añadir un nuevo proyecto a través de la API para poder implementar la funcionalidad de registro de nuevos desarrollos. | 2 | Jhosep Jamil Argomedo Camacho | Done |
+| TS03 | TK20 | Recuperar proyecto por ID | Como desarrollador, quiero solicitar un proyecto por su {id} para poder mostrar la vista de detalles del proyecto. | 5 | Mateo Italo Loechle Arias | Done |
+| TS12 | TK21 | Actualizar información de un proyecto | Como desarrollador, quiero solicitar a la API que actualice la información de un proyecto (nombre, ubicación y descripción) para mantener los datos actualizados en la vista de gestión de proyectos. | 6 | Fabrizio Martin Panta Castro | Done |
+
+---
+
+## 4.2.2.2. Sprint Backlog 2
+
+| Story ID | ID Task | Titulo | Descripción | Estimación (Horas) | Assigned To | Status |
+|---|---|---|---|---|---|---|
+| US23 | TK01 | Lista de clientes | Como Arquitecto, quiero ver una lista de todos los clientes para poder gestionar sus proyectos asociados y el estado de su cuenta. | 5 | Brayan Roberto Ccarita Cruz | Done |
+| US24 | TK02 | Buscar y ordenar clientes | Como Ingeniero, quiero poder ordenar la lista de clientes por columnas (Nombre Completo, Proyecto Asociado, Estado de Cuenta) para poder encontrar u organizar clientes rápidamente según criterios específicos. | 5 | Axel Randall Ordonez Ricaldi | Done |
+| US25 | TK03 | Agregar un Nuevo Cliente | Como arquitecto o ingeniero, quiero agregar un nuevo cliente, para registrar su información y asociarlo a los proyectos correspondientes. | 4 | Jhosep Jamil Argomedo Camacho | Done |
+| US26 | TK04 | Perfil del cliente | Como Ingeniero, quiero ver el perfil detallado de un cliente para poder acceder a toda su información y opciones de gestión. | 8 | Fabrizio Martin Panta Castro | Done |
+| US27 | TK05 | Acceder a la Configuración del Cliente | Como Arquitecto, quiero acceder a la configuración específica de un cliente para poder realizar acciones de gestión como editar o gestionar el estado de su cuenta. | 4 | Jhosep Jamil Argomedo Camacho | Done |
+| TS04 | TK06 | Actualizar información de un cliente | Como desarrollador, quiero enviar a la API una solicitud para modificar los datos de un cliente existente, para poder implementar la edición de su perfil y la gestión de su estado de cuenta. | 8 | Brayan Roberto Ccarita Cruz | Done |
+| TS05 | TK07 | Eliminar un cliente | Como desarrollador, quiero solicitar a la API la eliminación de un cliente por su {id}, para poder implementar la funcionalidad de dar de baja clientes que ya no se utilizarán. | 5 | Axel Randall Ordonez Ricaldi | Done |
+| TS06 | TK08 | Soportar ordenación de clientes | Como desarrollador, quiero poder enviar parámetros de ordenación a la API (nombre de columna y dirección), para poder implementar las funcionalidades de Buscar/Ordenar Clientes. | 8 | Fabrizio Martin Panta Castro | Done |
+| TS07 | TK09 | Listar clientes | Como desarrollador, quiero solicitar a la API que liste los clientes, opcionalmente filtrados por estado o nombre, para poder mostrar la vista de la lista de clientes. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| TS08 | TK10 | Crear un cliente | Como desarrollador, quiero añadir un nuevo cliente a través de la API para poder implementar la funcionalidad de creación de clientes. | 8 | Mateo Italo Loechle Arias | Done |
+| TS09 | TK11 | Recuperar cliente por ID | Como desarrollador, quiero solicitar un recurso de cliente por su {id} para poder implementar la vista detallada del perfil. | 5 | Brayan Roberto Ccarita Cruz | Done |
+| US10 | TK12 | Acceso a dispositivos conectados | Como usuario, quiero tener acceso a los dispositivos conectados, para poder monitorear su estado y uso. | 5 | Mateo Italo Loechle Arias | Done |
+| US15 | TK13 | Visualizar los dispositivos y su distribución por tipo | Como ingeniero, quiero ver cuáles son los dispositivos y cómo están distribuidos por tipo, para realizar un análisis más detallado de los recursos disponibles. | 6 | Fabrizio Martin Panta Castro | Done |
+| US33 | TK14 | Ver Lista de Dispositivos | Como propietario, quiero ver una lista de todos los dispositivos registrados para poder monitorear su estado y ubicacion. | 3 | Jhosep Jamil Argomedo Camacho | Done |
+| US34 | TK15 | Agregar un Nuevo Dispositivo | Como propietario, quiero agregar un nuevo dispositivo al sistema para expandir la cobertura de monitoreo y control. | 3 | Brayan Roberto Ccarita Cruz | Done |
+| US35 | TK16 | Editar/Configurar Ajustes de Dispositivo | Como propietario, quiero acceder a la configuracion especifica de un dispositivo para modificar sus parametros o revisar su informacion detallada. | 4 | Axel Randall Ordonez Ricaldi | Done |
+| US36 | TK17 | Eliminar un Dispositivo | Como propietario, quiero poder eliminar un dispositivo que ya no esta en uso o esta defectuoso, para mantener la lista limpia y precisa. | 5 | Fabrizio Martin Panta Castro | Done |
+| TS10 | TK18 | Listar dispositivos | Como desarrollador, quiero solicitar a la API que liste todos los dispositivos, filtrados por ubicación o estado, para poder mostrar la lista de Gestión de Dispositivos. | 5 | Brayan Roberto Ccarita Cruz | Done |
+| TS11 | TK19 | Eliminar un dispositivo por id | Como desarrollador, quiero solicitar a la API que elimine un dispositivo por su {id} para poder retirar hardware que ya no se utiliza del sistema. | 4 | Mateo Italo Loechle Arias | Done |
+| TS13 | TK20 | Actualizar información de un dispositivo | Como desarrollador, quiero solicitar a la API que actualice la información de un dispositivo (nombre y ubicación) para reflejar los cambios en la gestión de dispositivos. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| TS14 | TK21 | Crear un nuevo dispositivo | Como desarrollador, quiero solicitar a la API que cree un nuevo dispositivo especificando su nombre, tipo y ubicación, para registrar nuevos equipos en el sistema. | 6 | Axel Randall Ordonez Ricaldi | Done |
+
+---
+
+## 4.2.3.2. Sprint Backlog 3
+
+| Story ID | ID Task | Titulo | Descripción | Estimación (Horas) | Assigned To | Status |
+|---|---|---|---|---|---|---|
+| US16 | TK01 | Acceder al perfil del usuario | Como usuario, quiero tener acceso a mi perfil, para ver datos como mi nombre, email, numero de telefono y mi direccion. | 5 | Brayan Roberto Ccarita Cruz | Done |
+| US17 | TK02 | Edicion de Informacion del Perfil | Como usuario, quiero poder editar alguna parte de mi informacion, como mi email, numero de telefono o direccion, para mantener mis datos actualizados. | 6 | Axel Randall Ordonez Ricaldi | Done |
+| US18 | TK03 | Ver Imagen que Representa al Usuario | Como usuario, quiero poder ver una imagen que me represente, para tener una experiencia mas personalizada. | 4 | Fabrizio Martin Panta Castro | Done |
+| US19 | TK04 | Visualización del rol de la cuenta | Como usuario, quiero poder ver el rol de mi cuenta, para entender qué permisos tengo dentro de la aplicación. | 5 | Axel Randall Ordonez Ricaldi | Done |
+| US19 | TK05 | Ver el Rol de la Cuenta | Como usuario, quiero poder ver el rol de mi cuenta, para entender que permisos tengo dentro de la aplicacion. | 4 | Mateo Italo Loechle Arias | Done |
+| US08 | TK06 | Visualizar dashboard de analíticas y métricas según el rol | Como usuario de la plataforma (constructor o propietario), quiero acceder a un dashboard centralizado con métricas clave y datos en tiempo real de mis proyectos y dispositivos, para supervisar el rendimiento, ocupación y consumo energético de mis espacios. | 5 | Fabrizio Martin Panta Castro | Done |
+| US11 | TK07 | Capacidad de ocupación por proyecto | Como ingeniero, quiero tener acceso a la capacidad de ocupación de cada proyecto, para poder analizar el uso de los recursos y planificar de manera eficiente. | 5 | Brayan Roberto Ccarita Cruz | Done |
+| US12 | TK08 | Gráfico de consumo de energía por hora | Como ingeniero, quiero ver un gráfico sobre la energía que se consume por hora, para poder evaluar el rendimiento energético de los proyectos en tiempo real. | 8 | Fabrizio Martin Panta Castro | Done |
+| US13 | TK09 | Gráfico de registro de ocupación | Como ingeniero, quiero ver un gráfico sobre el registro de ocupación, para poder analizar la evolución de la ocupación a lo largo del tiempo. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| US14 | TK10 | Resumen del proyecto | Como ingeniero, quiero ver un resumen sobre cada proyecto, para saber si está activo, su ubicación y cuántos departamentos están ocupados. | 5 | Mateo Italo Loechle Arias | Done |
+| US28 | TK11 | Plan de suscripción actual | Como ingeniero, quiero ver mi plan de suscripción actual y su estado para confirmar los beneficios que tengo y el costo mensual. | 8 | Fabrizio Martin Panta Castro | Done |
+| US29 | TK12 | Planes de suscripción alternativos | Como ingeniero, quiero ver planes de suscripción alternativos (Professional y Starter) para poder comparar sus precios y beneficios con mi plan actual. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| US30 | TK13 | Cambio de plan | Como arquitecto, quiero iniciar el proceso de cambio de plan para poder seleccionar un nivel de servicio diferente que se ajuste mejor a mis necesidades. | 2 | Mateo Italo Loechle Arias | Done |
+| US31 | TK14 | Renovar plan activo | Como arquitecto, quiero renovar mi plan actual para asegurar la continuidad del servicio si estoy cerca de la fecha de expiración o si mi plan no está configurado para renovación automática. | 5 | Brayan Roberto Ccarita Cruz | Done |
+| US32 | TK15 | Cancelar plan actual | Como ingeniero, quiero cancelar mi plan actual para finalizar mi suscripción al término del ciclo de facturación. | 8 | Axel Randall Ordonez Ricaldi | Done |
+| TS16 | TK16 | Obtener suscripción actual | Como desarrollador, quiero solicitar la información de la suscripción activa del usuario actual, para mostrar el plan, costo y beneficios en la vista principal de suscripciones. | 3 | Axel Randall Ordonez Ricaldi | Done |
+| TS17 | TK17 | Listar catálogo de planes | Como desarrollador, quiero solicitar la lista de todos los planes de suscripción disponibles en el sistema, para mostrarlos como alternativas en la interfaz de comparación. | 3 | Fabrizio Martin Panta Castro | Done |
+| TS18 | TK18 | Cambiar plan de suscripción | Como desarrollador, quiero enviar una solicitud para actualizar el plan de suscripción del usuario, para hacer efectivo el cambio de nivel de servicio seleccionado en la interfaz. | 5 | Jhosep Jamil Argomedo Camacho | Done |
+| TS19 | TK19 | Renovar suscripción | Como desarrollador, quiero solicitar la renovación de la suscripción actual, para extender la vigencia del servicio cuando el usuario confirma la acción. | 3 | Mateo Italo Loechle Arias | Done |
+| TS20 | TK20 | Cancelar suscripción | Como desarrollador, quiero solicitar la cancelación de la suscripción activa, para detener la renovación automática y finalizar el servicio al terminar el ciclo. | 3 | Brayan Roberto Ccarita Cruz | Done |
+| US37 | TK21 | Acceder a Ayuda y Soporte | Como usuario, quiero acceder a una sección de ayuda y soporte, para resolver dudas o problemas relacionados con el uso de la aplicación. | 5 | Jhosep Jamil Argomedo Camacho | Done |
 
 ### 3.4. Impact Mapping.
 

@@ -840,6 +840,7 @@ Mediante el uso de UXPressia se obtuvo una representación visual clara y dinám
 
 **Segmento Objetivo #2: Dueños de apartamentos**  
 ![Imagen User Journey Mapping 2](assets/UserJourneyMap_Segmento2.png)
+
 ### 2.3.4. Empathy Mapping.
 
 Como parte del enfoque de diseño centrado en el usuario, se desarrollaron mapas de empatía (Empathy Maps) para los dos segmentos principales identificados: Propietarios y Constructoras. Esta técnica, introducida por Dave Gray, permite plasmar de manera visual lo que los usuarios piensan, sienten, expresan y hacen en relación con el producto o servicio, facilitando una comprensión más profunda de su experiencia tanto emocional como cognitiva.
@@ -881,52 +882,10 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <div style="page-break-before: always;"></div>
 
-### 2.3.5. Big Picture Event Storming.
+### 2.3.5. As-Is Scenario Mapping
+[IMAGEN ADJUNTADA AQUÍ]
 
-Para el desarrollo del Big Picture EventStorming, se utilizó la herramienta Miro, que facilitó la colaboración y visualización de los diferentes elementos del proceso. A continuación, se presenta un resumen de los principales componentes identificados durante la sesión de EventStorming:
-
-Primero, se definierón las leyendas para los diferentes elementos que se van a usar en el EventStorming:
-![Big-Picture-EventStorming-Leyenda](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%202/Big-Picture-EventStorming-Leyenda.png)
-<br>
-- **Domain Events:** Representa un hecho del negocio que ya ocurrió y no puede cambiarse.<br>
-- **Hotspot Question Improvement:** Señala un punto de incertidumbre, duda o posible conflicto en el proceso. Se utiliza para visibilizar preguntas que aún no tienen respuesta clara, de modo que el equipo pueda discutirlas y mejorarlas más adelante<br>
-- **Definition:** Aporta una explicación breve y precisa de un concepto clave dentro del dominio.<br>
-- **Actor:** Es la persona, rol u organización que interactúa con el sistema o provoca eventos.<br>
-- **Command:** Expresa la intención de realizar una acción en el sistema.<br>
-- **Comment:** Sirve para añadir notas, aclaraciones o hipótesis que enriquecen el contexto. No alteran el flujo, pero ayudan a documentar observaciones útiles para futuras discusiones.<br>
-- **Policy:** Define una regla de negocio que conecta automáticamente un evento con un comando.<br>
-- **External System:** Representa servicios o plataformas externas que interactúan con tu sistema, aunque no las controles directamente.<br>
-
-El event storming permitió identificar de forma colaborativa los eventos clave que marcan el flujo del sistema, desde las interacciones principales de los usuarios hasta los procesos internos que sostienen la experiencia. El proceso se desarrolló siguiendo pasos como el reconocimiento de los domain events, la incorporación de los actores que desencadenan acciones, la definición de los comandos que impulsan dichos eventos y la identificación de las políticas o reglas que guían la dinámica del sistema. A partir de esto se generaron ideas que ayudaron a visualizar cómo se conectan las acciones, qué actores participan en cada etapa y qué resultados se esperan, lo que facilitó comprender mejor la dinámica general y detectar oportunidades de mejora o innovación.
-<br>
-
-**Big Picture EventStorming 1:**<br>
-Para el desarrollo del primer EventStorming se identifican los domain events, como la creación de un nuevo usuario o la asignación de un departamento. Luego se reconocen los pasos que ejecuta el actor principal (la constructora), como iniciar sesión, acceder a la sección de usuarios y registrar la información. También se muestran las validaciones del sistema, por ejemplo, cuando un departamento ya está asignado, lo que genera una notificación. Finalmente, se plantean preguntas para mejorar el flujo, como cómo mostrar únicamente los departamentos disponibles.
-<br>
-![Big-Picture-EventStorming-1](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%202/Big-Picture-EventStorming-1.png)
-<br><br>
-**Big Picture EventStorming 2:**<br>
-Para el desarrollo del segundo EventStorming se identifican los domain events relacionados con la selección y contratación de un plan, como el inicio del proceso de pago, la confirmación o rechazo del mismo y la activación del plan. El actor principal (la constructora) realiza acciones como acceder al catálogo, elegir un plan y completar el contrato. El sistema interviene validando el pago a través de pasarelas externas y actualizando la cuenta según el resultado. Además, se incluyen notificaciones para informar al usuario y preguntas clave para manejar casos especiales, como qué sucede si el pago falla después de activar el plan.
-<br>
-![Big-Picture-EventStorming-2](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%202/Big-Picture-EventStorming-2.png)
-<br><br>
-**Big Picture EventStorming 3:**<br>
-Para el desarrollo del tercer EventStorming se identifican los domain events relacionados con la gestión de un nuevo proyecto de construcción en la plataforma. El actor principal (la constructora) inicia con la recepción de los requerimientos del cliente, registra el proyecto y carga planos y especificaciones técnicas. Posteriormente, se seleccionan los módulos inteligentes y se realiza la validación con el cliente final. El sistema interviene en la integración con software BIM y dispositivos IoT, así como en la modificación y configuración del proyecto en IoBuild. Finalmente, se aborda la implementación en obra con soporte técnico y se concluye con la transferencia de control al propietario, asegurando que este reciba la gestión de su proyecto.
-<br>
-![Big-Picture-EventStorming-3](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%202/Big-Picture-EventStorming-3.png)
-<br><br>
-**Big Picture EventStorming 4:**<br>
-Para el desarrollo del cuarto EventStorming se identifican los domain events de monitoreo y configuración de dispositivos, como la generación de reportes, la configuración de parámetros y el envío de alertas. El actor principal (propietario) realiza acciones como iniciar sesión, visualizar el dashboard, seleccionar dispositivos y configurarlos. El sistema valida el estado de los equipos, emite sugerencias y notifica fallas. Finalmente, surgen preguntas clave sobre métricas a considerar, detección de fallas y definición de soluciones.
-<br>
-![Big-Picture-EventStorming-4](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%202/Big-Picture-EventStorming-4.png)
-
-**Big Picture EventStorming 5**<br>
-Para el desarrollo del quinto EventStorming se identifican los domain events de vinculación de dispositivos, como el inicio del emparejamiento, la confirmación o el fallo de la vinculación. El actor principal (propietario) inicia sesión, navega a la sección de dispositivos, selecciona añadir uno nuevo y sigue el proceso de emparejamiento. El sistema valida la vinculación, notifica el resultado y actualiza el panel de control. Surgen preguntas clave sobre cómo manejar errores de emparejamiento y qué información incluir en las notificaciones.
-<br>
-![Big-Picture-EventStorming-5](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%202/Big-Picture-EventStorming-5.png)
-
-
-### 2.3.6. Ubiquitous Language.
+### 2.4. Ubiquitous Language.
 
 
 | Ubiquitous Term | Definición del Dominio Funcional |
@@ -949,11 +908,16 @@ Para el desarrollo del quinto EventStorming se identifican los domain events de 
 | Device State | El estado operativo actual de un dispositivo, como 'En línea', 'Fuera de línea', 'Batería baja' o 'Error'. |
 | Billing Cycle | Periodo recurrente en el que se factura al Cliente por el servicio de la suscripción. |
 
----
-## 2.4. Requirements Specification
-### 2.4.1. User Stories.
 
-#### 2.4.1.1. Epics
+
+# Capítulo III: Requirements Specification
+
+## 3.1. To-Be Scenario Mapping
+[DESARROLLO TO BE SCENARIO MAPPING]
+
+## 3.2. User Stories.
+
+### Epics
 
 | Epic ID | Título | Descripción |
 |---|---|---|
@@ -973,7 +937,7 @@ Para el desarrollo del quinto EventStorming se identifican los domain events de 
 | EP14 | Asistente Inteligente | Como usuario, quiero acceder a un chatbot impulsado por IA para resolver dudas y obtener asistencia sobre la plataforma IoBuild. |
 | EP15 | Integración con IA para Dispositivos | Como usuario, quiero utilizar herramientas de IA para facilitar la gestión y optimización de dispositivos conectados, incluyendo escaneo y automatización. |
 
-#### 2.4.1.2. User Stories
+### User Stories
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
@@ -1549,7 +1513,7 @@ Para el desarrollo del quinto EventStorming se identifican los domain events de 
     <tr><td colspan="4"><strong>Escenario 1: El usuario activa la optimización</strong><br>Dado que hay dispositivos conectados,<br>Cuando el usuario activa la optimización,<br>Entonces la IA analiza el uso y ajusta configuraciones automáticamente.<br><br><strong>Escenario 2: Se completa</strong><br>Dado que la optimización se aplica,<br>Cuando se completa,<br>Entonces el usuario recibe un reporte de los cambios realizados y beneficios obtenidos.<br><br><strong>Escenario 3: El usuario aprueba</strong><br>Dado que la optimización requiere confirmación,<br>Cuando el usuario aprueba,<br>Entonces se aplican los cambios definitivos.</td></tr>
 </table>
 
-#### 2.4.1.3. Technical Stories
+### Technical Stories
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
@@ -1839,7 +1803,7 @@ Para el desarrollo del quinto EventStorming se identifican los domain events de 
 
 ---
 
-#### 2.4.1.4. Spike Stories
+### Spike Stories
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
@@ -2092,49 +2056,7 @@ Para el desarrollo del quinto EventStorming se identifican los domain events de 
     <tr><td colspan="4"><strong>Hallazgos:</strong><br><strong>Decisión:</strong><br><strong>Próximas US impactadas:</strong> US18 (Ver Imagen que Representa al Usuario), US21 (Agregar un nuevo proyecto).</td></tr>
 </table>
 
-
-### 2.4.2. Impact Mapping.
-
-El Impact Mapping es una metodología visual que permite alinear los objetivos estratégicos de un negocio con las acciones concretas de los usuarios y las funcionalidades de un producto digital. A través de una estructura jerárquica en forma de árbol, esta técnica evidencia cómo las metas empresariales se traducen en cambios de comportamiento esperados en los actores clave, así como en los entregables que hacen posible dichos cambios.
-
-En el desarrollo de este proyecto, esta herramienta se empleó para organizar de manera clara la relación entre las metas SMART del modelo digital, los User Personas previamente definidos y las funcionalidades necesarias para alcanzar los objetivos. El trabajo consideró los siguientes elementos:
-
-* Business Goals SMART: metas específicas, medibles y con plazos definidos, orientadas tanto a la adquisición de usuarios como a su retención a largo plazo.
-
-* Actores principales: representados por Miguel Veramendi y Carla Flores, definidos a partir de sus motivaciones y del rol que desempeñan en el uso de la solución.
-
-* Impactos esperados: formulados como comportamientos observables que cada actor debe adoptar para contribuir al logro de los objetivos (por ejemplo, integrar la solución en propuestas de diseño o personalizar espacios del hogar).
-
-* Deliverables funcionales: características o componentes del producto diseñados para generar dichos impactos, como plantillas de propuestas, paneles de métricas o notificaciones guiadas.
-
-El mapa se elaboró bajo un enfoque de diseño centrado en el usuario, apoyado en dinámicas visuales colaborativas que facilitan la alineación entre los objetivos de negocio y el desarrollo técnico de la solución.
-
-"Anexo: Impact Mapping"
-
-https://drive.google.com/drive/folders/1EJW8bNS65Z4DgjwuNBIIRwbDrMOgehws?usp=sharing
-
-**Business Goal 1: Alcanzar 600 suscripciones activas al plan inicial en un periodo de 8 meses.**
-
-Este objetivo constituye el primer hito estratégico para consolidar el modelo de negocio digital. Su enfoque principal está en la captación de usuarios iniciales que permitan validar la propuesta de valor y establecer un flujo de ingresos sostenible durante la fase temprana del proyecto. La meta de alcanzar 600 suscripciones en 8 meses no solo es concreta y medible, sino también viable según el análisis de mercado, y responde a la necesidad de lograr un punto de equilibrio en el corto plazo, asegurando una rápida tracción de la solución.
-
-Además, este objetivo se encuentra alineado con el rol de los actores clave identificados, Miguel Veramendi y Carla Flores, quienes, mediante comportamientos estratégicos como integrar la solución en sus proyectos, utilizarla de manera constante y recomendarla activamente, impulsan el crecimiento de la base de usuarios. En este sentido, se busca evidenciar que el producto aporta valor desde sus primeras etapas, incentivando tanto a profesionales como a usuarios finales a convertirse en promotores orgánicos de la plataforma.
-
-![Impact-Mapping-1](/assets/Impact-Mapping-1.png)
-
-**Business Goal 2: Automatizar el 70 % de los procesos de personalización en un periodo de 6 meses y aumentar la retención de clientes recurrentes en un 25 % en 9 meses**
-
-Este objetivo está orientado a fortalecer la eficiencia operativa y la sostenibilidad del negocio en el mediano plazo. Tras consolidar una base inicial de usuarios, el siguiente paso consiste en reducir la fricción en la interacción con la solución mediante la implementación de automatizaciones que hagan la experiencia más ágil, intuitiva y atractiva. Alcanzar un 70 % de automatización en los procesos de personalización en un periodo de 6 meses permitirá a los usuarios percibir mayor comodidad y ahorro de tiempo, incrementando así su satisfacción y confianza en la plataforma.
-
-De forma complementaria, se plantea aumentar la retención de clientes recurrentes en un 25 % en 9 meses, con el objetivo de consolidar relaciones a largo plazo y disminuir la tasa de abandono. Este crecimiento en la retención se sustenta en la mejora continua de la experiencia del usuario, el acompañamiento constante y la entrega de valor tangible a lo largo del tiempo.
-
-En conjunto, este objetivo no solo impulsa la optimización de los procesos internos, sino que también refuerza la viabilidad del modelo de negocio a largo plazo, promoviendo la fidelización de los clientes y su evolución hacia usuarios recurrentes.
-
-![Impact-Mapping-2](/assets/Impact-Mapping-2.png)
-
-
-
-
-### 2.4.3. Product Backlog.
+## 3.3. Product Backlog.
 A continuación, se presenta el Product Backlog, el cual reúne las historias de usuario y las tareas técnicas priorizadas para el desarrollo del proyecto. Cada elemento incluye su identificador, título, descripción y la estimación correspondiente en puntos de historia.
 
 Para la gestión y organización del backlog se utilizó la herramienta Trello, la cual permitió estructurar y visualizar las tareas de forma clara, dinámica y colaborativa. Este backlog se organizó en columnas que representan las distintas etapas del proceso de desarrollo, lo que facilita el seguimiento del avance, la identificación de bloqueos y la adecuada priorización de actividades.
@@ -2227,1758 +2149,47 @@ Link de colaboración en trello: https://shorturl.at/FrDjk
 | 79 | SP08 | Explorar la integración del SDK de Cloudinary para optimización de imágenes | 3 | 2 |
 | 80 | US45 | Cerrar Sesión (Logout) | 3 | 2 |
 
-## 2.5. Strategic-Level Domain-Driven Design
+### 3.4. Impact Mapping.
 
-El enfoque de **Strategic-Level Domain-Driven Design** sirve como pilar esencial en el desarrollo de la aplicación **IoBuild**. Gracias a esta metodología, es posible identificar y delimitar los distintos contextos del dominio, definir cómo se relacionan entre sí y construir una arquitectura de software robusta que responda a los objetivos del negocio.
+El Impact Mapping es una metodología visual que permite alinear los objetivos estratégicos de un negocio con las acciones concretas de los usuarios y las funcionalidades de un producto digital. A través de una estructura jerárquica en forma de árbol, esta técnica evidencia cómo las metas empresariales se traducen en cambios de comportamiento esperados en los actores clave, así como en los entregables que hacen posible dichos cambios.
 
-En esta etapa estratégica, se prioriza:
+En el desarrollo de este proyecto, esta herramienta se empleó para organizar de manera clara la relación entre las metas SMART del modelo digital, los User Personas previamente definidos y las funcionalidades necesarias para alcanzar los objetivos. El trabajo consideró los siguientes elementos:
 
-- Un entendimiento profundo del dominio, mediante la identificación de los procesos clave del negocio.
-- La definición de bounded contexts, estableciendo límites claros entre las distintas áreas funcionales.
-- El modelado de las relaciones, determinando cómo interactúan los diferentes contextos.
-- El diseño de una arquitectura de alto nivel, que estructura de forma integral el sistema.
+* Business Goals SMART: metas específicas, medibles y con plazos definidos, orientadas tanto a la adquisición de usuarios como a su retención a largo plazo.
 
-### 2.5.1. EventStorming
+* Actores principales: representados por Miguel Veramendi y Carla Flores, definidos a partir de sus motivaciones y del rol que desempeñan en el uso de la solución.
 
-El EventStorming es una técnica de modelado colaborativo que permite analizar y entender en profundidad el dominio complejo de IoBuild. A través de sesiones de trabajo conjunto con expertos del dominio, esta metodología ayuda a identificar elementos clave como eventos de dominio, comandos, agregados y bounded contexts.
+* Impactos esperados: formulados como comportamientos observables que cada actor debe adoptar para contribuir al logro de los objetivos (por ejemplo, integrar la solución en propuestas de diseño o personalizar espacios del hogar).
 
-#### 2.5.1.1. Candidate Context Discovery
-La Candidate Context Discovery es el proceso mediante el cual identificamos los posibles bounded contexts dentro del dominio de LevelUpJourney. Este proceso se basa en el análisis de los eventos, comandos y agregados identificados durante las sesiones de EventStorming.<br><br>
+* Deliverables funcionales: características o componentes del producto diseñados para generar dichos impactos, como plantillas de propuestas, paneles de métricas o notificaciones guiadas.
 
-![Candidate Context Discovery](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Frame%209.jpg?raw=true)<br>
-Representa la frontera administrativa inicial de la plataforma. El flujo muestra a la **Constructora** ejecutando comandos para crear propietarios y asignar apartamentos, estableciendo el evento crítico de **Apartamento Asignado**. Además, define la regla de negocio para adquirir unidades adicionales condicionada a la validación de **Fondos Suficientes**.
+El mapa se elaboró bajo un enfoque de diseño centrado en el usuario, apoyado en dinámicas visuales colaborativas que facilitan la alineación entre los objetivos de negocio y el desarrollo técnico de la solución.
 
-![Candidate Context Discovery](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Frame%2010.jpg?raw=true)<br>
-Define el límite de seguridad y autenticación. El diagrama expone el proceso donde un usuario inicia un intento de sesión, el sistema verifica las credenciales y, tras validarlas, genera un **Token Acceso**, marcando la sesión como iniciada de forma segura.
+"Anexo: Impact Mapping"
 
-![Candidate Context Discovery](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Frame%2011.jpg?raw=true)<br>
-Agrupa todas las interacciones operativas directas con el hardware. El flujo refleja al **Propietario** vinculando nuevos equipos, y ejecutando comandos para encender, apagar o modificar parámetros, lo que genera los eventos de **Estado de Dispositivo Cambio** en el mundo físico.
-<br>
-![Candidate Context Discovery](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Frame%2012.jpg?raw=true)<br>
-Aísla el núcleo de cálculo matemático y procesamiento pasivo. Se observa al **Sistema de Monitoreo** registrando lecturas de voltaje para calcular el gasto energético acumulado. El evento pivotal aquí es el **Limite de Energia Superado**, el cual actúa como el detonante para emitir alertas automáticas.
+https://drive.google.com/drive/folders/1EJW8bNS65Z4DgjwuNBIIRwbDrMOgehws?usp=sharing
 
-![Candidate Context Discovery](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Frame%2013.jpg?raw=true)<br>
-Delimita el módulo encargado de las consultas (Queries) del sistema. Ilustra cómo el **Propietario** y la **Constructora** solicitan métricas y datos históricos, lo cual desencadena la generación de un **Reporte de Consumo** y culmina con el evento de **Dashboard Presentado**.
+**Business Goal 1: Alcanzar 600 suscripciones activas al plan inicial en un periodo de 8 meses.**
 
-![Candidate Context Discovery](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Frame%2014.jpg?raw=true)<br>
-Muestra un módulo transversal dedicado a la comunicación saliente. El flujo detalla cómo el sistema formatea mensajes de alerta y utiliza canales externos como **Email Provider** y **Push Notification** para despachar la información hasta que la notificación es leída por el usuario.
+Este objetivo constituye el primer hito estratégico para consolidar el modelo de negocio digital. Su enfoque principal está en la captación de usuarios iniciales que permitan validar la propuesta de valor y establecer un flujo de ingresos sostenible durante la fase temprana del proyecto. La meta de alcanzar 600 suscripciones en 8 meses no solo es concreta y medible, sino también viable según el análisis de mercado, y responde a la necesidad de lograr un punto de equilibrio en el corto plazo, asegurando una rápida tracción de la solución.
 
-![Candidate Context Discovery](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Frame%2015.jpg?raw=true)<br>
-Representa la capa de valor agregado y optimización autónoma. El diagrama muestra al **Motor IA** recibiendo consultas, analizando patrones de consumo y generando sugerencias de ahorro. Finaliza con un evento de alto impacto donde la IA ejecuta la **Sugerencia Aplicada al Dispositivo** de forma directa.
+Además, este objetivo se encuentra alineado con el rol de los actores clave identificados, Miguel Veramendi y Carla Flores, quienes, mediante comportamientos estratégicos como integrar la solución en sus proyectos, utilizarla de manera constante y recomendarla activamente, impulsan el crecimiento de la base de usuarios. En este sentido, se busca evidenciar que el producto aporta valor desde sus primeras etapas, incentivando tanto a profesionales como a usuarios finales a convertirse en promotores orgánicos de la plataforma.
 
-![Candidate Context Discovery](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Frame%2016.jpg?raw=true)<br>
-Enmarca el modelo de negocio financiero de la plataforma. La imagen ilustra a la **Constructora** ingresando un método de pago para procesar el **Cobro Mensual**. El evento de **Subscripción Activada** es la frontera comercial que permite la renovación del acceso premium al sistema.
+![Impact-Mapping-1](/assets/Impact-Mapping-1.png)
 
-<br>
+**Business Goal 2: Automatizar el 70 % de los procesos de personalización en un periodo de 6 meses y aumentar la retención de clientes recurrentes en un 25 % en 9 meses**
 
-#### 2.5.1.2. Domain Message Flows Modeling
-El Domain Message Flows Modeling mapea cómo los mensajes (eventos, comandos) fluyen entre los diferentes bounded contexts identificados. Este modelado es crucial para entender las dependencias y patrones de comunicación del sistema.<br><br>
+Este objetivo está orientado a fortalecer la eficiencia operativa y la sostenibilidad del negocio en el mediano plazo. Tras consolidar una base inicial de usuarios, el siguiente paso consiste en reducir la fricción en la interacción con la solución mediante la implementación de automatizaciones que hagan la experiencia más ágil, intuitiva y atractiva. Alcanzar un 70 % de automatización en los procesos de personalización en un periodo de 6 meses permitirá a los usuarios percibir mayor comodidad y ahorro de tiempo, incrementando así su satisfacción y confianza en la plataforma.
 
-![Domain Message Flows Modeling](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Frame%2017.jpg?raw=true)<br>
-Este diagrama ilustra el flujo inicial de habilitación de un usuario en el sistema. Comienza con la **Constructora** ejecutando el comando síncrono para **Asignar Apartamento** dentro del contexto de **Smart Project Setup**. Esto detona un evento asíncrono **Apartamento Asignado** que viaja hacia **Service Execution**, dándole luz verde al **Propietario** para ejecutar el comando de **Vincular dispositivo**. El ciclo concluye cuando Service Execution emite el evento **Dispositivo Vinculado Integration** hacia Energy Management, preparándolo para recibir futuras métricas de ese nuevo hardware.
+De forma complementaria, se plantea aumentar la retención de clientes recurrentes en un 25 % en 9 meses, con el objetivo de consolidar relaciones a largo plazo y disminuir la tasa de abandono. Este crecimiento en la retención se sustenta en la mejora continua de la experiencia del usuario, el acompañamiento constante y la entrega de valor tangible a lo largo del tiempo.
 
-![Domain Message Flows Modeling](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Frame%2018.jpg?raw=true)<br>
-Este diagrama representa el comportamiento reactivo y autónomo del sistema frente a un pico de consumo. Se inicia cuando un **Sensor IoT** envía continuamente el comando **Registrar Lectura** hacia **Energy Management**. Al detectarse una anomalía, este contexto publica el evento **Limite Energía Superado Integration** para despertar al **Smart Assistant**. La IA evalúa la situación y envía un comando de ejecución directa **Aplicar Optimización** hacia Service Execution **Monitoring**, el cual apaga o regula el equipo y avisa de vuelta a **Energy Management** mediante un evento de cambio de estado.
+En conjunto, este objetivo no solo impulsa la optimización de los procesos internos, sino que también refuerza la viabilidad del modelo de negocio a largo plazo, promoviendo la fidelización de los clientes y su evolución hacia usuarios recurrentes.
 
-![Domain Message Flows Modeling](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Frame%2019.jpg?raw=true)<br>
-Esta imagen detalla cómo el usuario humano interactúa con el hardware utilizando la IA como intermediario. El flujo muestra al **Propietario** usando la Mobile App para enviar comandos de **Consultar Asistente** y posteriormente **Aceptar Sugerencia** hacia el **Smart Assistant**. Una vez autorizado, el asistente toma el control y manda el comando imperativo de **Modificar Parametros** hacia **Service Execution and Monitoring**. Finalmente, el hardware ejecuta el cambio y emite un evento de **Parametros Configurados Integration** hacia **Energy Management** para que ajuste sus cálculos de consumo eléctrico
+![Impact-Mapping-2](/assets/Impact-Mapping-2.png)
 
-
-#### 2.5.1.3. Bounded Context Canvases
-Los Bounded Context Canvases proporcionan una visión detallada de cada contexto delimitado, documentando sus responsabilidades, interfaces, eventos y relaciones con otros contextos.
-<br><br>
-
-![Bounded Context Canvases](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Smart%20Project%20Setup.jpg?raw=true)<br>
-Esta imagen representa el contrato formal del módulo administrativo e inmobiliario. Se clasifica como un Supporting Domain cuyo rol es gestionar la infraestructura física. El diagrama central mapea su comunicación entrante (los comandos **Asignar Apartamento** de la Constructora y **Adquirir Apartamento** del Propietario) y su comunicación saliente (el evento **Apartamento Asignado Integration Event** dirigido hacia **Service Execution**). En la parte inferior, se documentan las reglas de negocio estrictas, como la validación de fondos y la restricción de que un usuario no puede operar dispositivos sin un departamento formalmente asignado.
-
-![Bounded Context Canvases](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Service%20Execution%20and%20Monitoring.jpg?raw=true)<br>
-Este lienzo expone la arquitectura del núcleo operativo en tiempo real de la plataforma IoT (un **Core Domain**). Define sus roles como **Orquestador de Hardware** y **Ejecutor de Órdenes**. El mapa de dependencias ilustra una alta interacción: recibe comandos físicos (**Vincular**, **Encender/Apagar**) tanto del Propietario como órdenes directas de la IA (**Aplicar Optimización**), y a su vez publica los eventos de **Estado Dispositivo Cambio** hacia los medidores. Sus decisiones de negocio garantizan que todo cambio físico se notifique inmediatamente para no perder precisión en el sistema.
-
-![Bounded Context Canvases](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Energy%20Management.jpg?raw=true)<br>
-Este diagrama delimita el motor analítico y cuantitativo del sistema (también un **Core Domain**). El lienzo muestra que su comunicación entrante se basa puramente en telemetría (**Registrar Lectura Command**) proveniente de los sensores y en los cambios de estado del hardware. Visualmente, destaca que su única y más importante salida es la emisión del evento **Limite Energía Superado Integration Event** hacia el **asistente inteligente**. Entre sus políticas documentadas se subraya que el cálculo matemático debe ser estrictamente asíncrono para evitar cuellos de botella en la red de los condominios.
-
-![Bounded Context Canvases](https://github.com/F4brizio24/Imagenes-Proyecto/blob/main/Web%20App/Cap%C3%ADtulo%202/CcaritaTech%20-%20BIG%20Picture%20Eventstorming%20-%20Smart%20Assistant.jpg?raw=true)<br>
-Este lienzo detalla el módulo de Inteligencia Artificial que aporta el valor agregado a la plataforma (**Core Domain**). Establece sus roles como **Optimizador** y **Agente Autónomo**. El diagrama central mapea cómo la IA se alimenta de las alertas de **Energy Management** y de las consultas a demanda del usuario, para luego emitir el comando imperativo de **Aplicar Optimización** hacia Service Execution. En la base del lienzo, consolida decisiones críticas del negocio, como la capacidad del sistema para enviar órdenes de apagado directo en **Modo Autónomo** sin tener que esperar la aprobación manual del dueño del departamento.
-
-
-### 2.5.2. Context Mapping
-
-##### Resumen del Proceso
-El Context Mapping es la fase donde definimos las relaciones estructurales y los contratos de comunicación entre nuestros Bounded Contexts. En IoBuild, este proceso se realizó mediante un análisis crítico de dependencias, buscando maximizar la autonomía de los microservicios y proteger el lenguaje ubicuo de cada uno.
-
-##### Análisis de Alternativas (Exploración de Diseño)
-
-Para llegar a la arquitectura final, el equipo evaluó diversas configuraciones respondiendo a las siguientes preguntas críticas:
-
-###### 1. ¿Qué pasaría si movemos la capacidad de "Monitoreo de Umbrales" a Smart Assistant?
-* **Análisis:** Si el motor de IA procesara directamente las lecturas de voltaje, se generaría un acoplamiento masivo de datos innecesarios hacia la IA.
-* **Decisión:** Mantenerlo en **Energy Management**. Esto permite que la IA sea reactiva y solo "despierte" cuando ocurre un evento de negocio relevante (Límite Superado), siguiendo el principio de segregación de responsabilidades.
-
-###### 2. ¿Qué pasaría si creamos un Shared Kernel para la entidad "Propietario"?
-* **Análisis:** Aunque todos los contextos usan el concepto de "Propietario", su definición cambia: en *Smart Project Setup* es un titular legal con fondos; en *Service Execution* es un operador de hardware.
-* **Decisión:** Rechazado. Un Shared Kernel crearía un acoplamiento rígido en la base de datos. Se optó por duplicar el ID del propietario y usar una capa de traducción para mantener la autonomía de los modelos.
-
-###### 3. ¿Qué pasaría si aislamos los Core Capabilities y movemos los otros a un contexto aparte?
-* **Análisis:** Identificamos que *Smart Project Setup* es un dominio de soporte (SaaS B2B).
-* **Decisión:** Se aisló completamente. Al ser Upstream, permite que el "Core IoT" (Execution, Energy, Assistant) evolucione técnicamente sin verse afectado por cambios en las reglas de negocio administrativas de la constructora.
-
-##### Patrones de Relación y Mapa de Contextos
-
-La arquitectura de IoBuild se define bajo una arquitectura orientada a eventos (EDA). A continuación se detallan las relaciones y patrones DDD establecidos:
-
-###### A. Smart Project Setup (Upstream) -> Service Execution (Downstream)
-* **Patrón:** **Customer-Supplier / Anti-Corruption Layer (ACL)**.
-* **Motivo:** *Service Execution* depende de la información de departamentos asignados. Implementamos una ACL en *Service Execution* para evitar que cambios en el modelo de datos inmobiliario contaminen la lógica de control de dispositivos.
-
-###### B. Service Execution (Upstream) -> Energy Management (Downstream)
-* **Patrón:** **Published Language (PL)**.
-* **Motivo:** La comunicación es asíncrona y masiva. *Service Execution* publica eventos de telemetría en un lenguaje estándar (JSON) que *Energy Management* consume para sus cálculos sin que ambos necesiten conocerse íntimamente.
-
-###### C. Energy Management (Upstream) -> Smart Assistant (Downstream)
-* **Patrón:** **Published Language (PL)**.
-* **Motivo:** El asistente se suscribe a eventos de alerta de consumo. La relación es de bajo acoplamiento, permitiendo que el motor de IA pueda ser reemplazado o actualizado sin afectar los medidores de energía.
-
-###### D. Smart Assistant (Upstream) -> Service Execution (Downstream)
-* **Patrón:** **Customer-Supplier**.
-* **Motivo:** En este flujo de comando, el asistente actúa como el cliente que solicita una acción de ahorro. *Service Execution* actúa como el proveedor de la capacidad física de apagar o regular el hardware.
-
-##### Discusión de Alternativas y Conclusión
-Tras evaluar modelos de *Conformist* (donde todos se adaptan al modelo de la constructora), el equipo decidió rechazarlo por el alto riesgo de deuda técnica. La aproximación elegida de **Customer-Supplier con ACL** y **Published Language** garantiza que IoBuild sea escalable, permitiendo manejar miles de dispositivos simultáneamente sin que una falla en un módulo administrativo afecte la inteligencia operativa de la IA o el monitoreo de energía.
-
-### 2.5.3. Software Architecture
-La arquitectura de software de IoBuild se ha diseñado utilizando el modelo C4, ya que este permite representar el sistema en diferentes niveles de abstracción como Contexto, Contenedores y Despliegue. Gracias a este enfoque, es más fácil entender cómo funciona el sistema en general, cómo interactúan los usuarios con la plataforma y cómo se relaciona con otros sistemas externos.
-
-Para el diseño de la arquitectura, se han considerado algunos principios clave. En primer lugar, la separación de responsabilidades, donde cada parte del sistema tiene funciones específicas. También se busca un bajo acoplamiento, para evitar dependencias innecesarias entre los módulos, y una alta cohesión, agrupando elementos que tienen relación entre sí. Finalmente, se toma en cuenta la escalabilidad, permitiendo que el sistema pueda crecer sin problemas, y la mantenibilidad, facilitando realizar cambios o mejoras en el futuro.
-
-#### 2.5.3.1. Software Architecture Context Level Diagrams
-El diagrama de contexto presenta el sistema IoBuild como una plataforma central, mostrando cómo interactúa con los usuarios y con distintos sistemas externos. Este nivel permite entender de manera general el alcance del sistema y cómo se integra con otros servicios.
-
-"Context Level Diagram": <https://shorturl.at/EbWzU>
-![Context Level Diagrams](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%202/Software%20Architecture%20Context%20Diagram.png)
-
-**Explicación del Diagrama**
-
-Sistema Central (IoBuild):
-Es la plataforma principal encargada de gestionar proyectos de construcción inteligente. Permite a los usuarios configurar entornos, administrar dispositivos conectados y consultar información relevante como reportes y datos del sistema.
-
-**Usuarios:**
-
-- Builder: Es el usuario encargado de diseñar y configurar entornos inteligentes. Interactúa con IoBuild para registrar dispositivos mediante escaneo (QR) y gestionar proyectos a través de una interfaz web.
-- Landlord: Es el usuario que utiliza la plataforma para supervisar y administrar sus propiedades. Consulta reportes y realiza seguimiento mediante un dashboard.
-
-**Sistemas Externos:**
-
-- Cloudinary: Servicio utilizado para la gestión y almacenamiento de archivos multimedia relacionados con los proyectos.
-- AI Chatbot Service: Proporciona asistencia inteligente a los usuarios, resolviendo dudas y brindando soporte dentro de la plataforma.
-- Stripe: Sistema encargado de procesar pagos y gestionar suscripciones dentro de IoBuild.
-
-**Interacciones:**
-
-- El Builder interactúa con IoBuild para registrar dispositivos y gestionar configuraciones de proyectos.
-- El Landlord utiliza IoBuild para consultar reportes y monitorear el estado de sus propiedades.
-- IoBuild se integra con Cloudinary para almacenar y administrar contenido multimedia.
-- IoBuild se comunica con el AI Chatbot Service para brindar soporte y asistencia a los usuarios.
-- IoBuild utiliza Stripe para gestionar pagos y suscripciones dentro de la plataforma.
-
-En conjunto, este diagrama permite entender cómo IoBuild se posiciona como el núcleo del sistema, conectando a los usuarios con distintos servicios externos para ofrecer una solución completa.
-
-#### 2.5.3.2. Software Architecture Container Level Diagrams
-El siguiente diagrama de contenedores muestra la arquitectura de alto nivel del sistema IoBuild, permitiendo entender cómo se organizan sus principales componentes, qué tecnologías se utilizan y cómo interactúan entre sí. Este nivel de detalle ayuda a visualizar la estructura interna del sistema y cómo se distribuyen las responsabilidades entre los distintos contenedores.
-
-"Container Level Diagram": <https://shorturl.at/FEOTa>
-![Container Level Diagrams](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%202/Software%20Architecture%20Container%20Diagram.png)
-
-**Descripción del Container Diagram**
-
-El sistema IoBuild está compuesto por varios contenedores que trabajan de manera conjunta para ofrecer sus funcionalidades:
-
-**Capa de Presentación:**
-
-- Landing Page: Es la página pública del sistema. Funciona como punto de entrada para los usuarios, brindando información general y redirigiendo hacia la aplicación web.
-- Web App: Es la aplicación web principal donde los usuarios (Builder y Landlord) interactúan con el sistema para gestionar dispositivos, proyectos y visualizar información relevante.
-- Mobile Application: Aplicación móvil que permite a los usuarios acceder a las funcionalidades principales de IoBuild desde sus smartphones, facilitando la gestión remota de sus propiedades y dispositivos.
-- Single Page Application: Representa la lógica del lado del cliente dentro de la web app, permitiendo una experiencia dinámica e interactiva en el navegador sin recargar la página.
-
-**Capa de Backend:**
-
-- Web Service: Es el backend del sistema. Se encarga de procesar la lógica de negocio, exponer endpoints mediante una API y gestionar la comunicación entre el frontend, la base de datos y los servicios externos.
-
-**Capa de Persistencia:**
-
-- Database: Almacena toda la información del sistema, como datos de usuarios, proyectos, dispositivos y configuraciones.
-
-**Sistemas Externos:**
-
-- Cloudinary: Servicio utilizado para el almacenamiento y gestión de archivos multimedia.
-- Stripe: Plataforma encargada de procesar pagos y manejar suscripciones dentro del sistema.
-
-**Interacciones y Comunicación**
-
-- Los usuarios acceden al sistema a través de la Landing Page, la cual los redirige hacia la Web App.
-- La Web App utiliza una arquitectura SPA para gestionar la interacción del usuario de manera dinámica.
-- Tanto la Web App como la Mobile Application consumen la API expuesta por el Web Service mediante solicitudes HTTP.
-- El Web Service se encarga de procesar la lógica del sistema, acceder a la Database para almacenar o recuperar información, y comunicarse con servicios externos.
-- IoBuild utiliza Cloudinary para gestionar archivos multimedia y Stripe para el manejo de pagos y suscripciones.
-
-**Decisiones Tecnológicas Principales:**
-
-- Uso de SPA para mejorar la experiencia de usuario en la web.
-- Separación entre frontend y backend para facilitar el desarrollo y mantenimiento.
-- Backend centralizado con ASP.NET Core, que actúa como punto de acceso a la lógica del sistema.
-- Uso de una base de datos relacional (MySQL) para garantizar consistencia de la información.
-- Integración con servicios externos especializados como Cloudinary y Stripe para funcionalidades específicas.
-
-En conjunto, esta arquitectura permite que IoBuild sea un sistema escalable, mantenible y flexible, donde cada componente cumple una función específica y puede evolucionar de manera independiente.
-
-#### 2.5.3.3. Software Architecture Deployment Diagrams
-El siguiente diagrama de despliegue muestra cómo los diferentes componentes del sistema IoBuild se distribuyen en la infraestructura, tanto en el cliente como en la nube. Este tipo de diagrama permite entender dónde se ejecuta cada parte del sistema, cómo se comunican entre sí y qué tecnologías o servicios se utilizan en el entorno real de producción.
-
-"Deployment Level Diagram": <https://shorturl.at/2DSHw>
-![Deployment Level Diagrams](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%202/Software%20Architecture%20Deployment%20Diagram.png)
-
-**Descripción del Deployment Diagram**
-
-El sistema IoBuild está organizado en varias capas de despliegue que separan claramente el frontend, los clientes, el backend y la base de datos:
-
-**Client Tier (Clientes):**
-
-- Web Clients (Browser): Representa a los usuarios que acceden desde un navegador web. Aquí se carga la Landing Page y la Web Application (SPA), permitiendo la interacción con el sistema sin necesidad de instalar software adicional.
-- Mobile Clients (Mobile Device): Incluye dispositivos móviles donde se ejecuta la Mobile App, permitiendo a los usuarios gestionar sus propiedades y dispositivos desde cualquier lugar.
-
-**Cloud Tier (Infraestructura en la Nube):**
-
-- Frontend Hosting:
-    - GitHub Pages: Se utiliza para alojar la Landing Page, que es un sitio estático informativo accesible públicamente.
-    - Vercel: Plataforma donde se despliega la Web Application (SPA), optimizada para aplicaciones modernas y con buen rendimiento.
-- Backend Layer:
-    - Application Server: Servidor donde se ejecuta la lógica del sistema.
-    - Docker Container: Contenedor que encapsula el API Backend (API REST), permitiendo portabilidad, escalabilidad y facilidad de despliegue.
-- Data Layer:
-    - Database Server: Nodo donde se encuentra la base de datos.
-    - MySQL Database: Sistema de gestión de base de datos relacional que almacena toda la información del sistema.
-
-**Interacciones y Comunicación**
-
-- Los usuarios acceden a la Landing Page desde el navegador, la cual redirige hacia la Web Application (SPA).
-- Tanto la Web App como la Mobile App se comunican con el API Backend mediante solicitudes HTTPS, enviando y recibiendo datos en formato JSON.
-- El API Backend, desplegado en un contenedor Docker, procesa la lógica del sistema y se encarga de gestionar las peticiones de los clientes.
-- El backend se comunica con la MySQL Database mediante consultas SQL para almacenar y recuperar información.
-
-**Decisiones de Despliegue y Justificación**
-
-- Separación por capas: Se divide el sistema en cliente, frontend, backend y base de datos para facilitar el mantenimiento y escalabilidad.
-- Uso de servicios cloud: GitHub Pages y Vercel permiten un despliegue sencillo y eficiente del frontend sin necesidad de gestionar servidores.
-- Contenerización con Docker: Facilita la portabilidad del backend y permite desplegarlo en distintos entornos sin problemas de compatibilidad.
-- Comunicación segura: Se utiliza HTTPS para proteger la información que viaja entre clientes y servidor.
-- Base de datos centralizada: MySQL asegura la persistencia y consistencia de los datos del sistema.
-
-En conjunto, este diagrama muestra una arquitectura moderna basada en servicios en la nube y contenedores, que permite a IoBuild ser un sistema escalable, accesible desde múltiples dispositivos y fácil de mantener.
-
-
-## 2.6. Tactical-Level Domain-Driven Design
-
-### Introduccion al Diseno Tactico
-El Tactical-Level Domain-Driven Design de **IoBuild** representa la materializacion concreta del diseno estrategico definido previamente. En esta seccion se detalla como cada bounded context implementa sus capas Domain, Interface, Application e Infrastructure, asi como sus componentes internos, contratos y mecanismos de persistencia. Este enfoque tactico asegura que las decisiones de negocio se traduzcan en una arquitectura modular, desacoplada, mantenible y lista para evolucionar conforme crezca la plataforma.
-
-Para IoBuild se han identificado cuatro bounded contexts principales que cubren las capacidades nucleares de la solucion: **Smart Project Setup** para la configuracion inicial de proyectos, zonas y perfiles IoT; **Service Execution and Monitoring** para la orquestacion de servicios y el monitoreo operativo en tiempo real; **Smart Assistant** para la asistencia inteligente y contextual a los usuarios de la plataforma; y **Energy Management** para la medicion, analisis y optimizacion del consumo energetico en edificios inteligentes.
-
-### 2.6.1. Bounded Context: Smart Project Setup
-#### 2.6.1.1. Domain Layer
-En **IoBuild**, este bounded context define como se prepara un proyecto inteligente antes de su ejecucion operativa. El dominio cubre modelado del sitio, seleccion de perfiles IoT y configuracion de conectividad para dejar el proyecto listo para despliegue.
-
-**Entities y Aggregates**
-- **SmartProjectSetup (Aggregate Root):** representa la configuracion principal del proyecto (id, ownerId, nombre del proyecto, tipo de edificio, estado del setup, zonas y perfiles asignados).
-- **SiteZone:** representa un espacio fisico del proyecto (piso, ambiente o sector) donde se desplegaran dispositivos.
-- **DeviceProfile:** representa la configuracion funcional de un tipo de dispositivo IoT (sensor, intervalo de lectura, umbrales y protocolo).
-- **ConnectivityProfile:** representa la configuracion de conectividad del proyecto (gateway, protocolo, credenciales y politicas de reconexion).
-
-**Value Objects**
-- **SetupId, OwnerId, ZoneId, DeviceProfileId, ConnectivityProfileId:** identificadores unicos del dominio.
-- **SetupStatus:** estado del setup (DRAFT, VALIDATED, PROVISIONED, ARCHIVED).
-- **BuildingType:** tipo de edificio (RESIDENTIAL, COMMERCIAL, INDUSTRIAL, EDUCATIONAL).
-- **SensorType:** tipo de sensor (TEMPERATURE, HUMIDITY, OCCUPANCY, ENERGY_METER, AIR_QUALITY).
-- **ProtocolType:** protocolo de comunicacion (MQTT, HTTP, MODBUS, BACNET).
-
-**Commands**
-- CreateSmartProjectSetupCommand
-- UpdateSmartProjectSetupCommand
-- DefineSiteZoneCommand
-- UpdateSiteZoneCommand
-- AssignDeviceProfileCommand
-- ConfigureConnectivityProfileCommand
-- ValidateSmartProjectSetupCommand
-- ProvisionSmartProjectSetupCommand
-
-**Queries**
-- GetSmartProjectSetupByIdQuery
-- GetSmartProjectSetupsByOwnerIdQuery
-- GetSetupChecklistByIdQuery
-- GetZonesBySetupIdQuery
-- GetAvailableDeviceProfilesQuery
-- GetConnectivityProfileBySetupIdQuery
-
-**Domain Services (Contratos)**
-- SmartProjectSetupCommandService
-- SmartProjectSetupQueryService
-- ZoneConfigurationCommandService
-- DeviceProfileConfigurationService
-- SetupValidationService
-
-#### 2.6.1.2. Interface Layer
-La capa de interfaz expone endpoints REST para crear y configurar proyectos IoBuild, registrar zonas del sitio y asignar perfiles tecnicos.
-
-**Controllers**
-- **SmartProjectSetupsController:** create, update, validate, provision y consultas principales del setup.
-- **SetupZonesController:** define y actualiza zonas fisicas del proyecto.
-- **SetupProfilesController:** asigna perfiles de dispositivo y configura conectividad.
-
-**Resources (Request/Query DTOs)**
-- **Setup:** CreateSmartProjectSetupResource, UpdateSmartProjectSetupResource, ValidateSmartProjectSetupResource, ProvisionSmartProjectSetupResource.
-- **Zones:** DefineSiteZoneResource, UpdateSiteZoneResource.
-- **Profiles:** AssignDeviceProfileResource, ConfigureConnectivityProfileResource.
-- **Queries:** GetSmartProjectSetupByIdResource, GetSmartProjectSetupsByOwnerIdResource, GetSetupChecklistByIdResource, GetZonesBySetupIdResource.
-
-**Smart Project Setup Interface Diagram**
-![Smart Project Setup Interface Diagram](https://instasize.com/api/image/ac46962e9edde3cbfc8e372f387b207c489713181446b1a16f8ce49facd5b3b2.png)
-
-#### 2.6.1.3. Application Layer
-La capa de aplicacion orquesta comandos y queries para preparar el proyecto IoBuild y validar que la configuracion cumpla requisitos minimos antes del aprovisionamiento.
-
-**Command Handlers**
-- **SmartProjectSetupCommandServiceImpl:** CreateSmartProjectSetupCommand, UpdateSmartProjectSetupCommand, ValidateSmartProjectSetupCommand, ProvisionSmartProjectSetupCommand.
-- **ZoneConfigurationCommandServiceImpl:** DefineSiteZoneCommand, UpdateSiteZoneCommand.
-- **DeviceProfileConfigurationServiceImpl:** AssignDeviceProfileCommand, ConfigureConnectivityProfileCommand.
-
-**Query Handlers**
-- **SmartProjectSetupQueryServiceImpl:** GetSmartProjectSetupByIdQuery, GetSmartProjectSetupsByOwnerIdQuery, GetSetupChecklistByIdQuery, GetZonesBySetupIdQuery.
-- **SetupCatalogQueryServiceImpl:** GetAvailableDeviceProfilesQuery, GetConnectivityProfileBySetupIdQuery.
-
-**Smart Project Setup Application Diagram**
-![Smart Project Setup Application Diagram](https://instasize.com/api/image/e9c9db4b1c8d1417d7243363b80201317c2b75e261099bf4500fee76ca9d9dea.png)
-
-#### 2.6.1.4. Infrastructure Layer
-La capa de infraestructura implementa persistencia del setup de IoBuild, incluyendo zonas, perfiles de dispositivos y configuracion de conectividad.
-
-**Repositories**
-- **SmartProjectSetupRepository:** busquedas por ownerId, status y validaciones por nombre del proyecto.
-- **SiteZoneRepository:** consultas de zonas por setup y validacion de nombres repetidos por setup.
-- **DeviceProfileRepository:** catalogo de perfiles por sensor y tipo de edificio.
-- **ConnectivityProfileRepository:** obtencion y reemplazo de configuracion de conectividad por setup.
-
-**Smart Project Setup Infrastructure Diagram**
-![Smart Project Setup Infrastructure Diagram](https://instasize.com/api/image/7b5799c5a59f8baa058ce64b7ac8c866100f4a3f54a18da83b6da5bd5d9c55f4.png)
-
-#### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
-<!--
-workspace "IoBuild - Smart Project Setup (Component Diagram)" "C4 Component Diagram del bounded context Smart Project Setup" {
-    model {
-builder  = person "Builder"   "Configura proyectos y perfiles IoT."
-landlord = person "Landlord"  "Supervisa el setup del proyecto."
-
-iobuild = softwareSystem "IoBuild" {
-
-  spsApi = container "Smart Project Setup API" "Gestiona setup, zonas y perfiles." "ASP.NET Core Web API" {
-      spsController      = component "SmartProjectSetupsController""Endpoints de setup.""ASP.NET Core MVC Controller"
-      zonesController    = component "SetupZonesController""Endpoints de zonas.""ASP.NET Core MVC Controller"
-      profilesController = component "SetupProfilesController"     "Endpoints de perfiles y conectividad." "ASP.NET Core MVC Controller"
-      cmdService= component "SmartProjectSetupCommandServiceImpl"   "Casos de uso de comando."   "Application Service (C#)"
-      qryService= component "SmartProjectSetupQueryServiceImpl"     "Casos de uso de consulta."  "Application Service (C#)"
-      zoneCmdService     = component "ZoneConfigurationCommandServiceImpl"   "Reglas de zonas." "Application Service (C#)"
-      profileCmdService  = component "DeviceProfileConfigurationServiceImpl" "Reglas de perfiles IoT."    "Application Service (C#)"
-      aggregate= component "SmartProjectSetup Aggregate" "Invariantes del dominio."   "Domain Model (DDD)"
-      validation= component "SetupValidationService"      "Validaciones de negocio."   "Domain Service"
-      setupRepo= component "SmartProjectSetupRepository""Persistencia de setup."     "Repository"
-      zoneRepo = component "SiteZoneRepository""Persistencia de zonas."     "Repository"
-      profileRepo= component "DeviceProfileRepository"    "Persistencia de perfiles."  "Repository"
-      connectivityRepo   = component "ConnectivityProfileRepository""Persistencia de conectividad.""Repository"
-  }
-
-  mysql    = container "MySQL Database" "Persistencia transaccional."       "MySQL 8"
-  eventBus = container "Event Bus"      "Publicación de eventos de dominio." "RabbitMQ / Kafka"
-}
-
-builder  -> spsApi "Usa"      "HTTPS/JSON"
-landlord -> spsApi "Consulta" "HTTPS/JSON"
-
-spsController      -> cmdService"Envía comandos"
-spsController      -> qryService"Envía queries"
-zonesController    -> zoneCmdService    "Envía comandos"
-profilesController -> profileCmdService "Envía comandos"
-
-cmdService-> aggregate "Orquesta"
-qryService-> aggregate "Lee"
-zoneCmdService    -> aggregate "Modifica"
-profileCmdService -> aggregate "Modifica"
-
-aggregate -> validation "Valida reglas"
-
-cmdService-> setupRepo"Persiste"
-qryService-> setupRepo"Consulta"
-zoneCmdService    -> zoneRepo"Persiste"
-profileCmdService -> profileRepo      "Persiste"
-profileCmdService -> connectivityRepo "Persiste"
-
-setupRepo-> mysql "CRUD" "SQL/TCP"
-zoneRepo-> mysql "CRUD" "SQL/TCP"
-profileRepo      -> mysql "CRUD" "SQL/TCP"
-connectivityRepo -> mysql "CRUD" "SQL/TCP"
-
-aggregate -> eventBus "Publica eventos" "AMQP/Kafka"
-    }
-
-    views {
-component spsApi "SPS-Component" {
-  include *
-  autolayout lr
-}
-
-styles {
-  element "Person" {
-      background #08427b
-      color #ffffff
-      shape person
-  }
-  element "Software System" {
-      background #1168bd
-      color #ffffff
-  }
-  element "Container" {
-      background #438dd5
-      color #ffffff
-  }
-  element "Component" {
-      background #85bbf0
-      color #000000
-  }
-}
-    }
-}
-
--->
-
-![Diagram C4](https://i.imgur.com/EZ0QtVR.png)
-
-#### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
-En esta seccion se presentan los diagramas de nivel codigo para **Smart Project Setup**, cubriendo el modelo del Domain Layer y su persistencia relacional.
-
-##### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
-El siguiente diagrama UML muestra clases, interfaces, enumeraciones, atributos, metodos, scopes y relaciones con multiplicidad del dominio.
-
-
-<div style="display:none">
-    ```mermaid
-    classDiagram
-    direction LR
-
-    class SmartProjectSetup {
--SetupId id
--OwnerId ownerId
--string projectName
--BuildingType buildingType
--SetupStatus status
--DateTime createdAt
--DateTime updatedAt
-+renameProject(name:string) void
-+changeBuildingType(type:BuildingType) void
-+addZone(zone:SiteZone) void
-+assignDeviceProfile(profile:DeviceProfile) void
-+configureConnectivity(profile:ConnectivityProfile) void
-+validate() void
-+provision() void
-    }
-
-    class SiteZone {
--ZoneId id
--string name
--int floor
--string areaType
--float areaM2
-+rename(name:string) void
-+updateArea(areaM2:float) void
-    }
-
-    class DeviceProfile {
--DeviceProfileId id
--SensorType sensorType
--int samplingIntervalSec
--float minThreshold
--float maxThreshold
--ProtocolType protocol
-+changeSamplingInterval(seconds:int) void
-+updateThresholds(min:float,max:float) void
-    }
-
-    class ConnectivityProfile {
--ConnectivityProfileId id
--ProtocolType protocol
--string gatewayHost
--int gatewayPort
--string credentialsRef
--int reconnectPolicySec
-+updateGateway(host:string,port:int) void
-+rotateCredentials(ref:string) void
-    }
-
-    class SetupStatus {
-<<enumeration>>
-DRAFT
-VALIDATED
-PROVISIONED
-ARCHIVED
-    }
-
-    class BuildingType {
-<<enumeration>>
-RESIDENTIAL
-COMMERCIAL
-INDUSTRIAL
-EDUCATIONAL
-    }
-
-    class SensorType {
-<<enumeration>>
-TEMPERATURE
-HUMIDITY
-OCCUPANCY
-ENERGY_METER
-AIR_QUALITY
-    }
-    ```
-</div>
-
-![Diagrama plantUML](https://i.imgur.com/aqFCKUf.png)
-
-
-##### 2.6.1.6.2. Bounded Context Database Design Diagram
-El siguiente diagrama relacional muestra tablas, columnas y constraints para la persistencia del bounded context.
-
-<div style="display:none">
-
-    ```mermaid
-    erDiagram
-  SMART_PROJECT_SETUPS {
-  string setup_id PK
-  string owner_id
-  string project_name
-  string building_type
-  string setup_status
-datetime created_at
-datetime updated_at
-  }
-
-  SITE_ZONES {
-  string zone_id PK
-  string setup_id FK
-  string name
-int floor
-  string area_type
-  float area_m2
-datetime created_at
-  }
-
-  DEVICE_PROFILES {
-  string device_profile_id PK
-  string setup_id FK
-  string sensor_type
-int sampling_interval_sec
-  float min_threshold
-  float max_threshold
-  string protocol
-datetime created_at
-  }
-
-  CONNECTIVITY_PROFILES {
-  string connectivity_profile_id PK
-  string setup_id FK
-  string protocol
-  string gateway_host
-int gateway_port
-  string credentials_ref
-int reconnect_policy_sec
-datetime updated_at
-  }
-
-  SMART_PROJECT_SETUPS ||--o{ SITE_ZONES : "has zones"
-  SMART_PROJECT_SETUPS ||--o{ DEVICE_PROFILES : "has profiles"
-  SMART_PROJECT_SETUPS ||--o| CONNECTIVITY_PROFILES : "has connectivity"
-    ```
-</div>
-
-![Diagrama lucidchart](https://i.imgur.com/szDoLl0.png)
-
-### 2.6.2. Bounded Context: Service Execution and Monitoring
-#### 2.6.2.1. Domain Layer
-En **IoBuild**, este bounded context gestiona la ejecucion operativa de servicios y el monitoreo continuo de su comportamiento. El dominio cubre la orquestacion de ejecuciones, el registro de metricas de observabilidad y la gestion de alertas operativas.
-
-**Entities y Aggregates**
-- **ServiceExecution (Aggregate Root):** representa una ejecucion de servicio (id, projectId, serviceId, triggerType, estado, inicio, fin y resultado).
-- **ExecutionTask:** representa una tarea interna ejecutada dentro de un flujo de servicio (orden, comando, estado y duracion).
-- **MonitoringMetric:** representa una medicion tecnica asociada a una ejecucion o servicio (tipo, valor, unidad y timestamp).
-- **ServiceAlert:** representa una alerta operativa generada por fallos, degradacion o umbrales excedidos.
-
-**Value Objects**
-- **ExecutionId, TaskId, ProjectId, ServiceId, MetricId, AlertId:** identificadores unicos del dominio.
-- **ExecutionStatus:** estado de ejecucion (QUEUED, RUNNING, SUCCESS, FAILED, CANCELLED, TIMEOUT).
-- **TaskStatus:** estado de tarea (PENDING, RUNNING, COMPLETED, FAILED, SKIPPED).
-- **HealthStatus:** salud del servicio (HEALTHY, DEGRADED, OFFLINE).
-- **MetricType:** tipo de metrica (CPU_USAGE, MEMORY_USAGE, LATENCY, ERROR_RATE, THROUGHPUT).
-- **AlertSeverity:** severidad de alerta (INFO, WARNING, CRITICAL).
-
-##### Domain Behavior and Invariants
-
-Los aggregates del dominio encapsulan reglas de negocio y comportamiento operativo.
-
-**ServiceExecution Behavior**
-- startExecution()
-- stopExecution()
-- retryExecution()
-- completeExecution()
-- failExecution(reason)
-- registerMonitoringMetric(metric)
-- evaluateServiceHealth()
-
-**Domain Invariants**
-- Una ejecución solo puede estar RUNNING si posee startTime.
-- Una ejecución finalizada no puede reiniciarse sin crear una nueva instancia.
-- Las métricas solo pueden registrarse para ejecuciones activas.
-
-##### Domain Events
-
-El bounded context publica eventos del dominio para permitir integración desacoplada con otros contextos.
-
-- ServiceExecutionStarted
-- ServiceExecutionCompleted
-- ServiceExecutionFailed
-- MonitoringMetricRegistered
-- ServiceHealthDegraded
-- ServiceAlertRaised
-- ServiceAlertResolved
-
-**Commands**
-- StartServiceExecutionCommand
-- StopServiceExecutionCommand
-- RetryServiceExecutionCommand
-- CancelServiceExecutionCommand
-- RegisterMonitoringMetricCommand
-- UpdateServiceHealthStatusCommand
-- RaiseServiceAlertCommand
-- ResolveServiceAlertCommand
-
-**Queries**
-- GetExecutionByIdQuery
-- GetExecutionsByProjectIdQuery
-- GetActiveExecutionsQuery
-- GetMetricsByExecutionIdQuery
-- GetServiceHealthByProjectIdQuery
-- GetOpenAlertsByProjectIdQuery
-
-**Domain Services (Contratos)**
-- ServiceExecutionCommandService
-- ServiceExecutionQueryService
-- MonitoringCommandService
-- MonitoringQueryService
-- AlertManagementService
-- AlertQueryService
-
-#### 2.6.2.2. Interface Layer
-La capa de interfaz expone endpoints REST para ejecutar servicios, consultar estado operativo y administrar alertas del proyecto.
-
-**Controllers**
-- **ServiceExecutionsController:** start, stop, retry, cancel y consultas de ejecuciones.
-- **ServiceMonitoringController:** registro de metricas y consulta de salud operativa.
-- **ServiceAlertsController:** apertura, resolucion y consulta de alertas activas.
-
-**Resources (Request/Query DTOs)**
-- **Execution:** StartServiceExecutionResource, StopServiceExecutionResource, RetryServiceExecutionResource, CancelServiceExecutionResource.
-- **Monitoring:** RegisterMonitoringMetricResource, UpdateServiceHealthStatusResource.
-- **Alerts:** RaiseServiceAlertResource, ResolveServiceAlertResource.
-- **Queries:** GetExecutionByIdResource, GetExecutionsByProjectIdResource, GetMetricsByExecutionIdResource, GetServiceHealthByProjectIdResource, GetOpenAlertsByProjectIdResource.
-
-**Service Execution and Monitoring Interface Diagram**
-![Service Execution and Monitoring Interface Diagram](https://instasize.com/api/image/d237f139e3bd29eea6ef5698a4e4f57140679000ed1d00c23baaec4157afae78.png)
-
-#### 2.6.2.3. Application Layer
-La capa de aplicacion orquesta la ejecucion de servicios y los procesos de observabilidad para garantizar trazabilidad y control operativo del sistema.
-
-**Command Handlers**
-- **ServiceExecutionCommandServiceImpl:** StartServiceExecutionCommand, StopServiceExecutionCommand, RetryServiceExecutionCommand, CancelServiceExecutionCommand.
-- **MonitoringCommandServiceImpl:** RegisterMonitoringMetricCommand, UpdateServiceHealthStatusCommand.
-- **AlertManagementServiceImpl:** RaiseServiceAlertCommand, ResolveServiceAlertCommand.
-
-**Query Handlers**
-- **ServiceExecutionQueryServiceImpl:** GetExecutionByIdQuery, GetExecutionsByProjectIdQuery, GetActiveExecutionsQuery.
-- **MonitoringQueryServiceImpl:** GetMetricsByExecutionIdQuery, GetServiceHealthByProjectIdQuery.
-- **AlertQueryServiceImpl:** GetOpenAlertsByProjectIdQuery.
-
-**Service Execution and Monitoring Application Diagram**
-![Service Execution and Monitoring Application Diagram](https://instasize.com/api/image/20b81bd5a2eecdf45ebe39b3305e475644b4581e030069c24911def098e3a3c8.png)
-
-#### 2.6.2.4. Infrastructure Layer
-La capa de infraestructura implementa persistencia de ejecuciones, metricas y alertas para soportar monitoreo historico y operacion en tiempo real.
-
-**Repositories**
-- **ServiceExecutionRepository:** busquedas por projectId, estado de ejecucion y ejecuciones activas.
-- **ExecutionTaskRepository:** tareas por executionId y estado de tarea.
-- **MonitoringMetricRepository:** metricas por executionId y por tipo de metrica.
-- **ServiceAlertRepository:** alertas por projectId, severidad y estado de resolucion.
-
-**Service Execution and Monitoring Infrastructure Diagram**
-![Service Execution and Monitoring Infrastructure Diagram](https://instasize.com/api/image/6c9a8603ca4cac961870fdedc0c763647510ccd982a43e0e2128bb56cbe5cdd4.png)
-
-#### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
-<!--
-workspace "IoBuild - Service Execution & Monitoring (Component Diagram)" "C4 Component Diagram del bounded context Service Execution and Monitoring" {
-
-    model {
-builder  = person "Builder"  "Opera servicios."
-landlord = person "Landlord" "Monitorea estado operativo."
-
-iobuild = softwareSystem "IoBuild" {
-
-  semApi = container "Service Execution & Monitoring API" "Ejecuta servicios, monitorea métricas y alertas." "ASP.NET Core Web API" {
-      execController    = component "ServiceExecutionsController""Endpoints de ejecución."     "ASP.NET Core MVC Controller"
-      monitorController = component "ServiceMonitoringController""Endpoints de métricas/salud." "ASP.NET Core MVC Controller"
-      alertsController  = component "ServiceAlertsController"  "Endpoints de alertas."       "ASP.NET Core MVC Controller"
-
-      execCmd    = component "ServiceExecutionCommandServiceImpl" "Comandos de ejecución."  "Application Service (C#)"
-      execQry    = component "ServiceExecutionQueryServiceImpl"   "Queries de ejecución."   "Application Service (C#)"
-      monitorCmd = component "MonitoringCommandServiceImpl"       "Comandos de monitoreo."  "Application Service (C#)"
-      monitorQry = component "MonitoringQueryServiceImpl""Queries de monitoreo."   "Application Service (C#)"
-      alertCmd   = component "AlertManagementServiceImpl""Comandos de alertas."    "Application Service (C#)"
-      alertQry   = component "AlertQueryServiceImpl"    "Queries de alertas."     "Application Service (C#)"
-
-      executionAgg = component "ServiceExecution Aggregate" "Ciclo de vida de ejecuciones y tareas." "Domain Model (DDD)"
-      alertEntity  = component "ServiceAlert Entity""Modelo de alertas." "Domain Entity"
-      healthSvc    = component "HealthEvaluationService"    "Evalúa estado de salud."      "Domain Service"
-
-      executionRepo = component "ServiceExecutionRepository" "Persistencia de ejecuciones." "Repository"
-      taskRepo      = component "ExecutionTaskRepository"    "Persistencia de tareas."      "Repository"
-      metricRepo    = component "MonitoringMetricRepository" "Persistencia de métricas."    "Repository"
-      alertRepo     = component "ServiceAlertRepository"     "Persistencia de alertas."     "Repository"
-  }
-
-  mysql= container "MySQL Database"      "Persistencia operativa." "MySQL 8"
-  observability = container "Observability Stream" "Eventos/telemetría."     "Kafka / OpenTelemetry"
-}
-
-builder  -> semApi "Usa"      "HTTPS/JSON"
-landlord -> semApi "Consulta" "HTTPS/JSON"
-
-execController    -> execCmd    "Comandos"
-execController    -> execQry    "Queries"
-monitorController -> monitorCmd "Comandos"
-monitorController -> monitorQry "Queries"
-alertsController  -> alertCmd   "Comandos"
-alertsController  -> alertQry   "Queries"
-
-execCmd    -> executionAgg "Orquesta"
-execQry    -> executionAgg "Consulta"
-monitorCmd -> executionAgg "Registra métricas"
-monitorQry -> executionAgg "Consulta métricas"
-alertCmd   -> alertEntity  "Gestiona"
-alertQry   -> alertEntity  "Consulta"
-executionAgg -> healthSvc  "Evalúa salud"
-
-execCmd    -> executionRepo "Persiste"
-execQry    -> executionRepo "Consulta"
-execCmd    -> taskRepo      "Persiste tareas"
-monitorCmd -> metricRepo    "Persiste métricas"
-monitorQry -> metricRepo    "Consulta métricas"
-alertCmd   -> alertRepo     "Persiste alertas"
-alertQry   -> alertRepo     "Consulta alertas"
-
-executionRepo -> mysql "CRUD" "SQL/TCP"
-taskRepo      -> mysql "CRUD" "SQL/TCP"
-metricRepo    -> mysql "CRUD" "SQL/TCP"
-alertRepo     -> mysql "CRUD" "SQL/TCP"
-
-executionAgg -> observability "Publica eventos" "Kafka/OTel"
-    }
-
-    views {
-component semApi "SEM-Component" {
-  include *
-  autolayout lr
-}
-
-styles {
-  element "Person" {
-      background #08427b
-      color #ffffff
-      shape person
-  }
-  element "Software System" {
-      background #1168bd
-      color #ffffff
-  }
-  element "Container" {
-      background #438dd5
-      color #ffffff
-  }
-  element "Component" {
-      background #85bbf0
-      color #000000
-  }
-}
-    }
-}
--->
-![Diagrama C4](https://i.imgur.com/p8nHO38.png)
-
-
-#### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
-En esta seccion se presenta el detalle de implementacion para **Service Execution and Monitoring**, incluyendo estructura de dominio y modelo de persistencia.
-
-##### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
- <div style="display:none">
-    ```mermaid
-    classDiagram
-    direction LR
-
-    class ServiceExecution {
--ExecutionId id
--ProjectId projectId
--ServiceId serviceId
--ExecutionStatus status
--DateTime startedAt
--DateTime finishedAt
--string resultSummary
-+startExecution() void
-+stopExecution() void
-+retryExecution() void
-+completeExecution() void
-+failExecution(reason:string) void
-+registerMonitoringMetric(metric:MonitoringMetric) void
-    }
-
-    class ExecutionTask {
--TaskId id
--ExecutionId executionId
--int taskOrder
--string command
--TaskStatus status
--int durationMs
-+start() void
-+complete() void
-+fail(reason:string) void
-    }
-
-    class MonitoringMetric {
--MetricId id
--ExecutionId executionId
--MetricType type
--float value
--string unit
--DateTime timestamp
-    }
-
-    class ServiceAlert {
--AlertId id
--ProjectId projectId
--AlertSeverity severity
--string message
--bool resolved
--DateTime createdAt
-+resolve() void
-    }
-
-    class ExecutionStatus {
-<<enumeration>>
-QUEUED
-RUNNING
-SUCCESS
-FAILED
-CANCELLED
-TIMEOUT
-    }
-
-    class TaskStatus {
-<<enumeration>>
-PENDING
-RUNNING
-COMPLETED
-FAILED
-SKIPPED
-    }
-
-    class MetricType {
-<<enumeration>>
-CPU_USAGE
-MEMORY_USAGE
-LATENCY
-ERROR_RATE
-THROUGHPUT
-    }
-
-    class AlertSeverity {
-<<enumeration>>
-INFO
-WARNING
-CRITICAL
-    }
-
-    class ServiceExecutionRepository {
-<<interface>>
-+save(exec:ServiceExecution) ServiceExecution
-+findById(id:ExecutionId) ServiceExecution
-+findActiveByProjectId(projectId:ProjectId) List~ServiceExecution~
-    }
-
-    class AlertManagementService {
-<<interface>>
-+raiseAlert(alert:ServiceAlert) ServiceAlert
-+resolveAlert(alertId:AlertId) void
-    }
-
-    ServiceExecution "1" --> "1..*" ExecutionTask : orchestrates
-    ServiceExecution "1" --> "0..*" MonitoringMetric : emits
-    ServiceExecution "1" --> "1" ExecutionStatus : has
-    ExecutionTask "1" --> "1" TaskStatus : has
-    MonitoringMetric "1" --> "1" MetricType : classifies
-    ServiceAlert "1" --> "1" AlertSeverity : has
-    AlertManagementService ..> ServiceAlert : manages
-    ServiceExecutionRepository ..> ServiceExecution : persists
-    ```
- </div>   
-
-![Diagrama plantUML](https://i.imgur.com/Ngsgh4D.png)
-
-##### 2.6.2.6.2. Bounded Context Database Design Diagram
-
-<div style="display:none">
-    ```mermaid
-erDiagram
-SERVICE_EXECUTIONS {
-string execution_id PK
-string project_id
-string service_id
-string status
-      datetime started_at
-      datetime finished_at
-string result_summary
-}
-
-EXECUTION_TASKS {
-string task_id PK
-string execution_id FK
-      int task_order
-string command
-string status
-      int duration_ms
-}
-
-MONITORING_METRICS {
-string metric_id PK
-string execution_id FK
-string metric_type
-float metric_value
-string unit
-      datetime measured_at
-}
-
-SERVICE_ALERTS {
-string alert_id PK
-string project_id
-string severity
-string message
-boolean resolved
-      datetime created_at
-      datetime resolved_at
-}
-
-SERVICE_EXECUTIONS ||--|{ EXECUTION_TASKS : "contains tasks"
-SERVICE_EXECUTIONS ||--o{ MONITORING_METRICS : "registers metrics"
-    ```
-</div>
-
-![Diagrama Lucidchart](https://i.imgur.com/xtReovF.png)
-
-### 2.6.3. Bounded Context: Smart Assistant
-#### 2.6.3.1. Domain Layer
-En **IoBuild**, este bounded context implementa la asistencia inteligente contextual para apoyar decisiones operativas. El dominio cubre conversaciones asistidas, generacion de recomendaciones tecnicas y construccion de planes de accion sobre eventos del proyecto.
-
-**Entities y Aggregates**
-- **AssistantConversation (Aggregate Root):** representa una sesion conversacional asociada a un proyecto (id, projectId, userId, canal, estado y timestamps).
-- **AssistantMessage:** representa cada mensaje de una conversacion (rol, contenido, metadatos y momento de emision).
-- **AssistantRecommendation:** representa una recomendacion accionable generada por el asistente para optimizar operacion, mantenimiento o rendimiento.
-- **AssistantActionPlan:** representa el plan de accion derivado de una recomendacion, con pasos, prioridad y estado de ejecucion sugerido.
-
-**Value Objects**
-- **ConversationId, MessageId, RecommendationId, ActionPlanId, ProjectId, UserId:** identificadores unicos del dominio.
-- **ConversationStatus:** estado de conversacion (OPEN, WAITING_CONTEXT, RESOLVED, CLOSED).
-- **MessageRole:** rol del mensaje (USER, ASSISTANT, SYSTEM).
-- **AssistantChannel:** canal de interaccion (WEB_CHAT, MOBILE_CHAT, API).
-- **RecommendationType:** tipo de recomendacion (ALERT_TRIAGE, SERVICE_TUNING, ENERGY_OPTIMIZATION, MAINTENANCE).
-- **RecommendationPriority:** prioridad (LOW, MEDIUM, HIGH, CRITICAL).
-
-**Commands**
-- StartAssistantConversationCommand
-- SendUserMessageCommand
-- GenerateAssistantResponseCommand
-- CloseAssistantConversationCommand
-- CreateAssistantRecommendationCommand
-- AcceptAssistantRecommendationCommand
-- DismissAssistantRecommendationCommand
-- GenerateAssistantActionPlanCommand
-
-**Queries**
-- GetConversationByIdQuery
-- GetConversationsByProjectIdQuery
-- GetConversationMessagesQuery
-- GetRecommendationsByProjectIdQuery
-- GetPendingRecommendationsQuery
-- GetActionPlanByRecommendationIdQuery
-
-**Domain Services (Contratos)**
-- AssistantConversationCommandService
-- AssistantConversationQueryService
-- AssistantRecommendationCommandService
-- AssistantRecommendationQueryService
-- AssistantActionPlanCommandService
-- AssistantActionPlanQueryService
-
-#### 2.6.3.2. Interface Layer
-La capa de interfaz expone endpoints REST para interactuar con el asistente, administrar recomendaciones y consultar planes de accion.
-
-**Controllers**
-- **AssistantConversationsController:** inicio de conversacion, envio de mensajes, cierre y consultas de historial.
-- **AssistantRecommendationsController:** creacion, aceptacion, descarte y consulta de recomendaciones.
-- **AssistantActionPlansController:** generacion y consulta de planes de accion asociados a recomendaciones.
-
-**Resources (Request/Query DTOs)**
-- **Conversations:** StartAssistantConversationResource, SendUserMessageResource, GenerateAssistantResponseResource, CloseAssistantConversationResource.
-- **Recommendations:** CreateAssistantRecommendationResource, AcceptAssistantRecommendationResource, DismissAssistantRecommendationResource.
-- **Action Plans:** GenerateAssistantActionPlanResource.
-- **Queries:** GetConversationByIdResource, GetConversationsByProjectIdResource, GetConversationMessagesResource, GetRecommendationsByProjectIdResource, GetPendingRecommendationsResource, GetActionPlanByRecommendationIdResource.
-
-**Smart Assistant Interface Diagram**
-![Smart Assistant Interface Diagram](https://instasize.com/api/image/f00d4edcae97cb8e384659f46342e12d43ad825eec9ea7cdeaf51d53e584f900.png)
-
-#### 2.6.3.3. Application Layer
-La capa de aplicacion orquesta la interaccion del asistente con el contexto del proyecto para responder consultas, generar recomendaciones y proponer planes accionables.
-
-**Command Handlers**
-- **AssistantConversationCommandServiceImpl:** StartAssistantConversationCommand, SendUserMessageCommand, GenerateAssistantResponseCommand, CloseAssistantConversationCommand.
-- **AssistantRecommendationCommandServiceImpl:** CreateAssistantRecommendationCommand, AcceptAssistantRecommendationCommand, DismissAssistantRecommendationCommand.
-- **AssistantActionPlanCommandServiceImpl:** GenerateAssistantActionPlanCommand.
-
-**Query Handlers**
-- **AssistantConversationQueryServiceImpl:** GetConversationByIdQuery, GetConversationsByProjectIdQuery, GetConversationMessagesQuery.
-- **AssistantRecommendationQueryServiceImpl:** GetRecommendationsByProjectIdQuery, GetPendingRecommendationsQuery.
-- **AssistantActionPlanQueryServiceImpl:** GetActionPlanByRecommendationIdQuery.
-
-**Smart Assistant Application Diagram**
-![Smart Assistant Application Diagram](https://instasize.com/api/image/c1e93fdfadf169bc27b0c35f392c880a7e7cf8277875b5ca32146081bf2f4cae.png)
-
-#### 2.6.3.4. Infrastructure Layer
-La capa de infraestructura implementa persistencia de conversaciones, mensajes, recomendaciones y planes de accion para asegurar trazabilidad de la asistencia inteligente.
-
-**Repositories**
-- **AssistantConversationRepository:** consultas por projectId, estado de conversacion y usuario.
-- **AssistantMessageRepository:** historial de mensajes por conversationId y orden cronologico.
-- **AssistantRecommendationRepository:** recomendaciones por proyecto, prioridad y estado de aceptacion.
-- **AssistantActionPlanRepository:** planes de accion por recommendationId.
-
-##### Aggregate Persistence Rule
-
-ExecutionTask es una entidad interna del aggregate ServiceExecution y su persistencia se gestiona a través de ServiceExecutionRepository para mantener consistencia transaccional del aggregate.
-
-**Smart Assistant Infrastructure Diagram**
-![Smart Assistant Infrastructure Diagram](https://instasize.com/api/image/30c135e534c0d290f7f1eb2b52a4639e2d8ea4d833724136d9d91420f37e6c99.png)
-#### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
-
-<!--
-workspace "IoBuild - Smart Assistant (Component Diagram)" "C4 Component Diagram del bounded context Smart Assistant" {
-
-    model {
-builder = person "Builder" "Usa asistencia contextual."
-landlord = person "Landlord" "Solicita recomendaciones."
-
-llm = softwareSystem "External LLM Provider" "Proveedor IA externo (OpenAI u otro)."
-
-iobuild = softwareSystem "IoBuild" {
-
-  mysql = container "MySQL Database" "Persistencia conversacional." "MySQL 8"
-
-  saApi = container "Smart Assistant API" "Conversaciones, recomendaciones y planes de acción." "ASP.NET Core Web API" {
-      convController = component "AssistantConversationsController" "Endpoints de conversación." "ASP.NET Core MVC Controller"
-      recController = component "AssistantRecommendationsController" "Endpoints de recomendaciones." "ASP.NET Core MVC Controller"
-      planController = component "AssistantActionPlansController" "Endpoints de planes." "ASP.NET Core MVC Controller"
-
-      convCmd = component "AssistantConversationCommandServiceImpl" "Comandos de conversación." "Application Service (C#)"
-      convQry = component "AssistantConversationQueryServiceImpl" "Queries de conversación." "Application Service (C#)"
-      recCmd = component "AssistantRecommendationCommandServiceImpl" "Comandos de recomendación." "Application Service (C#)"
-      recQry = component "AssistantRecommendationQueryServiceImpl" "Queries de recomendación." "Application Service (C#)"
-      planCmd = component "AssistantActionPlanCommandServiceImpl" "Comandos de plan." "Application Service (C#)"
-      planQry = component "AssistantActionPlanQueryServiceImpl" "Queries de plan." "Application Service (C#)"
-
-      conversationAgg = component "AssistantConversation Aggregate" "Reglas de conversación y contexto." "Domain Model (DDD)"
-      recommendationEntity = component "AssistantRecommendation Entity" "Recomendaciones accionables." "Domain Entity"
-      actionPlanEntity = component "AssistantActionPlan Entity" "Planes accionables." "Domain Entity"
-
-      aiPort = component "AssistantAIService" "Puerto de dominio para IA (ACL)." "Domain Interface"
-      aiAdapter = component "OpenAIAssistantAdapter / ExternalLLMAdapter" "Adaptador infraestructura a proveedor externo." "Infrastructure Adapter"
-
-      convRepo = component "AssistantConversationRepository" "Persistencia de conversaciones." "Repository"
-      msgRepo = component "AssistantMessageRepository" "Persistencia de mensajes." "Repository"
-      recRepo = component "AssistantRecommendationRepository" "Persistencia de recomendaciones." "Repository"
-      planRepo = component "AssistantActionPlanRepository" "Persistencia de planes." "Repository"
-  }
-}
-
-builder -> saApi "Usa" "HTTPS/JSON"
-landlord -> saApi "Usa" "HTTPS/JSON"
-
-convController -> convCmd "Comandos"
-convController -> convQry "Queries"
-recController -> recCmd "Comandos"
-recController -> recQry "Queries"
-planController -> planCmd "Comandos"
-planController -> planQry "Queries"
-
-convCmd -> conversationAgg "Orquesta"
-convQry -> conversationAgg "Consulta"
-recCmd -> recommendationEntity "Gestiona"
-recQry -> recommendationEntity "Consulta"
-planCmd -> actionPlanEntity "Gestiona"
-planQry -> actionPlanEntity "Consulta"
-
-convCmd -> aiPort "Solicita generación"
-recCmd -> aiPort "Solicita recomendaciones"
-aiAdapter -> aiPort "Implementa"
-aiAdapter -> llm "Invoca API" "HTTPS"
-
-convCmd -> convRepo "Persiste"
-convQry -> convRepo "Consulta"
-convCmd -> msgRepo "Persiste"
-recCmd -> recRepo "Persiste"
-recQry -> recRepo "Consulta"
-planCmd -> planRepo "Persiste"
-planQry -> planRepo "Consulta"
-
-convRepo -> mysql "CRUD" "SQL/TCP"
-msgRepo -> mysql "CRUD" "SQL/TCP"
-recRepo -> mysql "CRUD" "SQL/TCP"
-planRepo -> mysql "CRUD" "SQL/TCP"
-    }
-
-    views {
-component saApi "SA-Component" {
-  include *
-  autolayout lr
-}
-
-styles {
-  element "Person" {
-      background #08427b
-      color #ffffff
-      shape person
-  }
-  element "Software System" {
-      background #1168bd
-      color #ffffff
-  }
-  element "Container" {
-      background #438dd5
-      color #ffffff
-  }
-  element "Component" {
-      background #85bbf0
-      color #000000
-  }
-}
-    }
-}
--->
-
-![Diagrama C4](https://i.imgur.com/AQmKgPv.png)
-
-#### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
-En esta seccion se presenta el nivel de codigo del bounded context **Smart Assistant**, incluyendo su modelo de dominio y esquema de base de datos.
-
-##### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
-
-<div style="display:none">
-    ```mermaid
-    classDiagram
-    direction LR
-
-    class AssistantConversation {
--ConversationId id
--ProjectId projectId
--UserId userId
--AssistantChannel channel
--ConversationStatus status
--DateTime startedAt
--DateTime closedAt
-+startConversation() void
-+receiveUserMessage(content:string) void
-+generateAssistantResponse() AssistantMessage
-+closeConversation() void
-    }
-
-    class AssistantMessage {
--MessageId id
--ConversationId conversationId
--MessageRole role
--string content
--string metadataJson
--DateTime sentAt
-    }
-
-    class AssistantRecommendation {
--RecommendationId id
--ConversationId conversationId
--RecommendationType type
--RecommendationPriority priority
--string summary
--bool accepted
-+accept() void
-+dismiss() void
-    }
-
-    class AssistantActionPlan {
--ActionPlanId id
--RecommendationId recommendationId
--string stepsJson
--string executionStatus
-+createFromRecommendation(rec:AssistantRecommendation) AssistantActionPlan
-    }
-
-    class ConversationStatus {
-<<enumeration>>
-OPEN
-WAITING_CONTEXT
-RESOLVED
-CLOSED
-    }
-
-    class MessageRole {
-<<enumeration>>
-USER
-ASSISTANT
-SYSTEM
-    }
-
-    class AssistantChannel {
-<<enumeration>>
-WEB_CHAT
-MOBILE_CHAT
-API
-    }
-
-    class RecommendationType {
-<<enumeration>>
-ALERT_TRIAGE
-SERVICE_TUNING
-ENERGY_OPTIMIZATION
-MAINTENANCE
-    }
-
-    class RecommendationPriority {
-<<enumeration>>
-LOW
-MEDIUM
-HIGH
-CRITICAL
-    }
-
-    class AssistantConversationRepository {
-<<interface>>
-+save(conversation:AssistantConversation) AssistantConversation
-+findById(id:ConversationId) AssistantConversation
-+findByProjectId(projectId:ProjectId) List~AssistantConversation~
-    }
-
-    class AssistantAIService {
-<<interface>>
-+generateResponse(context:string) string
-+generateRecommendations(context:string) List~AssistantRecommendation~
-    }
-
-    AssistantConversation "1" --> "1..*" AssistantMessage : contains
-    AssistantConversation "1" --> "0..*" AssistantRecommendation : generates
-    AssistantRecommendation "1" --> "0..1" AssistantActionPlan : derives
-    AssistantConversation "1" --> "1" ConversationStatus : has
-    AssistantMessage "1" --> "1" MessageRole : has
-    AssistantConversation "1" --> "1" AssistantChannel : uses
-    AssistantRecommendation "1" --> "1" RecommendationType : classifies
-    AssistantRecommendation "1" --> "1" RecommendationPriority : has
-    AssistantAIService ..> AssistantConversation : assists
-    AssistantConversationRepository ..> AssistantConversation : persists
-    ```
-</div>
-
-![Diagrama plantUML](https://i.imgur.com/nHDNIB3.png)
-
-##### 2.6.3.6.2. Bounded Context Database Design Diagram
-<div style="display:none">
-
-    ```mermaid
-    erDiagram
-  ASSISTANT_CONVERSATIONS {
-  string conversation_id PK
-  string project_id
-  string user_id
-  string channel
-  string status
-datetime started_at
-datetime closed_at
-  }
-
-  ASSISTANT_MESSAGES {
-  string message_id PK
-  string conversation_id FK
-  string role
-text content
-  string metadata_json
-datetime sent_at
-  }
-
-  ASSISTANT_RECOMMENDATIONS {
-  string recommendation_id PK
-  string conversation_id FK
-  string recommendation_type
-  string priority
-text summary
-  boolean accepted
-datetime created_at
-  }
-
-  ASSISTANT_ACTION_PLANS {
-  string action_plan_id PK
-  string recommendation_id FK
-  string steps_json
-  string execution_status
-datetime created_at
-  }
-
-  ASSISTANT_CONVERSATIONS ||--|{ ASSISTANT_MESSAGES : "stores messages"
-  ASSISTANT_CONVERSATIONS ||--o{ ASSISTANT_RECOMMENDATIONS : "produces recommendations"
-  ASSISTANT_RECOMMENDATIONS ||--o| ASSISTANT_ACTION_PLANS : "derives plan"
-    ```
-</div>
-
-![Diagrama lucidchart](https://i.imgur.com/2b7dggg.png)
-
-### 2.6.4. Bounded Context: Energy Management
-#### 2.6.4.1. Domain Layer
-En **IoBuild**, este bounded context gestiona la medicion, analisis y optimizacion del consumo energetico de los edificios inteligentes. El dominio cubre planes de optimizacion, registro de consumo, deteccion de anomalias y eventos de respuesta a la demanda.
-
-**Entities y Aggregates**
-- **EnergyOptimizationPlan (Aggregate Root):** representa el plan de optimizacion energetica de un proyecto (id, projectId, baseline, objetivo de reduccion, ventana de aplicacion y estado).
-- **EnergyConsumptionRecord:** representa una lectura de consumo energetico por zona, medidor y periodo de tiempo.
-- **EnergyAnomaly:** representa una desviacion del patron esperado de consumo (pico, sobrecarga, consumo fuera de horario o caida abrupta).
-- **DemandResponseEvent:** representa un evento operativo para ajustar carga electrica en periodos criticos.
-
-**Value Objects**
-- **EnergyPlanId, ConsumptionRecordId, AnomalyId, ResponseEventId, ProjectId, ZoneId, MeterId:** identificadores unicos del dominio.
-- **OptimizationStatus:** estado del plan (DRAFT, ACTIVE, PAUSED, COMPLETED, CANCELLED).
-- **ConsumptionPeriod:** granularidad de lectura (HOURLY, DAILY, WEEKLY, MONTHLY).
-- **EnergyUnit:** unidad de energia (WH, KWH, MWH).
-- **AnomalySeverity:** severidad de anomalia (LOW, MEDIUM, HIGH, CRITICAL).
-- **DemandResponseStatus:** estado del evento de respuesta (CREATED, IN_PROGRESS, EXECUTED, FAILED, CLOSED).
-
-##### Domain Behavior and Invariants
-
-**AssistantConversation Behavior**
-- startConversation()
-- receiveUserMessage()
-- generateAssistantResponse()
-- closeConversation()
-- createRecommendation()
-
-**Domain Invariants**
-- Una conversación en estado CLOSED no acepta nuevos mensajes.
-- Toda recomendación debe estar asociada a una conversación activa.
-- Los planes de acción solo pueden generarse desde recomendaciones existentes.
-
-##### Domain Events
-
-- AssistantConversationStarted
-- AssistantMessageReceived
-- AssistantResponseGenerated
-- AssistantRecommendationGenerated
-- AssistantActionPlanCreated
-
-**Commands**
-- CreateEnergyOptimizationPlanCommand
-- ActivateEnergyOptimizationPlanCommand
-- PauseEnergyOptimizationPlanCommand
-- RegisterEnergyConsumptionCommand
-- DetectEnergyAnomalyCommand
-- AcknowledgeEnergyAnomalyCommand
-- CreateDemandResponseEventCommand
-- CompleteDemandResponseEventCommand
-
-**Queries**
-- GetOptimizationPlanByIdQuery
-- GetOptimizationPlansByProjectIdQuery
-- GetConsumptionByProjectIdQuery
-- GetConsumptionByZoneIdQuery
-- GetEnergyAnomaliesByProjectIdQuery
-- GetActiveDemandResponseEventsQuery
-- GetEnergySavingsSummaryByProjectIdQuery
-
-**Domain Services (Contratos)**
-- EnergyOptimizationCommandService
-- EnergyOptimizationQueryService
-- EnergyMonitoringCommandService
-- EnergyMonitoringQueryService
-- DemandResponseCommandService
-- DemandResponseQueryService
-- EnergySavingsAnalysisService
-
-#### 2.6.4.2. Interface Layer
-La capa de interfaz expone endpoints REST para crear planes de optimizacion, registrar consumo, gestionar anomalias y ejecutar eventos de respuesta a la demanda.
-
-**Controllers**
-- **EnergyOptimizationPlansController:** creacion, activacion, pausa y consultas de planes de optimizacion.
-- **EnergyMonitoringController:** registro de consumo, deteccion/revision de anomalias y consultas operativas.
-- **DemandResponseController:** apertura, cierre y consulta de eventos de respuesta a la demanda.
-
-**Resources (Request/Query DTOs)**
-- **Optimization:** CreateEnergyOptimizationPlanResource, ActivateEnergyOptimizationPlanResource, PauseEnergyOptimizationPlanResource.
-- **Monitoring:** RegisterEnergyConsumptionResource, DetectEnergyAnomalyResource, AcknowledgeEnergyAnomalyResource.
-- **Demand Response:** CreateDemandResponseEventResource, CompleteDemandResponseEventResource.
-- **Queries:** GetOptimizationPlanByIdResource, GetOptimizationPlansByProjectIdResource, GetConsumptionByProjectIdResource, GetConsumptionByZoneIdResource, GetEnergyAnomaliesByProjectIdResource, GetActiveDemandResponseEventsResource, GetEnergySavingsSummaryByProjectIdResource.
-
-**Energy Management Interface Diagram**
-![Energy Management Interface Diagram](https://instasize.com/api/image/3be25a2e254b035f27c7ecdb7b05bb59883da84db0dbb2b70a1b26ef89bff79b.png)
-
-#### 2.6.4.3. Application Layer
-La capa de aplicacion orquesta comandos y consultas para convertir datos de consumo en decisiones operativas de eficiencia energetica.
-
-**Command Handlers**
-- **EnergyOptimizationCommandServiceImpl:** CreateEnergyOptimizationPlanCommand, ActivateEnergyOptimizationPlanCommand, PauseEnergyOptimizationPlanCommand.
-- **EnergyMonitoringCommandServiceImpl:** RegisterEnergyConsumptionCommand, DetectEnergyAnomalyCommand, AcknowledgeEnergyAnomalyCommand.
-- **DemandResponseCommandServiceImpl:** CreateDemandResponseEventCommand, CompleteDemandResponseEventCommand.
-
-**Query Handlers**
-- **EnergyOptimizationQueryServiceImpl:** GetOptimizationPlanByIdQuery, GetOptimizationPlansByProjectIdQuery.
-- **EnergyMonitoringQueryServiceImpl:** GetConsumptionByProjectIdQuery, GetConsumptionByZoneIdQuery, GetEnergyAnomaliesByProjectIdQuery, GetEnergySavingsSummaryByProjectIdQuery.
-- **DemandResponseQueryServiceImpl:** GetActiveDemandResponseEventsQuery.
-
-**Energy Management Application Diagram**
-![Energy Management Application Diagram](https://instasize.com/api/image/5bb792141cfabc4249c13bd8e17c84a6a90107bd2fd33d9f018e89a5e9a35127.png)
-
-#### 2.6.4.4. Infrastructure Layer
-La capa de infraestructura implementa persistencia de planes de optimizacion, lecturas de consumo, anomalias y eventos de respuesta para soportar analitica historica y operacion en tiempo real.
-
-**Repositories**
-- **EnergyOptimizationPlanRepository:** planes por projectId, estado de optimizacion y planes activos.
-- **EnergyConsumptionRecordRepository:** lecturas por projectId, zoneId, meterId y rango temporal.
-- **EnergyAnomalyRepository:** anomalias por proyecto, severidad y estado abierto/cerrado.
-- **DemandResponseEventRepository:** eventos por proyecto, estado y eventos activos.
-
-**Energy Management Infrastructure Diagram**
-![Energy Management Infrastructure Diagram](https://instasize.com/api/image/ebde2d543f68889ecb0ca0460f113851d31f2dafc5549e80d83402882b863d54.png)
-
-##### AI Integration Anti-Corruption Layer
-
-Para evitar acoplamiento directo con proveedores externos de inteligencia artificial, el sistema define:
-
-- AssistantAIService (Domain Interface)
-
-Implementaciones en infraestructura:
-
-- OpenAIAssistantAdapter
-- ExternalLLMAdapter
-
-Este patrón protege el dominio frente a cambios tecnológicos del proveedor IA.
-
-#### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
-
-<!--
-
-workspace "IoBuild - Energy Management (Component Diagram)" "C4 Component Diagram del bounded context Energy Management" {
-
-    model {
-builder = person "Builder" "Configura planes energéticos."
-landlord = person "Landlord" "Monitorea consumo y ahorros."
-
-iobuild = softwareSystem "IoBuild" {
-
-emApi = container "Energy Management API" "Optimización energética, consumo, anomalías y demand response." "ASP.NET Core Web API" {
-  plansController = component "EnergyOptimizationPlansController" "Endpoints de planes energéticos." "ASP.NET Core MVC Controller"
-  monitoringController = component "EnergyMonitoringController" "Endpoints de consumo y anomalías." "ASP.NET Core MVC Controller"
-  drController = component "DemandResponseController" "Endpoints de eventos de demanda." "ASP.NET Core MVC Controller"
-
-  optCmd = component "EnergyOptimizationCommandServiceImpl" "Comandos de optimización." "Application Service (C#)"
-  optQry = component "EnergyOptimizationQueryServiceImpl" "Queries de optimización." "Application Service (C#)"
-  monCmd = component "EnergyMonitoringCommandServiceImpl" "Comandos de monitoreo energético." "Application Service (C#)"
-  monQry = component "EnergyMonitoringQueryServiceImpl" "Queries de monitoreo energético." "Application Service (C#)"
-  drCmd = component "DemandResponseCommandServiceImpl" "Comandos de demand response." "Application Service (C#)"
-  drQry = component "DemandResponseQueryServiceImpl" "Queries de demand response." "Application Service (C#)"
-
-  planAgg = component "EnergyOptimizationPlan Aggregate" "Reglas del plan de optimización." "Domain Model (DDD)"
-  consumptionEntity = component "EnergyConsumptionRecord Entity" "Lecturas de consumo." "Domain Entity"
-  anomalyEntity = component "EnergyAnomaly Entity" "Detección de anomalías." "Domain Entity"
-  demandEntity = component "DemandResponseEvent Entity" "Eventos de respuesta a demanda." "Domain Entity"
-  savingsSvc = component "EnergySavingsAnalysisService" "Cálculo de ahorro energético." "Domain Service"
-
-  planRepo = component "EnergyOptimizationPlanRepository" "Persistencia de planes." "Repository"
-  consumptionRepo = component "EnergyConsumptionRecordRepository" "Persistencia de consumo." "Repository"
-  anomalyRepo = component "EnergyAnomalyRepository" "Persistencia de anomalías." "Repository"
-  demandRepo = component "DemandResponseEventRepository" "Persistencia de eventos DR." "Repository"
-}
-
-mysql = container "MySQL Database" "Persistencia energética." "MySQL 8"
-eventStream = container "Event Stream" "Eventos energéticos." "Kafka / RabbitMQ"
-    }
-
-builder -> emApi "Usa" "HTTPS/JSON"
-landlord -> emApi "Consulta" "HTTPS/JSON"
-
-plansController -> optCmd "Comandos"
-plansController -> optQry "Queries"
-monitoringController -> monCmd "Comandos"
-monitoringController -> monQry "Queries"
-drController -> drCmd "Comandos"
-drController -> drQry "Queries"
-
-optCmd -> planAgg "Orquesta"
-optQry -> planAgg "Consulta"
-monCmd -> consumptionEntity "Registra"
-monCmd -> anomalyEntity "Detecta"
-monQry -> consumptionEntity "Consulta"
-monQry -> anomalyEntity "Consulta"
-drCmd -> demandEntity "Orquesta"
-drQry -> demandEntity "Consulta"
-monQry -> savingsSvc "Calcula ahorro"
-
-optCmd -> planRepo "Persiste"
-optQry -> planRepo "Consulta"
-monCmd -> consumptionRepo "Persiste"
-monQry -> consumptionRepo "Consulta"
-monCmd -> anomalyRepo "Persiste"
-monQry -> anomalyRepo "Consulta"
-drCmd -> demandRepo "Persiste"
-drQry -> demandRepo "Consulta"
-
-planRepo -> mysql "CRUD" "SQL/TCP"
-consumptionRepo -> mysql "CRUD" "SQL/TCP"
-anomalyRepo -> mysql "CRUD" "SQL/TCP"
-demandRepo -> mysql "CRUD" "SQL/TCP"
-
-planAgg -> eventStream "Publica eventos" "AMQP/Kafka"
-demandEntity -> eventStream "Publica eventos DR" "AMQP/Kafka"
-    }
-
-    views {
-component emApi "EM-Component" {
-  include *
-  autolayout lr
-}
-
-styles {
-  element "Person" {
-      background #08427b
-      color #ffffff
-      shape person
-  }
-  element "Software System" {
-      background #1168bd
-      color #ffffff
-  }
-  element "Container" {
-      background #438dd5
-      color #ffffff
-  }
-  element "Component" {
-      background #85bbf0
-      color #000000
-  }
-}
-    }
-}
-
--->
-
-![Diagrama C4](https://i.imgur.com/XKGyZ20.png)
-
-#### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
-En esta seccion se presenta el detalle de implementacion de **Energy Management** a nivel de clases de dominio y persistencia relacional.
-
-##### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
-<div style="display:none">
-    ```mermaid
-    classDiagram
-    direction LR
-
-    class EnergyOptimizationPlan {
--EnergyPlanId id
--ProjectId projectId
--float baselineKwh
--float reductionTargetPercent
--DateRange applicationWindow
--OptimizationStatus status
-+activate() void
-+pause() void
-+complete() void
-    }
-
-    class EnergyConsumptionRecord {
--ConsumptionRecordId id
--ProjectId projectId
--ZoneId zoneId
--MeterId meterId
--float value
--EnergyUnit unit
--ConsumptionPeriod period
--DateTime recordedAt
-    }
-
-    class EnergyAnomaly {
--AnomalyId id
--ProjectId projectId
--ZoneId zoneId
--AnomalySeverity severity
--string detectedPattern
--bool acknowledged
-+acknowledge() void
-    }
-
-    class DemandResponseEvent {
--ResponseEventId id
--ProjectId projectId
--string eventName
--DemandResponseStatus status
--DateTime startsAt
--DateTime endsAt
-+start() void
-+complete() void
-    }
-
-    class OptimizationStatus {
-<<enumeration>>
-DRAFT
-ACTIVE
-PAUSED
-COMPLETED
-CANCELLED
-    }
-
-    class ConsumptionPeriod {
-<<enumeration>>
-HOURLY
-DAILY
-WEEKLY
-MONTHLY
-    }
-
-    class EnergyUnit {
-<<enumeration>>
-WH
-KWH
-MWH
-    }
-
-    class AnomalySeverity {
-<<enumeration>>
-LOW
-MEDIUM
-HIGH
-CRITICAL
-    }
-
-    class DemandResponseStatus {
-<<enumeration>>
-CREATED
-IN_PROGRESS
-EXECUTED
-FAILED
-CLOSED
-    }
-
-    class EnergyOptimizationPlanRepository {
-<<interface>>
-+save(plan:EnergyOptimizationPlan) EnergyOptimizationPlan
-+findById(id:EnergyPlanId) EnergyOptimizationPlan
-+findByProjectId(projectId:ProjectId) List~EnergyOptimizationPlan~
-    }
-
-    class EnergySavingsAnalysisService {
-<<interface>>
-+calculateSavings(projectId:ProjectId,period:ConsumptionPeriod) float
-    }
-
-    EnergyOptimizationPlan "1" --> "0..*" EnergyConsumptionRecord : analyzes
-    EnergyOptimizationPlan "1" --> "0..*" EnergyAnomaly : reacts to
-    EnergyOptimizationPlan "1" --> "0..*" DemandResponseEvent : triggers
-    EnergyOptimizationPlan "1" --> "1" OptimizationStatus : has
-    EnergyConsumptionRecord "1" --> "1" ConsumptionPeriod : has
-    EnergyConsumptionRecord "1" --> "1" EnergyUnit : has
-    EnergyAnomaly "1" --> "1" AnomalySeverity : has
-    DemandResponseEvent "1" --> "1" DemandResponseStatus : has
-    EnergySavingsAnalysisService ..> EnergyConsumptionRecord : analyzes
-    EnergyOptimizationPlanRepository ..> EnergyOptimizationPlan : persists
-    ```
-</div>
-
-![Diagrama plantUML](https://i.imgur.com/VxFxqqC.png)
-
-##### 2.6.4.6.2. Bounded Context Database Design Diagram
-<div style="display:none">
-    ```mermaid
-erDiagram
-  ENERGY_OPTIMIZATION_PLANS {
-  string energy_plan_id PK
-  string project_id
-  float baseline_kwh
-  float reduction_target_percent
-datetime window_start
-datetime window_end
-  string status
-datetime created_at
-  }
-
-  ENERGY_CONSUMPTION_RECORDS {
-  string consumption_record_id PK
-  string energy_plan_id FK
-  string project_id
-  string zone_id
-  string meter_id
-  float value
-  string unit
-  string period
-datetime recorded_at
-  }
-
-  ENERGY_ANOMALIES {
-  string anomaly_id PK
-  string energy_plan_id FK
-  string project_id
-  string zone_id
-  string severity
-  string detected_pattern
-  boolean acknowledged
-datetime detected_at
-  }
-
-  DEMAND_RESPONSE_EVENTS {
-  string response_event_id PK
-  string energy_plan_id FK
-  string project_id
-  string event_name
-  string status
-datetime starts_at
-datetime ends_at
-  }
-
-  ENERGY_OPTIMIZATION_PLANS ||--o{ ENERGY_CONSUMPTION_RECORDS : "contains records"
-  ENERGY_OPTIMIZATION_PLANS ||--o{ ENERGY_ANOMALIES : "detects anomalies"
-  ENERGY_OPTIMIZATION_PLANS ||--o{ DEMAND_RESPONSE_EVENTS : "schedules events"
-    ```
-</div>
-
-![Diagrama LucidChart](https://i.imgur.com/bxwcuZp.png)
-
-## Capítulo III: Solution UI/UX Design
-
-### 3.1. Product design
-#### 3.1.1. Style Guidelines
-##### 3.1.1.1. General Style Guidelines
+# Capítulo IV: Product Design 
+## 4.1. Style Guideline
+### 4.1.1. General Style Guidelines
 #### **Tipografía**
 La tipografía seleccionada para los encabezados de nuestra marca es **Poppins**, debido a su estilo moderno. Su diseño elegante permite destacar títulos y secciones importantes, generando un impacto claro y atractivo para los usuarios. Esto la convierte en una elección ideal para comunicar innovación y profesionalismo dentro de la identidad visual.
 
@@ -4013,40 +2224,82 @@ En IoBuild, utilizaremos un lenguaje que refleje nuestra visión de transformar 
 
 4. **Inspirador y optimista:** En IoBuild creemos que el futuro de la construcción es más sostenible, adaptable y tecnológico. Por ello, nos comunicaremos con entusiasmo y convicción, motivando a nuestros usuarios a visualizar y construir una nueva forma de habitar hogares inteligentes.
 
-#### 3.1.2. Information Architecture
+## 4.2 Information Architecture
+### 4.2.1. Organization Systems
 
-UX Heuristics & Principles Evaluation<br>
-Usability – Inclusive Design – Information Architecture<br>
-CARRERA: Ingeniería de Software<br>
-CURSO: Aplicaciones para Dispositivos Móviles<br>
-NRC: 3687<br>
-PROFESOR: David Gerardo Quevedo Velazco<br>
-CLIENTE(S): Javier Maximo Ordoñez Cordova, Christy Karen Callata Alvarez<br>
-SITE o APP A EVALUAR: CcaritaTech
+En esta sección se define cómo se organiza la información dentro de la Landing Page de IoBuild, considerando la estructura visual del contenido y su distribución dentro de la plataforma. Estas decisiones buscan facilitar la comprensión y navegación de los usuarios, permitiendo que encuentren de manera sencilla la propuesta de valor y los recursos más importantes, reduciendo la carga mental y dirigiendo la atención hacia los elementos esenciales.
 
-TAREAS A EVALUAR:<br>
-El alcance de esta evaluación contempla el análisis de la usabilidad en la ejecución de las siguientes tareas:<br>
+#### Organización visual del contenido
 
-Segmento Objetivo #1: Arquitectos e Ingenieros Civiles
-- **Configurar funcionalidades inteligentes:** Claridad y facilidad para integrar automatización (iluminación, climatización, seguridad, riego, etc.) dentro de la plataforma.
-- **Gestionar proyectos y roles técnicos:** Facilidad para asignar permisos y colaborar con otros profesionales dentro del mismo entorno.
-- **Acceder a documentación y guías técnicas:** Disponibilidad, organización y comprensión de recursos de soporte (manuales, tutoriales, BIM).
+La organización visual en IoBuild se basa principalmente en los enfoques jerárquico y temático, aplicados de acuerdo con la prioridad y naturaleza de la información presentada en la Landing Page.
 
-Segmento Objetivo #2: Dueños de Apartamentos (Usuarios Finales)
-- **Controlar dispositivos desde un único panel:** Usabilidad de la interfaz centralizada para manejar iluminación, clima, seguridad y energía.
-- **Recibir notificaciones y alertas personalizadas:** Facilidad para activar, modificar y entender las notificaciones sobre consumo energético o seguridad.
-- **Acceder a reportes de consumo y eficiencia:** Claridad de la información mostrada y utilidad para la toma de decisiones sobre ahorro energético.
+**a) Organización jerárquica (Visual Hierarchy)**
 
+La organización jerárquica constituye la base de la estructura de la Landing Page. La información se presenta siguiendo una lógica de prioridad, comenzando por los elementos principales de la propuesta de valor y continuando con información complementaria.
 
-##### 3.1.2.1. Organization Systems
+En IoBuild, esta jerarquía se organiza de la siguiente manera:
 
-Dentro del diseño de interfaces digitales enfocadas en el usuario, el Organization System funciona como la base de la arquitectura de información, definiendo cómo se ordenan, agrupan y muestran los contenidos en la plataforma. Su propósito es facilitar la comprensión y la navegación, permitiendo que los usuarios encuentren de manera sencilla la propuesta de valor y los recursos más importantes. Este sistema ayuda a disminuir la carga mental, dirigir la atención hacia lo esencial y mejorar la experiencia general de interacción con el producto.
+Hero section: presenta un mensaje directo sobre la propuesta de valor y un llamado a la acción destacado: “Explora IoBuild”.
+Beneficios de la plataforma: presentan información dirigida a arquitectos, ingenieros y propietarios de viviendas.
+Presentación del equipo: incorpora información complementaria sobre las personas detrás del proyecto.
+Objetivos del proyecto: permiten conocer los propósitos de IoBuild.
+Canales de contacto: proporcionan los medios para establecer comunicación.
+Esta jerarquía permite que los usuarios comprendan de manera inmediata qué es IoBuild, para quién está dirigido y cómo pueden empezar a interactuar con la solución.
 
-En el caso de IoBuild, la Landing Page implementa un sistema de organización jerárquico y temático, pensado para comunicar de forma clara el propósito de la aplicación y dirigir la acción del visitante. La estructura se organiza en bloques que siguen una lógica de prioridad: en primer lugar, se despliega un hero section con un mensaje directo sobre la propuesta de valor y un llamado a la acción destacado (“Explora IoBuild”), seguido de secciones que detallan los beneficios de la plataforma para arquitectos, ingenieros y propietarios de viviendas. Posteriormente, se integran apartados complementarios como la presentación del equipo, los objetivos del proyecto y los canales de contacto.
+**b) Organización temática**
 
-Tanto el header como el footer refuerzan esta organización al centralizar los accesos principales de navegación (inicio, características, contacto) y los secundarios (redes sociales y enlaces informativos). Esta disposición garantiza que los usuarios comprendan de manera inmediata qué es IoBuild, para quién está dirigido y cómo pueden empezar a interactuar con la solución. Además, la página aplica principios como la progressive disclosure y el diseño responsivo, asegurando una experiencia fluida y clara en dispositivos móviles y de escritorio.
+La organización temática se aplica mediante la división de la Landing Page en diferentes bloques de contenido. Cada bloque aborda un aspecto específico de IoBuild, permitiendo presentar la información de manera ordenada.
 
-##### 3.1.2.2. Labelling Systems
+Los principales bloques temáticos son:
+
+Propuesta de valor
+Beneficios de la plataforma
+Presentación del equipo
+Objetivos del proyecto
+Canales de contacto
+Esta distribución facilita la comprensión del contenido al presentar cada aspecto de la plataforma dentro de una sección específica.
+
+**c) Organización responsiva**
+
+La Landing Page implementa un diseño responsivo, permitiendo que la organización del contenido se adapte tanto a dispositivos móviles como de escritorio.
+
+Esta característica busca asegurar una experiencia fluida y clara independientemente del dispositivo desde el cual el usuario acceda a IoBuild.
+
+#### Sistemas de categorización de contenido
+
+Complementando la organización visual, IoBuild agrupa su contenido de acuerdo con diferentes aspectos relacionados con la información presentada y los usuarios a los que está dirigida.
+
+**a) Categorización por audiencia**
+
+La información de la Landing Page se orienta hacia tres grupos principales de usuarios:
+
+Arquitectos
+Ingenieros
+Propietarios de viviendas
+Esta categorización permite presentar los beneficios de la plataforma considerando los diferentes perfiles a los que está dirigida la propuesta de IoBuild.
+
+**b) Categorización por contenido**
+
+El contenido se organiza en diferentes secciones según el tipo de información que se desea comunicar. Entre ellas se encuentran la propuesta de valor, los beneficios de la plataforma, la presentación del equipo, los objetivos del proyecto y los canales de contacto.
+
+Esta organización permite que cada sección cumpla con una función específica dentro de la comunicación general de la Landing Page.
+
+**c) Categorización por navegación**
+
+La navegación de IoBuild se refuerza mediante el header y el footer, los cuales centralizan los diferentes accesos disponibles en la Landing Page.
+
+El header contiene los accesos principales de navegación:
+
+Inicio
+Características
+Contacto
+Por su parte, el footer incorpora elementos secundarios, como redes sociales y enlaces informativos.
+
+Esta disposición facilita el acceso a las diferentes secciones y recursos disponibles dentro de la Landing Page.
+
+Finalmente, IoBuild aplica el principio de progressive disclosure, permitiendo presentar la información de manera progresiva y evitando mostrar todos los contenidos al mismo tiempo. De esta forma, la estructura de la Landing Page facilita que los usuarios comprendan qué es IoBuild, para quién está dirigido y cómo pueden empezar a interactuar con la solución.
+
+### 4.2.2. Labelling Systems
 
 En el marco del diseño de la arquitectura de información, los Labeling Systems cumplen la función de comunicar de forma clara, coherente y predecible los elementos de interacción presentes en la interfaz. En IoBuild, cada etiqueta textual utilizada en botones, menús, enlaces y secciones está orientada a guiar al usuario en su recorrido por la Landing Page, facilitando la comprensión del propósito del proyecto y motivando la interacción con los elementos principales.
 
@@ -4067,7 +2320,7 @@ La siguiente tabla resume las etiquetas implementadas, su ubicación y su funci�
 
 El sistema de etiquetado en la Landing Page de IoBuild refleja una aplicación consistente de principios de usabilidad y arquitectura de información. Las etiquetas emplean un lenguaje simple, reconocible y orientado a la acción, lo que facilita tanto la navegación como la comprensión inmediata de los contenidos. Asimismo, existe una coherencia semántica entre el header, el cuerpo de la página y el footer, acompañada de un uso de imperativos y sustantivos comunes que refuerzan la accesibilidad cognitiva. Este Labeling System contribuye a la claridad, consistencia y escalabilidad de la experiencia web, garantizando que tanto profesionales técnicos como usuarios finales puedan interactuar sin fricciones con la plataforma.
 
-##### 3.1.2.3. SEO Tags and Meta Tags
+### 4.2.3. SEO Tags and Meta Tags
 
 Los meta tags y etiquetas SEO son elementos esenciales dentro de la sección <head> de cualquier página web, ya que permiten definir cómo es interpretado, indexado y presentado el contenido de un sitio por parte de los motores de búsqueda (como Google) y las redes sociales (como Facebook, Twitter o LinkedIn). Aunque estos elementos no son visibles de forma directa para los usuarios, desempeñan un papel crucial en el posicionamiento orgánico, en la forma en que los enlaces se muestran al compartirse y en la claridad con la que se comunica la propuesta de valor del sitio.
 
@@ -4085,13 +2338,13 @@ La página Sobre Nosotros de IoBuild incluye etiquetas SEO básicas que refuerza
 La página FAQ - Preguntas Frecuentes de IoBuild incorpora etiquetas SEO orientadas a brindar claridad y accesibilidad al usuario. Se define un título descriptivo y directo que comunica de inmediato el propósito de la sección, acompañado de una meta descripción que resume su función como espacio de resolución de dudas sobre la plataforma SaaS y sus aplicaciones en proyectos de construcción con IoT. Asimismo, se incluyen configuraciones técnicas esenciales como la codificación UTF-8 y la vista responsiva, garantizando una correcta interpretación del contenido y una experiencia de navegación fluida en diversos dispositivos.
 ![Imagen de Meta Tags FAQ](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%204/Meta_Tags_FAQ.png)
 
-##### 3.1.2.4. Searching Systems
+### 4.2.4. Searching Systems
 
 Al ingresar a la landing page de IoBuild, el usuario será recibido con una sección principal que introduce la propuesta de valor de la plataforma, acompañada de un botón destacado que invita a conocer más sobre sus funcionalidades. En la parte superior, la navegación se organiza mediante un menú claro y accesible que permite desplazarse hacia las secciones clave, como Sobre Nosotros, Preguntas Frecuentes y Contacto. Esta estructura busca brindar una experiencia fluida y ordenada, evitando confusiones y facilitando el acceso a la información más relevante.
 
 La navegación está reforzada con etiquetas descriptivas, jerarquía visual y un diseño responsivo, de manera que el usuario siempre tenga claridad sobre en qué parte del sitio se encuentra y cómo puede avanzar o retroceder dentro del flujo. El enfoque de la interfaz prioriza la simplicidad y la claridad, asegurando que el visitante pueda comprender rápidamente la misión de IoBuild y decidir explorar más a fondo sus soluciones tecnológicas.
 
-##### 3.1.2.5. Navigation Systems
+### 4.2.5. Navigation Systems
 
 La navegación es un elemento central en la landing page de IoBuild, ya que estructura el recorrido del usuario y facilita el acceso a la información clave sobre la plataforma. Bajo principios de simplicidad, accesibilidad y jerarquía visual, el sistema de navegación ha sido diseñado para garantizar una experiencia clara e intuitiva, tanto en dispositivos de escritorio como en móviles.
 
@@ -4114,7 +2367,7 @@ Finalmente, la navegación en IoBuild cumple con principios fundamentales de usa
 - **Jerarquía:** las secciones más consultadas están ubicadas estratégicamente en el centro de la navegación.
 - **Retroalimentación visual:** se incluyen estados hover y focus que refuerzan la interacción del usuario.
 
-#### 3.1.3. Landing Page UI Design
+## 4.3. Landing Page UI Design
 
 La sección de Landing Page UI Design busca definir, estructurar y validar la interfaz visual de la página principal de IoBuild, garantizando una experiencia clara, accesible y centrada en los distintos perfiles de usuario interesados en soluciones IoT para la construcción. Para esta fase se diseñaron los primeros wireframes, los cuales permitieron organizar los contenidos clave como la propuesta de valor de la plataforma, los beneficios, características principales, planes de servicio, sección “Sobre Nosotros”, preguntas frecuentes y un footer con enlaces a contacto y redes sociales. Posteriormente, se elaboraron mockups de alta fidelidad aplicando un sistema de diseño minimalista y funcional, priorizando la jerarquía informativa, la coherencia visual y la consistencia entre dispositivos.
 
@@ -4132,7 +2385,7 @@ Con el valor y la tecnología ya establecidos, el enfoque se desplaza hacia la c
 Finalmente, el sitio se enfoca en eliminar las últimas barreras para la compra. La página de "Preguntas Frecuentes" se anticipa a cualquier duda restante sobre implementación, precios o soporte, ofreciendo respuestas claras y transparentes. Esto conduce de forma natural a la sección de "Planes de la aplicación", donde la decisión se vuelve tangible. Con una estructura de precios escalable y un plan "Más Popular" claramente destacado, se facilita al cliente la elección de la opción que mejor se adapte a su escala. Por último, el "Footer" o pie de página actúa como una red de seguridad: ofrece un último llamado a la acción y un mapa completo del sitio para quienes necesiten más información, asegurando que ninguna pregunta quede sin respuesta y que el camino para empezar sea siempre accesible.
 
 
-##### 3.1.3.1. Landing Page Wireframe
+### 4.3.1. Landing Page Wireframe
 
 [Link ded Figma]<https://shorturl.at/ZkQuE>
 
@@ -4142,13 +2395,13 @@ Finalmente, el sitio se enfoca en eliminar las últimas barreras para la compra.
 <img src="https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%204/Landingpage_Home_Wireframe.png" style="page-break-inside: auto; break-inside: auto; display: block;">
 <br>
 
-#### 1. About Us
+#### 2. About Us
 - El wireframe de About se organiza en un esquema de columnas, a la izquierda se ubican el título y los párrafos descriptivos, mientras que a la derecha se reserva un espacio para la imagen. La página integra secciones jerarquizadas que construyen una narrativa clara sobre la identidad de la marca. En la parte inferior se disponen tarjetas con íconos y descripciones, seguidas de la presentación del equipo con un miembro destacado y cuatro integrantes adicionales. La composición se enmarca con una navegación principal en la parte superior y un footer completo al final, manteniendo coherencia visual y un flujo narrativo fluido.<br>
 
 ![Landing page About-us Wireframe](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%204/Landingpage_About-us_Wireframe.png)
 <br>
 
-#### 1. FAQ
+#### 3. FAQ
 - La sección adopta un acordeón vertical, donde cada pregunta se despliega para mostrar respuestas detalladas. Los contenidos abarcan temas clave como precios, diseño, edición y alianzas. En la parte superior, filtros por categoría facilitan la exploración del material, mientras que en la parte inferior un CTA “Didn’t Find Your Answer?” dirige a la página de contacto. El diseño mantiene un estilo minimalista y ordenado, y una jerarquía visual clara, optimizada para la legibilidad y una experiencia sin distracciones.<br>
 
 ![Landing page FAQ 1 Wireframe](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%204/Landingpage_FAQ_Wireframe.png)
@@ -4156,9 +2409,7 @@ Finalmente, el sitio se enfoca en eliminar las últimas barreras para la compra.
 ![Landing page FAQ 2 Wireframe](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%204/Landingpage_FAQ2_Wireframe.png)
 <br>
 
-##### 3.1.3.2. Landing Page Mock-up
-
-[Link ded Figma]<https://shorturl.at/ZkQuE>
+### 4.3.2. Landing Page Mock-up
 
 #### 1. Home
 - El mockup de la página principal presenta una estética moderna y minimalista, enfocada en la claridad y la atracción visual. En la parte superior, el header integra el logo junto con enlaces a Benefits, Features, Plans, About Us y FAQ, además de un botón de llamado a la acción “Get Started”. El hero section concentra la atención con un título llamativo y un botón CTA (“I want it!”) sobre un fondo verde claro. Más abajo, el contenido se organiza en bloques visuales con imágenes y una tipografía legible, destacando secciones como “Advanced Technical Features” y “Plans Designed for Your Scale”. Finalmente, el footer reúne enlaces estructurados (Home Page, Community, Legal, Company), íconos de redes sociales y un mensaje de marca que refuerza la identidad visual del sitio.
@@ -4180,7 +2431,7 @@ Finalmente, el sitio se enfoca en eliminar las últimas barreras para la compra.
 ![Landing page FAQ 2 Mock-up](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%204/Landingpage_FAQ%202_Mock-up.png)
 <br>
 
-#### 3.1.4. Mobile Applications UX/UI Design
+## 4.4. Mobile Applications UX/UI Design
 La sección de Diseño UX/UI de Aplicaciones Móviles se enfoca en la creación de interfaces intuitivas y la definición de experiencias de usuario optimizadas para dispositivos móviles dentro de las soluciones de IoBuild. Este proceso comprende desde la conceptualización de pantallas funcionales hasta el diseño de flujos de interacción adaptados al entorno móvil, considerando las necesidades específicas de nuestros dos segmentos clave: Arquitectos/Ingenieros y Propietarios.
 
 En esta etapa inicial, se desarrollaron mockups de alta fidelidad alineados con el sistema visual y la identidad de marca de IoBuild, asegurando una experiencia coherente y moderna en cada pantalla de la aplicación móvil. El diseño prioriza la simplicidad, la claridad visual y la facilidad de uso en contextos de movilidad.
@@ -4191,7 +2442,7 @@ La arquitectura de navegación fue diseñada para ofrecer una experiencia fluida
 
 Asimismo, la aplicación móvil integrará servicios RESTful para la comunicación con el backend y contará con prototipos interactivos que permitirán validar las funcionalidades críticas y la experiencia de usuario en escenarios reales. De esta manera, IoBuild busca ofrecer una solución móvil que combine eficiencia, usabilidad y una experiencia moderna alineada con las expectativas de sus usuarios.
 
-##### 3.1.4.1. Mobile Applications Wireframes
+### 4.4.1. Mobile Applications Wireframes
 
 #### Vista del segmento #1: Arquitectos e Ingenieros Civiles
 #### 1. Login
@@ -4218,7 +2469,7 @@ Asimismo, la aplicación móvil integrará servicios RESTful para la comunicaci�
 ![Segmento #1 Wireframe Projects](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Moviles/Cap%C3%ADtulo%203/Projects_Wireframe.jpeg)
 <br>
 
-##### 3.1.4.2. Mobile Applications Wireflow Diagrams
+### 4.4.2. Mobile Applications Wireflow Diagrams
 #### Segmento Objetivo #1: Arquitectos e Ingenieros Civiles
 Los arquitectos e ingenieros civiles utilizan la plataforma IoBuild para gestionar sus proyectos residenciales, centralizar la información de clientes, monitorear dispositivos IoT implementados en los edificios y configurar opciones de administración de manera eficiente.
 
@@ -4253,7 +2504,7 @@ Los arquitectos e ingenieros civiles utilizan la plataforma IoBuild para gestion
 
 ![Web Aplication Wireflow Guest](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Moviles/Cap%C3%ADtulo%203/Wireflow_Wireframe.jpeg)
 
-##### 3.1.4.3. Mobile Applications Mock-ups
+### 4.4.3. Mobile Applications Mock-ups
 
 #### Vista del segmento #1: Arquitectos e Ingenieros Civiles
 #### 1. Login
@@ -4285,7 +2536,7 @@ Los arquitectos e ingenieros civiles utilizan la plataforma IoBuild para gestion
 ![Segmento #1 Mock-up Projects](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Moviles/Cap%C3%ADtulo%203/Projects_Mock-Up.jpeg)
 <br>
 
-##### 3.1.4.4. Mobile Applications User Flow Diagrams
+### 4.4.4. Mobile Applications User Flow Diagrams
 #### Segmento Objetivo #1: Arquitectos e Ingenieros Civiles
 
 **1. Login**
@@ -4296,7 +2547,7 @@ Los arquitectos e ingenieros civiles utilizan la plataforma IoBuild para gestion
 **User Goal:** Como ingeniero, quiero ver y editar mi infomación.
 ![Segmento #1 User Flow #2](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Moviles/Cap%C3%ADtulo%203/Journey-Flow-1_Mock-Up.jpeg)
 
-##### 3.1.4.5. Mobile Applications Prototyping
+##### 4.5. Mobile Applications Prototyping
 En esta etapa se presentan los prototipos de la aplicación móvil IoBuild, diseñados para smartphones y tablets. El enfoque está en simular los flujos principales de cada segmento objetivo, garantizando una experiencia intuitiva, accesible y optimizada para pantallas táctiles y entornos de movilidad.
 
 **Segmento constructoras**
@@ -4313,16 +2564,444 @@ Los ingenieros utilizan la aplicación móvil para supervisar proyectos residenc
 
 Con estos flujos, los prototipos evidencian cómo cada tipo de usuario interactúa con la aplicación, asegurando una navegación coherente y ajustada a sus necesidades.
 
+## 4.6. Web Applications UX/UI Design
+La sección de Diseño UX/UI de Aplicaciones Web se enfoca en la creación de interfaces y la definición de la experiencia de usuario para las soluciones web de IoBuild. Este proceso abarca desde la conceptualización de las vistas funcionales hasta la definición de flujos de interacción completos, diseñados específicamente para satisfacer las necesidades de nuestros dos segmentos clave: Arquitectos/Ingenieros y Propietarios.
 
-## Capítulo IV: Product Implementation & Validation
+En esta etapa inicial, se procedió al diseño de mockups de alta fidelidad, los cuales se alinearon con el sistema visual y la identidad de marca adoptados para la plataforma IoBuild. Este enfoque garantiza la consistencia, simplicidad y una clara orientación a la tarea en todas las interacciones.
 
-### 4. Product Implementation & Validation
-#### 4.1. Software Configuration Management
+Los componentes de la interfaz fueron meticulosamente organizados siguiendo flujos de usuario validados previamente, tomando como referencia los Empathy Map desarrollados en fases anteriores. Esto asegura que cada acción del usuario tenga un propósito claro y un recorrido intuitivo dentro de la experiencia de la plataforma.
 
-La gestion de configuracion de software del proyecto **IoBuild** define y controla el conjunto de herramientas, servicios y convenciones necesarios para asegurar un desarrollo movil consistente, trazable y reproducible.  
+La estructura de navegación ha sido concebida para ofrecer una experiencia inclusiva y eficiente, aplicando criterios de accesibilidad (a11y) para garantizar que la plataforma sea usable para todos, y soporte multilenguaje (i18n) para una adopción global.
+
+Se integrarán servicios RESTful para la comunicación con el backend y se crearán prototipos navegables que permitan validar funcionalmente las interacciones más críticas del sistema con usuarios reales. Esto asegurará que la solución digital de IoBuild no solo sea atractiva visualmente, sino también robusta, intuitiva y alineada con las expectativas de sus usuarios.
+
+### 4.6.1. Web Applications Wireframes
+
+#### Vista del segmento #1: Arquitectos e Ingenieros Civiles
+#### 1. Home
+- El área principal está dedicada a la "Project Overview", que incluye varios gráficos informativos: un gráfico circular sobre el estado de los proyectos (diseño, planificación, implementación), gráficos de barras sobre el presupuesto y la asignación de dispositivos IoT, y un gráfico de líneas para el proceso general.
+
+![Segmento #1 Wireframe Home](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Wireframe_Home.png)
+<br>
+
+#### 2. Proflie
+- El área principal de contenido está estructurada para mostrar primero un resumen del perfil del usuario ("Full Name", "Role") junto con un botón "Edit Profile". Debajo, se detallan los "Account Information", que incluyen campos para el nombre completo, correo electrónico y número de teléfono. Más abajo, se presentan opciones de configuración adicionales como el "Current Plan" con una opción para renovar, la "Time Zone"y el "App language".
+
+![Segmento #1 Wireframe Profile](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Wireframe_Profile.png)
+<br>
+
+#### 3. Projects
+- El área principal de contenido presenta un encabezado "My Projects" y un botón prominente "+ Add Project", sugiriendo la capacidad de crear nuevas iniciativas. Debajo, se visualizan tres tarjetas de proyecto idénticas en su estructura, cada una con un marcador de posición para una imagen, un título "Name Project", etiquetas indicando "In implementation" y la cantidad de dispositivos asociados, y una barra de progreso.
+
+![Segmento #1 Wireframe Project](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Wireframe_Projects.png)
+<br>
+
+#### 4. Client Managment
+- El área principal del contenido presenta el encabezado "My Clients" y un botón "+ Add Client" , lo que sugiere la capacidad de incorporar nuevos clientes al sistema. Debajo, se presenta una tabla organizada con columnas para "Full Name", "Associated Project", "Account Statement" y "Actions".
+
+![Segmento #1 Wireframe Management](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Wireframe_Management.png)
+<br>
+
+#### 5. Configuration
+- El área principal del contenido se divide en tres secciones claras: "Notifications", "Security and Privacy", y "Support and Help". En la sección de Notificaciones, los usuarios pueden activar o desactivar alertas de expiración, actualizaciones del sistema y notificaciones de clientes mediante interruptores. La sección de Seguridad y Privacidad ofrece opciones para cambiar la contraseña, configurar la autenticación de dos factores y gestionar las sesiones activas, cada una con un icono de configuración para mayor detalle. Finalmente, la sección de Soporte y Ayuda proporciona enlaces a un Centro de ayuda y Contacto de Soporte.
+
+![Segmento #1 Wireframe Configuration](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Wireframe_Configuration.png)
+<br><br>
+
+#### Vista del segmento #2: Propietarios de departamentos
+#### 1. Home
+- El área principal está dedicada a la "Project Overview", que incluye varios gráficos informativos: un gráfico circular sobre el estado de los proyectos (diseño, planificación, implementación), gráficos de barras sobre el presupuesto y la asignación de dispositivos IoT, y un gráfico de líneas para el proceso general.
+
+![Segmento #2 Wireframe Home](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Wireframe_Home.png)
+<br>
+
+#### 2. Profile
+- El área principal de contenido está estructurada para mostrar primero un resumen del perfil del usuario ("Full Name", "Role") junto con un botón "Edit Profile". Debajo, se detallan los "Account Information", que incluyen campos para el nombre completo, correo electrónico y número de teléfono. Además, se introduce una nueva sección titulada "Favorite Scene Configuration" (Configuración de Escena Favorita), que lista múltiples opciones de "Energy-Saving Mode" con botones "Use", indicando la capacidad de configurar escenarios o modos preestablecidos para dispositivos. Más abajo, se presentan opciones de configuración adicionales como el "Current Plan" con una opción para renovar, la "Time Zone"y el "App language".
+
+![Segmento #2 Wireframe Profile](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Wireframe_Profile.png)
+<br>
+
+#### 3. Device Management
+- El encabezado "My Devices" es prominente, acompañado de dos botones de acción principales: "+ Create Scene", que permite agrupar y automatizar múltiples dispositivos, y "+ Add Device", para incorporar nuevos equipos al sistema. La información de los dispositivos se presenta en una tabla con columnas para "Name", "Category", "Real-time status" y "Actions". La tabla lista dispositivos con estados alternos de "On" y "Off", y cada uno incluye un icono de configuración para acceder a ajustes específicos.
+
+![Segmento #2 Wireframe Management](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Wireframe_Management.png)
+<br>
+
+#### 4. Configuration
+- El área principal del contenido se divide en tres secciones claras: "Notifications", "Security and Privacy", y "Support and Help". En la sección de Notificaciones, los usuarios pueden activar o desactivar alertas de expiración, actualizaciones del sistema y notificaciones de clientes mediante interruptores. La sección de Seguridad y Privacidad ofrece opciones para cambiar la contraseña, configurar la autenticación de dos factores y gestionar las sesiones activas, cada una con un icono de configuración para mayor detalle. Finalmente, la sección de Soporte y Ayuda proporciona enlaces a un Centro de ayuda y Contacto de Soporte. La sección "Advanced Device Management", que incluye opciones para "Automated Scenes" y "User Permissions".
+
+![Segmento #2 Wireframe Configuration](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Wireframe_Configuration.png)
+<br>
+
+### 4.6.2. Web Applications Wireflow Diagrams.
+#### Segmento Objetivo #1: Arquitectos e Ingenieros Civiles
+Los arquitectos e ingenieros civiles utilizan la plataforma IoBuild para gestionar sus proyectos residenciales, centralizar la información de clientes, monitorear dispositivos IoT implementados en los edificios y configurar opciones de administración de manera eficiente.
+
+**Login / Create Account**
+
+**1. Login:**
+- El usuario de la constructora introduce su correo corporativo y contraseña.
+-  Selecciona la opción “Login” para acceder a su cuenta empresarial.
+
+**Create Account:**
+- Si es un nuevo usuario, completa un formulario con datos de la empresa, representante y correo corporativo.
+- Selecciona “Create” para registrar la cuenta en el sistema.
+
+**Acción esperada:** Autenticarse exitosamente en la plataforma y acceder al Dashboard principal.<br><br>
+
+**2. Dashboard**
+-	Una vez autenticado, el usuario accede al panel principal, donde se visualiza un menú lateral con accesos a secciones clave:
+    - Home
+    - Profile
+    - Projects
+    - Client Management
+    - Configuration
+-	El Dashboard sirve como centro de navegación para todas las funciones de la plataforma.
+
+**Acción esperada:** Orientarse rápidamente en la aplicación y seleccionar la sección que desea administrar.<br><br>
+
+**3. Profile**
+-	Visualiza y edita información del usuario administrador como el nombre, logo, contacto, etc.
+-	Opciones para gestionar miembros del equipo y asignar roles.
+
+**Acción esperada:** Actualizar datos corporativos, ver plan y administrar accesos del equipo.<br><br>
+
+**4. Project Management**
+-	El usuario accede a la sección Projects, donde puede ver un listado de proyectos residenciales activos.
+-	Cada proyecto incluye nombre, estado, fecha y acceso a detalles.
+-	Puede pulsar “+ Add Project” para registrar un nuevo proyecto en la plataforma.
+
+**Acción esperada:** Visualizar, gestionar o crear proyectos residenciales vinculados a la constructora.<br><br>
+
+**5. Client Management**
+-	En la sección Client Management, se despliega una tabla con los clientes asociados a cada proyecto.
+-	Se muestran datos como nombre completo, proyecto asociado, estado y opciones de acción.
+-	El usuario puede añadir nuevos clientes con el botón “+ Add Client”.
+
+**Acción esperada:** Gestionar información de clientes vinculados a los proyectos residenciales.<br><br>
+
+
+**6. Configuration**
+-	En el apartado Configuration, la constructora puede administrar aspectos como notificaciones, seguridad, idioma de la aplicación y soporte técnico.
+-	Incluye secciones de seguridad y privacidad (cambio de contraseña, autenticación en dos pasos), así como alertas del sistema.
+
+**Acción esperada:** Personalizar la configuración de la plataforma para ajustarla a las necesidades de la empresa.<br><br>
+
+[Web Applications Wireflow Diagrams - Arquitectos e Ingenieros Civiles] <https://shorturl.at/ORylU>
+![Web Aplication Wireflow Guest](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Wireflow_Segmento2.png)
+
+
+#### Segmento Objetivo #2: Dueños de apartamentos
+
+
+**Login / Create Account**
+
+**1. Login:**
+- El usuario introduce su correo electrónico y contraseña.
+- Pulsa “Login” para acceder a su cuenta personal.
+
+**Create Account:**
+- Si es nuevo, completa un formulario con nombre completo, correo, dirección (unidad), y contraseña.
+- Pulsa “Create” para registrar la cuenta.
+
+**Acción esperada:** Autenticarse correctamente y acceder al Dashboard personal.<br><br>
+
+**2. Dashboard**
+-	Una vez autenticado, el usuario accede al panel principal, donde se visualiza un menú lateral con accesos a secciones clave::
+    - Home
+    - Profile
+    - Device Management
+    - Configuration
+-	Al ingresar, el dueño visualiza un Dashboard con widgets clave: consumo energético mensual (gráfico), estado general de dispositivos (rueda/donut), resumen de ahorros por dispositivo (gráfica) y un Notifications feed con alertas recientes.
+
+**Acción esperada:** Obtener un panorama rápido del estado del apartamento y acceder en un clic a control de dispositivos o a la configuración.<br><br>
+
+**3. Profile**
+-	Vista para ver/editar datos personales y de la unidad: nombre, contacto, dirección vinculada, Current Plan, zona horaria e idioma.
+-	Secciones: Edit Profile, Favorite Scene Configuration (botones Use para escenas guardadas), opciones para invitar a familiares o delegar accesos.
+
+**Acción esperada:** Actualizar información del propietario, gestionar quién tiene acceso y elegir escenas favoritas para uso rápido.<br><br>
+
+**4. Device Management**
+-	Acciones principales: + Add Device y + Create Scene.
+-	Dentro de cada dispositivo: estado en tiempo real, historial básico y acceso a ajustes
+
+**Acción esperada:** Añadir, identificar y controlar dispositivos individuales de forma ágil.<br><br>
+
+**5. Configuration**
+-	Panel con secciones: Notifications, Security and Privacy (cambio de contraseña, 2FA, gestión de sesiones), Support and Help y Advanced Device Management
+-	Opciones para activar/desactivar notificaciones críticas, administrar permisos de invitados y configurar preferencias globales de la unidad.
+
+**Acción esperada:** Personalizar la experiencia y garantizar seguridad y soporte.<br><br>
+
+[Web Applications Wireflow Diagrams - Dueños de apartamentos] <https://shorturl.at/h1jhp>
+![Web Aplication Wireflow Guest](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Wireflow_Segmento1.png)
+
+### 4.6.3. Web Applications Mock-ups.
+#### Vista del segmento #1: Arquitectos e Ingenieros Civiles
+#### 1. Home
+- En el área principal del panel, hay una sección de "Project Overview" que incluye dos gráficos: uno de barras titulado "Budget Allocated" y uno de líneas llamado "Devices Implemented", que proporcionan una visión rápida del rendimiento. A la derecha, se encuentra un "Notification Feed" con mensajes sobre la expiración de un proyecto y la adición de un nuevo cliente.
+
+![Segmento #1 Mock-up Home](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Mock-up_Home.png)
+<br>
+
+#### 2. Proflie
+- En esta pantalla, se destacan los detalles del perfil del usuario, "Roberto Ccarita", con un botón prominente para "Edit Profile". La información se organiza en varias secciones claras: "Account Information", donde se muestran el nombre completo, el correo electrónico y el número de teléfono del usuario; "Time Zone", "Current Plan" y "App Language", establecido en "English".
+
+![Segmento #1 Mock-up Profile](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Mock-up_Profile.png)
+<br>
+
+#### 3. Projects
+- En esta pantalla, se presenta una galería de proyectos individuales, cada uno ilustrado con una imagen de un edificio moderno. Cada tarjeta de proyecto incluye el nombre del proyecto, su estado y la fecha de su última actualización. Un botón "More Details" para acceder a información más profunda sobre cada proyecto. Además, en la parte superior derecha, un botón "+ Add Project" indica la funcionalidad para crear nuevos proyectos dentro de la aplicación.
+
+![Segmento #1 Mock-up Project](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Mock-up_Projects.png)
+<br>
+
+#### 4. Clients
+- Esta vista presenta una tabla detallada con información de los clientes, incluyendo su "Full Name", "Associated Project", "Account Statement" y "Actions". El estado de la cuenta varía entre "Active", "Suspended" y "Stand by". Para cada cliente, se ofrecen opciones como "View Profile" y un icono de configuración, permitiendo al usuario gestionar los detalles del cliente. En la esquina superior derecha, un botón "+ Add Client" facilita la incorporación de nuevos clientes.
+
+![Segmento #1 Mock-up Management](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Mock-up_Management.png)
+<br>
+
+#### 5. Configuration
+- Esta vista está organizada en tres áreas principales que permiten al usuario personalizar y gestionar su experiencia. La sección "Notifications" incluye toggles para activar o desactivar alertas de expiración, actualizaciones del sistema, notificaciones de clientes y notificaciones push. La sección "Security and Privacy" ofrece opciones para cambiar la contraseña, configurar la autenticación de dos factores, gestionar sesiones y añadir una dirección de correo electrónico alternativa, todas ellas con un icono de engranaje que sugiere configuraciones adicionales. Finalmente, la sección "Support and Help" proporciona enlaces a FAQs y contacto de soporte.
+
+![Segmento #1 Mock-up Configuration](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Mock-up_Configuration.png)
+<br><br>
+
+#### Vista del segmento #2: Propietarios de departamentos
+#### 1. Home
+- La sección principal, "Overview" (Resumen), incluye dos gráficos: uno de líneas que detalla el "Energy Consumption" (Consumo de Energía) a lo largo del tiempo, y un gráfico de barras que ilustra los "Energy Savings By Device (%)" (Ahorros de Energía por Dispositivo) para elementos como luces, termostatos, aire acondicionado y cámaras. A la derecha, el "Notification Feed" (Feed de Notificaciones) alerta sobre "High power consumption detected" (Se detectó un alto consumo de energía) y "Air conditioner may need maintenance" (El aire acondicionado puede necesitar mantenimiento). Esta pantalla ofrece al propietario una visión integral y en tiempo real del consumo energético y el estado de los dispositivos, facilitando la gestión eficiente de las propiedades.
+
+![Segmento #2 Mock-up Home](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Mock-up_Home.png)
+<br>
+
+#### 2. Proflie
+- En la sección "Account Information", se detallan los datos personales del usuario, incluyendo un campo adicional con una dirección. A la derecha, una sección llamada "Scenes", que presenta toggles para activar o desactivar modos como "Energy Saving Mode", "Movie" y varias opciones de "Push Notifications". La "Time Zone" (Zona Horaria) se mantiene como "UTC +5 Lima".
+
+![Segmento #2 Mock-up Profile](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Mock-up_Profile.png)
+<br>
+
+#### 3. Device Management
+- Esta pantalla presenta una tabla que lista los dispositivos asociados al usuario, con columnas para "Name", "Category" y "Real Time Status". Los dispositivos mostrados incluyen termostatos, aire acondicionado, luces (exteriores e interiores), cerraduras inteligentes y cámaras de video, clasificados en categorías como "Climatization", "Zen Tower" y "Security". Los estados en tiempo real varían entre "Online", "Offline" y "Damaged", lo que proporciona una visión clara del funcionamiento de cada dispositivo. Para cada entrada, un icono de engranaje en la columna de configuración. En la parte superior derecha, un botón "+ Add Device" permite al usuario incorporar nuevos dispositivos a su sistema, lo que hace de esta sección una herramienta central para el control y monitoreo de la infraestructura inteligente.
+
+![Segmento #2 Mock-up Management](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Mock-up_Management.png)
+<br>
+
+#### 4. Configuration
+- Esta vista está organizada en tres áreas principales que permiten al usuario personalizar y gestionar su experiencia. La sección "Notifications" incluye toggles para activar o desactivar alertas de expiración, actualizaciones del sistema, notificaciones de clientes y notificaciones push. La sección "Security and Privacy" ofrece opciones para cambiar la contraseña, configurar la autenticación de dos factores, gestionar sesiones y añadir una dirección de correo electrónico alternativa, todas ellas con un icono de engranaje que sugiere configuraciones adicionales. Finalmente, la sección "Support and Help" proporciona enlaces a FAQs y contacto de soporte.
+
+![Segmento #2 Mock-up Configuration](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Mock-up_Configuration.png)
+<br>
+
+### 4.6.4. Web Applications User Flow Diagrams
+#### Segmento Objetivo #1: Arquitectos e Ingenieros Civiles
+
+**1. Profile**
+**User Goal:** Como ingeniero, quiero ver y editar mi infomación.
+![Segmento #1 User Flow #1](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_User-Flow%231.png)
+
+**2. Project Management**
+**User Goal:** Como ingeniero, quiero ver, editar y añadir projects en los que estoy trabajando.
+![Segmento #1 User Flow #2](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_User-Flow%232.png)
+
+**3. Client Management**
+**User Goal:** Como ingeniero, quiero monitorear los dispositivos de los projectos en los que estoy trabajando.
+![Segmento #1 User Flow #3](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_User-Flow%233.png)
+
+**4. Configuration**
+**User Goal:** Como ingeniero, quiero personalizar la configuración de la plataforma.
+![Segmento #1 User Flow #4](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_User-Flow%234.png)
+
+#### Segmento Objetivo #2: Dueños de apartamentos
+
+**1. Profile**
+**User Goal:** Como propietario, quiero ver y editar mi infomación.
+![Segmento #2 User Flow #1](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_User-Flow%231.png)
+
+**2. Device Management**
+**User Goal:** Como propietario, quiero monitorear y configurar mis dispositivos.
+![Segmento #2 User Flow #2](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_User-Flow%232.png)
+
+**3. Configuration**
+**User Goal:** Como propietario, quiero personalizar la configuración de la plataforma.
+![Segmento #2 User Flow #3](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_User-Flow%233.png)
+
+## 4.7. Web Applications Prototyping
+En esta etapa se presentan los prototipos de la aplicación web IoBuild, diseñados para navegadores de escritorio. El enfoque está en simular los flujos principales de cada segmento objetivo, garantizando una experiencia clara y funcional en pantallas grandes.
+
+**Segmento constructoras**
+<br>
+Los ingenieros usan la plataforma para gestionar proyectos residenciales, centralizar información de clientes, monitorear dispositivos IoT y configurar opciones de administración.
+
+- Desde el menú Home, acceden al Dashboard con datos de sus proyectos.
+
+- La barra lateral incluye cinco menús principales: Home, Profile, Project, Device Management y Configuration.
+
+- En Device Management se despliega la lista de clientes con datos como nombre, proyecto, estado de cuenta y opciones de gestión.
+
+- Al seleccionar un cliente, pueden visualizar el estado de los dispositivos IoT relacionados; si hay restricciones o errores, el sistema muestra un aviso.
+
+**Segmento Dueños de Departamentos**<br>
+Los propietarios buscan controlar de forma remota sus dispositivos y conocer su rendimiento.
+
+- El recorrido inicia en Home, donde se muestra un Dashboard con información general de los dispositivos.
+
+- En este caso, el menú lateral incluye cuatro opciones: Home, Profile, Device Management y Configuration.
+
+- En Device Management aparece la lista de aparatos conectados al departamento, con datos como nombre, categoría y estado.
+
+- El usuario puede ingresar al detalle de cada dispositivo o recibir un mensaje de error en caso de restricciones.
+
+Con estos flujos, los prototipos evidencian cómo cada tipo de usuario interactúa con la aplicación, asegurando una navegación coherente y ajustada a sus necesidades.
+
+A continuación se presenta el video con los prototipos navegables de ambos segmentos: https://goo.su/Cor4Q
+
+## 4.8. Domain-Driven Software Architecture
+### 4.8.1. Software Architecture Context Diagram
+El diagrama de contexto muestra la vista más general de IoBuild, destacando a sus actores principales y cómo se relacionan con la plataforma. En este nivel aparecen dos roles clave: las Constructoras, que usan IoBuild para agregar funciones inteligentes a sus proyectos y darles un valor diferencial; y los Propietarios, que ingresan al sistema para personalizar su hogar o espacio de trabajo de forma fácil y sin necesidad de conocimientos técnicos.
+
+Aunque sus objetivos son distintos, ambos se conectan a la misma plataforma, que hace posible que los edificios y viviendas se conviertan en entornos más cómodos, accesibles y personalizables.
+
+Este modelo refuerza la misión de IoBuild: acercar la tecnología de los espacios inteligentes a constructoras y propietarios con herramientas prácticas, simples y útiles. Además, gracias a su diseño modular, la plataforma puede adaptarse a diferentes mercados y necesidades sin perder su esencia.
+
+![Software Architecture Context Diagram](assets/chapther-4/domain-driven-software-architecture/context-diagram.jpg)
+
+### 4.8.2. Software Architecture Container Diagrams
+
+El diagrama de contenedores profundiza en la estructura interna del sistema y muestra cómo está organizado IoBuild en términos de sus principales componentes de ejecución. La aplicación se compone de tres contenedores principales: la Landing Page, la Web App en SPA y el API Backend. Cada uno cumple un rol específico dentro del modelo de negocio.
+
+La Landing Page funciona como el punto de entrada, mostrando la propuesta de valor de IoBuild y diferenciando la experiencia según el tipo de usuario, ya sea una constructora o un propietario. Desde allí, los usuarios acceden a la Web App, una interfaz de una sola página (SPA) que reúne las funcionalidades principales: configuración de espacios inteligentes, personalización de ambientes, gestión de dispositivos y administración de perfiles.
+
+Esta SPA se conecta con un API Backend central, encargado de coordinar las operaciones entre los distintos módulos de la plataforma, como la gestión de proyectos, la administración de dispositivos y la configuración de automatizaciones.
+
+Gracias a este diseño modular, IoBuild mantiene una separación clara entre la experiencia de usuario y la lógica de negocio, lo que permite escalar sus funciones y reducir el tiempo de despliegue de nuevas capacidades.
+
+![Software Architecture Container Diagram](assets/chapther-4/domain-driven-software-architecture/container-diagrams.jpg)
+
+### 4.8.3. Software Architecture Components Diagrams
+
+El diagrama de componentes muestra la estructura interna de la **IoBuild Platform API Application**, destacando cómo sus capacidades principales se organizan en **bounded contexts**, cada uno implementado como un componente independiente en ASP.NET Core.
+
+Dentro de la aplicación API, el dominio está dividido en los siguientes componentes:
+
+- **IAM**  
+  Gestiona la autenticación, autorización e identidades mediante JWT y BCrypt.
+
+- **Devices**  
+  Administra dispositivos IoT, sus configuraciones y operaciones relacionadas.
+
+- **Projects**  
+  Maneja la creación, administración y ciclo de vida de proyectos, incluyendo gestión de medios con **Cloudinary**.
+
+- **Profiles**  
+  Gestiona la información y los datos de perfil de los usuarios.
+
+- **Clients**  
+  Administra la información de clientes y sus relaciones.
+
+- **Subscriptions**  
+  Gestiona planes de suscripción, ciclos de facturación y se integra con **Stripe** para pagos.
+
+- **Analytics**  
+  Procesa y provee datos analíticos sobre dispositivos, proyectos y clientes.
+
+- **Shared**  
+  Contiene funcionalidades compartidas, como repositorios base, patrones de mediación, utilidades y abstracciones comunes.
+
+En conjunto, este diagrama muestra cómo la aplicación API está modularizada, cómo colaboran los diferentes componentes y cómo se conectan tanto con servicios externos como con la base de datos central.
+
+![Software Architecture Component Diagram](assets/chapther-4/domain-driven-software-architecture/componets-diagrams.jpg)
+
+## 4.9. Software Object-Oriented Design
+### 4.9.1. Class Diagrams
+
+**Identity and Access Management**
+
+El bounded context de Identity and Access Management (IAM) se encarga de gestionar la autenticación, autorización y administración de usuarios dentro de la plataforma IoBuild. Este contexto define las entidades principales como User (usuario) y Role (rol), estableciendo la base para controlar quién tiene acceso al sistema y qué permisos posee. Además, implementa servicios de hashing de contraseñas mediante BCryptPasswordHasher y generación de tokens JWT a través de JwtTokenService, asegurando la seguridad en cada interacción. Los repositorios y servicios de comandos/consultas facilitan la creación, actualización y consulta de usuarios, mientras que las políticas de autorización protegen los recursos críticos del sistema.
+
+![Identity and Access Management Class Diagram](assets/chapther-4/software-objetct_oriented-design/IAM_Class_Diagram.png)
+
+**Subscriptions and Payments Management**
+
+El diagrama de clases de Subscriptions representa la estructura del modelo de negocio de suscripciones siguiendo Domain-Driven Design (DDD). Los agregados principales son Subscription (que vincula un builder con un plan específico, controlando estado y vigencia) y Plan (que define características, precio y límites de cada nivel de servicio). El diagrama muestra la separación clara entre capas: Domain (agregados, commands, queries, servicios e interfaces de repositorios), Application (implementación de servicios de comandos y consultas, además del ACL SubscriptionsContextFacade que expone funcionalidades a otros bounded contexts), e Infrastructure (repositorios concretos con Entity Framework y servicios de pago con Stripe). Los commands y queries implementan el patrón CQRS, separando operaciones de escritura (crear/actualizar) de las de lectura (consultas). Este diseño facilita la evolución independiente del contexto, manteniendo bajo acoplamiento con otros módulos del sistema.
+
+![Subscriptions and Payments Management Class Diagram](assets/chapther-4/software-objetct_oriented-design/Subscriptions_and_Payments_Management_Class_Diagram.png)
+
+**Projects Management**
+
+El bounded context de Projects Management gestiona el ciclo de vida de los proyectos de construcción inteligentes dentro de IoBuild. El agregado principal Project encapsula información como nombre, descripción, ubicación, estado y unidades asociadas, permitiendo que arquitectos e ingenieros organicen y supervisen sus desarrollos inmobiliarios. Las entidades Unit representan los espacios individuales (apartamentos, oficinas) dentro de cada proyecto, incluyendo detalles como número de unidad, piso, área y estado de ocupación. Este contexto también define servicios de comandos y consultas que permiten crear, actualizar, listar y eliminar proyectos, manteniendo una separación clara entre la lógica de dominio y la infraestructura de persistencia.
+
+![Projects Management Class Diagram](assets/chapther-4/software-objetct_oriented-design/Projects_Class_Diagram.png)
+
+**Profile and Preferences Management**
+
+El bounded context de Profiles Management administra la información personal y las preferencias de los usuarios dentro de la plataforma IoBuild. El agregado Profile encapsula datos como nombre, teléfono, dirección y configuraciones de usuario, vinculándose directamente con el User del contexto IAM. Las entidades UserPreferences y NotificationSettings permiten personalizar aspectos como idioma, zona horaria y canales de notificación (correo, push, SMS), adaptando la experiencia a las necesidades individuales de cada propietario o ingeniero. Los servicios de comandos y consultas facilitan la creación, actualización y consulta de perfiles, asegurando que la información del usuario esté siempre disponible y actualizada.
+
+![Profile and Preferences Management Class Diagram](assets/chapther-4/software-objetct_oriented-design/Profiles_Class_Diagram.png)
+
+**Devices Management**
+
+El bounded context de Devices Management se enfoca en la administración y monitoreo de dispositivos IoT dentro de los espacios inteligentes. El agregado raíz Device representa cada dispositivo físico conectado (luces, termostatos, cámaras, cerraduras, sensores), almacenando su tipo, ubicación, estado operativo y configuración. Las entidades TelemetryData permiten registrar métricas en tiempo real, mientras que DeviceConfiguration facilita la personalización de parámetros específicos de cada equipo. Los servicios de comandos y consultas posibilitan el registro, actualización, eliminación y búsqueda de dispositivos, garantizando que propietarios e ingenieros puedan gestionar su infraestructura inteligente de forma centralizada y eficiente.
+
+![Devices Management Class Diagram](assets/chapther-4/software-objetct_oriented-design/Devices_Class_Diagram.png)
+
+**Analytics**
+
+El bounded context de Analytics se especializa en la recopilación, procesamiento y visualización de métricas operativas dentro de IoBuild. Los agregados principales EnergyConsumption y OccupancyRecord registran datos clave como el consumo energético por dispositivo/unidad y los niveles de ocupación en diferentes períodos de tiempo. Estos datos permiten a ingenieros y propietarios tomar decisiones informadas sobre eficiencia energética, planificación de recursos y optimización de espacios. Los servicios de consulta y repositorios asociados facilitan la extracción de información histórica y la generación de reportes personalizados, contribuyendo al objetivo de crear edificios inteligentes, sostenibles y eficientes.
+
+![Analytics Class Diagram](assets/chapther-4/software-objetct_oriented-design/Dashboard_and_Analytics_Class_Diagram.png)
+
+## 4.10. Database Design
+### 4.10.1. Database Diagram
+
+**Identity and Access Management**
+
+El diagrama de base de datos de Identity and Access Management (IAM) modela la estructura para gestionar usuarios, roles y permisos dentro de la plataforma IoBuild. La tabla users almacena la información básica de autenticación (nombre de usuario, email y hash de contraseña). Los roles (roles) definen conjuntos de permisos que pueden ser asignados a usuarios mediante la tabla intermedia user_roles. Los permisos específicos (permissions) detallan qué acciones están permitidas sobre qué recursos, y se vinculan a roles mediante role_permissions. Este diseño permite una gestión flexible y escalable de la seguridad, facilitando la asignación dinámica de permisos según el contexto y las necesidades del negocio.
+
+![Identity and Access Management Database Diagram](assets/chapther-4/database-design/Identity_and_Access_Management_Database_Diagram.jpeg)
+
+**Subscriptions and Payments Management**
+
+El diagrama de base de datos de Subscriptions modela la persistencia del sistema de suscripciones y facturación. La tabla plans almacena los diferentes niveles de servicio disponibles (Basic, Pro, Enterprise), incluyendo precio, descripción, características (en formato texto delimitado), límites de dispositivos y administradores, nivel de soporte, y acceso a API/analytics. La tabla subscriptions vincula cada builder con un plan específico, registrando el estado (active, cancelled, expired), fechas de inicio y fin, facilitando el control de vigencia y renovaciones. Las transacciones financieras se registran en payments, que incluye integración con Stripe mediante el campo stripe_payment_intent_id, almacenando monto, moneda, método de pago y estado. Finalmente, invoices documenta las facturas generadas por cada pago, con número de factura único, montos totales e impuestos, y fechas de emisión, vencimiento y pago. Los índices estratégicos optimizan consultas por builder, plan, estado de suscripción y transacciones de Stripe.
+
+![Subscriptions and Payments Management Database Diagram](assets/chapther-4/database-design/Subscriptions_and_Payments_Management_Database_Diagram.png)
+
+**Profile and Preferences Management**
+
+El diagrama de Profile and Preferences Management modela la información personal y preferencias de los usuarios dentro de IoBuild. La tabla profiles contiene datos como nombre completo, teléfono y dirección completa (calle, ciudad, estado, código postal y país), vinculándose directamente con los usuarios del sistema. Las preferencias del usuario se almacenan en user_preferences, incluyendo idioma, zona horaria y configuraciones de notificaciones (email, push y SMS). Este modelo permite personalizar la experiencia de cada usuario, adaptando el sistema a sus necesidades individuales y facilitando la gestión de su información personal de forma centralizada.
+
+![Profile and Preferences Management Database Diagram](assets/chapther-4/database-design/Profiles_Database_Diagram.png)
+
+**Devices Management**
+
+El diagrama de Devices Management representa la gestión y monitoreo de dispositivos IoT dentro de la plataforma. La tabla devices almacena información esencial de cada dispositivo (nombre, tipo, ubicación, estado y configuración en formato JSON). Los datos de telemetría se registran en telemetry_data, capturando métricas en tiempo real con sus timestamps correspondientes. La tabla device_configurations mantiene un historial versionado de las configuraciones aplicadas a cada dispositivo, incluyendo parámetros en JSON y fecha de aplicación. Este diseño permite un control granular sobre el estado operativo de los dispositivos, facilita el análisis histórico de su comportamiento y soporta la toma de decisiones basada en datos para optimización energética y mantenimiento predictivo.
+
+![Service Execution and Monitoring Database Diagram](assets/chapther-4/database-design/Devices_Database_Diagram.png)
+
+
+**Projects Management**
+
+El diagrama de Projects Management describe la estructura para gestionar proyectos de construcción inteligentes y las unidades asociadas. La tabla projects almacena información clave como nombre, descripción, ubicación, estado actual y el constructor responsable (referenciado por builder_id). Cada proyecto puede contener múltiples unidades (units), que representan espacios individuales (apartamentos, oficinas) con detalles como número de unidad, piso, área y estado de ocupación. La relación con builders permite identificar al responsable del proyecto, mientras que residents vincula a los ocupantes de cada unidad. Este diseño facilita la administración centralizada de proyectos inmobiliarios y sus componentes.
+
+![Projects Management Database Diagram](assets/chapther-4/database-design/Projects_Database_Diagram.png)
+
+
+**Analytics**
+
+El diagrama de Dashboard and Analytics modela la captura y análisis de métricas operativas en IoBuild. La tabla energy_consumption registra el consumo energético de cada dispositivo y unidad, incluyendo timestamp, valor, unidad de medida y metadatos adicionales en formato JSON. Los registros de ocupación (occupancy_records) capturan porcentajes de ocupación y número de dispositivos activos por unidad en momentos específicos. Finalmente, analytics_reports almacena reportes generados bajo demanda, especificando tipo de reporte, período analizado, proyecto asociado y datos completos en formato JSON. Este modelo permite a ingenieros y propietarios tomar decisiones informadas sobre eficiencia energética, planificación de recursos y optimización de espacios, contribuyendo al objetivo de crear edificios inteligentes y sostenibles.
+
+![Dashboard and Analytics Database Diagram](assets/chapther-4/database-design/Analytics_Database_Diagram.png)
+
+<div style="page-break-before: always;"></div>
+
+## Capítulo V: Product Implementation
+## 5.1. Software Configuration Management
+
+La gestion de configuracion de software del proyecto IoBuild define y controla el conjunto de herramientas, servicios y convenciones necesarios para asegurar un desarrollo movil consistente, trazable y reproducible.  
 En esta seccion se documentan los componentes del entorno de desarrollo, su proposito dentro del proyecto y su aporte a la calidad del producto final.
 
-##### 4.1.1. Software Development Environment Configuration
+### 5.1.1. Software Development Environment Configuration
 
 Para la implementacion de la solucion, se configuro un entorno de desarrollo orientado a aplicaciones moviles Android, integracion con servicios backend y soporte para diseno UX/UI, documentacion y colaboracion del equipo.
 
@@ -4344,9 +3023,9 @@ Para la implementacion de la solucion, se configuro un entorno de desarrollo ori
 | Render | Despliegue Backend | https://render.com/ | Plataforma de despliegue para aplicaciones Spring Boot |
 | Firebase Cloud Messaging | Notificaciones Push | https://firebase.google.com/ | Servicio de notificaciones push para dispositivos moviles |
 
-##### 4.1.2. Source Code Management
+### 5.1.2. Source Code Management
 
-La gestion del codigo fuente de **IoBuild** se realiza con Git y GitHub, siguiendo practicas estandar para asegurar trazabilidad, colaboracion efectiva y control de cambios durante todo el ciclo de desarrollo.
+La gestion del codigo fuente de IoBuild se realiza con Git y GitHub, siguiendo practicas estandar para asegurar trazabilidad, colaboracion efectiva y control de cambios durante todo el ciclo de desarrollo.
 
 **Gestion de Repositorios**
 
@@ -4354,9 +3033,10 @@ El proyecto utiliza GitHub como plataforma centralizada de control de versiones.
 
 | Producto | URL del Repositorio | Descripcion |
 |---|---|---|
-| Landing Page | Pendiente de registrar URL oficial | Sitio web de presentacion del producto |
-| Mobile Application Kotlin | Pendiente de registrar URL oficial | Aplicacion movil nativa Android |
-| Project Report | https://github.com/CcaritaTech/Report | Reporte tecnico y documentacion del proyecto |
+| Landing Page | https://github.com/CcaritaTech-upc/ccarita-tech.website | Sitio web de presentacion del producto |
+| Web Application | https://github.com/CcaritaTech-upc/ccarita-tech.webapp | Aplicación web hecha en Vue.js |
+| Mobile Application Kotlin | https://github.com/CcaritaTech-upc/ccarita-tech.mobileapp | Aplicacion movil nativa Android |
+| Project Report | https://github.com/CcaritaTech-upc/ccarita-tech.report | Reporte tecnico y documentacion del proyecto |
 
 **Implementacion de GitFlow**
 
@@ -4400,7 +3080,7 @@ Tipos de commit mas usados:
 
 Esta convencion facilita auditoria de cambios y futura generacion automatica de changelogs.
 
-##### 4.1.3. Source Code Style Guide & Conventions
+### 5.1.3. Source Code Style Guide & Conventions
 
 El proyecto **IoBuild** define una guia de estilo comun para mantener consistencia, legibilidad y mantenibilidad en sus componentes de backend, aplicacion movil, landing page y documentacion tecnica.
 
@@ -4470,7 +3150,7 @@ Para la documentacion (`README`, diagramas y evidencias), se mantiene formato un
 
 Estas convenciones fortalecen la calidad del codigo y facilitan el trabajo colaborativo durante todo el ciclo de vida del producto.
 
-##### 4.1.4. Software Deployment Configuration
+### 5.1.4. Software Deployment Configuration
 
 El proyecto IoBuild implementa una estrategia de despliegue diferenciada por componente, utilizando servicios en la nube y canales de distribucion acordes al tipo de aplicacion. Esta aproximacion permite optimizar recursos y mantener una entrega continua para landing page, backend y aplicacion movil.
 
@@ -4525,7 +3205,7 @@ El diagrama de despliegue de esta etapa representa:
 
 ![Deploy Diagram](https://i.ibb.co/WYbfcRR/Deploy-Diagram.png)
 
-#### 4.2. Landing Page & Mobile Application Implementation
+#### 5.2. Product Implementation & Deployment
 # 4.2.1. Sprint 1
 
 El Sprint 1 se enfocó en establecer los cimientos de la plataforma IoBuild, desarrollando secciones clave de la landing page (sobre nosotros, testimonios, contacto y FAQ), la opción de registro e internacionalización, y el dashboard inicial con acceso básico a proyectos y dispositivos. El equipo trabajó de manera colaborativa distribuyéndose las tareas según sus especialidades, logrando completar todas las user stories planificadas dentro del timeline estimado.

@@ -2950,26 +2950,70 @@ En conjunto, estas evidencias permiten verificar que la landing page fue correct
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
+### 0.1 Deploy
+![deploy app](assets/deployapp.png)
+
+Aqui podemos observar la app deployada con render , en este caso se utilizo esta plataforma por su mayor cantidad de recursos gratuitos 
+
+### 1. Pantalla de Inicio de Sesión
+![Inicio de Sesión](assets/image.png)
+Formulario principal de acceso a la plataforma. Permite ingresar con credenciales de correo y contraseña, o seleccionar el tipo de registro: **Constructor** o **Propietario**.
+
+---
+
+### 2. Registro como Constructor - Paso 1
+![Registro Constructor Paso 1](assets/image-1.png)
+Primera etapa del flujo de registro para constructores, donde se solicitan las credenciales principales de la cuenta (correo electrónico y contraseña).
+
+---
+
+### 3. Registro como Propietario - Paso 1
+![Registro Propietario Paso 1](assets/image-3.png)
+Primera etapa del formulario de registro para propietarios de inmuebles, enfocada en la creación de las credenciales de acceso a la cuenta.
+
+---
+
+### 4. Registro como Propietario - Paso 2
+![Registro Propietario Paso 2](assets/image-4.png)
+Segunda etapa del registro de propietario donde se capturan los datos personales y de perfil (nombre, dirección, teléfono y foto de perfil).
+
+---
+
+### 5. Panel de Control del Propietario
+![Panel de Control Propietario](assets/image-5.png)
+Dashboard principal del propietario ("Mi Panel de Unidad"), con resumen de dispositivos, estado del hogar inteligente y gráficas de consumo energético, temperatura y agua.
+
+---
+
+### 6. Telemetría y Monitoreo en Tiempo Real
+![Telemetría en Tiempo Real](assets/image-6.png)
+Módulo de monitoreo en vivo ("Live Energy") que muestra datos de consumo de dispositivos seleccionados en los últimos minutos o 24 horas.
+
+---
+
+### 7. Estado del Sistema y Unidades
+![Estado del Sistema](assets/image-7.png)
+Sección de diagnóstico que presenta el estado de salud de los dispositivos IoT conectados y el resumen general de las unidades inmobiliarias asignadas.
+
+---
+
+### 8. Perfil de Usuario
+![Perfil de Usuario](assets/image-8.png)
+Vista de administración de cuenta donde el usuario puede consultar y actualizar su información personal, datos de contacto e idioma de la aplicación.
+
+---
+
+### 9. Vinculación de Dispositivos
+![Vinculación de Dispositivos](assets/image-9.png)
+Modal para la adición de nuevos dispositivos IoT ("Add Device"), permitiendo seleccionar el tipo de equipo, asignarle un nombre y vincularlo a una unidad específica.
+
+---
+
+### 10. Gestión de Suscripciones
+![Gestión de Suscripciones](assets/image-10.png)
+Módulo de planes de suscripción para empresas o constructores (Starter, Professional y Enterprise), donde se administran las funcionalidades de infraestructura IoT e integración de proyectos.
 
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
 
 ### 5.2.4. Acuerdo de Servicio - SaaS
 
@@ -3030,68 +3074,75 @@ La aplicación incorpora mecanismos técnicos de operación como `/health`, read
 
 El plan Enterprise muestra la característica “Guaranteed SLA” en el catálogo, pero la versión actual no define todavía un porcentaje de uptime, tiempos máximos de respuesta, ventanas de mantenimiento, compensaciones ni un proceso formal de escalamiento. Por ello, esos parámetros deben completarse en el contrato comercial antes de ofrecer el servicio como SLA legalmente vinculante.
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
 
 ### 5.2.5. Implemented Native-Mobile Application Evidence 
 
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+1. Login
+La pantalla presenta una interfaz de inicio de sesión minimalista. El diseño incluye dos campos de entrada de texto: uno ara el correo electrónico (Email) y otro para la contraseña (Password). Debajo de estos campos, destaca un botón principal de color verde con el texto "Sign In" para acceder al sistema, seguido de una opción de registro en la parte inferior que dice "Don’t have an account? Register".
+
+![Segmento #1 Mock-up Login](assets/mobile1.jpeg)
+
+2. Dashboard
+El "Builder Dashboard" muestra métricas clave como proyectos activos, dispositivos conectados y ocupación. Incluye un gráfico circular de "Device Distribution" (temperatura, agua, energía y control de acceso), un gráfico de líneas sobre la tasa de ocupación mensual y una sección de "Project Overview" con detalles específicos del proyecto "Torres del Pacífico".
+
+![Segmento #1 Mock-up Dashboard](assets/mobile2.jpeg)
+
+3. Profile
+La pantalla muestra el perfil de usuario de "Juan Pérez", identificado con el cargo de "Builder". Incluye una sección con datos personales como nombre completo, nombre de usuario, teléfono, dirección en San Isidro, Lima, y edad. En la parte inferior, destaca un botón verde con la opción "Edit Profile".
+
+![Segmento #1 Mock-up-1 Profile](assets/mobile3.jpeg)
+
+Esta interfaz corresponde a la edición del perfil de "Juan Pérez", bajo el rol de "Builder". Presenta cinco campos de texto editables con la información del usuario: nombre completo, nombre de usuario, teléfono, dirección y edad. En la parte inferior, se incluyen dos opciones principales: un botón verde para "Save Changes" (Guardar cambios) y un enlace de texto para "Cancel" (Cancelar).
+
+![Segmento #1 Mock-up-2 Profile](assets/mobile4.jpeg)
+
+4. Projects
+La interfaz muestra una lista de proyectos de "IoBuild" organizados en tarjetas cuadrículas. Cada tarjeta presenta el nombre del edificio, como "Torres del Pacífico" o "Torre Ccarita", su ubicación o descripción breve, y una barra de progreso que indica el estado de las unidades ocupadas (por ejemplo, 68/80 o 90/90 unidades). Además, la pantalla incluye un botón flotante en la esquina inferior derecha con el símbolo "+" para añadir nuevos elementos.
+
+![Segmento #1 Mock-up Projects](assets/mobile5.jpeg)
 
 ### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence 
 
+### 1. Vista General y Endpoints de Analytics
+![Interfaz principal de Swagger UI de IoBuild y endpoints del módulo Analytics](assets/api1.png)
+* **Descripción:** Interfaz principal de Swagger UI para la API de IoBuild ("All Bounded Contexts v1"). Muestra los endpoints de consulta (`GET`) para el módulo **Analytics**, permitiendo la obtención de métricas, consumo energético e insights tanto de constructores (*builders*) como de propietarios (*owners*).
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+---
+
+### 2. Gestión de Clientes (Clients)
+![Endpoints CRUD del módulo Clients](assets/api2.png)
+* **Descripción:** Módulos y endpoints correspondientes a la entidad **Clients**. Ofrece una arquitectura CRUD estándar (`GET`, `POST`, `PUT`, `DELETE`) para el registro, edición, consulta y eliminación de datos de los clientes.
+
+---
+
+### 3. Administración e Interacción con Dispositivos (Devices)
+![Endpoints para la gestión, comandos y telemetría de Dispositivos](assets/api3.png)
+* **Descripción:** Conjunto de endpoints del contexto de **Devices**. Incluye soporte para la gestión de dispositivos y sus tipos, comandos en tiempo real, recepción de telemetría (`/telemetry`), retransmisión de datos (`/replay`), así como la consulta de estado y métricas de energía por dispositivo.
+
+---
+
+### 4. Gestión de Identidad y Acceso (IAM)
+![Endpoints para usuarios, autenticación y sesiones del módulo IAM](assets/api4.png)
+* **Descripción:** Endpoints para el módulo **IAM** (*Identity and Access Management*). Permite el registro de usuarios (`sign-up`), inicio y cierre de sesión (`sign-in`, `sign-out`), gestión de invitaciones y administración de sesiones activas.
+
+---
+
+### 5. Health Check, Contratos, Planes y Perfiles
+![Endpoints para verificación de salud, contratos, planes de suscripción y perfiles de usuario](assets/api5.png)
+* **Descripción:** Documentación de los contextos **IoBuild.Api** (verificación de estado `/health` y contratos), **Plans** (gestión de planes de suscripción) y **Profiles** (actualización e inspección de perfiles de usuario, incluyendo la foto de perfil vía `PATCH`).
+
+---
+
+### 6. Gestión de Proyectos y Subscripciones (Projects & Subscriptions)
+![Endpoints de Proyectos y manejo de Subscripciones con pasarela de pagos](assets/api6.png)
+* **Descripción:** Endpoints de los contextos **Projects** y **Subscriptions**. Permite la administración de proyectos y sus estructuras, el manejo del ciclo de vida de suscripciones, sesiones de pago, historial de facturas e integración mediante webhooks con Stripe.
+
+---
+
+### 7. Transiciones de Sistema y Unidades (System & Cutover / Units)
+![Endpoints para estado de congelamiento/estabilización del sistema y gestión de unidades inmobiliarias](assets/api7.png)
+* **Descripción:** Endpoints correspondientes a **System & Cutover** (control de estado, congelamiento y estabilización del sistema durante despliegues) y **Units** (administración de unidades/inmuebles y asignación de propietarios).
 
 ### 5.2.7. RESTful API documentation 
 
@@ -3265,23 +3316,6 @@ La documentación se deriva de los archivos de endpoints del repositorio actual:
 ### 5.2.8. Team Collaboration Insights 
 
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+
 
 ## 5.3. Video About-the-Product. 

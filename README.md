@@ -3313,9 +3313,3 @@ La documentación se deriva de los archivos de endpoints del repositorio actual:
 - [Analytics](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/Analytics/Interfaces/REST/AnalyticsEndpoints.cs)
 - [Subscriptions](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/Subscriptions/Interfaces/REST/SubscriptionsEndpoints.cs)
 
-### 5.2.8. Team Collaboration Insights 
-
-
-
-
-## 5.3. Video About-the-Product. 

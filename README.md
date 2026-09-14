@@ -2188,56 +2188,56 @@ Se integrarán servicios RESTful para la comunicación con el backend y se crear
 #### 1. Home
 - El área principal está dedicada a la "Project Overview", que incluye varios gráficos informativos: un gráfico circular sobre el estado de los proyectos (diseño, planificación, implementación), gráficos de barras sobre el presupuesto y la asignación de dispositivos IoT, y un gráfico de líneas para el proceso general.
 
-![Segmento #1 Wireframe Home](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Wireframe_Home.png)
+![Segmento #1 Wireframe Home](assets/chapther-4/web-applications-ux_ui-design/wireframes/segment_1/Segmento1_Wireframe_Home.png)
 <br>
 
 #### 2. Proflie
 - El área principal de contenido está estructurada para mostrar primero un resumen del perfil del usuario ("Full Name", "Role") junto con un botón "Edit Profile". Debajo, se detallan los "Account Information", que incluyen campos para el nombre completo, correo electrónico y número de teléfono. Más abajo, se presentan opciones de configuración adicionales como el "Current Plan" con una opción para renovar, la "Time Zone"y el "App language".
 
-![Segmento #1 Wireframe Profile](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Wireframe_Profile.png)
+![Segmento #1 Wireframe Profile](assets/chapther-4/web-applications-ux_ui-design/wireframes/segment_1/Segmento1_Wireframe_Profile.png)
 <br>
 
 #### 3. Projects
 - El área principal de contenido presenta un encabezado "My Projects" y un botón prominente "+ Add Project", sugiriendo la capacidad de crear nuevas iniciativas. Debajo, se visualizan tres tarjetas de proyecto idénticas en su estructura, cada una con un marcador de posición para una imagen, un título "Name Project", etiquetas indicando "In implementation" y la cantidad de dispositivos asociados, y una barra de progreso.
 
-![Segmento #1 Wireframe Project](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Wireframe_Projects.png)
+![Segmento #1 Wireframe Project](assets/chapther-4/web-applications-ux_ui-design/wireframes/segment_1/Segmento1_Wireframe_Projects.png)
 <br>
 
 #### 4. Client Managment
 - El área principal del contenido presenta el encabezado "My Clients" y un botón "+ Add Client" , lo que sugiere la capacidad de incorporar nuevos clientes al sistema. Debajo, se presenta una tabla organizada con columnas para "Full Name", "Associated Project", "Account Statement" y "Actions".
 
-![Segmento #1 Wireframe Management](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Wireframe_Management.png)
+![Segmento #1 Wireframe Management](assets/chapther-4/web-applications-ux_ui-design/wireframes/segment_1/Segmento1_Wireframe_Management.png)
 <br>
 
 #### 5. Configuration
 - El área principal del contenido se divide en tres secciones claras: "Notifications", "Security and Privacy", y "Support and Help". En la sección de Notificaciones, los usuarios pueden activar o desactivar alertas de expiración, actualizaciones del sistema y notificaciones de clientes mediante interruptores. La sección de Seguridad y Privacidad ofrece opciones para cambiar la contraseña, configurar la autenticación de dos factores y gestionar las sesiones activas, cada una con un icono de configuración para mayor detalle. Finalmente, la sección de Soporte y Ayuda proporciona enlaces a un Centro de ayuda y Contacto de Soporte.
 
-![Segmento #1 Wireframe Configuration](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Wireframe_Configuration.png)
+![Segmento #1 Wireframe Configuration](assets/chapther-4/web-applications-ux_ui-design/wireframes/segment_1/Segmento1_Wireframe_Configuration.png)
 <br><br>
 
 #### Vista del segmento #2: Propietarios de departamentos
 #### 1. Home
 - El área principal está dedicada a la "Project Overview", que incluye varios gráficos informativos: un gráfico circular sobre el estado de los proyectos (diseño, planificación, implementación), gráficos de barras sobre el presupuesto y la asignación de dispositivos IoT, y un gráfico de líneas para el proceso general.
 
-![Segmento #2 Wireframe Home](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Wireframe_Home.png)
+![Segmento #2 Wireframe Home](assets/chapther-4/web-applications-ux_ui-design/wireframes/segment_2/Segmento2_Wireframe_Home.png)
 <br>
 
 #### 2. Profile
 - El área principal de contenido está estructurada para mostrar primero un resumen del perfil del usuario ("Full Name", "Role") junto con un botón "Edit Profile". Debajo, se detallan los "Account Information", que incluyen campos para el nombre completo, correo electrónico y número de teléfono. Además, se introduce una nueva sección titulada "Favorite Scene Configuration" (Configuración de Escena Favorita), que lista múltiples opciones de "Energy-Saving Mode" con botones "Use", indicando la capacidad de configurar escenarios o modos preestablecidos para dispositivos. Más abajo, se presentan opciones de configuración adicionales como el "Current Plan" con una opción para renovar, la "Time Zone"y el "App language".
 
-![Segmento #2 Wireframe Profile](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Wireframe_Profile.png)
+![Segmento #2 Wireframe Profile](assets/chapther-4/web-applications-ux_ui-design/wireframes/segment_2/Segmento2_Wireframe_Profile.png)
 <br>
 
 #### 3. Device Management
 - El encabezado "My Devices" es prominente, acompañado de dos botones de acción principales: "+ Create Scene", que permite agrupar y automatizar múltiples dispositivos, y "+ Add Device", para incorporar nuevos equipos al sistema. La información de los dispositivos se presenta en una tabla con columnas para "Name", "Category", "Real-time status" y "Actions". La tabla lista dispositivos con estados alternos de "On" y "Off", y cada uno incluye un icono de configuración para acceder a ajustes específicos.
 
-![Segmento #2 Wireframe Management](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Wireframe_Management.png)
+![Segmento #2 Wireframe Management](assets/chapther-4/web-applications-ux_ui-design/wireframes/segment_2/Segmento2_Wireframe_Management.png)
 <br>
 
 #### 4. Configuration
 - El área principal del contenido se divide en tres secciones claras: "Notifications", "Security and Privacy", y "Support and Help". En la sección de Notificaciones, los usuarios pueden activar o desactivar alertas de expiración, actualizaciones del sistema y notificaciones de clientes mediante interruptores. La sección de Seguridad y Privacidad ofrece opciones para cambiar la contraseña, configurar la autenticación de dos factores y gestionar las sesiones activas, cada una con un icono de configuración para mayor detalle. Finalmente, la sección de Soporte y Ayuda proporciona enlaces a un Centro de ayuda y Contacto de Soporte. La sección "Advanced Device Management", que incluye opciones para "Automated Scenes" y "User Permissions".
 
-![Segmento #2 Wireframe Configuration](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Wireframe_Configuration.png)
+![Segmento #2 Wireframe Configuration](assets/chapther-4/web-applications-ux_ui-design/wireframes/segment_2/Segmento2_Wireframe_Configuration.png)
 <br>
 
 ### 4.6.2. Web Applications Wireflow Diagrams.
@@ -2294,8 +2294,7 @@ Los arquitectos e ingenieros civiles utilizan la plataforma IoBuild para gestion
 
 **Acción esperada:** Personalizar la configuración de la plataforma para ajustarla a las necesidades de la empresa.<br><br>
 
-[Web Applications Wireflow Diagrams - Arquitectos e Ingenieros Civiles] <https://shorturl.at/ORylU>
-![Web Aplication Wireflow Guest](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Wireflow_Segmento2.png)
+![Web Aplication Wireflow Guest](assets/chapther-4/web-applications-ux_ui-design/wireflow-diagrams/segment_1/Wireflow_Segmento1.png)
 
 
 #### Segmento Objetivo #2: Dueños de apartamentos
@@ -2339,66 +2338,65 @@ Los arquitectos e ingenieros civiles utilizan la plataforma IoBuild para gestion
 -	Panel con secciones: Notifications, Security and Privacy (cambio de contraseña, 2FA, gestión de sesiones), Support and Help y Advanced Device Management
 -	Opciones para activar/desactivar notificaciones críticas, administrar permisos de invitados y configurar preferencias globales de la unidad.
 
-**Acción esperada:** Personalizar la experiencia y garantizar seguridad y soporte.<br><br>
+**Acción esperada:** Personalizar la experiencia y garantizar seguridad y soporte.<br>
 
-[Web Applications Wireflow Diagrams - Dueños de apartamentos] <https://shorturl.at/h1jhp>
-![Web Aplication Wireflow Guest](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Wireflow_Segmento1.png)
+![Web Aplication Wireflow Guest](assets/chapther-4/web-applications-ux_ui-design/wireflow-diagrams/segment_2/Wireflow_Segmento2.png)
 
 ### 4.6.3. Web Applications Mock-ups.
 #### Vista del segmento #1: Arquitectos e Ingenieros Civiles
 #### 1. Home
 - En el área principal del panel, hay una sección de "Project Overview" que incluye dos gráficos: uno de barras titulado "Budget Allocated" y uno de líneas llamado "Devices Implemented", que proporcionan una visión rápida del rendimiento. A la derecha, se encuentra un "Notification Feed" con mensajes sobre la expiración de un proyecto y la adición de un nuevo cliente.
 
-![Segmento #1 Mock-up Home](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Mock-up_Home.png)
+![Segmento #1 Mock-up Home](assets/chapther-4/web-applications-ux_ui-design/mockups/Segmento1_Mock-up_Home.png)
 <br>
 
 #### 2. Proflie
 - En esta pantalla, se destacan los detalles del perfil del usuario, "Roberto Ccarita", con un botón prominente para "Edit Profile". La información se organiza en varias secciones claras: "Account Information", donde se muestran el nombre completo, el correo electrónico y el número de teléfono del usuario; "Time Zone", "Current Plan" y "App Language", establecido en "English".
 
-![Segmento #1 Mock-up Profile](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Mock-up_Profile.png)
+![Segmento #1 Mock-up Profile](assets/chapther-4/web-applications-ux_ui-design/mockups/Segmento1_Mock-up_Profile.png)
 <br>
 
 #### 3. Projects
 - En esta pantalla, se presenta una galería de proyectos individuales, cada uno ilustrado con una imagen de un edificio moderno. Cada tarjeta de proyecto incluye el nombre del proyecto, su estado y la fecha de su última actualización. Un botón "More Details" para acceder a información más profunda sobre cada proyecto. Además, en la parte superior derecha, un botón "+ Add Project" indica la funcionalidad para crear nuevos proyectos dentro de la aplicación.
 
-![Segmento #1 Mock-up Project](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Mock-up_Projects.png)
+![Segmento #1 Mock-up Project](assets/chapther-4/web-applications-ux_ui-design/mockups/Segmento1_Mock-up_Projects.png)
 <br>
 
 #### 4. Clients
 - Esta vista presenta una tabla detallada con información de los clientes, incluyendo su "Full Name", "Associated Project", "Account Statement" y "Actions". El estado de la cuenta varía entre "Active", "Suspended" y "Stand by". Para cada cliente, se ofrecen opciones como "View Profile" y un icono de configuración, permitiendo al usuario gestionar los detalles del cliente. En la esquina superior derecha, un botón "+ Add Client" facilita la incorporación de nuevos clientes.
 
-![Segmento #1 Mock-up Management](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Mock-up_Management.png)
+![Segmento #1 Mock-up Management](assets/chapther-4/web-applications-ux_ui-design/mockups/Segmento1_Mock-up_Management.png)
 <br>
 
 #### 5. Configuration
 - Esta vista está organizada en tres áreas principales que permiten al usuario personalizar y gestionar su experiencia. La sección "Notifications" incluye toggles para activar o desactivar alertas de expiración, actualizaciones del sistema, notificaciones de clientes y notificaciones push. La sección "Security and Privacy" ofrece opciones para cambiar la contraseña, configurar la autenticación de dos factores, gestionar sesiones y añadir una dirección de correo electrónico alternativa, todas ellas con un icono de engranaje que sugiere configuraciones adicionales. Finalmente, la sección "Support and Help" proporciona enlaces a FAQs y contacto de soporte.
 
-![Segmento #1 Mock-up Configuration](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_Mock-up_Configuration.png)
+![Segmento #1 Mock-up Configuration](assets/chapther-4/web-applications-ux_ui-design/mockups/Segmento1_Mock-up_Configuration.png)
 <br><br>
 
 #### Vista del segmento #2: Propietarios de departamentos
 #### 1. Home
 - La sección principal, "Overview" (Resumen), incluye dos gráficos: uno de líneas que detalla el "Energy Consumption" (Consumo de Energía) a lo largo del tiempo, y un gráfico de barras que ilustra los "Energy Savings By Device (%)" (Ahorros de Energía por Dispositivo) para elementos como luces, termostatos, aire acondicionado y cámaras. A la derecha, el "Notification Feed" (Feed de Notificaciones) alerta sobre "High power consumption detected" (Se detectó un alto consumo de energía) y "Air conditioner may need maintenance" (El aire acondicionado puede necesitar mantenimiento). Esta pantalla ofrece al propietario una visión integral y en tiempo real del consumo energético y el estado de los dispositivos, facilitando la gestión eficiente de las propiedades.
 
-![Segmento #2 Mock-up Home](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Mock-up_Home.png)
+![Segmento #2 Mock-up Home](assets/chapther-4/web-applications-ux_ui-design/mockups/segment_2/Segmento2_Mock-up_Home.png)
 <br>
 
 #### 2. Proflie
 - En la sección "Account Information", se detallan los datos personales del usuario, incluyendo un campo adicional con una dirección. A la derecha, una sección llamada "Scenes", que presenta toggles para activar o desactivar modos como "Energy Saving Mode", "Movie" y varias opciones de "Push Notifications". La "Time Zone" (Zona Horaria) se mantiene como "UTC +5 Lima".
 
-![Segmento #2 Mock-up Profile](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Mock-up_Profile.png)
+![Segmento #2 Mock-up Profile](assets/chapther-4/web-applications-ux_ui-design/mockups/segment_2/Segmento2_Mock-up_Profile.png)
 <br>
 
 #### 3. Device Management
 - Esta pantalla presenta una tabla que lista los dispositivos asociados al usuario, con columnas para "Name", "Category" y "Real Time Status". Los dispositivos mostrados incluyen termostatos, aire acondicionado, luces (exteriores e interiores), cerraduras inteligentes y cámaras de video, clasificados en categorías como "Climatization", "Zen Tower" y "Security". Los estados en tiempo real varían entre "Online", "Offline" y "Damaged", lo que proporciona una visión clara del funcionamiento de cada dispositivo. Para cada entrada, un icono de engranaje en la columna de configuración. En la parte superior derecha, un botón "+ Add Device" permite al usuario incorporar nuevos dispositivos a su sistema, lo que hace de esta sección una herramienta central para el control y monitoreo de la infraestructura inteligente.
 
-![Segmento #2 Mock-up Management](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Mock-up_Management.png)
+![Segmento #2 Mock-up Management](assets/chapther-4/web-applications-ux_ui-design/mockups/segment_2/Segmento2_Mock-up_Management.png)
 <br>
 
 #### 4. Configuration
 - Esta vista está organizada en tres áreas principales que permiten al usuario personalizar y gestionar su experiencia. La sección "Notifications" incluye toggles para activar o desactivar alertas de expiración, actualizaciones del sistema, notificaciones de clientes y notificaciones push. La sección "Security and Privacy" ofrece opciones para cambiar la contraseña, configurar la autenticación de dos factores, gestionar sesiones y añadir una dirección de correo electrónico alternativa, todas ellas con un icono de engranaje que sugiere configuraciones adicionales. Finalmente, la sección "Support and Help" proporciona enlaces a FAQs y contacto de soporte.
 
-![Segmento #2 Mock-up Configuration](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_Mock-up_Configuration.png)
+![Segmento #2 Mock-up Configuration](assets/chapther-4/web-applications-ux_ui-design/mockups/segment_2/Segmento2_Mock-up_Configuration.png)
 <br>
 
 ### 4.6.4. Web Applications User Flow Diagrams
@@ -2406,33 +2404,33 @@ Los arquitectos e ingenieros civiles utilizan la plataforma IoBuild para gestion
 
 **1. Profile**
 **User Goal:** Como ingeniero, quiero ver y editar mi infomación.
-![Segmento #1 User Flow #1](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_User-Flow%231.png)
+![Segmento #1 User Flow #1](assets/chapther-4/web-applications-ux_ui-design/user-flow_diagrams/segment_1/Segmento1_User-Flow1.png)
 
 **2. Project Management**
 **User Goal:** Como ingeniero, quiero ver, editar y añadir projects en los que estoy trabajando.
-![Segmento #1 User Flow #2](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_User-Flow%232.png)
+![Segmento #1 User Flow #2](assets/chapther-4/web-applications-ux_ui-design/user-flow_diagrams/segment_1/Segmento1_User-Flow2.png)
 
 **3. Client Management**
 **User Goal:** Como ingeniero, quiero monitorear los dispositivos de los projectos en los que estoy trabajando.
-![Segmento #1 User Flow #3](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_User-Flow%233.png)
+![Segmento #1 User Flow #3](assets/chapther-4/web-applications-ux_ui-design/user-flow_diagrams/segment_1/Segmento1_User-Flow3.png)
 
 **4. Configuration**
 **User Goal:** Como ingeniero, quiero personalizar la configuración de la plataforma.
-![Segmento #1 User Flow #4](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%231_User-Flow%234.png)
+![Segmento #1 User Flow #4](assets/chapther-4/web-applications-ux_ui-design/user-flow_diagrams/segment_1/Segmento1_User-Flow4.png)
 
 #### Segmento Objetivo #2: Dueños de apartamentos
 
 **1. Profile**
 **User Goal:** Como propietario, quiero ver y editar mi infomación.
-![Segmento #2 User Flow #1](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_User-Flow%231.png)
+![Segmento #2 User Flow #1](assets/chapther-4/web-applications-ux_ui-design/user-flow_diagrams/segment_2/Segmento2_User-Flow1.png)
 
 **2. Device Management**
 **User Goal:** Como propietario, quiero monitorear y configurar mis dispositivos.
-![Segmento #2 User Flow #2](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_User-Flow%232.png)
+![Segmento #2 User Flow #2](assets/chapther-4/web-applications-ux_ui-design/user-flow_diagrams/segment_2/Segmento2_User-Flow2.png)
 
 **3. Configuration**
 **User Goal:** Como propietario, quiero personalizar la configuración de la plataforma.
-![Segmento #2 User Flow #3](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Imagenes/Cap%C3%ADtulo%204/Segmento%232_User-Flow%233.png)
+![Segmento #2 User Flow #3](assets/chapther-4/web-applications-ux_ui-design/user-flow_diagrams/segment_2/Segmento2_User-Flow3.png)
 
 ## 4.7. Web Applications Prototyping
 En esta etapa se presentan los prototipos de la aplicación web IoBuild, diseñados para navegadores de escritorio. El enfoque está en simular los flujos principales de cada segmento objetivo, garantizando una experiencia clara y funcional en pantallas grandes.

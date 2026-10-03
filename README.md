@@ -3384,3 +3384,26 @@ A continuación, se detallan los componentes y etapas principales que conforman 
 **8. Artifact Upload (Gestión de Resultados)**
 
 -   **Almacenamiento de Artefactos:** Uso de acciones como actions/upload-artifact para preservar temporalmente los elementos críticos generados durante el pipeline. Esto incluye el empaquetado de la carpeta construida y los reportes detallados de pruebas, haciéndolos descargables para inspección manual o preparándolos para ser consumidos por un pipeline secundario de _Continuous Deployment_ (CD).
+
+<br><br>
+
+## **7.2. Continuous Delivery**
+### **7.2.1. Tools and Practices**
+
+El proceso de Entrega Continua (CD) abarca los repositorios ccarita-tech.webapp y ccarita-tech.mobileapp, garantizando que los incrementos de código validados en la fase de integración (CI) sean empaquetados y desplegados de manera automática, segura y predecible. Esta estrategia cubre tanto la distribución web como la entrega de versiones de prueba y producción para el ecosistema móvil.
+
+Basado en las directrices de calidad y monitoreo de la arquitectura de referencia, el equipo emplea las siguientes herramientas para la automatización del despliegue:
+
+| HERRAMIENTA | DESCRIPCIÓN | LOGO |
+|--|--| -- |
+| GitHub Actions (Orquestador de CD) | Actúa como el puente entre la integración y la entrega. Configura flujos de trabajo de despliegue que se activan al fusionar código en ramas protegidas o al generar nuevas etiquetas (tags) de versión, gestionando de forma segura los secretos y credenciales de producción. | <img src="https://github.gallerycdn.vsassets.io/extensions/github/vscode-github-actions/0.32.3/1784139132081/Microsoft.VisualStudio.Services.Icons.Default" width="150"> |
+| Plataformas de Cloud Hosting (ej. Vercel, Render o AWS) | Utilizadas para el alojamiento de la aplicación web (ccarita-tech.webapp). Facilitan el despliegue automatizado y ofrecen entornos de _Preview_ o _Staging_ dinámicos, garantizando un despliegue sin tiempo de inactividad (Zero Downtime Deployment) para los usuarios. | <img src="https://karankrishnani.com/images/vercel-logo.webp" width="150"> |
+| Firebase App Distribution | Herramienta central para el pipeline del cliente móvil (ccarita-tech.mobileapp). Permite automatizar la distribución de los compilados (como APKs para Android o IPAs para iOS) directamente al equipo de QA y _testers_ autorizados, agilizando las pruebas antes de la publicación final en las tiendas de aplicaciones (App Store / Google Play). | <img src="https://www.gstatic.com/alkali/eba17e954431c80b7b31125928f3379476ee4934.png" width="150"> |
+| Sentry (Monitoreo y Observabilidad) | Integrado en las aplicaciones web y móvil para capturar errores no controlados, excepciones y _crashes_ en tiempo real. Proporciona visibilidad inmediata sobre la salud del _release_ en los entornos de _Staging_ y Producción. | <img src="https://www.svgrepo.com/show/354332/sentry-icon.svg" width="150"> |
+
+Para respaldar el uso de estas herramientas, se aplican las siguientes prácticas de Entrega Continua:
+
+-   **Despliegue Basado en Entornos (Environment-based Promotion):** Se mantiene una separación rigurosa entre entornos (_Development_, _Staging_, _Production_). Los despliegues a _Staging_ ocurren de manera automática tras la validación en la rama develop, sirviendo como filtro final de Pruebas de Aceptación del Usuario (UAT).
+-   **Versionado Semántico (SemVer) y Release Tagging:** Cada paso a producción o empaquetado móvil está respaldado por la creación de un _Release_ y una etiqueta en Git (ej. v1.0.3). Esto asegura la trazabilidad exacta de qué iteración del código está activa, facilitando la auditoría y simplificando los _rollbacks_.
+-   **Distribución Móvil Automatizada:** Los flujos de trabajo de la aplicación móvil incluyen pasos de compilación nativa. Si la compilación es exitosa, GitHub Actions sube el artefacto a Firebase App Distribution, el cual notifica automáticamente a los _testers_ por correo electrónico para que descarguen y evalúen la nueva versión.
+-   **Estrategia de Rollback y Health Checks:** Los despliegues web incluyen validaciones de disponibilidad post-despliegue. Si se detecta una degradación severa del servicio o un aumento anormal de errores en Sentry inmediatamente después de un lanzamiento, el equipo cuenta con protocolos para revertir la aplicación a la etiqueta de versión estable anterior con un solo clic o comando.

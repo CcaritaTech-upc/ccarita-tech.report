@@ -3494,3 +3494,17 @@ El pipeline de Despliegue Continuo hacia entornos de producción está diseñado
 
 **7. Production Notification System (Notificaciones de Lanzamiento)**
 -   Emisión de alertas automatizadas a los canales de comunicación del equipo técnico resumiendo el resultado del despliegue, la versión exacta publicada, los _commits_ incorporados en la actualización y enlaces de auditoría para monitorear el comportamiento inicial en vivo.
+
+<br><br>
+
+## **7.4. Continuous monitoring**
+### **7.4.1. Tools and Practices**
+
+Para asegurar que la aplicación web y móvil mantengan un rendimiento óptimo, alta disponibilidad y una experiencia de usuario fluida en producción, se implementa una estrategia de monitoreo continuo utilizando las siguientes herramientas y prácticas:
+
+| HERRAMIENTA | DESCRIPCIÓN | LOGO |
+|--|--| -- |
+| Sentry - Monitoreo de Errores y Rendimiento (APM) | Es la herramienta principal para la captura de excepciones y el monitoreo de rendimiento de aplicaciones (APM) en tiempo real. Se integra tanto en el entorno web como en el móvil para rastrear cuellos de botella, latencia en las llamadas a la API y _crashes_ no controlados, proporcionando trazas de pila exactas gracias a los _source maps_ subidos durante el despliegue. | <img src="https://www.svgrepo.com/show/354332/sentry-icon.svg" width="150"> |
+| Analytics - Monitoreo de Experiencia del Usuario | Para comprender cómo interactúan los usuarios con las plataformas, se emplea **Google Analytics** (para la web) y **Firebase Analytics** (para la aplicación móvil). Estas herramientas recopilan métricas de uso, flujos de navegación, retención y tiempos de pantalla, permitiendo al equipo de producto tomar decisiones basadas en datos para mejorar la usabilidad. | <img src="https://firebase.google.com/static/images/products/analytics/analytics-hero_1x.png?hl=es-419" width="150"> |
+| Google Lighthouse - Auditorías de Calidad y Core Web Vitals | Se utiliza de forma automatizada y manual para auditar la aplicación web. Evalúa el rendimiento (tiempos de carga, LCP, CLS), accesibilidad, mejores prácticas y SEO, garantizando que el frontend cumpla con los estándares modernos de calidad y no degrade la experiencia en dispositivos de bajos recursos. | <img src="https://t3.ftcdn.net/jpg/01/76/26/92/360_F_176269228_UnrOgKCKP6ljfNV7TetPmt5fBkr2LmAf.jpg" width="150"> |
+| Supervisión de Disponibilidad (Uptime & Synthetic Monitoring) | Herramientas como **UptimeRobot** o **Checkly** realizan _pings_ constantes y pruebas sintéticas sobre los _endpoints_ principales y las URLs de producción de la web. Esto asegura que los servicios estén activos globalmente y responden dentro de los tiempos esperados (ej. < 500ms). | <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/uptimerobot.svg" width="150"> |

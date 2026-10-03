@@ -3465,3 +3465,32 @@ Las prácticas metodológicas que respaldan este enfoque técnico incluyen:
 -   **Feature Toggling (Desacoplamiento del Lanzamiento):** Separación del despliegue del código de la liberación de la característica. El código llega a producción de forma continua, pero las funcionalidades se activan de forma remota según la estrategia de negocio.
 -   **Monitoreo Proactivo y Rollback Inmediato:** Al no haber validación manual humana de último momento antes del paso a producción de la web, el equipo confía en métricas de salud automatizadas (latencia, tasa de errores). Si ocurre una anomalía, se ejecuta un _rollback_ a la versión anterior estable con un solo comando.
 -   **Gestión Automatizada de Certificados Móviles:** Uso de herramientas criptográficas compartidas (como match en Fastlane) para sincronizar credenciales, perfiles de aprovisionamiento y claves de firma del proyecto móvil de forma segura en la nube, previniendo fallos manuales de publicación.
+
+<br>
+
+### **7.3.2. Production Deployment Pipeline Components**
+
+El pipeline de Despliegue Continuo hacia entornos de producción está diseñado para ser altamente resiliente, seguro y completamente auditable. Los componentes que estructuran este flujo definitivo son:
+
+**1. Production Triggers (Desencadenadores de Producción)**
+-   El flujo se inicia exclusivamente tras la aprobación y fusión de un _Pull Request_ hacia la rama de producción principal o mediante la creación de un _Release_ oficial (etiqueta de Git) que ha superado previamente y de forma exitosa los Quality Gates de CI.
+
+**2. Secrets & Environment Injection (Inyección de Entorno Seguro)**
+-   Recuperación de variables de entorno de producción (claves de bases de datos de producción, tokens de APIs externas, pasarelas de pago) desde el gestor de secretos del repositorio. Estos valores se inyectan en el proceso de compilación de forma cifrada para evitar filtraciones.
+
+**3. Optimized Production Build (Construcción Optimizada)**
+-   **Web (ccarita-tech.webapp):** Ejecución del proceso de compilación final con minificación estricta, eliminación de código no utilizado (_tree shaking_) y compresión de activos (ej. Gzip/Brotli) para maximizar el rendimiento y los Core Web Vitals.
+-   **Mobile (ccarita-tech.mobileapp):** Compilación de artefactos de lanzamiento definitivos (Android App Bundles .aab, iOS App Store Packages .ipa) utilizando las firmas criptográficas de producción y los perfiles de distribución comercial asociados a la cuenta de desarrollador de la organización.
+
+**4. Automated Store & Edge Deployment (Despliegue a Producción)**
+-   **Despliegue Web:** Publicación automática de los activos de la aplicación web en la plataforma de _cloud hosting_. Se actualizan de forma transparente las reglas de enrutamiento y se invalida la caché de la Red de Entrega de Contenido (CDN) a nivel global.
+-   **Distribución a Tiendas Móviles:** Ejecución de secuencias de comandos de Fastlane para transferir los binarios a los canales de revisión (_tracks_ de producción o _rollouts_ por fases) en Google Play Console y App Store Connect, incluyendo la actualización programática de _changelogs_ y metadatos.
+
+**5. Telemetry & Source Map Publishing (Sincronización de Depuración)**
+-   Subida de los mapas de código fuente (_Source Maps_) de la aplicación web y los archivos de símbolos de depuración nativos (dSYMs para iOS, ProGuard para Android) a la plataforma Sentry. Este componente desofusca automáticamente las trazas de pila (_stack traces_) de los errores de producción, mapeándolos a líneas de código legibles.
+
+**6. Post-Deployment Smoke Testing (Pruebas de Humo en Producción)**
+-   Ejecución de un conjunto muy específico y reducido de pruebas sintéticas o _scripts_ automatizados que validan la salud de la aplicación recién desplegada consultando rutas críticas reales (ej. comprobación de carga del _dashboard_ principal y resolución del _login_) sin alterar datos transaccionales.
+
+**7. Production Notification System (Notificaciones de Lanzamiento)**
+-   Emisión de alertas automatizadas a los canales de comunicación del equipo técnico resumiendo el resultado del despliegue, la versión exacta publicada, los _commits_ incorporados en la actualización y enlaces de auditoría para monitorear el comportamiento inicial en vivo.

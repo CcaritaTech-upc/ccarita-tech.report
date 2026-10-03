@@ -3440,3 +3440,28 @@ A continuación se detallan los componentes principales que conforman estas etap
 
 **7. Notificaciones del Pipeline (Pipeline Alerts)**
 -   **Alertas de Estado:** Envío automático de notificaciones a los canales de comunicación del equipo de desarrollo y operaciones informando sobre el resultado del pipeline de despliegue (éxito, fallo o degradación), incluyendo enlaces directos a los registros de GitHub Actions para auditoría rápida.
+
+<br><br>
+
+
+## **7.3. Continuous deployment**
+### **7.3.1. Tools and Practices**
+
+El Despliegue Continuo (Continuous Deployment) lleva la automatización un paso más allá de la Entrega Continua, eliminando la intervención manual en el proceso de lanzamiento. En el ecosistema de la aplicación web y aplicación móvil, cualquier cambio que supere exitosamente las pruebas automatizadas (CI) y los criterios de aceptación en entornos previos se despliega directamente en los entornos de producción o se envía a las tiendas de aplicaciones.
+
+Para ejecutar esta automatización de extremo a extremo de forma segura y eficiente, se emplean las siguientes herramientas:
+
+| HERRAMIENTA | DESCRIPCIÓN | LOGO |
+|--|--| -- |
+| GitHub Actions | Orquestador principal que automatiza el flujo completo de publicación al detectar cambios validados en la rama main o al generar un nuevo _release tag_ semántico. | <img src="https://github.gallerycdn.vsassets.io/extensions/github/vscode-github-actions/0.32.3/1784139132081/Microsoft.VisualStudio.Services.Icons.Default" width="150"> |
+| Vercel / Render / AWS | Plataformas de alojamiento web que soportan integración directa de despliegue continuo para la aplicación web, garantizando implementaciones inmediatas en el borde (edge) sin interrupción del servicio. | <img src="https://karankrishnani.com/images/vercel-logo.webp" width="150"> |
+| Fastlane | Herramienta de automatización fundamental para la aplicación móvil. Gestiona la firma de certificados, la captura de metadatos y la publicación directa de los binarios (AAB e IPA) en Google Play Console y Apple App Store Connect. | <img src="https://fastlane.tools/assets/images/fastlane-logo-lockup.png" width="150"> |
+| Sentry | Sistema de monitoreo de errores y rendimiento que observa la estabilidad del entorno de producción en tiempo real, vital para detectar fallas críticas en los primeros minutos de un despliegue automatizado. | <img src="https://www.svgrepo.com/show/354332/sentry-icon.svg" width="150"> |
+| Feature Flags (ej. LaunchDarkly / Configuración interna) | Herramientas de gestión de banderas de características que permiten desplegar código en producción manteniendo nuevas funcionalidades ocultas o limitadas a un segmento de usuarios hasta que estén completamente listas. | <img src="https://cdn.worldvectorlogo.com/logos/launchdarkly-1.svg" width="150"> |
+
+Las prácticas metodológicas que respaldan este enfoque técnico incluyen:
+
+-   **Zero-Downtime Deployments:** Actualizaciones de la infraestructura web sin tiempo de inactividad, enrutando el tráfico a la nueva versión solo cuando el contenedor o los activos estáticos están 100% listos.
+-   **Feature Toggling (Desacoplamiento del Lanzamiento):** Separación del despliegue del código de la liberación de la característica. El código llega a producción de forma continua, pero las funcionalidades se activan de forma remota según la estrategia de negocio.
+-   **Monitoreo Proactivo y Rollback Inmediato:** Al no haber validación manual humana de último momento antes del paso a producción de la web, el equipo confía en métricas de salud automatizadas (latencia, tasa de errores). Si ocurre una anomalía, se ejecuta un _rollback_ a la versión anterior estable con un solo comando.
+-   **Gestión Automatizada de Certificados Móviles:** Uso de herramientas criptográficas compartidas (como match en Fastlane) para sincronizar credenciales, perfiles de aprovisionamiento y claves de firma del proyecto móvil de forma segura en la nube, previniendo fallos manuales de publicación.

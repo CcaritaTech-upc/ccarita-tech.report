@@ -3508,3 +3508,33 @@ Para asegurar que la aplicación web y móvil mantengan un rendimiento óptimo, 
 | Analytics - Monitoreo de Experiencia del Usuario | Para comprender cómo interactúan los usuarios con las plataformas, se emplea **Google Analytics** (para la web) y **Firebase Analytics** (para la aplicación móvil). Estas herramientas recopilan métricas de uso, flujos de navegación, retención y tiempos de pantalla, permitiendo al equipo de producto tomar decisiones basadas en datos para mejorar la usabilidad. | <img src="https://firebase.google.com/static/images/products/analytics/analytics-hero_1x.png?hl=es-419" width="150"> |
 | Google Lighthouse - Auditorías de Calidad y Core Web Vitals | Se utiliza de forma automatizada y manual para auditar la aplicación web. Evalúa el rendimiento (tiempos de carga, LCP, CLS), accesibilidad, mejores prácticas y SEO, garantizando que el frontend cumpla con los estándares modernos de calidad y no degrade la experiencia en dispositivos de bajos recursos. | <img src="https://t3.ftcdn.net/jpg/01/76/26/92/360_F_176269228_UnrOgKCKP6ljfNV7TetPmt5fBkr2LmAf.jpg" width="150"> |
 | Supervisión de Disponibilidad (Uptime & Synthetic Monitoring) | Herramientas como **UptimeRobot** o **Checkly** realizan _pings_ constantes y pruebas sintéticas sobre los _endpoints_ principales y las URLs de producción de la web. Esto asegura que los servicios estén activos globalmente y responden dentro de los tiempos esperados (ej. < 500ms). | <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/uptimerobot.svg" width="150"> |
+
+<br>
+
+### **7.4.2. Monitoring Pipeline Components**
+
+El pipeline de monitoreo opera de forma paralela y continua una vez que la aplicación está en producción. Sus componentes se encargan de recopilar, procesar y visualizar el estado del sistema sin impactar el rendimiento del usuario final.
+
+-   **Ingesta de Telemetría (Data Collection):** En la aplicación web y móvil, los SDKs de Sentry y Firebase capturan eventos de forma asíncrona. Esto incluye tiempos de carga de la interfaz, solicitudes HTTP fallidas, información del dispositivo (modelo, versión de SO, memoria disponible) y acciones clave del usuario.
+-   **Análisis Continuo de Calidad (Lighthouse CI):** Se integra un componente de ejecución programada (mediante GitHub Actions o servicios externos) que lanza pruebas de Lighthouse contra el entorno de producción y _staging_. Este componente almacena un historial de las puntuaciones de rendimiento para detectar regresiones visuales o de velocidad introducidas por nuevos despliegues.
+-   **Paneles de Visualización (Dashboards):** Los datos recopilados se consolidan en interfaces visuales. En Sentry, se configuran paneles para visualizar la tasa de errores (_crash-free sessions_). En Google Analytics/Firebase, se observan los embudos de conversión y el comportamiento del tráfico. Esto permite a los desarrolladores y equipos de negocio tener una única fuente de verdad sobre la salud del sistema.
+
+<br>
+
+### **7.4.3. Alerting Pipeline Components**
+
+El componente de alertas es el encargado de evaluar en tiempo real los datos recopilados por el pipeline de monitoreo y determinar si el comportamiento del sistema cruza umbrales críticos que requieran intervención humana.
+
+-   **Gestión de Reglas y Umbrales:** En Sentry y herramientas de Uptime, se configuran reglas específicas basadas en la severidad. Por ejemplo, se define una alerta crítica si la tasa de errores de la API supera el 5% en un periodo de 5 minutos, si ocurre un _crash_ en la aplicación móvil que afecta a más de 100 usuarios únicos, o si el tiempo de respuesta del servidor web supera los 2 segundos.
+-   **Evaluación de Anomalías:** Además de los umbrales estáticos, el sistema utiliza detección de anomalías para identificar picos inusuales de tráfico o errores que no superan un límite fijo pero representan una desviación significativa del comportamiento normal de la aplicación.
+-   **Enrutamiento de Alertas (Routing):** Una vez que se dispara una condición, el sistema clasifica la alerta según el entorno (ej. _Staging_ vs _Production_) y el tipo de error (ej. Frontend vs Backend). Esto evita la fatiga de alertas, asegurando que las notificaciones críticas se prioricen sobre las advertencias menores.
+
+<br>
+
+### **7.4.4. Notification Pipeline Components**
+
+El pipeline de notificaciones es el último eslabón de la observabilidad. Se encarga de distribuir la información generada por el CI/CD y los sistemas de alertas hacia los canales de comunicación del equipo, garantizando una respuesta oportuna.
+
+-   **Integración de Webhooks:** El sistema utiliza _webhooks_ para conectar las plataformas de orquestación y monitoreo (GitHub Actions, Sentry, UptimeRobot) directamente con las herramientas de mensajería del equipo, como **Slack**, **Discord** o **Microsoft Teams**.
+-   **Notificaciones de Despliegue (Pipeline Status):** GitHub Actions envía notificaciones estructuradas al finalizar cada ejecución del pipeline. Si un despliegue falla en CI o CD, se notifica inmediatamente al canal de desarrollo indicando el _commit_ causante, el autor y un enlace directo a los _logs_. Si el despliegue a producción es exitoso, se envía un resumen de la versión liberada.
+-   **Notificaciones de Incidentes:** Cuando el componente de alertas detecta una falla en producción (ej. caída del servicio o excepción crítica en la app móvil), el sistema de notificaciones envía un mensaje de alta prioridad al canal de operaciones. Este mensaje incluye el contexto del error, la cantidad de usuarios afectados, las etiquetas de la versión y accesos directos para asignar y gestionar la resolución del incidente.

@@ -3337,3 +3337,50 @@ El uso de estas herramientas está sustentado por una serie de prácticas metodo
 -   **Políticas Estrictas de Pull Request (PR):** Las ramas principales están protegidas. Para que un cambio sea integrado, debe enviarse mediante un _Pull Request_ que requiere la aprobación obligatoria de al menos un revisor par (Code Review) y la ejecución exitosa de todos los _checks_ de integración en GitHub Actions.
 -   **Pipeline de Ejecución Secuencial (Fail-Fast):** Los _workflows_ están diseñados para fallar rápido. El pipeline ejecuta primero las tareas más rápidas (instalación de dependencias, _linting_ y formateo de código). Si estas fallan, el proceso se detiene inmediatamente sin consumir recursos en la ejecución de pruebas unitarias o análisis en SonarCloud, notificando al desarrollador al instante.
 -   **Cobertura de Código (Code Coverage):** Dentro de las prácticas de calidad, se establece un umbral mínimo de cobertura de pruebas (ej. 70% u 80%). Si el nuevo código introducido reduce el porcentaje general de cobertura por debajo del límite permitido, el pipeline marca el estado como fallido.
+
+<br>
+
+### **7.1.2. Build & Test Suite Pipeline Components**
+
+El pipeline de Integración Continua (CI) del repositorio está estructurado en una serie de _jobs_ (trabajos) y _steps_ (pasos) secuenciales, orquestados principalmente a través de GitHub Actions. Este flujo de trabajo automatizado garantiza que cada incremento de código sea compilado y evaluado rigurosamente antes de considerarse válido para su fusión.
+
+A continuación, se detallan los componentes y etapas principales que conforman el Build & Test Suite Pipeline de la aplicación:
+
+**1. Triggers (Desencadenadores del Pipeline)**
+
+-   **Eventos de Pull Request:** El pipeline se activa automáticamente cada vez que se abre, actualiza o reabre un _Pull Request_ hacia las ramas protegidas (main o develop).
+-   **Eventos de Push:** Se ejecuta tras la integración de código (merge) en las ramas principales, actuando como una validación final antes de iniciar cualquier proceso de despliegue.
+
+**2. Environment Setup (Configuración del Entorno de Ejecución)**
+
+-   **Contenedor de Ejecución:** Los _workflows_ operan sobre entornos limpios y estandarizados (típicamente ubuntu-latest), garantizando la consistencia entre ejecuciones.
+-   **Aprovisionamiento del Runtime:** Uso de acciones predefinidas (ej. actions/setup-node) para instalar y configurar la versión específica de Node.js requerida por el ecosistema de la aplicación.
+-   **Estrategia de Caché:** Implementación de mecanismos de caché para la carpeta de dependencias (node_modules o la ruta de caché del gestor de paquetes). Esto evita descargas redundantes desde los registros, reduciendo drásticamente los tiempos de ejecución del pipeline.
+
+**3. Dependency Installation (Gestión de Dependencias)**
+
+-   Ejecución de instalaciones limpias y deterministas (mediante comandos como npm ci o equivalentes en yarn/pnpm). Este componente asegura que el pipeline utilice las versiones exactas especificadas en el archivo de bloqueo (lockfile), evitando discrepancias ocasionadas por actualizaciones de dependencias de terceros.
+
+**4. Code Quality & Linting (Validación de Sintaxis y Formato)**
+
+-   **Análisis Estático Básico:** Ejecución de ESLint para escanear todo el código fuente. Identifica de forma proactiva errores de sintaxis, variables no utilizadas y violaciones a los estándares de codificación del equipo.
+-   **Verificación de Formato:** Evaluación del estilo del código utilizando Prettier (o herramientas análogas) para asegurar que la estructura visual (indentación, espaciado, uso de comillas) sea uniforme. Los fallos en esta etapa detienen la ejecución (_fail-fast_).
+
+**5. Test Suite (Ejecución de Pruebas Unitarias y de Integración)**
+
+-   **Ejecución del Framework:** Lanzamiento de las suites de pruebas automatizadas (mediante Jest o Vitest) para verificar la correcta funcionalidad de la lógica de negocio, los componentes de interfaz y los servicios internos de la aplicación web.
+-   **Generación de Reportes de Cobertura:** Configuración del framework para emitir métricas detalladas de cobertura de código (_Code Coverage_) en formatos estandarizados (como lcov), cuantificando el porcentaje de líneas, funciones y ramas evaluadas.
+
+**6. Static Code Analysis (Inspección Avanzada y Quality Gates)**
+
+-   **Escaneo de Seguridad y Mantenibilidad:** Transmisión de los reportes de cobertura generados a plataformas de análisis profundo (como SonarCloud o SonarQube).
+-   **Quality Gates:** Evaluación automática del código contra umbrales predefinidos. Si se detectan vulnerabilidades de seguridad críticas, _code smells_ excesivos, o si la cobertura cae por debajo del límite mínimo aceptable, el componente marca el _job_ como fallido y bloquea la integración.
+
+**7. Build Configuration (Compilación y Empaquetado)**
+
+-   **Proceso de Transpilación:** Ejecución del comando de construcción (ej. npm run build) que compila el código TypeScript/JavaScript moderno y procesa los activos.
+-   **Validación de Integridad:** Este paso asegura que el proyecto pueda empaquetarse correctamente (vía Vite, Webpack, etc.) sin errores de compilación ni dependencias circulares, generando la carpeta de activos estáticos optimizados (dist o build) listos para producción.
+
+**8. Artifact Upload (Gestión de Resultados)**
+
+-   **Almacenamiento de Artefactos:** Uso de acciones como actions/upload-artifact para preservar temporalmente los elementos críticos generados durante el pipeline. Esto incluye el empaquetado de la carpeta construida y los reportes detallados de pruebas, haciéndolos descargables para inspección manual o preparándolos para ser consumidos por un pipeline secundario de _Continuous Deployment_ (CD).

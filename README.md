@@ -3313,3 +3313,27 @@ La documentación se deriva de los archivos de endpoints del repositorio actual:
 - [Analytics](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/Analytics/Interfaces/REST/AnalyticsEndpoints.cs)
 - [Subscriptions](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/main/backend/src/IoBuild.Api/Subscriptions/Interfaces/REST/SubscriptionsEndpoints.cs)
 
+<div style="page-break-after: always;"></div>
+
+# **Capítulo VII: DevOps Practices**
+## **7.1. Continuous Integration**
+### **7.1.1. Tools and Practices**
+
+IoBuild implementa una estrategia de Integración Continua (CI) estructurada para garantizar que cada contribución al código fuente sea verificada de manera automática y sistemática. El objetivo principal de esta fase es detectar problemas de integración de forma temprana, mantener la integridad de la base de código y asegurar que los nuevos desarrollos cumplan con los estándares de calidad antes de avanzar a la etapa de despliegue.
+
+Para lograr esta automatización y estandarización, el equipo hace uso de las siguientes herramientas fundamentales:
+
+| HERRAMIENTA | DESCRIPCIÓN | LOGO |
+|--|--| -- |
+| GitHub (Control de Versiones y Colaboración) | Actúa como el repositorio central y la fuente única de verdad para el código fuente, gestionando el historial de cambios a través de Git y facilitando la revisión asíncrona de código. | <img src="https://cdn-icons-png.flaticon.com/256/25/25231.png" width="150"> |
+| GitHub Actions (Orquestador de Pipelines) | Es el motor principal de la integración continua. Se encarga de ejecutar _workflows_ definidos en archivos YAML cada vez que se detecta un evento clave, como la creación de un _Pull Request_ o un _Push_ hacia las ramas principales. | <img src="https://github.gallerycdn.vsassets.io/extensions/github/vscode-github-actions/0.32.3/1784139132081/Microsoft.VisualStudio.Services.Icons.Default" width="150"> |
+| SonarCloud (Inspección Continua) | Herramienta de análisis de código estático integrada en el pipeline para detectar vulnerabilidades de seguridad, _bugs_ y _code smells_, garantizando que la deuda técnica se mantenga bajo control. | <img src="https://cdn.worldvectorlogo.com/logos/sonarcloud-1.svg" width="150"> |
+| ESLint y Prettier (Linters y Formateadores) | Herramientas de análisis a nivel de sintaxis que aseguran el cumplimiento de las convenciones de codificación del equipo, estandarizando el estilo y previniendo errores comunes en el código base (como TypeScript o JavaScript). | <img src="https://exceptionptr.gallerycdn.vsassets.io/extensions/exceptionptr/vscode-prettier-eslint/1.1.5/1701684974736/Microsoft.VisualStudio.Services.Icons.Default" width="150"> |
+| Jest (Framework de Testing) | Tecnologías empleadas para ejecutar la suite de pruebas unitarias y de integración durante el pipeline, validando que los componentes y la lógica de negocio funcionen como se espera. | <img src="https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png" width="150"> |
+
+El uso de estas herramientas está sustentado por una serie de prácticas metodológicas de DevOps diseñadas para fomentar la colaboración segura y el _feedback_ rápido:
+
+-   **Estrategia de Ramas (Branching Strategy):** Se utiliza un modelo basado en _Feature Branching_ (como GitHub Flow o GitFlow). Todo nuevo desarrollo, corrección de errores o refactorización se realiza en una rama aislada (ej. feature/nombre-de-tarea) y nunca directamente sobre la rama de producción (main o master).
+-   **Políticas Estrictas de Pull Request (PR):** Las ramas principales están protegidas. Para que un cambio sea integrado, debe enviarse mediante un _Pull Request_ que requiere la aprobación obligatoria de al menos un revisor par (Code Review) y la ejecución exitosa de todos los _checks_ de integración en GitHub Actions.
+-   **Pipeline de Ejecución Secuencial (Fail-Fast):** Los _workflows_ están diseñados para fallar rápido. El pipeline ejecuta primero las tareas más rápidas (instalación de dependencias, _linting_ y formateo de código). Si estas fallan, el proceso se detiene inmediatamente sin consumir recursos en la ejecución de pruebas unitarias o análisis en SonarCloud, notificando al desarrollador al instante.
+-   **Cobertura de Código (Code Coverage):** Dentro de las prácticas de calidad, se establece un umbral mínimo de cobertura de pruebas (ej. 70% u 80%). Si el nuevo código introducido reduce el porcentaje general de cobertura por debajo del límite permitido, el pipeline marca el estado como fallido.

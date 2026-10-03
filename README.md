@@ -3407,3 +3407,36 @@ Para respaldar el uso de estas herramientas, se aplican las siguientes práctica
 -   **Versionado Semántico (SemVer) y Release Tagging:** Cada paso a producción o empaquetado móvil está respaldado por la creación de un _Release_ y una etiqueta en Git (ej. v1.0.3). Esto asegura la trazabilidad exacta de qué iteración del código está activa, facilitando la auditoría y simplificando los _rollbacks_.
 -   **Distribución Móvil Automatizada:** Los flujos de trabajo de la aplicación móvil incluyen pasos de compilación nativa. Si la compilación es exitosa, GitHub Actions sube el artefacto a Firebase App Distribution, el cual notifica automáticamente a los _testers_ por correo electrónico para que descarguen y evalúen la nueva versión.
 -   **Estrategia de Rollback y Health Checks:** Los despliegues web incluyen validaciones de disponibilidad post-despliegue. Si se detecta una degradación severa del servicio o un aumento anormal de errores en Sentry inmediatamente después de un lanzamiento, el equipo cuenta con protocolos para revertir la aplicación a la etiqueta de versión estable anterior con un solo clic o comando.
+
+<br>
+
+### **7.2.2. Stages Deployment Pipeline Components**
+
+El pipeline de Entrega Continua (CD) para los ecosistemas de la aplicación y móvil está compuesto por una serie de etapas secuenciales diseñadas para transformar el código fuente validado en versiones empaquetadas, distribuidas y monitoreadas de forma automática.
+
+A continuación se detallan los componentes principales que conforman estas etapas de despliegue:
+
+**1. Desencadenadores de Entrega (Deployment Triggers)**
+-   **Fusión en Ramas de Producción:** El pipeline se activa automáticamente tras un _merge_ exitoso hacia la rama main o master.
+-   **Release Tagging:** La creación de etiquetas de versión semántica (ej. v1.2.0) en el repositorio desencadena flujos de trabajo específicos para empaquetado de producción o envíos a tiendas.
+
+**2. Aprovisionamiento y Gestión de Secretos (Environment & Secrets Management)**
+-   **Inyección de Credenciales:** Extracción segura de tokens, claves de API y configuraciones de base de datos almacenadas en GitHub Secrets.
+-   **Configuración por Entorno:** Asignación dinámica de variables de entorno (ej. .env.production o .env.staging) según el entorno objetivo del despliegue, asegurando el aislamiento de los datos.
+
+**3. Compilación de Producción (Production Build)**
+-   **Web (ccarita-tech.webapp):** Ejecución de herramientas de _bundling_ (como Vite o Webpack) para minificar el código, optimizar recursos estáticos (imágenes, fuentes) y generar el directorio final (ej. dist) listo para ser servido.
+-   **Mobile (ccarita-tech.mobileapp):** Preparación del SDK correspondiente (Flutter, React Native, o nativo) y compilación de los binarios ejecutables para ambas plataformas: archivos APK/AAB para Android y archivos IPA para iOS.
+
+**4. Despliegue y Distribución de Artefactos (Deployment & Distribution)**
+-   **Actualización de Infraestructura Web:** Transferencia automática de los artefactos compilados del frontend web hacia la plataforma de _cloud hosting_ (ej. Vercel, Render o AWS), invalidando cachés (CDN) y enrutando el tráfico hacia la nueva versión mediante un proceso _zero-downtime_.
+-   **Distribución Móvil en Firebase (App Distribution):** Subida de los binarios móviles (APK/IPA) a Firebase App Distribution. Esta etapa asigna las notas de la versión (_release notes_) generadas a partir de los _commits_ y notifica automáticamente por correo al grupo de _testers_ predefinido.
+
+**5. Sincronización de Monitoreo (Release Tracking)**
+-   **Integración con Sentry:** El pipeline notifica a la plataforma de monitoreo de errores (Sentry) sobre la nueva versión desplegada, adjuntando los mapas de código (_source maps_) de la web o los símbolos de depuración móvil. Esto permite rastrear excepciones en producción con referencias exactas al código fuente original.
+
+**6. Verificación Post-Despliegue (Post-Deployment Verification)**
+-   **Smoke Tests & Health Checks:** Ejecución de pruebas automatizadas ligeras o pings a los _endpoints_ principales y rutas críticas de la aplicación web recién desplegada para confirmar que el sistema responde con códigos HTTP 200 y está operativo.
+
+**7. Notificaciones del Pipeline (Pipeline Alerts)**
+-   **Alertas de Estado:** Envío automático de notificaciones a los canales de comunicación del equipo de desarrollo y operaciones informando sobre el resultado del pipeline de despliegue (éxito, fallo o degradación), incluyendo enlaces directos a los registros de GitHub Actions para auditoría rápida.

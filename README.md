@@ -3315,6 +3315,26 @@ La documentación se deriva de los archivos de endpoints del repositorio actual:
 
 <div style="page-break-after: always;"></div>
 
+# **Capítulo VI: Product Verification & Validation**
+
+## **6.1. Testing suites & validation**
+
+### **6.1.1. Core Entities Unit Tests**
+
+Los Core Entities Unit Tests son fundamentales para garantizar la calidad y el correcto funcionamiento de las entidades principales y las reglas de negocio que conforman el dominio de la aplicación. Estas pruebas permiten detectar errores de manera temprana, reducir el riesgo de regresiones ante futuros cambios y facilitar el mantenimiento y evolución del código. De esta forma, contribuyen a construir un sistema más estable, confiable y consistente con las reglas definidas para el negocio.
+
+#### Unit Entity Test:
+
+![Unit Entity Test](./Test_1.png)
+
+#### Plan Entity Test:
+
+![Plan Entity Test](./Test_2.png)
+
+#### Client Entity Test:
+
+![Client Entity Test](./Test_3.png)
+
 # **Capítulo VII: DevOps Practices**
 ## **7.1. Continuous Integration**
 ### **7.1.1. Tools and Practices**

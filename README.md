@@ -882,6 +882,20 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <div style="page-break-before: always;"></div>
 
+### 2.3.5. As-is Scenario Mapping.
+
+**Segmento 1: Arquitectos e Ingenieros Civiles**
+
+<img src="assets/As-Is Scenario Mapping - Miguel Veramendi.jpg" alt="Imagen As-is Scenario Mapping Segemento 1">
+
+<br>
+
+**Segmento 2: Dueños de apartamentos**
+
+<img src="assets/As-Is Scenario Mapping - Carla Flores.jpg" alt="Imagen As-is Scenario Mapping Segemento 2">
+
+<div style="page-break-before: always;"></div>
+
 ### 2.4. Ubiquitous Language.
 
 

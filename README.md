@@ -882,17 +882,17 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <div style="page-break-before: always;"></div>
 
-### 2.3.5. As-is Scenario Mapping.
+### 2.3.5. As-Is Scenario Mapping.
 
 **Segmento 1: Arquitectos e Ingenieros Civiles**
 
-<img src="assets/As-Is Scenario Mapping - Miguel Veramendi.jpg" alt="Imagen As-is Scenario Mapping Segemento 1">
+<img src="assets/As-Is Scenario Mapping - Miguel Veramendi.jpg" alt="Imagen As-Is Scenario Mapping Segemento 1">
 
 <br>
 
 **Segmento 2: Dueños de apartamentos**
 
-<img src="assets/As-Is Scenario Mapping - Carla Flores.jpg" alt="Imagen As-is Scenario Mapping Segemento 2">
+<img src="assets/As-Is Scenario Mapping - Carla Flores.jpg" alt="Imagen As-Is Scenario Mapping Segemento 2">
 
 <div style="page-break-before: always;"></div>
 
@@ -922,6 +922,20 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 <div style="page-break-before: always;"></div>
 
 # Capítulo III: Requirements Specification
+
+## 3.1. To-Be Scenario Mapping.
+
+**Segmento 1: Arquitectos e Ingenieros Civiles**
+
+<img src="assets/To-Be Scenario Mapping - Miguel Veramendi.jpg" alt="Imagen To-Be Scenario Mapping Segemento 1">
+
+<br>
+
+**Segmento 2: Dueños de apartamentos**
+
+<img src="assets/To-Be Scenario Mapping - Carla Flores.jpg" alt="Imagen To-Be Scenario Mapping Segemento 2">
+
+<div style="page-break-before: always;"></div>
 
 ## 3.1. User Stories.
 

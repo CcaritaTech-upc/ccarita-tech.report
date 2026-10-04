@@ -3335,6 +3335,28 @@ Los Core Entities Unit Tests son fundamentales para garantizar la calidad y el c
 
 ![Client Entity Test](./Test_3.png)
 
+### **6.1.2. Core Integration Tests**
+
+Las Core Integration Tests son esenciales para verificar que los controladores y endpoints de la API funcionen correctamente en conjunto con los demás componentes del sistema, como los servicios de aplicación y las bases de datos. Estas pruebas permiten validar tanto escenarios exitosos como situaciones de error, asegurando que la aplicación gestione adecuadamente comportamientos inesperados y devuelva los códigos de estado HTTP correspondientes. De esta manera, contribuyen a mejorar la experiencia del usuario, facilitar la identificación y corrección de errores y garantizar el desarrollo de un software más confiable, estable y de calidad.
+
+#### IAM Login Controller / API Tests:
+
+![IAM Login Controller Tests](./Test_4.png)
+
+#### Project Structure Controller / API Tests:
+
+![Project Structure Controller Tests](./Test_5.png)
+
+#### Device Control Controller / API Tests:
+
+![Device Control Controller Tests](./Test_6.png)
+
+#### Subscriptions Payment Controller / API Tests:
+
+![Subscriptions Payment Controller Tests](./Test_7.png)
+
+<div style="page-break-after: always;"></div>
+
 # **Capítulo VII: DevOps Practices**
 ## **7.1. Continuous Integration**
 ### **7.1.1. Tools and Practices**

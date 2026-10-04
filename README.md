@@ -937,7 +937,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <div style="page-break-before: always;"></div>
 
-## 3.1. User Stories.
+## 3.2. User Stories.
 
 ### Epics
 
@@ -955,179 +955,11 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 | EP10 | Gestión de energía en tiempo real | Como Desarrollador, quiero implementar un sistema de monitoreo energético, para que los usuarios puedan consultar el uso de energía en sus espacios. |
 | EP11 | Gestión de usuarios | Como desarrollador, quiero gestionar a los usuarios de la plataforma, para asegurar un control adecuado de accesos, roles y permisos |
 
-### 3.1.1. User Stories
+### 3.2.1. User Stories
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US01</td><td>visitante del sitio</td><td>Alta</td><td>EP01</td></tr>
-    <tr><th>Title</th><td colspan="3">Conocer la sección "Sobre Nosotros"</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como visitante del sitio, quiero conocer la historia y valores de la aplicación, para tener mayor conexión y confianza con la empresa.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Llega a la sección “Sobre Nosotros”</strong><br>Dado que el visitante está explorando la landing page,<br> Cuando llega a la sección “Sobre Nosotros”, <br>Entonces debe visualizar una descripción breve de la historia de IoBuild, su equipo y valores, acompañada de imágenes.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US02</td><td>visitante del sitio</td><td>Media</td><td>EP01</td></tr>
-    <tr><th>Title</th><td colspan="3">Consultar los testimonios de clientes</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como visitante del sitio, quiero consultar testimonios de otros clientes, para generar confianza en la propuesta de valor de la start up</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Consulta la sección de testimonios</strong><br>Dado que el visitante accede al sitio web<br>Cuando consulta la sección de testimonios<br>Entonces visualiza opiniones de clientes<br>Y percibe la experiencia de otros usuarios.<br><br><strong>Escenario 2: El visitante desea revisar más testimonios</strong><br>Dado que existen varios testimonios disponibles<br>Cuando el visitante desea revisar más testimonios<br>Entonces el sistema le muestra todos los testimonios</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US03</td><td>visitante del sitio</td><td>Alta</td><td>EP01</td></tr>
-    <tr><th>Title</th><td colspan="3">Acceder a la información de contacto</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como visitante del sitio, quiero acceder fácilmente a la información de contacto de IoBuild, para comunicarme en caso de dudas</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Consulta la sección de contacto</strong><br>Dado que el visitante accede a la landing page<br>Cuando consulta la sección de contacto<br>Entonces visualiza información clara como correo y teléfono <br>Y puede identificar rápidamente los medios de comunicación disponibles.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US04</td><td>visitante del sitio</td><td>Alta</td><td>EP01</td></tr>
-    <tr><th>Title</th><td colspan="3">Visualizar los servicios principales</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como visitante del sitio, quiero conocer los servicios que ofrece IoBuild, para entender su propuesta de valor.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Navega a la sección de servicios</strong><br>Dado que el visitante accede a la landing page<br>Cuando navega a la sección de servicios<br>Entonces visualiza una lista de los servicios principales<br><br><strong>Escenario 2: Quiere conocer más sobre un servicio de su interés</strong><br>Dado que el visitante accede a la landing page <br>Cuando quiere conocer más sobre un servicio de su interés<br>Entonces selecciona la opción de “ver más”<br>Y se muestra un texto más completo sobre el servicio seleccionado</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US05</td><td>visitante del sitio</td><td>Alta</td><td>EP02</td></tr>
-    <tr><th>Title</th><td colspan="3">Registrarse en la aplicación</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como visitante del sitio, quiero registrarme en la aplicación, para tener acceso a las funcionalidades de la aplicación</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Se dirige a la parte superior de la página</strong><br>Dado que el visitante accede a la landing page<br>Cuando se dirige a la parte superior de la página<br>Y selecciona la opción registrarse<br>Entonces la aplicación lo redirige al formulario de registro</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US06</td><td>visitante del sitio</td><td>Media</td><td>EP01</td></tr>
-    <tr><th>Title</th><td colspan="3">Consultar las preguntas frecuentes</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como visitante del sitio, quiero consultar una sección de preguntas frecuentes, para resolver dudas comunes sin necesidad de contactar a la start up</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Entra a la sección de preguntas frecuentes</strong><br>Dado que el visitante accede a la landing page<br>Cuando entra a la sección de preguntas frecuentes<br>Entonces puede desplegar las respuestas a cada pregunta común<br>Y encuentra información organizada y clara.<br><br><strong>Escenario 2: Revisa la lista de preguntas disponibles</strong><br>Dado que el visitante accede a la sección de preguntas frecuentes<br>Cuando revisa la lista de preguntas disponibles<br>Entonces el sistema debe mostrar múltiples preguntas frecuentes <br>Y cada pregunta debe poder expandirse para visualizar su respuesta correspondiente.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US07</td><td>visitante del sitio</td><td>Media</td><td>EP03</td></tr>
-    <tr><th>Title</th><td colspan="3">Seleccionar el idioma de la landing page</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como visitante del sitio, quiero poder encontrar más de un idioma disponible, para poder elegir el idioma de mi preferencia.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Selecciona un idioma distinto</strong><br>Dado que el visitante accede a la landing page<br>Cuando selecciona un idioma distinto<br>Entonces todo el contenido de la landing page debe mostrarse automáticamente en el idioma seleccionado.<br><br><strong>Escenario 2: Vuelve a ingresar al sitio</strong><br>Dado que el visitante seleccionó un idioma previamente<br>Cuando vuelve a ingresar al sitio<br>Entonces la landing page debe mostrarse en el último idioma elegido, sin necesidad de volver a configurarlo.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US08</td><td>usuario (constructor o propietario)</td><td>Alta</td><td>EP06</td></tr>
-    <tr><th>Title</th><td colspan="3">Visualizar dashboard de analíticas y métricas según el rol</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como usuario de la plataforma (constructor o propietario), quiero acceder a un dashboard centralizado con métricas clave y datos en tiempo real de mis proyectos y dispositivos, para supervisar el rendimiento, ocupación y consumo energético de mis espacios.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Visualización del Dashboard para Constructor (Builder)</strong><br>Dado que el usuario ha iniciado sesión con el rol de Constructor (Builder),<br>Cuando accede a la vista principal de analíticas / dashboard,<br>Entonces el sistema muestra tarjetas estadísticas con el total de proyectos, tasa de ocupación, unidades administradas y el gráfico de telemetría de consumo de energía en tiempo real.<br><br><strong>Escenario 2: Visualización del Dashboard para Propietario (Owner)</strong><br>Dado que el usuario ha iniciado sesión con el rol de Propietario (Owner),<br>Cuando accede a la vista de su dashboard,<br>Entonces el sistema muestra las unidades residenciales que tiene asignadas, el estado de sus dispositivos conectados y el consumo energético específico de su vivienda.<br><br><strong>Escenario 3: Actualización de datos de telemetría</strong><br>Dado que el usuario está visualizando su dashboard respectivo,<br>Cuando el sistema recibe nuevas lecturas o cambios en los dispositivos,<br>Entonces los indicadores numéricos y los gráficos de consumo se actualizan reflejando la información más reciente.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US09</td><td>ingeniero</td><td>Alta</td><td>EP08</td></tr>
-    <tr><th>Title</th><td colspan="3">Acceder a los proyectos activos</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como ingeniero, quiero tener acceso a los proyectos que se encuentran activos, para poder realizar un seguimiento de su progreso y gestionar los recursos necesarios.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Consulta la lista de proyectos</strong><br>Dado que el ingeniero accede al sistema,<br>Cuando consulta la lista de proyectos,<br>Entonces verá solo los proyectos con estado "activo".<br><br><strong>Escenario 2: Selecciona un proyecto</strong><br>Dado que el ingeniero tiene acceso a los proyectos activos,<br>Cuando selecciona un proyecto,<br>Entonces puede acceder a detalles como el progreso, recursos y métricas del proyecto.<br><br><strong>Escenario 3: Hay cambios en el estado de algún proyecto (e.g., transición a "completado")</strong><br>Dado que el ingeniero está visualizando proyectos activos,<br>Cuando hay cambios en el estado de algún proyecto (e.g., transición a "completado"),<br>Entonces la lista se actualiza automáticamente.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US10</td><td>usuario</td><td>Alta</td><td>EP09</td></tr>
-    <tr><th>Title</th><td colspan="3">Acceder a los dispositivos conectados</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como usuario, quiero tener acceso a los dispositivos conectados, para poder monitorear su estado y uso.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Consulta los dispositivos conectados</strong><br>Dado que el usuario accede a la aplicación,<br>Cuando consulta los dispositivos conectados,<br>Entonces verá una lista de dispositivos con su estado actual (activo, inactivo, etc.).<br><br><strong>Escenario 2: Selecciona un dispositivo</strong><br>Dado que el usuario tiene acceso a los dispositivos,<br>Cuando selecciona un dispositivo,<br>Entonces puede ver información detallada sobre su configuración, tipo y uso.<br><br><strong>Escenario 3: Un dispositivo cambia su estado</strong><br>Dado que hay dispositivos conectados,<br>Cuando un dispositivo cambia su estado,<br>Entonces la interfaz se actualiza automáticamente.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US11</td><td>ingeniero</td><td>Media</td><td>EP10</td></tr>
-    <tr><th>Title</th><td colspan="3">Acceder a la capacidad de ocupación por proyecto</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como ingeniero, quiero tener acceso a la capacidad de ocupación de cada proyecto, para poder analizar el uso de los recursos y planificar de manera eficiente.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Consulta la información de ocupación</strong><br>Dado que el ingeniero accede al sistema,<br>Cuando consulta la información de ocupación,<br>Entonces verá la capacidad de ocupación de cada proyecto, expresada como porcentaje o número de espacios ocupados.<br><br><strong>Escenario 2: Selecciona un proyecto</strong><br>Dado que el ingeniero tiene acceso a los proyectos,<br>Cuando selecciona un proyecto,<br>Entonces puede ver su capacidad de ocupación histórica y proyectada.<br><br><strong>Escenario 3: Cambia su ocupación</strong><br>Dado que un proyecto tiene capacidad de ocupación variable,<br>Cuando cambia su ocupación,<br>Entonces la información se actualiza en tiempo real.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US12</td><td>ingeniero</td><td>Media</td><td>EP10</td></tr>
-    <tr><th>Title</th><td colspan="3">Visualizar el gráfico de consumo de energía por hora</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como ingeniero, quiero ver un gráfico sobre la energía que se consume por hora, para poder evaluar el rendimiento energético de los proyectos en tiempo real.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Visualiza los datos</strong><br>Dado que el ingeniero accede a la sección de consumo energético,<br>Cuando visualiza los datos,<br>Entonces verá un gráfico que muestra el consumo de energía de cada proyecto por hora.<br><br><strong>Escenario 2: Se actualizan los datos de consumo</strong><br>Dado que el gráfico muestra el consumo energético,<br>Cuando se actualizan los datos de consumo,<br>Entonces el gráfico se refresca en tiempo real.<br><br><strong>Escenario 3: Selecciona un rango de tiempo específico</strong><br>Dado que el ingeniero necesita analizar tendencias,<br>Cuando selecciona un rango de tiempo específico,<br>Entonces el gráfico ajusta el intervalo de horas.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US13</td><td>ingeniero</td><td>Media</td><td>EP10</td></tr>
-    <tr><th>Title</th><td colspan="3">Visualizar el gráfico de registro de ocupación</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como ingeniero, quiero ver un gráfico sobre el registro de ocupación, para poder analizar la evolución de la ocupación a lo largo del tiempo.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Consulta los datos históricos</strong><br>Dado que el ingeniero accede a la sección de ocupación,<br>Cuando consulta los datos históricos,<br>Entonces verá un gráfico que representa la evolución de la ocupación de los proyectos a lo largo del tiempo.<br><br><strong>Escenario 2: El ingeniero selecciona diferentes proyectos</strong><br>Dado que el gráfico de ocupación está disponible,<br>Cuando el ingeniero selecciona diferentes proyectos,<br>Entonces puede visualizar la ocupación de cada uno por separado.<br><br><strong>Escenario 3: Se produce un cambio en la ocupación</strong><br>Dado que los datos de ocupación se actualizan con frecuencia,<br>Cuando se produce un cambio en la ocupación,<br>Entonces el gráfico se actualiza automáticamente.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US14</td><td>ingeniero</td><td>Media</td><td>EP08</td></tr>
-    <tr><th>Title</th><td colspan="3">Ver el resumen del proyecto</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como ingeniero, quiero ver un resumen sobre cada proyecto, para saber si está activo, su ubicación y cuántos departamentos están ocupados.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Selecciona un proyecto</strong><br>Dado que el ingeniero accede a los proyectos,<br>Cuando selecciona un proyecto,<br>Entonces verá un resumen con la información clave: estado (activo/inactivo), ubicación y número de departamentos ocupados.<br><br><strong>Escenario 2: Se actualiza algún dato clave del proyecto (e.g., cambio de ubicación o estado)</strong><br>Dado que el ingeniero puede ver el resumen,<br>Cuando se actualiza algún dato clave del proyecto (e.g., cambio de ubicación o estado),<br>Entonces el resumen se actualiza automáticamente.<br><br><strong>Escenario 3: Consulta la lista</strong><br>Dado que el ingeniero tiene acceso a múltiples proyectos,<br>Cuando consulta la lista,<br>Entonces puede ver una visión general de todos los proyectos activos con esta información resumida.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US15</td><td>ingeniero</td><td>Media</td><td>EP09</td></tr>
+    <tr><td>US01</td><td>ingeniero</td><td>Media</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Visualizar los dispositivos y su distribución por tipo</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como ingeniero, quiero ver cuáles son los dispositivos y cómo están distribuidos por tipo, para realizar un análisis más detallado de los recursos disponibles.</td></tr>
@@ -1139,7 +971,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US16</td><td>usuario</td><td>Media</td><td>EP05</td></tr>
+    <tr><td>US02</td><td>usuario</td><td>Media</td><td>EP05</td></tr>
     <tr><th>Title</th><td colspan="3">Acceder al perfil del usuario</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario, quiero tener acceso a mi perfil, para ver datos como mi nombre, email, número de teléfono y mi dirección.</td></tr>
@@ -1151,7 +983,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US17</td><td>usuario</td><td>Alta</td><td>EP05</td></tr>
+    <tr><td>US03</td><td>usuario</td><td>Alta</td><td>EP05</td></tr>
     <tr><th>Title</th><td colspan="3">Edición de Información del Perfil</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como usuario, quiero poder editar alguna parte de mi información, como mi email, número de teléfono o dirección, para mantener mis datos actualizados.</td></tr>
@@ -1163,31 +995,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US18</td><td>usuario</td><td>Baja</td><td>EP05</td></tr>
-    <tr><th>Title</th><td colspan="3">Ver Imagen que Representa al Usuario</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como usuario, quiero poder ver una imagen que me represente, para tener una experiencia más personalizada.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Visualiza la información personal</strong><br>Dado que el usuario accede a su perfil,<br>Cuando visualiza la información personal,<br>Entonces verá una imagen o avatar asociado a su cuenta (si está disponible).<br><br><strong>Escenario 2: Selecciona la opción para editar la foto de perfil</strong><br>Dado que el usuario desea cambiar su imagen,<br>Cuando selecciona la opción para editar la foto de perfil,<br>Entonces podrá cargar una nueva imagen desde su dispositivo.<br><br><strong>Escenario 3: La nueva imagen se guarda</strong><br>Dado que el usuario cambia su imagen de perfil,<br>Cuando la nueva imagen se guarda,<br>Entonces se actualiza correctamente en el perfil y se refleja en todas las pantallas donde se visualiza el avatar del usuario.<br><br>**Escenario 4: Validación**<br>Dado que el usuario no ha subido una imagen de perfil,<br>Cuando no se encuentra una imagen,<br>Entonces se muestra una imagen predeterminada (por ejemplo, un ícono de usuario genérico).</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US19</td><td>usuario</td><td>Media</td><td>EP11</td></tr>
-    <tr><th>Title</th><td colspan="3">Ver el Rol de la Cuenta</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como usuario, quiero poder ver el rol de mi cuenta, para entender qué permisos tengo dentro de la aplicación.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Consulta los detalles de su cuenta</strong><br>Dado que el usuario accede a su perfil,<br>Cuando consulta los detalles de su cuenta,<br>Entonces verá un campo que indica su rol (por ejemplo: "Administrador", "Usuario", "Invitado").<br><br><strong>Escenario 2: El sistema identifica un cambio en el rol</strong><br>Dado que el usuario tiene un rol específico,<br>Cuando el sistema identifica un cambio en el rol,<br>Entonces actualizará la información visible en el perfil en tiempo real.<br><br><strong>Escenario 3: Accede a secciones de la aplicación</strong><br>Dado que el usuario ve su rol,<br>Cuando accede a secciones de la aplicación,<br>Entonces verá solo las opciones que correspondan a su nivel de acceso (por ejemplo, un "Administrador" verá opciones de configuración, mientras que un "Usuario" verá solo las opciones básicas).<br><br>**Escenario 4: Validación**<br>Dado que el rol puede cambiar,<br>Cuando un administrador o un usuario con permisos lo actualiza,<br>Entonces la modificación se refleja inmediatamente en el perfil del usuario.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US20</td><td>ingeniero</td><td>Alta</td><td>EP08</td></tr>
+    <tr><td>US04</td><td>ingeniero</td><td>Alta</td><td>EP08</td></tr>
     <tr><th>Title</th><td colspan="3">Ver lista de proyectos</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como ingeniero, quiero ver una lista de todos mis proyectos para poder conocer el estado y detalles de cada uno.</td></tr>
@@ -1199,7 +1007,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US21</td><td>arquitecto</td><td>Alta</td><td>EP08</td></tr>
+    <tr><td>US05</td><td>arquitecto</td><td>Alta</td><td>EP08</td></tr>
     <tr><th>Title</th><td colspan="3">Agregar un nuevo proyecto</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como arquitecto, quiero agregar un nuevo proyecto para poder registrar nuevos desarrollos inmobiliarios.</td></tr>
@@ -1211,7 +1019,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US22</td><td>arquitecto</td><td>Alta</td><td>EP08</td></tr>
+    <tr><td>US06</td><td>arquitecto</td><td>Alta</td><td>EP08</td></tr>
     <tr><th>Title</th><td colspan="3">Ver detalles de un proyecto</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como arquitecto, quiero ver los detalles de un proyecto específico para poder revisar su información completa.</td></tr>
@@ -1223,7 +1031,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US23</td><td>Arquitecto</td><td>Alta</td><td>EP07</td></tr>
+    <tr><td>US07</td><td>Arquitecto</td><td>Alta</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Ver Lista de Clientes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Arquitecto, quiero ver una lista de todos los clientes para poder gestionar sus proyectos asociados y el estado de su cuenta.</td></tr>
@@ -1235,19 +1043,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US24</td><td>Ingeniero</td><td>Media</td><td>EP07</td></tr>
-    <tr><th>Title</th><td colspan="3">Buscar/Ordenar Clientes</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como Ingeniero, quiero poder ordenar la lista de clientes por columnas (Nombre Completo, Proyecto Asociado, Estado de Cuenta) para poder encontrar u organizar clientes rápidamente según criterios específicos.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El Ingeniero hace clic en el ícono de ordenar junto a Nombre Completo</strong><br>Dado que se muestra la lista de clientes,<br>Cuando el Ingeniero hace clic en el ícono de ordenar junto a Nombre Completo,<br>Entonces el sistema ordena la lista alfabéticamente por nombre del cliente (ascendente o descendente).<br><br><strong>Escenario 2: El Ingeniero hace clic en el ícono de ordenar junto a Proyecto Asociado</strong><br>Dado que se muestra la lista de clientes,<br>Cuando el Ingeniero hace clic en el ícono de ordenar junto a Proyecto Asociado,<br>Entonces el sistema ordena la lista por el nombre del proyecto asociado (ascendente o descendente).<br><br><strong>Escenario 3: El Ingeniero hace clic en el ícono de ordenar junto a Estado de Cuenta</strong><br>Dado que se muestra la lista de clientes,<br>Cuando el Ingeniero hace clic en el ícono de ordenar junto a Estado de Cuenta,<br>Entonces el sistema ordena la lista por el estado de la cuenta (ej., Activo, Stand by, Suspendido).</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US25</td><td>Arquitecto</td><td>Alta</td><td>EP07</td></tr>
+    <tr><td>US08</td><td>Arquitecto</td><td>Alta</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Agregar un Nuevo Cliente</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Arquitecto, quiero poder agregar un nuevo cliente para poder registrarlo en el sistema.</td></tr>
@@ -1259,31 +1055,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US26</td><td>Ingeniero</td><td>Media</td><td>EP07</td></tr>
-    <tr><th>Title</th><td colspan="3">Ver Perfil del Cliente</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como Ingeniero, quiero ver el perfil detallado de un cliente para poder acceder a toda su información y opciones de gestión.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El Ingeniero hace clic en el botón de acción View Profile (Ver Perfil)</strong><br>Dado que un cliente existente se muestra en la lista,<br>Cuando el Ingeniero hace clic en el botón de acción View Profile (Ver Perfil),<br>Entonces el sistema navega a la vista detallada del perfil para ese cliente específico.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US27</td><td>Arquitecto</td><td>Media</td><td>EP07</td></tr>
-    <tr><th>Title</th><td colspan="3">Acceder a la Configuración del Cliente</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como Arquitecto, quiero acceder a la configuración específica de un cliente para poder realizar acciones de gestión como editar o gestionar el estado de su cuenta.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El Arquitecto hace clic en el botón de acción ícono de Configuración/Engranaje</strong><br>Dado que un cliente existente se muestra en la lista,<br>Cuando el Arquitecto hace clic en el botón de acción ícono de Configuración/Engranaje,<br>Entonces el sistema muestra un menú o navega a una pantalla con opciones de gestión para ese cliente (ej., Editar, Suspender, Activar, Eliminar).</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US28</td><td>ingeniero</td><td>Media</td><td>EP11</td></tr>
+    <tr><td>US09</td><td>ingeniero</td><td>Media</td><td>EP11</td></tr>
     <tr><th>Title</th><td colspan="3">Ver Plan de Suscripción Actual</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como ingeniero, quiero ver mi plan de suscripción actual y su estado para confirmar los beneficios que tengo y el costo mensual.</td></tr>
@@ -1295,144 +1067,12 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US29</td><td>ingeniero</td><td>Baja</td><td>EP11</td></tr>
-    <tr><th>Title</th><td colspan="3">Ver Planes de Suscripción Alternativos</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como ingeniero, quiero ver planes de suscripción alternativos (Professional y Starter) para poder comparar sus precios y beneficios con mi plan actual.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El sistema carga la vista</strong><br>Dado que el ingeniero accede a la sección de suscripción,<br>Cuando el sistema carga la vista,<br>Entonces el sistema muestra, junto al plan actual, las tarjetas informativas de los planes Professional y Starter, incluyendo sus costos y sus listas de beneficios específicos.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US30</td><td>arquitecto</td><td>Media</td><td>EP11</td></tr>
-    <tr><th>Title</th><td colspan="3">Iniciar Cambio de Plan</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como arquitecto, quiero iniciar el proceso de cambio de plan para poder seleccionar un nivel de servicio diferente que se ajuste mejor a mis necesidades.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El arquitecto hace clic en el botón Change Plan (Cambiar Plan)</strong><br>Dado que el arquitecto se encuentra en la sección de suscripción,<br>Cuando el arquitecto hace clic en el botón Change Plan (Cambiar Plan),<br>Entonces el sistema inicia el flujo para seleccionar un nuevo plan (ej., navegando a una nueva página o mostrando un modal de selección).</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US31</td><td>arquitecto</td><td>Media</td><td>EP11</td></tr>
-    <tr><th>Title</th><td colspan="3">Renovar Plan Activo</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como arquitecto, quiero renovar mi plan actual para asegurar la continuidad del servicio si estoy cerca de la fecha de expiración o si mi plan no está configurado para renovación automática.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El arquitecto hace clic en el botón Renew Plan (Renovar Plan)</strong><br>Dado que el arquitecto tiene un plan activo,<br>Cuando el arquitecto hace clic en el botón Renew Plan (Renovar Plan),<br>Entonces el sistema inicia el proceso de renovación del plan actual (ej., mostrando un resumen de la transacción o confirmando la fecha de renovación).</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US32</td><td>ingeniero</td><td>Media</td><td>EP11</td></tr>
-    <tr><th>Title</th><td colspan="3">Cancelar Plan Actual</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como ingeniero, quiero cancelar mi plan actual para finalizar mi suscripción al término del ciclo de facturación.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El ingeniero hace clic en el botón Cancel Plan (Cancelar Plan)</strong><br>Dado que el ingeniero tiene un plan activo,<br>Cuando el ingeniero hace clic en el botón Cancel Plan (Cancelar Plan),<br>Entonces el sistema muestra una ventana de confirmación o inicia el flujo de cancelación (ej., pidiendo un motivo de la cancelación antes de confirmarla).</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US33</td><td>propietario</td><td>Alta</td><td>EP09</td></tr>
-    <tr><th>Title</th><td colspan="3">Ver Lista de Dispositivos</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como propietario, quiero ver una lista de todos los dispositivos registrados para poder monitorear su estado y ubicación.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El Ingeniero/Arquitecto accede a la vista de Gestión de Dispositivos</strong><br>Dado que hay dispositivos registrados en el sistema,<br>Cuando el Ingeniero/Arquitecto accede a la vista de Gestión de Dispositivos,<br>Entonces el sistema muestra una lista con el Name (Nombre), Type (Tipo), Location (Ubicación) y Real-time Status (Estado en Tiempo Real) de cada dispositivo.<br>Y el sistema muestra las Actions (Acciones) disponibles (Configuración y Eliminar).<br><br><strong>Escenario 2: El Ingeniero/Arquitecto ve la lista</strong><br>Dado que hay dispositivos con estado "Offline",<br>Cuando el Ingeniero/Arquitecto ve la lista,<br>Entonces el sistema resalta claramente el estado "Offline" (ej., en color rojo) para esos dispositivos.<br><br><strong>Escenario 3: El Ingeniero/Arquitecto hace clic en los íconos de ordenar (flechas) junto a las columnas Name, Type o Location</strong><br>Dado que se muestra la lista de dispositivos,<br>Cuando el Ingeniero/Arquitecto hace clic en los íconos de ordenar (flechas) junto a las columnas Name, Type o Location,<br>Entonces el sistema ordena la lista según el campo seleccionado (ascendente o descendente).</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US34</td><td>propietario</td><td>Alta</td><td>EP09</td></tr>
-    <tr><th>Title</th><td colspan="3">Agregar un Nuevo Dispositivo</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como propietario, quiero agregar un nuevo dispositivo al sistema para expandir la cobertura de monitoreo y control.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El Ingeniero/Arquitecto hace clic en el botón + Add Device (Agregar Dispositivo)</strong><br>Dado que el Ingeniero/Arquitecto está en la vista de Gestión de Dispositivos,<br>Cuando el Ingeniero/Arquitecto hace clic en el botón + Add Device (Agregar Dispositivo),<br>Entonces el sistema presenta un formulario o flujo para ingresar los detalles del nuevo dispositivo (ej., Nombre, Tipo, Ubicación y credenciales de conexión).<br><br><strong>Escenario 2: El formulario es enviado</strong><br>Dado que el Ingeniero/Arquitecto proporciona todos los datos requeridos y válidos,<br>Cuando el formulario es enviado,<br>Entonces el sistema registra el dispositivo, y este aparece en la lista con su estado inicial.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US35</td><td>propietario</td><td>Media</td><td>EP09</td></tr>
-    <tr><th>Title</th><td colspan="3">Editar/Configurar Ajustes de Dispositivo</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como propietario, quiero acceder a la configuración específica de un dispositivo para modificar sus parámetros o revisar su información detallada.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El Ingeniero hace clic en el ícono de Configuración en la columna de Acciones</strong><br>Dado que un dispositivo está listado,<br>Cuando el Ingeniero hace clic en el ícono de Configuración en la columna de Acciones,<br>Entonces el sistema navega a una vista detallada o abre un modal con la información editable del dispositivo (ej., cambiar nombre, ubicación, parámetros técnicos).</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US36</td><td>propietario</td><td>Media</td><td>EP09</td></tr>
-    <tr><th>Title</th><td colspan="3">Eliminar un Dispositivo</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como propietario, quiero poder eliminar un dispositivo que ya no está en uso o está defectuoso, para mantener la lista limpia y precisa.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El Arquitecto hace clic en el ícono de Eliminar</strong><br>Dado que un dispositivo está listado,<br>Cuando el Arquitecto hace clic en el ícono de Eliminar,<br>Entonces el sistema solicita una confirmación de eliminación.<br><br><strong>Escenario 2: El sistema procesa la solicitud</strong><br>Dado que el Arquitecto ha solicitado la eliminación y confirma la acción,<br>Cuando el sistema procesa la solicitud,<br>Entonces el dispositivo es removido de la lista y se confirma la acción.<br><br><strong>Escenario 3: El Arquitecto solicita la eliminación</strong><br>Dado que un dispositivo está asociado a una función crítica o un tutorial (si aplicara),<br>Cuando el Arquitecto solicita la eliminación,<br>Entonces el sistema rechaza la eliminación y proporciona un mensaje de error indicando la dependencia.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US37</td><td>Usuario</td><td>Media</td><td>EP05</td></tr>
-    <tr><th>Title</th><td colspan="3">Acceder a Ayuda y Soporte</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como Usuario, quiero acceder rápidamente a las secciones de Soporte para resolver mis dudas o contactar con el equipo de soporte.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: El Usuario hace clic en *FAQs*</strong><br>Dado que el Usuario está en la sección de Soporte y Ayuda,<br>Cuando el Usuario hace clic en *FAQs*,<br>Entonces el sistema navega a la página de preguntas frecuentes.<br><br><strong>Escenario 2: El Usuario hace clic en *Contact Support*</strong><br>Dado que el Usuario está en la sección de Soporte y Ayuda,<br>Cuando el Usuario hace clic en *Contact Support*,<br>Entonces el sistema navega a la página o abre un formulario para contactar directamente al equipo de soporte.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US38</td><td>Usuario</td><td>Alta</td><td>EP02</td></tr>
-    <tr><th>Title</th><td colspan="3">Registrarse en la plataforma</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como Usuario, quiero crear una cuenta nueva proporcionando mis datos básicos y seleccionando mi rol, para poder acceder a las funcionalidades de la plataforma.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Hace clic en el botón "Registrarse"</strong><br>Dado que el visitante se encuentra en el formulario de registro y proporciona un correo válido, una contraseña segura y selecciona su rol.<br>Cuando hace clic en el botón "Registrarse".<br>Entonces el sistema crea la cuenta, inicia la sesión automáticamente y redirige al usuario a la pantalla principal.<br><br><strong>Escenario 2: Envía el formulario</strong><br>Dado que el visitante intenta registrarse con un correo electrónico que ya existe en el sistema.<br>Cuando envía el formulario.<br>Entonces el sistema muestra un mensaje de error indicando que el correo ya está en uso.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US39</td><td>Usuario</td><td>Alta</td><td>EP02</td></tr>
+    <tr><td>US10</td><td>Usuario</td><td>Alta</td><td>EP02</td></tr>
     <tr><th>Title</th><td colspan="3">Iniciar Sesión (Login)</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como Usuario, quiero ingresar mis credenciales (correo y contraseña) para acceder a mi cuenta y utilizar las funciones protegidas.</td></tr>
     <tr><th colspan="4">Acceptance Criteria</th></tr>
     <tr><td colspan="4"><strong>Escenario 1: Hace clic en el botón "Ingresar"</strong><br>Dado que el usuario ingresa un correo y contraseña correctos.<br>Cuando hace clic en el botón "Ingresar".<br>Entonces el sistema valida las credenciales, le otorga acceso y lo redirige al Dashboard correspondiente a su rol.<br><br><strong>Escenario 2: Intenta iniciar sesión</strong><br>Dado que el usuario ingresa un correo no registrado o una contraseña errónea.<br>Cuando intenta iniciar sesión.<br>Entonces el sistema deniega el acceso y muestra un mensaje genérico de error ("Usuario o contraseña incorrectos").</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US40</td><td>Usuario</td><td>Alta</td><td>EP02</td></tr>
-    <tr><th>Title</th><td colspan="3">Cerrar Sesión (Logout)</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como Usuario, quiero cerrar mi sesión actual para proteger mi cuenta, especialmente si estoy en un dispositivo compartido.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Selecciona la opción "Cerrar Sesión"</strong><br>Dado que el usuario tiene una sesión activa.<br>Cuando selecciona la opción "Cerrar Sesión".<br>Entonces el sistema invalida su acceso actual y lo redirige a la página de inicio o login pública.</td></tr>
 </table>
 
 ### 3.1.2. Technical Stories
@@ -1463,55 +1103,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS03</td><td>desarrollador</td><td>Alta</td><td>EP08</td></tr>
-    <tr><th>Title</th><td colspan="3">Recuperar un Proyecto por ID</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero solicitar un proyecto por su *{id}* para poder mostrar la vista de detalles del proyecto.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud para un proyecto identificado por *{id}*,<br>Cuando la API encuentra el recurso,<br>Entonces la API responde con **200 OK** y devuelve el recurso de proyecto completo (con todos sus atributos detallados).<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se recibe una solicitud para un proyecto identificado por un *{id}* no existente,<br>Cuando la API no encuentra el recurso,<br>Entonces la API responde con **404 Not Found** y un payload de error indicando que el proyecto no existe.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS04</td><td>desarrollador</td><td>Media</td><td>EP07</td></tr>
-    <tr><th>Title</th><td colspan="3">Actualizar la información de un cliente</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero enviar a la API una solicitud para modificar los datos de un cliente existente, para poder implementar la edición de su perfil y la gestión de su estado de cuenta.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud **PUT** o **PATCH** para actualizar el cliente identificado por *{id}* con datos válidos (ej. un nuevo *accountStatement*),<br>Cuando la API valida y persiste los cambios exitosamente,<br>Entonces la API responde con **200 OK** y devuelve la representación del recurso de cliente actualizado.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se recibe una solicitud de actualización con campos obligatorios faltantes o que contienen valores inválidos,<br>Cuando la validación de la API falla,<br>Entonces la API responde con **400 Bad Request** y un payload de error que describe los errores de validación.<br><br><strong>Escenario 3: Variación</strong><br>Dado que se recibe una solicitud para actualizar un cliente con un *{id}* no existente,<br>Cuando la API no encuentra el recurso,<br>Entonces la API responde con **404 Not Found** y un payload de error.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS05</td><td>desarrollador</td><td>Media</td><td>EP07</td></tr>
-    <tr><th>Title</th><td colspan="3">Eliminar un cliente</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero solicitar a la API la eliminación de un cliente por su *{id}*, para poder implementar la funcionalidad de dar de baja clientes que ya no se utilizarán.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud **DELETE** para eliminar un cliente identificado por *{id}*,<br>Cuando la API elimina el recurso exitosamente,<br>Entonces la API responde con **204 No Content** (estándar para eliminación exitosa).<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se recibe una solicitud para eliminar un cliente identificado por un *{id}* no existente,<br>Cuando la API no encuentra el recurso,<br>Entonces la API responde con **404 Not Found** y un payload de error.<br><br><strong>Escenario 3: Variación</strong><br>Dado que se recibe una solicitud para eliminar un cliente identificado por *{id}* que tiene proyectos activos o dependencias críticas,<br>Cuando la API detecta una restricción de dependencia,<br>Entonces la API responde con **409 Conflict** y un payload de error explicando que la acción fue rechazada debido a dependencias.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS06</td><td>desarrollador</td><td>Media</td><td>EP07</td></tr>
-    <tr><th>Title</th><td colspan="3">Soportar ordenación en la lista de clientes</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero poder enviar parámetros de ordenación a la API (nombre de columna y dirección), para poder implementar las funcionalidades de Buscar/Ordenar Clientes.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud para listar clientes incluyendo parámetros de ordenación válidos (ej. *sort=fullName,desc* o *sort=accountStatement,asc*),<br>Cuando la API procesa los datos y aplica la ordenación,<br>Entonces la API responde con **200 OK** y los clientes son devueltos en el orden especificado.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se recibe una solicitud para listar clientes incluyendo un parámetro de ordenación inválido o una columna no soportada,<br>Cuando la API valida los parámetros de entrada,<br>Entonces la API responde con **400 Bad Request** y un payload de error indicando que el parámetro de ordenación es incorrecto o no está permitido.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS07</td><td>desarrollador</td><td>Alta</td><td>EP07</td></tr>
+    <tr><td>TS03</td><td>desarrollador</td><td>Alta</td><td>EP07</td></tr>
     <tr><th>Title</th><td colspan="3">Listar clientes</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar a la API que liste los clientes, opcionalmente filtrados por estado o nombre, para poder mostrar la vista de la lista de clientes.</td></tr>
@@ -1523,31 +1115,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS08</td><td>desarrollador</td><td>Alta</td><td>EP07</td></tr>
-    <tr><th>Title</th><td colspan="3">Crear un cliente</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero añadir un nuevo cliente a través de la API para poder implementar la funcionalidad de creación de clientes.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud de creación que incluye campos obligatorios (ej. *fullName*),<br>Cuando la API valida y persiste el nuevo cliente exitosamente,<br>Entonces la API responde con **201 Created** y devuelve la representación del recurso de cliente creado (incluyendo *id*).<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se recibe una solicitud de creación con campos obligatorios faltantes o que contienen valores inválidos,<br>Cuando la validación de la API falla,<br>Entonces la API responde con **400 Bad Request** y un payload de error que describe los errores de validación.<br><br><strong>Escenario 3: Variación</strong><br>Dado que se recibe una solicitud de creación para un *fullName* que ya existe,<br>Cuando la API detecta la violación de la restricción de duplicado,<br>Entonces la API responde con **409 Conflict** y un payload de error explicativo.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS09</td><td>desarrollador</td><td>Media</td><td>EP07</td></tr>
-    <tr><th>Title</th><td colspan="3">Recuperar un cliente por id</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero solicitar un recurso de cliente por su *{id}* para poder implementar la vista detallada del perfil.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud para un cliente identificado por *{id}*,<br>Cuando la API encuentra el recurso,<br>Entonces la API responde con **200 OK** y devuelve el recurso de cliente completo.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se recibe una solicitud para un cliente identificado por un *{id}* no existente,<br>Cuando la API no encuentra el recurso,<br>Entonces la API responde con **404 Not Found** y un payload de error.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS10</td><td>desarrollador</td><td>Alta</td><td>EP09</td></tr>
+    <tr><td>TS04</td><td>desarrollador</td><td>Alta</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Listar dispositivos</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero solicitar a la API que liste todos los dispositivos, filtrados por ubicación o estado, para poder mostrar la lista de Gestión de Dispositivos.</td></tr>
@@ -1559,127 +1127,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS11</td><td>desarrollador</td><td>Media</td><td>EP09</td></tr>
-    <tr><th>Title</th><td colspan="3">Eliminar un dispositivo por id</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero solicitar a la API que elimine un dispositivo por su *{id}* para poder retirar hardware que ya no se utiliza del sistema.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud para eliminar un dispositivo identificado por *{id}*,<br>Cuando la API elimina el recurso exitosamente,<br>Entonces la API responde con **204 No Content** (estándar para eliminación exitosa).<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se recibe una solicitud para eliminar un dispositivo identificado por un *{id}* no existente,<br>Cuando la API no encuentra el recurso,<br>Entonces la API responde con **404 Not Found** y un payload de error.<br><br><strong>Escenario 3: Variación</strong><br>Dado que se recibe una solicitud para eliminar un dispositivo identificado por *{id}* que está actualmente en uso o vinculado a datos críticos,<br>Cuando la API detecta una restricción de dependencia,<br>Entonces la API responde con **409 Conflict** y un payload de error explicando la dependencia.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS12</td><td>desarrollador</td><td>Media</td><td>EP08</td></tr>
-    <tr><th>Title</th><td colspan="3">Actualizar información de un proyecto</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero solicitar a la API que actualice la información de un proyecto (nombre, ubicación y descripción) para mantener los datos actualizados en la vista de gestión de proyectos.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud para actualizar un proyecto identificado por *{id}*, incluyendo campos válidos como *name*, *location* y *description*,<br>Cuando la API valida y persiste los cambios correctamente,<br>Entonces la API responde con **200 OK** y devuelve la representación actualizada del recurso de proyecto.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se recibe una solicitud de actualización con campos faltantes o valores inválidos,<br>Cuando la validación de la API falla,<br>Entonces la API responde con **400 Bad Request** y un payload que describe los errores de validación.<br><br><strong>Escenario 3: Variación</strong><br>Dado que se recibe una solicitud para actualizar un proyecto identificado por un *{id}* inexistente,<br>Cuando la API no encuentra el recurso,<br>Entonces la API responde con **404 Not Found** y un mensaje de error apropiado.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS13</td><td>desarrollador</td><td>Media</td><td>EP09</td></tr>
-    <tr><th>Title</th><td colspan="3">Actualizar información de un dispositivo</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero solicitar a la API que actualice la información de un dispositivo (nombre y ubicación) para reflejar los cambios en la gestión de dispositivos.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud para actualizar un dispositivo identificado por *{id}*, incluyendo campos válidos como *name* y *location*,<br>Cuando la API valida y persiste los cambios exitosamente,<br>Entonces la API responde con **200 OK** y devuelve el recurso de dispositivo actualizado.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se recibe una solicitud con campos inválidos o formatos incorrectos,<br>Cuando la API valida la información y detecta errores,<br>Entonces la API responde con **400 Bad Request** y un payload con los detalles del error.<br><br><strong>Escenario 3: Variación</strong><br>Dado que se recibe una solicitud para actualizar un dispositivo con un *{id}* inexistente,<br>Cuando la API no encuentra el recurso,<br>Entonces la API responde con **404 Not Found** y un mensaje de error.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS14</td><td>desarrollador</td><td>Alta</td><td>EP09</td></tr>
-    <tr><th>Title</th><td colspan="3">Crear un nuevo dispositivo</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero solicitar a la API que cree un nuevo dispositivo especificando su nombre, tipo y ubicación, para registrar nuevos equipos en el sistema.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud de creación de un dispositivo con los campos obligatorios (*name*, *type*, *location*),<br>Cuando la API valida y persiste el nuevo recurso,<br>Entonces la API responde con **201 Created** y devuelve la representación del dispositivo creado, incluyendo su *id*.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se recibe una solicitud con campos faltantes o datos inválidos,<br>Cuando la API detecta errores de validación,<br>Entonces la API responde con **400 Bad Request** y un payload con los mensajes de error.<br><br><strong>Escenario 3: Variación</strong><br>Dado que se recibe una solicitud para crear un dispositivo con un *name* duplicado,<br>Cuando la API detecta una violación de unicidad,<br>Entonces la API responde con **409 Conflict** y un mensaje explicativo.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS15</td><td>desarrollador</td><td>Alta</td><td>EP11</td></tr>
-    <tr><th>Title</th><td colspan="3">Crear ruta segura y mostrar datos específicos</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero proteger el dashboard de fabricantes para que solo los fabricantes puedan visualizarlo</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que el desarrollador configura una ruta protegida para el rol de fabricante<br>Cuando un usuario con rol válido accede al dashboard<br>Entonces el sistema permite la visualización del contenido del dashboard.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que el desarrollador implementa validación de roles en la ruta protegida<br>Cuando un usuario sin el rol de fabricante intenta acceder al dashboard<br>Entonces el sistema redirige al usuario a una vista alternativa</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS16</td><td>desarrollador</td><td>Media</td><td>EP02</td></tr>
-    <tr><th>Title</th><td colspan="3">Obtener suscripción actual</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero solicitar la información de la suscripción activa del usuario actual, para mostrar el plan, costo y beneficios en la vista principal de suscripciones.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud GET para recuperar la suscripción del usuario autenticado<br>Cuando la API encuentra una suscripción activa asociada al usuario.<br>Entonces la API responde con **200 OK** y devuelve un objeto con los detalles del plan.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que el usuario no cuenta con una suscripción vigente.<br>Cuando la API procesa la solicitud.<br>Entonces la API responde con **404 Not Found** indicando que no hay plan contratado.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS17</td><td>desarrollador</td><td>Baja</td><td>EP02</td></tr>
-    <tr><th>Title</th><td colspan="3">Listar catálogo de planes</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero solicitar la lista de todos los planes de suscripción disponibles en el sistema, para mostrarlos como alternativas en la interfaz de comparación.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud GET al endpoint de catálogo de planes.<br>Cuando la API recupera la configuración de planes disponibles en la base de datos.<br>Entonces la API responde con **200 OK** y devuelve un arreglo de objetos, donde cada uno contiene el nombre del plan, precio mensual y la lista de beneficios específicos.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS18</td><td>desarrollador</td><td>Media</td><td>EP02</td></tr>
-    <tr><th>Title</th><td colspan="3">Cambiar plan de suscripción</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero enviar una solicitud para actualizar el plan de suscripción del usuario, para hacer efectivo el cambio de nivel de servicio seleccionado en la interfaz.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud PUT con el identificador del nuevo plan seleccionado.<br>Cuando la API valida que el plan existe y procesa la actualización de la suscripción.<br>Entonces la API responde con **200 OK** y devuelve los detalles de la suscripción actualizada con el nuevo plan.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se intenta cambiar a un plan inválido o no disponible.<br>Cuando la validación de la API falla.<br>Entonces la API responde con **400 Bad** Request indicando que el plan seleccionado no es válido para la transición.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS19</td><td>desarrollador</td><td>Media</td><td>EP02</td></tr>
-    <tr><th>Title</th><td colspan="3">Renovar suscripción</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero solicitar la renovación de la suscripción actual, para extender la vigencia del servicio cuando el usuario confirma la acción.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud POST al endpoint de renovación para la suscripción actual.<br>Cuando la API procesa el pago o extiende la fecha de expiración exitosamente.<br>Entonces la API responde con **200 OK** y devuelve la suscripción con la nueva fecha de vencimiento actualizada.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que hay un problema con el método de pago o el estado de la cuenta.<br>Cuando el proceso de renovación falla en el backend.<br>Entonces la API responde con **402 Payment Required** o **400 Bad Request** con el detalle del error.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS20</td><td>desarrollador</td><td>Media</td><td>EP02</td></tr>
-    <tr><th>Title</th><td colspan="3">Cancelar suscripción</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero solicitar la cancelación de la suscripción activa, para detener la renovación automática y finalizar el servicio al terminar el ciclo.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud DELETE sobre la suscripción activa.o<br>Cuando la API registra la solicitud de cancelación y actualiza el estado a "Cancelled" o "Pending Cancellation".<br>Entonces la API responde con **200 OK** confirmando que la suscripción no se renovará, pero manteniendo el acceso hasta el final del periodo actual si aplica.</td></tr>
-</table>
-
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS21</td><td>desarrollador</td><td>Alta</td><td>EP02</td></tr>
+    <tr><td>TS05</td><td>desarrollador</td><td>Alta</td><td>EP02</td></tr>
     <tr><th>Title</th><td colspan="3">Registrar nuevo usuario</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4">Como desarrollador, quiero enviar los datos de registro (nombre, email, password, rol) a la API, para crear una nueva identidad en el sistema y permitir el acceso futuro.</td></tr>
@@ -1687,19 +1135,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
     <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se recibe una solicitud POST con payload válido (email único, password cumple requisitos).<br>Cuando la API persiste el nuevo usuario y encripta la contraseña.<br>Entonces la API responde con **201 Created** y devuelve los datos del usuario creado o un token de acceso inicial.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que se recibe un email que ya está registrado en la base de datos.<br>Cuando la API valida la unicidad del usuario.<br>Entonces la API responde con **409 Conflict** indicando que el recurso ya existe.</td></tr>
 </table>
 
----
-
-<table>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS22</td><td>desarrollador</td><td>Alta</td><td>EP11</td></tr>
-    <tr><th>Title</th><td colspan="3">Validar token de sesión</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4">Como desarrollador, quiero que la API valide que el token enviado en los headers es legítimo y no ha expirado, para proteger las rutas privadas.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4"><strong>Escenario 1: Flujo principal</strong><br>Dado que se realiza una petición a un recurso protegido con un header Authorization: Bearer {token}.<br>Cuando la API verifica la firma y fecha del token.<br>Entonces la API permite el acceso y devuelve el recurso solicitado.<br><br><strong>Escenario 2: Flujo alterno</strong><br>Dado que el token está caducado o malformado.<br>Cuando la API intenta decodificarlo.<br>Entonces la API responde con **401 Unauthorized** o **403 Forbidden**.</td></tr>
-</table>
-
-## 3.2. Product Backlog
+## 3.3. Product Backlog
 
 A continuación, se presenta el Product Backlog, el cual reúne las historias de usuario y las tareas técnicas priorizadas para el desarrollo del proyecto. Cada elemento incluye su identificador, título, descripción y la estimación correspondiente en puntos de historia.
 
@@ -1711,80 +1147,25 @@ Link de colaboración en trello: https://shorturl.at/FrDjk
 
 | #Orden | User Story ID | Titulo | Sprint | Story Points (1/2/3/5/8) |
 |--------|---------------|--------|-------------|--------------------------|
-| 1 | US12 | Visualizar el gráfico de consumo de energía por hora | 3 | 8 |
-| 2 | US15 | Visualizar los dispositivos y su distribución por tipo | 2 | 8 |
-| 3 | US21 | Agregar un nuevo proyecto | 1 | 8 |
-| 4 | US26 | Ver Perfil del Cliente | 2 | 8 |
-| 5 | US28 | Ver Plan de Suscripción Actual | 3 | 8 |
-| 6 | US32 | Cancelar Plan Actual | 3 | 8 |
-| 7 | US34 | Agregar un Nuevo Dispositivo | 2 | 8 |
-| 8 | US36 | Eliminar un Dispositivo | 2 | 8 |
-| 9 | US37 | Acceder a Ayuda y Soporte | 3 | 8 |
-| 10 | TS04 | Actualizar la información de un cliente | 2 | 8 |
-| 11 | TS06 | Soportar ordenación en la lista de clientes | 2 | 8 |
-| 12 | TS08 | Crear un cliente | 2 | 8 |
-| 13 | TS12 | Actualizar información de un proyecto | 1 | 8 |
-| 14 | TS14 | Crear un nuevo dispositivo | 2 | 8 |
-| 15 | TS15 | Crear ruta segura y mostrar datos específicos | 1 | 8 |
-| 16 | US02 | Consultar los testimonios de clientes | 1 | 5 |
-| 17 | US03 | Acceder a la información de contacto | 1 | 5 |
-| 18 | US06 | Consultar las preguntas frecuentes | 1 | 5 |
-| 19 | US08 | Visualizar dashboard de analíticas y métricas según el rol | 3 | 5 |
-| 20 | US09 | Acceder a los proyectos activos | 1 | 5 |
-| 21 | US10 | Acceder a los dispositivos conectados | 2 | 5 |
-| 22 | US11 | Acceder a la capacidad de ocupación por proyecto | 3 | 5 |
-| 23 | US13 | Visualizar el gráfico de registro de ocupación | 3 | 5 |
-| 24 | US14 | Ver el resumen del proyecto | 3 | 5 |
-| 25 | US19 | Ver el Rol de la Cuenta | 3 | 5 |
-| 26 | US20 | Ver lista de proyectos | 1 | 5 |
-| 27 | US22 | Ver detalles de un proyecto | 1 | 5 |
-| 28 | US23 | Ver Lista de Clientes | 2 | 5 |
-| 29 | US24 | Buscar/Ordenar Clientes | 2 | 5 |
-| 30 | US27 | Acceder a la Configuración del Cliente | 2 | 5 |
-| 31 | US29 | Ver Planes de Suscripción Alternativos | 3 | 5 |
-| 32 | US31 | Renovar Plan Activo | 3 | 5 |
-| 33 | US33 | Ver Lista de Dispositivos | 2 | 5 |
-| 34 | US35 | Editar/Configurar Ajustes de Dispositivo | 2 | 5 |
-| 35 | US38 | Registrarse en la plataforma | 1 | 5 |
-| 36 | TS01 | Listar proyectos por Constructor | 1 | 5 |
-| 37 | TS03 | Recuperar un Proyecto por ID | 1 | 5 |
-| 38 | TS05 | Eliminar un cliente | 2 | 5 |
-| 39 | TS07 | Listar clientes | 2 | 5 |
-| 40 | TS09 | Recuperar un cliente por id | 2 | 5 |
-| 41 | TS10 | Listar dispositivos | 2 | 5 |
-| 42 | TS13 | Actualizar información de un dispositivo | 2 | 5 |
-| 43 | TS18 | Cambiar plan de suscripción | 3 | 5 |
-| 44 | TS21 | Registrar nuevo usuario | 1 | 5 |
-| 45 | SP02 | Evaluar proveedores de LLM para el Asistente Inteligente (Smart Assistant) | 3 | 5 |
-| 46 | SP05 | Analizar la viabilidad de RabbitMQ vs Apache Kafka para el manejo masivo de telemetría | 3 | 5 |
-| 47 | US04 | Visualizar los servicios principales | 1 | 3 |
-| 48 | US05 | Registrarse en la aplicación | 1 | 3 |
-| 49 | US07 | Seleccionar el idioma de la landing page | 1 | 3 |
-| 50 | US16 | Acceder al perfil del usuario | 3 | 3 |
-| 51 | US17 | Editar la información del perfil | 3 | 3 |
-| 52 | US18 | Ver Imagen que Representa al Usuario | 3 | 3 |
-| 53 | US25 | Agregar un Nuevo Cliente | 2 | 3 |
-| 54 | US39 | Iniciar Sesión (Login) | 1 | 3 |
-| 55 | TS11 | Eliminar un dispositivo por id | 2 | 3 |
-| 56 | TS16 | Obtener suscripción actual | 3 | 3 |
-| 57 | TS17 | Listar catálogo de planes | 3 | 3 |
-| 58 | TS19 | Renovar suscripción | 3 | 3 |
-| 59 | TS20 | Cancelar suscripción | 3 | 3 |
-| 60 | TS22 | Validar token de sesión | 1 | 3 |
-| 61 | SP01 | Investigar el uso de MQTT vs WebSockets para la telemetría en tiempo real | 3 | 3 |
-| 62 | SP03 | Analizar librerías de OCR para el escaneo de dispositivos en Android | 3 | 3 |
-| 63 | SP04 | Explorar la integración de Webhooks de Stripe para la gestión de suscripciones | 3 | 3 |
-| 64 | SP06 | Investigar la implementación de Firebase Cloud Messaging (FCM) para notificaciones | 3 | 3 |
-| 65 | SP07 | Evaluar alternativas para la implementación de Autenticación de Dos Factores (2FA) | 3 | 3 |
-| 66 | US01 | Conocer la sección "Sobre Nosotros" | 1 | 2 |
-| 67 | US30 | Iniciar Cambio de Plan | 3 | 2 |
-| 68 | TS02 | Crear un Proyecto | 1 | 2 |
-| 69 | SP08 | Explorar la integración del SDK de Cloudinary para optimización de imágenes | 3 | 2 |
-| 70 | US40 | Cerrar Sesión (Logout) | 1 | 2 |
+| 1 | US01 | Visualizar los dispositivos y su distribución por tipo | 2 | 8 |
+| 2 | US02 | Acceder al perfil del usuario | 3 | 3 |
+| 3 | US03 | Editar la información del perfil | 3 | 3 |
+| 4 | US04 | Ver lista de proyectos | 1 | 5 |
+| 5 | US05 | Agregar un nuevo proyecto | 1 | 8 |
+| 6 | US06 | Ver detalles de un proyecto | 1 | 5 |
+| 7 | US07 | Ver Lista de Clientes | 2 | 5 |
+| 8 | US08 | Agregar un Nuevo Cliente | 2 | 3 |
+| 9 | US09 | Ver Plan de Suscripción Actual | 3 | 8 |
+| 10 | US10 | Iniciar Sesión (Login) | 1 | 3 |
+| 11 | TS01 | Listar proyectos por Constructor | 1 | 5 |
+| 12 | TS02 | Crear un Proyecto | 1 | 2 |
+| 13 | TS03 | Listar clientes | 2 | 5 |
+| 14 | TS04 | Listar dispositivos | 2 | 5 |
+| 15 | TS05 | Registrar nuevo usuario | 1 | 5 |
 
 ---
 
-### 3.3. Impact Mapping.
+### 3.4. Impact Mapping.
 
 El Impact Mapping es una metodología visual que permite alinear los objetivos estratégicos de un negocio con las acciones concretas de los usuarios y las funcionalidades de un producto digital. A través de una estructura jerárquica en forma de árbol, esta técnica evidencia cómo las metas empresariales se traducen en cambios de comportamiento esperados en los actores clave, así como en los entregables que hacen posible dichos cambios.
 

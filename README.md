@@ -2764,6 +2764,22 @@ Las Core Integration Tests son esenciales para verificar que los controladores y
 
 ![Subscriptions Payment Controller Tests](./Test_7.png)
 
+### **6.1.3. Core Behavior-Driven Development**
+
+En esta sección se definen y validan los escenarios de aceptación de las historias de usuario desde la perspectiva del comportamiento esperado del sistema, aplicando la metodología BDD (Behavior-Driven Development) mediante la herramienta Cucumber y la especificación en lenguaje Gherkin (`.feature`).
+
+#### Estructura de Features del Proyecto:
+
+<img src="assets/Test_US.jpeg" alt="Carpeta con los Test realizados">
+
+#### US05: Agregar un nuevo proyecto
+
+<img src="assets/Test_US05.jpeg" alt="Test US05">
+
+#### US10: Iniciar Sesión (Login)
+
+<img src="assets/Test_US10.jpeg" alt="Test US10">
+
 <div style="page-break-after: always;"></div>
 
 # **Capítulo VII: DevOps Practices**

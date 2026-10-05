@@ -2780,6 +2780,60 @@ En esta sección se definen y validan los escenarios de aceptación de las histo
 
 <img src="assets/Test_US10.jpeg" alt="Test US10">
 
+### **6.1.4. Core System Tests**
+
+Las pruebas de sistema (System / End-to-End Tests) permiten validar el flujo integral de la aplicación directamente sobre la interfaz de usuario en el entorno web desplegado, simulando el comportamiento real de los usuarios y verificando que cada historia de usuario se cumpla de inicio a fin. Para la automatización y registro de estas suites se utilizó **Selenium IDE**.
+
+#### US01: Visualizar los dispositivos y su distribución por tipo
+**Como** ingeniero, **quiero** ver cuáles son los dispositivos y cómo están distribuidos por tipo, **para** realizar un análisis más detallado de los recursos disponibles.
+
+<img src="assets/US01.jpeg" alt="Test US01">
+
+#### US02: Acceder al perfil del usuario
+**Como** usuario, **quiero** tener acceso a mi perfil, **para** ver datos como mi nombre, email, número de teléfono y mi dirección.
+
+<img src="assets/US02.jpeg" alt="Test US02">
+
+#### US03: Edición de Información del Perfil
+**Como** usuario, **quiero** poder editar alguna parte de mi información, como mi email, número de teléfono o dirección, **para** mantener mis datos actualizados.
+
+<img src="assets/US03.jpeg" alt="Test US03">
+
+#### US04: Ver lista de proyectos
+**Como** ingeniero, **quiero** ver una lista de todos mis proyectos, **para** poder conocer el estado y detalles de cada uno.
+
+<img src="assets/US04.jpeg" alt="Test US04">
+
+#### US05: Agregar un nuevo proyecto
+**Como** arquitecto, **quiero** agregar un nuevo proyecto, **para** poder registrar nuevos desarrollos inmobiliarios e integrar funcionalidades inteligentes.
+
+<img src="assets/US05.jpeg" alt="Test US05">
+
+#### US06: Ver detalles de un proyecto
+**Como** arquitecto, **quiero** ver los detalles de un proyecto específico, **para** poder revisar su información completa.
+
+<img src="assets/US06.jpeg" alt="Test US06">
+
+#### US07: Ver Lista de Clientes
+**Como** arquitecto, **quiero** ver una lista de todos los clientes, **para** poder gestionar sus proyectos asociados y el estado de su cuenta.
+
+<img src="assets/US07.jpeg" alt="Test US07">
+
+#### US08: Agregar un Nuevo Cliente
+**Como** arquitecto, **quiero** poder agregar un nuevo cliente, **para** poder registrarlo en el sistema.
+
+<img src="assets/US08.jpeg" alt="Test US08">
+
+#### US09: Ver Plan de Suscripción Actual
+**Como** ingeniero, **quiero** ver mi plan de suscripción actual y su estado, **para** confirmar los beneficios que tengo y el costo mensual.
+
+<img src="assets/US09.jpeg" alt="Test US09">
+
+#### US10: Iniciar Sesión (Login)
+**Como** usuario, **quiero** ingresar mis credenciales (correo y contraseña), **para** acceder a mi cuenta y utilizar las funciones protegidas.
+
+<img src="assets/US10.jpeg" alt="Test US10">
+
 <div style="page-break-after: always;"></div>
 
 # **Capítulo VII: DevOps Practices**

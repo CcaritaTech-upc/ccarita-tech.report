@@ -90,7 +90,7 @@ U20231A810      Panta Castro, Fabrizio Martín
 <br>
 
 <p align="center" style="font-size: 12pt;">
-  Septiembre del 2026
+  Octubre del 2026
 </p>
 
 <div style="page-break-after: always;"></div>
@@ -195,188 +195,119 @@ Panta Castro, Fabrizio Martin trabajó junto con Axel Ordoñez en el desarrollo 
 
 [Student Outcome](#student-outcome)
 
-[Objetivos SMART](#objetivos-smart)
+[Capítulo I: Introducción](#capítulo-i-introducción)
+[1.1. Startup Profile](#11-startup-profile)<br>
+[1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)<br>
+[1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)<br>
+[1.2. Solution Profile](#12-solution-profile)<br>
+[1.2.1. Antecedentes y problemática](#121-antecedentes-y-problemática)<br>
+[1.2.2. Lean UX Process](#122-lean-ux-process)<br>
+[1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)<br>
+[1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)<br>
+[1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)<br>
+[1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)<br>
+[1.3. Segmentos objetivo](#13-segmentos-objetivo)<br>
 
-[Capítulo I: Presentación](#capítulo-i-presentación)
+[Capítulo II: Requirements Elicitation & Analysis](#capítulo-ii-requirements-elicitation--analysis)<br>
+[2.1. Competidores](#21-competidores)<br>
+[2.1.1. Análisis competitivo](#211-análisis-competitivo)<br>
+[2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)<br>
+[2.2. Entrevistas](#22-entrevistas)<br>
+[2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)<br>
+[2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)<br>
+[2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)<br>
+[2.3. Needfinding](#23-needfinding)<br>
+[2.3.1. User Personas](#231-user-personas)<br>
+[2.3.2. User Task Matrix](#232-user-task-matrix)<br>
+[2.3.3. User Journey Mapping](#233-user-journey-mapping)<br>
+[2.3.4. Empathy Mapping](#234-empathy-mapping)<br>
+[2.3.5. As-is Scenario Mapping](#235-as-is-scenario-mapping)<br>
+[2.4. Ubiquitous Language](#24-ubiquitous-language)<br>
 
-[1.1 Startup Profile](#11-startup-profile)  
-[1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)  
-[1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)  
+[Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)<br>
+[3.1. To-Be Scenario Mapping](#31-to-be-scenario-mapping)<br>
+[3.2. User Stories](#32-user-stories)<br>
+[3.3. Product Backlog](#33-product-backlog)<br>
+[3.4. Impact Mapping](#34-impact-mapping)<br>
 
-[1.2. Solution Profile](#12-solution-profile)
-[1.2.1 Antecedentes y problemática](#121-antecedentes-y-problemática)  
-[1.2.2 Lean UX Process.](#122-lean-ux-process)  
-[1.2.2.1. Lean UX Problem Statements.](#1221-lean-ux-problem-statements)  
-[1.2.2.2. Lean UX Assumptions.](#1222-lean-ux-assumptions)
-[1.2.2.3. Lean UX Hypothesis Statements.](#1223-lean-ux-hypothesis-statements)  
-[1.2.2.4. Lean UX Canvas.](#1224-lean-ux-canvas)  
+[Capítulo IV: Product Design](#capítulo-iv-product-design)<br>
+[4.1. Style Guidelines](#41-style-guideline)<br>
+[4.1.1. General Style Guidelines](#411-general-style-guidelines)<br>
+[4.1.3.2. Android Mobile Style Guidelines]()<br>
+[4.2. Information Architecture](#42-information-architecture)<br>
+[4.2.1. Organization Systems](#421-organization-systems)<br>
+[4.2.2. Labeling Systems](#422-labelling-systems)<br>
+[4.2.3. SEO Tags and Meta Tags](#423-seo-tags-and-meta-tags)<br>
+[4.2.4. Searching Systems](#424-searching-systems)<br>
+[4.2.5. Navigation Systems](#425-navigation-systems)<br>
+[4.3. Landing Page UI Design](#43-landing-page-ui-design)<br>
+[4.3.1. Landing Page Wireframe](#431-landing-page-wireframe)<br>
+[4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)<br>
+[4.4. Mobile Applications UX/UI Design](#44-mobile-applications-uxui-design)<br>
+[4.4.1. Mobile Applications Wireframes](#441-mobile-applications-wireframes)<br>
+[4.4.2. Mobile Applications Wireflow Diagrams](#442-mobile-applications-wireflow-diagrams)<br>
+[4.4.3. Mobile Applications Mock-ups](#443-mobile-applications-mock-ups)<br>
+[4.4.4. Mobile Applications User Flow Diagrams](#444-mobile-applications-user-flow-diagrams)<br>
+[4.5. Mobile Applications Prototyping](#45-mobile-applications-prototyping)<br>
+[4.6. Web Applications UX/UI Design](#46-web-applications-uxui-design)<br>
+[4.6.1. Web Applications Wireframes](#461-web-applications-wireframes)<br>
+[4.6.2. Web Applications Wireflow Diagrams](#462-web-applications-wireflow-diagrams)<br>
+[4.6.3. Web Applications Mock-ups](#463-web-applications-mock-ups)<br>
+[4.6.4. Web Applications User Flow Diagrams](#464-web-applications-user-flow-diagrams)<br>
+[4.7. Web Applications Prototyping](#47-web-applications-prototyping)<br>
+[4.8. Domain-Driven Software Architecture](#48-domain-driven-software-architecture)<br>
+[4.8.1. Software Architecture Context Diagram](#481-software-architecture-context-diagram)<br>
+[4.8.2. Software Architecture Container Diagrams](#482-software-architecture-container-diagrams)<br>
+[4.8.3. Software Architecture Components Diagrams](#483-software-architecture-components-diagrams)<br>
+[4.9. Software Object-Oriented Design](#49-software-object-oriented-design)<br>
+[4.9.1. Class Diagrams](#491-class-diagrams)<br>
+[4.10. Database Design](#410-database-design)<br>
+[4.10.1. Relational/Non-Relational Database Diagram](#4101-database-diagram)<br>
 
-[1.3. Segmentos objetivo.](#13-segmentos-objetivo)  
+[Capítulo V: Product Implementation](#capítulo-v-product-implementation)
+[5.1. Software Configuration Management](#51-software-configuration-management)<br>
+[5.1.1. Software Development Environment Configuration](#511-software-development-environment-configuration)<br>
+[5.1.2. Source Code Management](#512-source-code-management)<br>
+[5.1.3. Source Code Style Guide & Conventions](#513-source-code-style-guide--conventions)<br>
+[5.1.4. Software Deployment Configuration](#514-software-deployment-configuration)<br>
+[5.2. Product Implementation & Deployment](#52-product-implementation--deployment)<br>
+[5.2.1. Sprint Backlogs](#521-sprint-backlogs)<br>
+[5.2.2. Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)<br>
+[5.2.3. Implemented Frontend-Web Application Evidence](#523-implemented-frontend-web-application-evidence)<br>
+[5.2.4. Acuerdo de Servicio - SaaS](#524-acuerdo-de-servicio---saas)<br>
+[5.2.5. Implemented Native-Mobile Application Evidence](#525-implemented-native-mobile-application-evidence)<br>
+[5.2.6. Implemented RESTful API and/or Serverless Backend Evidence](#526-implemented-restful-api-andor-serverless-backend-evidence)<br>
+[5.2.7. RESTful API documentation](#527-restful-api-documentation)<br>
 
-[Capítulo II: Requirements Development and Software Solution Design](#capítulo-ii-requirements-development-and-software-solution-design)  
+[Capítulo VI: Product Verification & Validation](#capítulo-vi-product-verification--validation)<br>
+[6.1. Testing Suites & Validation](#61-testing-suites--validation)<br>
+[6.1.1. Core Entities Unit Tests](#611-core-entities-unit-tests)<br>
+[6.1.2. Core Integration Tests](#612-core-integration-tests)<br>
+[6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)<br>
+[6.1.4. Core System Tests](#614-core-system-tests)<br>
 
-[2.1. Competidores](#21-competidores)  
-[2.1.1. Análisis competitivo](#211-análisis-competitivo)  
-[2.1.2. Estrategias y tácticas frente a competidores](#211-análisis-competitivo)  
-
-[2.2. Entrevistas](#22-entrevistas)  
-[2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)  
-[2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)  
-[2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)  
-
-[2.3. Needfinding](#23-needfinding)  
-[2.3.1. User Personas](#231-user-personas)  
-[2.3.2. User Task Matrix](#232-user-task-matrix)  
-[2.3.3. User Journey Mapping](#233-user-journey-mapping)  
-[2.3.4. Empathy Mapping](#234-empathy-mapping)  
-[2.3.5. Big Picture Event Storming](#235-big-picture-event-storming)  
-[2.3.6. Ubiquitous Language](#236-ubiquitous-language)
-
-[2.4. Requirements Specification](#24-requirements-specification)  
-[2.4.1. User Stories](#241-user-stories)  
-[2.4.1.1. Epics](#2411-epics)  
-[2.4.1.2. User Stories](#2412-user-stories)  
-[2.4.1.3. Technical Stories](#2413-technical-stories)  
-[2.4.1.4. Spike Stories](#2414-spike-stories)  
-[2.4.2. Impact Mapping](#242-impact-mapping)  
-[2.4.3. Product Backlog](#243-product-backlog)  
-
-[2.5. Strategic-Level Domain-Driven Design](#25-strategic-level-domain-driven-design)  
-[2.5.1. EventStorming](#251-eventstorming)  
-[2.5.1.1. Candidate Context Discovery](#2511-candidate-context-discovery)  
-[2.5.1.2. Domain Message Flows Modeling](#2512-domain-message-flows-modeling)  
-[2.5.1.3. Bounded Context Canvases](#2513-bounded-context-canvases)  
-[2.5.2. Context Mapping](#252-context-mapping)  
-[2.5.3. Software Architecture](#253-software-architecture)  
-[2.5.3.1. Software Architecture Context Level Diagrams](#2531-software-architecture-context-level-diagrams)  
-[2.5.3.2. Software Architecture Container Level Diagrams](#2532-software-architecture-container-level-diagrams)  
-[2.5.3.3. Software Architecture Deployment Diagrams](#2533-software-architecture-deployment-diagrams)  
-
-[2.6. Tactical-Level Domain-Driven Design](#26-tactical-level-domain-driven-design)  
-[2.6.1. Bounded Context: <Bounded Context Name>](#261-bounded-context-smart-project-setup)  
-[2.6.1.1. Domain Layer](#2611-domain-layer)  
-[2.6.1.2. Interface Layer](#2612-interface-layer)  
-[2.6.1.3. Application Layer](#2613-application-layer)  
-[2.6.1.4 Infrastructure Layer](#2614-infrastructure-layer)  
-[2.6.1.5. Bounded Context Software Architecture Component Level Diagrams](#2615-bounded-context-software-architecture-component-level-diagrams)  
-[2.6.1.6. Bounded Context Software Architecture Code Level Diagrams](#2616-bounded-context-software-architecture-code-level-diagrams)  
-[2.6.1.6.1. Bounded Context Domain Layer Class Diagrams](#26161-bounded-context-domain-layer-class-diagrams)  
-[2.6.1.6.2. Bounded Context Database Design Diagram](#26162-bounded-context-database-design-diagram)  
-
-[2.6.2. Bounded Context: <Bounded Context Name>](#262-bounded-context-service-execution-and-monitoring)  
-[2.6.2.1. Domain Layer](#2621-domain-layer)  
-[2.6.2.2. Interface Layer](#2622-interface-layer)  
-[2.6.2.3. Application Layer](#2623-application-layer)  
-[2.6.2.4 Infrastructure Layer](#2624-infrastructure-layer)  
-[2.6.2.5. Bounded Context Software Architecture Component Level Diagrams](#2625-bounded-context-software-architecture-component-level-diagrams)  
-[2.6.2.6. Bounded Context Software Architecture Code Level Diagrams](#2626-bounded-context-software-architecture-code-level-diagrams)  
-[2.6.2.6.1. Bounded Context Domain Layer Class Diagrams](#26261-bounded-context-domain-layer-class-diagrams)  
-[2.6.2.6.2. Bounded Context Database Design Diagram](#26262-bounded-context-database-design-diagram)  
-
-[2.6.3. Bounded Context: <Bounded Context Name>](#263-bounded-context-smart-assistant)  
-[2.6.3.1. Domain Layer](#2631-domain-layer)  
-[2.6.3.2. Interface Layer](#2632-interface-layer)  
-[2.6.3.3. Application Layer](#2633-application-layer)  
-[2.6.3.4 Infrastructure Layer](#2634-infrastructure-layer)  
-[2.6.3.5. Bounded Context Software Architecture Component Level Diagrams](#2635-bounded-context-software-architecture-component-level-diagrams)  
-[2.6.3.6. Bounded Context Software Architecture Code Level Diagrams](#2636-bounded-context-software-architecture-code-level-diagrams)  
-[2.6.3.6.1. Bounded Context Domain Layer Class Diagrams](#26361-bounded-context-domain-layer-class-diagrams)  
-[2.6.3.6.2. Bounded Context Database Design Diagram](#26362-bounded-context-database-design-diagram)  
-
-[2.6.4. Bounded Context: <Bounded Context Name>](#264-bounded-context-energy-management)  
-[2.6.4.1. Domain Layer](#2641-domain-layer)  
-[2.6.4.2. Interface Layer](#2642-interface-layer)  
-[2.6.4.3. Application Layer](#2643-application-layer)  
-[2.6.4.4 Infrastructure Layer](#2644-infrastructure-layer)  
-[2.6.4.5. Bounded Context Software Architecture Component Level Diagrams](#2645-bounded-context-software-architecture-component-level-diagrams)  
-[2.6.4.6. Bounded Context Software Architecture Code Level Diagrams](#2646-bounded-context-software-architecture-code-level-diagrams)  
-[2.6.4.6.1. Bounded Context Domain Layer Class Diagrams](#26461-bounded-context-domain-layer-class-diagrams)  
-[2.6.4.6.2. Bounded Context Database Design Diagram](#26462-bounded-context-database-design-diagram)  
-
-[Capítulo III: Solution UI/UX Design](#capítulo-iii-solution-uiux-design)  
-
-[3.1. Product design](#31-product-design)  
-[3.1.1. Style Guidelines](#311-style-guidelines)  
-[3.1.1.1. General Style Guidelines](#3111-general-style-guidelines)  
-[3.1.2. Information Architecture](#312-information-architecture)  
-[3.1.2.1. Organization Systems](#3121-organization-systems)  
-[3.1.2.2. Labelling Systems](#3122-labelling-systems)  
-[3.1.2.3. SEO Tags and Meta Tags](#3123-seo-tags-and-meta-tags)  
-[3.1.2.4. Searching Systems](#3124-searching-systems)  
-[3.1.2.5. Navigation Systems](#3125-navigation-systems)  
-[3.1.3. Landing Page UI Design](#313-landing-page-ui-design)  
-[3.1.3.1. Landing Page Wireframe](#3131-landing-page-wireframe)  
-[3.1.3.2. Landing Page Mock-up](#3132-landing-page-mock-up)  
-[3.1.4. Mobile Applications UX/UI Design](#314-mobile-applications-uxui-design)  
-[3.1.4.1. Mobile Applications Wireframes](#3141-mobile-applications-wireframes)  
-[3.1.4.2. Mobile Applications Wireflow Diagrams](#3142-mobile-applications-wireflow-diagrams)  
-[3.1.4.3. Mobile Applications Mock-ups](#3143-mobile-applications-mock-ups)  
-[3.1.4.4. Mobile Applications User Flow Diagrams](#3144-mobile-applications-user-flow-diagrams)  
-[3.1.4.5. Mobile Applications Prototyping](#3145-mobile-applications-prototyping)  
-
-[Capítulo IV: Product Implementation & Validation](#capítulo-iv-product-implementation--validation)  
-
-[4.1. Software Configuration Management](#41-software-configuration-management)  
-[4.1.1. Software Development Environment Configuration](#411-software-development-environment-configuration)  
-[4.1.2. Source Code Management](#412-source-code-management)  
-[4.1.3. Source Code Style Guide & Conventions](#413-source-code-style-guide--conventions)  
-[4.1.4. Software Deployment Configuration](#414-software-deployment-configuration)  
-
-[4.2. Landing Page & Mobile Application Implementation](#42-landing-page--mobile-application-implementation)  
-[4.2.1. Sprint 1](#421-sprint-1)  
-[4.2.1.1. Sprint Planning 1](#4211-Sprint-planning-1)  
-[4.2.1.2. Sprint Backlog 1](#4212-sprint-backlog-1)  
-[4.2.1.3. Development Evidence for Sprint Review](#4213-development-evidence-for-sprint-review)  
-[4.2.1.4. Testing Suite Evidence for Sprint Review](#4214-testing-suite-evidence-for-sprint-review)  
-[4.2.1.5. Execution Evidence for Sprint Review](#4215-execution-evidence-for-sprint-review)  
-[4.2.1.6. Services Documentation Evidence for Sprint Review](#4216-services-documentation-evidence-for-sprint-review)  
-[4.2.1.7. Software Deployment Evidence for Sprint Review](#4217-software-deployment-evidence-for-sprint-review)  
-[4.2.1.8. Team Collaboration Insights during Sprint](#4218-team-collaboration-insights-during-sprint)  
-
-[4.2.2. Sprint 2](#422-sprint-2)  
-[4.2.2.1. Sprint Planning 2](#4221-Sprint-planning-2)  
-[4.2.2.2. Sprint Backlog 2](#4222-sprint-backlog-2)  
-[4.2.2.3. Development Evidence for Sprint Review](#4223-development-evidence-for-sprint-review)  
-[4.2.2.4. Testing Suite Evidence for Sprint Review](#4224-testing-suite-evidence-for-sprint-review)  
-[4.2.2.5. Execution Evidence for Sprint Review](#4225-execution-evidence-for-sprint-review)  
-[4.2.2.6. Services Documentation Evidence for Sprint Review](#4226-services-documentation-evidence-for-sprint-review)  
-[4.2.2.7. Software Deployment Evidence for Sprint Review](#4227-software-deployment-evidence-for-sprint-review)  
-[4.2.2.8. Team Collaboration Insights during Sprint](#4228-team-collaboration-insights-during-sprint)  
-
-[4.2.3. Sprint 3](#423-sprint-3)  
-[4.2.3.1. Sprint Planning 3](#4231-Sprint-planning-3)  
-[4.2.3.2. Sprint Backlog 3](#4232-sprint-backlog-3)  
-[4.2.3.3. Development Evidence for Sprint Review](#4233-development-evidence-for-sprint-review)  
-[4.2.3.4. Testing Suite Evidence for Sprint Review](#4234-testing-suite-evidence-for-sprint-review)  
-[4.2.3.5. Execution Evidence for Sprint Review](#4235-execution-evidence-for-sprint-review)  
-[4.2.3.6. Services Documentation Evidence for Sprint Review](#4236-services-documentation-evidence-for-sprint-review)  
-[4.2.3.7. Software Deployment Evidence for Sprint Review](#4237-software-deployment-evidence-for-sprint-review)  
-[4.2.3.8. Team Collaboration Insights during Sprint](#4238-team-collaboration-insights-during-sprint)  
-
-[4.3. Validation Interviews](#43-validation-interviews)  
-[4.3.1. Diseño de Entrevistas](#431-diseño-de-entrevistas)  
-[4.3.2. Registro de Entrevistas](#432-registro-de-entrevistas)  
-[4.3.3. Evaluaciones según heurísticas](#433-evaluaciones-según-heurísticas)  
-
-[Conclusiones](#conclusiones)  
-[Video App Validation](#video-app-validation)  
-[Video About the product](#video-about-the-product)  
-[Video About the team](#video-about-the-team)  
-
-[Bibliografía](#bibliografía)  
-[Anexos](#anexos)  
+[Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices)<br>
+[7.1. Continuous Integration](#71-continuous-integration)<br>
+[7.1.1. Tools and Practices](#711-tools-and-practices)<br>
+[7.1.2. Build & Test Suite Pipeline Components](#712-build--test-suite-pipeline-components)<br>
+[7.2. Continuous Delivery](#72-continuous-delivery)<br>
+[7.2.1. Tools and Practices](#721-tools-and-practices)<br>
+[7.2.2. Stages Deployment Pipeline Components](#722-stages-deployment-pipeline-components)<br>
+[7.3. Continuous deployment](#73-continuous-deployment)<br>
+[7.3.1. Tools and Practices](#731-tools-and-practices)<br>
+[7.3.2. Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)<br>
 
 <div style="page-break-before: always;"></div>
 
 # Student Outcome
-|Criterio Especifico|Acciones Realizadas|Conclusiones|
-|-|-|-|
-|Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y, en especial, para su proyecto en soluciones de software.| Jhosep Argomedo <br> **AV1** <br> Investigación y actualización de métricas de calidad web para la optimización de la landing page corporativa. <br><br> Roberto Ccarita <br> **AV1** <br> Actualización de conceptos de desarrollo mobile nativo/híbrido para la resolución de errores en la aplicación móvil. <br><br> Mateo Loechle <br> **AV1** <br> Revisión teórica de los estándares del proyecto para la validación y corrección de la consistencia técnica del informe. <br><br> Axel Ordoñez <br> **AV1** <br> Estudio de patrones arquitectónicos modernos para la reestructuración de la app móvil y actualización de diagramas. <br><br> Fabrizio Panta <br> **AV1** <br> Actualización en metodologías ágiles y criterios de aceptación INVEST para la redefinición de historias de usuario. <br> | En base a las actividades desarrolladas en la **AV1**, el equipo logró asimilar conceptos clave de arquitectura, metodologías ágiles, estándares de documentación y optimización tanto web como móvil. Esta actualización técnica fue indispensable para corregir las deficiencias del proyecto y alinear la solución con los requerimientos profesionales del mercado actual. |
-|Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.| Jhosep Argomedo <br> **AV1** <br> Corrección transversal del informe final, identificando vacíos de información y auto-educándose en la redacción técnica de ingeniería. <br><br> Roberto Ccarita <br> **AV1** <br> Redacción de la sección de auditoría, requiriendo el autoaprendizaje de normativas de seguridad y cumplimiento de software. <br><br> Mateo Loechle <br> **AV1** <br> Corrección de secciones críticas del informe, detectando de forma autónoma oportunidades de mejora en la documentación del proyecto. <br><br> Axel Ordoñez <br> **AV1** <br> Modelado autónomo de diagramas de arquitectura de software para plasmar de forma precisa la nueva estructura de la app móvil. <br><br> Fabrizio Panta <br> **AV1** <br> Refactorización integral del Product Backlog, reconociendo de manera autodidacta la importancia de mantener requerimientos dinámicos y adaptables. <br>  | El desarrollo de la **AV1** demostró que la ingeniería de software exige un aprendizaje autónomo y constante. Cada integrante identificó limitaciones en el estado inicial del proyecto y recurrió a la investigación independiente (en auditoría, arquitectura, documentación y metodologías) para levantar las observaciones, asumiendo que el aprendizaje permanente es la única vía para garantizar el éxito del proyecto. |
+| Criterio Especifico | Acciones Realizadas | Conclusiones |
+| --- | --- | --- |
+| **Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y, en especial, para su proyecto en soluciones de software.** | **Jhosep Argomedo Camacho** <br> **AV1** <br> Investigación y actualización de métricas de calidad web para la optimización de la landing page corporativa. <br><br> **TP1** <br> Investigación y actualización de conceptos relacionados con **Continuous Integration, Continuous Delivery y Continuous Deployment**, aplicándolos a la documentación y definición de los procesos de integración, entrega y despliegue del software. <br><br> **Brayan Ccarita Cruz** <br> **AV1** <br> Actualización de conceptos de desarrollo mobile nativo/híbrido para la resolución de errores en la aplicación móvil. <br><br> **TP1** <br> Actualización de conocimientos relacionados con **testing de aplicaciones web**, aplicando técnicas de validación para identificar y corregir errores presentes en la aplicación. <br><br> **Mateo Loechle Arias** <br> **AV1** <br> Revisión teórica de los estándares del proyecto para la validación y corrección de la consistencia técnica del informe. <br><br> **TP1** <br> Revisión y aplicación de conceptos relacionados con los modelos **AS-IS, TO-BE y Testing Suites & Validation**, permitiendo representar la situación actual y futura del proyecto y validar la solución desarrollada. <br><br> **Axel Ordoñez Ricaldi** <br> **AV1** <br> Estudio de patrones arquitectónicos modernos para la reestructuración de la app móvil y actualización de diagramas. <br><br> **TP1** <br> Actualización de conocimientos relacionados con **testing de aplicaciones móviles**, aplicando procesos de validación y corrección para identificar errores y mejorar el funcionamiento de la aplicación. <br><br> **Fabrizio Panta Castro** <br> **AV1** <br> Actualización en metodologías ágiles y criterios de aceptación INVEST para la redefinición de historias de usuario. <br><br> **TP1** <br> Investigación y aplicación de conceptos relacionados con los modelos **AS-IS, TO-BE y Testing Suites & Validation**, orientados al análisis del estado actual, definición del estado objetivo y validación de la solución. | En base a las actividades desarrolladas en la **AV1 y TP1**, el equipo logró mantener un proceso continuo de actualización de conocimientos relacionados con arquitectura, metodologías ágiles, estándares de documentación, testing, validación y prácticas de integración y despliegue de software. Mientras que en la **AV1** se fortalecieron conocimientos vinculados con la calidad, arquitectura, documentación y gestión de requerimientos, en la **TP1** estos conocimientos se complementaron con prácticas de testing, validación y procesos de entrega de software. Esta evolución permitió al equipo aplicar conocimientos técnicos de manera progresiva y alinearlos con las necesidades profesionales actuales de la ingeniería de software. |
+| **Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.** | **Jhosep Argomedo Camacho** <br> **AV1** <br> Corrección transversal del informe final, identificando vacíos de información y auto-educándose en la redacción técnica de ingeniería. <br><br> **TP1** <br> Investigación autónoma sobre **Continuous Integration, Continuous Delivery y Continuous Deployment**, reconociendo la necesidad de mantenerse actualizado en prácticas de automatización, integración y entrega continua de software. <br><br> **Brayan Ccarita Cruz** <br> **AV1** <br> Redacción de la sección de auditoría, requiriendo el autoaprendizaje de normativas de seguridad y cumplimiento de software. <br><br> **TP1** <br> Ejecución de pruebas y correcciones sobre la aplicación web, identificando errores durante el proceso y recurriendo al aprendizaje autónomo para determinar sus causas y aplicar soluciones. <br><br> **Mateo Loechle Arias** <br> **AV1** <br> Corrección de secciones críticas del informe, detectando de forma autónoma oportunidades de mejora en la documentación del proyecto. <br><br> **TP1** <br> Elaboración y revisión de los modelos **AS-IS, TO-BE y Testing Suites & Validation**, fortaleciendo de manera autónoma sus conocimientos para representar y validar adecuadamente la evolución de la solución. <br><br> **Axel Ordoñez Ricaldi** <br> **AV1** <br> Modelado autónomo de diagramas de arquitectura de software para plasmar de forma precisa la nueva estructura de la app móvil. <br><br> **TP1** <br> Realización de pruebas y correcciones de la aplicación móvil, investigando de manera autónoma las causas de los errores encontrados y aplicando los conocimientos adquiridos para mejorar su funcionamiento. <br><br> **Fabrizio Panta Castro** <br> **AV1** <br> Refactorización integral del Product Backlog, reconociendo de manera autodidacta la importancia de mantener requerimientos dinámicos y adaptables. <br><br> **TP1** <br> Desarrollo y revisión de los modelos **AS-IS, TO-BE y Testing Suites & Validation**, identificando la necesidad de profundizar continuamente en técnicas de análisis y validación de software para mejorar el proyecto. | El desarrollo de la **AV1 y TP1** demostró que la ingeniería de software exige un aprendizaje autónomo y constante. En la **AV1**, cada integrante identificó limitaciones del proyecto y recurrió a la investigación independiente para mejorar aspectos de arquitectura, documentación, auditoría, metodologías y requerimientos. Posteriormente, en la **TP1**, este aprendizaje se extendió hacia prácticas de testing, validación, análisis de procesos e integración y entrega continua. De esta manera, el equipo evidenció una evolución progresiva de sus competencias, comprendiendo que la actualización permanente es fundamental para resolver nuevos problemas y garantizar la calidad y evolución del proyecto. |
 
 <div style="page-break-before: always;"></div>
 
-# Capítulo I: Presentación
+# Capítulo I: Introducción
 ## 1.1. Startup Profile
 ### 1.1.1. Descripción de la Startup
 
@@ -631,7 +562,6 @@ Sabremos que tuvimos éxito cuando veamos una reducción del 60% en los reclamos
 | **Psicológica** | Orientados a la **innovación y sostenibilidad**, valoran la eficiencia, la **funcionalidad estructural** y la diferenciación competitiva. Personalidad meticulosa y colaborativa, motivados por el impacto en el mercado y la adopción de tendencias tecnológicas para mejorar diseños y la viabilidad del proyecto. | Buscadores de **comodidad y seguridad**. Tienen una actitud práctica hacia la tecnología (desde entusiastas a cautelosos). Valoran la conveniencia diaria y la privacidad. Su estilo de vida es urbano y dinámico, con énfasis en el equilibrio entre trabajo y vida personal, así como el ahorro de tiempo. |
 | **Función de comportamiento** | Alta frecuencia en la integración de tendencias tecnológicas en diseños y estructuras. Lealtad a herramientas y marcas que faciliten la **colaboración entre diseño y cálculo estructural** (software BIM, CAD, etc.). Buscan soluciones que optimicen costos, mantenimiento y la **seguridad de la construcción**. Se frustran por barreras regulatorias o la falta de compatibilidad tecnológica. Su objetivo es diferenciar proyectos y asegurar la **viabilidad técnica y estructural**. | Uso ocasional a diario de apps para el hogar. La adopción se basa en la **facilidad de uso y la seguridad**. Son leales a marcas intuitivas. Se frustran por la complejidad técnica o problemas de privacidad. Sus objetivos son automatizar rutinas, mejorar la seguridad y la eficiencia energética en su apartamento. |
 
----
 <div style="page-break-before: always;"></div>
 
 # Capítulo II: Requirements Elicitation & Analysis
@@ -773,7 +703,6 @@ URL de las entrevistas:
 | **Imagen del entrevistado:**<br>![imagen de entrevistado](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%202/Entrevistdo7.png)     ||
 | **Resumen de la entrevista:**<br>Cristi Karen Callata Álvarez vive desde hace menos de un año en un departamento, elegido por el espacio y la cantidad de habitaciones necesarias para compartir. Valora principalmente la tranquilidad de la zona, lo que le permite descansar, aunque reconoce como principal frustración la distancia hacia su centro laboral, que le implica viajes de hasta una hora y veinte minutos. Su rutina diaria transcurre mayormente fuera de casa, por lo que busca que ciertas tareas domésticas se realicen de forma más automática y práctica, como el encendido y apagado de luces. Actualmente no cuenta con dispositivos inteligentes, pero muestra interés en incorporarlos para simplificar su día a día y mejorar la seguridad.<br>Callata considera útil una aplicación que permita controlar luces, cámaras y accesos de manera remota, ya que mejoraría su comodidad y seguridad dentro del hogar. Valora especialmente que la app sea fácil de usar, intuitiva y accesible. Puntúa con un 6 o 7 sobre 10 la influencia de estas funcionalidades en la decisión de adquirir un nuevo apartamento. Reconoce que la principal preocupación sería la seguridad de sus datos personales al usar una aplicación de este tipo. Además, estaría dispuesta a pagar una suscripción mensual por funciones avanzadas, siempre que estas ofrezcan mayores facilidades y control en su vivienda.<br><br>**Datos adicionales:**<br>**Navegador preferido:** Google Chrome<br>**Sistema operativo de preferencia:** Windows <br>**Dispositivo usado con mas frecuencia:** Laptop<br>**Dispositivo movil prefereido:** Android<br>**Principal medio de contacto:** Apps de colaboración <br>**Personalidad tecnológica:** Interesada, pero aún sin adopción.<br>**Objetivos principales:** Tranquilidad, comodidad y seguridad en el hogar.<br>**Tecnologías inteligentes de interés:** Automatización de luces, cámaras de seguridad conectadas al celular, control de accesos.<br>**Motivaciones:** Ahorrar tiempo, simplificar tareas y reforzar seguridad.<br>**Frustraciones:** Larga distancia al trabajo y tiempo de traslado.<br>**Preocupaciones:** Seguridad y privacidad de datos personales.<br>**Disposición de pago:** Sí, suscripción mensual por funciones avanzadas. ||
 
-
 ### 2.2.3. Análisis de entrevistas.
 
 |Segemento|Caracteristicas|Objetivos comunes|Caracteristicas subjetivas comunes|
@@ -882,7 +811,7 @@ Hace: Prueba aplicaciones o servicios digitales para evaluar su utilidad.
 
 <div style="page-break-before: always;"></div>
 
-### 2.3.5. As-Is Scenario Mapping.
+### 2.3.5. As-Is Scenario Mapping
 
 **Segmento 1: Arquitectos e Ingenieros Civiles**
 
@@ -1203,6 +1132,8 @@ En conjunto, este objetivo no solo impulsa la optimización de los procesos inte
 
 ![Impact-Mapping-2](/assets/Impact-Mapping-2.png)
 
+<div style="page-break-before: always;"></div>
+
 # Capítulo IV: Product Design 
 ## 4.1. Style Guideline
 ### 4.1.1. General Style Guidelines
@@ -1408,7 +1339,7 @@ Finalmente, el sitio se enfoca en eliminar las últimas barreras para la compra.
 #### 1. Home
 - La interfaz sigue una estructura en Z con un header fijo con logo y menú principal, un hero section con título, subtítulo y un llamado a la acción destacado (“Empezar ahora”). En las secciones intermedias se presentan los beneficios en formato de tarjetas, seguidos de testimonios y planes de precios. El footer reúne enlaces organizados por categorías, accesos a redes sociales y aviso de copyright. El diseño es claro, escaneable y enfocado en la conversión, guiando al usuario de manera natural desde el primer contacto hasta la acción final.<br>
 
-<img src="https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%204/Landingpage_Home_Wireframe.png" style="page-break-inside: auto; break-inside: auto; display: block;">
+<img src="https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Web%20App/Cap%C3%ADtulo%204/Landingpage_Home_Wireframe.png">
 <br>
 
 #### 2. About Us
@@ -1562,23 +1493,6 @@ Los arquitectos e ingenieros civiles utilizan la plataforma IoBuild para gestion
 **1. Profile**
 **User Goal:** Como ingeniero, quiero ver y editar mi infomación.
 ![Segmento #1 User Flow #2](https://raw.githubusercontent.com/F4brizio24/Imagenes-Proyecto/refs/heads/main/Moviles/Cap%C3%ADtulo%203/Journey-Flow-1_Mock-Up.jpeg)
-
-##### 4.5. Mobile Applications Prototyping
-En esta etapa se presentan los prototipos de la aplicación móvil IoBuild, diseñados para smartphones y tablets. El enfoque está en simular los flujos principales de cada segmento objetivo, garantizando una experiencia intuitiva, accesible y optimizada para pantallas táctiles y entornos de movilidad.
-
-**Segmento constructoras**
-<br>
-Los ingenieros utilizan la aplicación móvil para supervisar proyectos residenciales, acceder rápidamente a información de clientes, monitorear dispositivos IoT y gestionar configuraciones desde cualquier lugar y en tiempo real.
-
-- Desde la pantalla principal, pueden acceder al Dashboard móvil, donde se muestran indicadores clave de los proyectos, estados de dispositivos y notificaciones importantes en un formato adaptado a dispositivos móviles.
-
-- La navegación de la aplicación se organiza mediante una barra inferior y menús desplegables que incluyen las principales secciones: Home, Profile, Projects, Device Management y Configuration, permitiendo una interacción rápida y sencilla con una sola mano.
-
-- En la sección Device Management, los usuarios pueden visualizar la lista de clientes junto con información relevante como nombre, proyecto asociado, estado de cuenta y opciones de administración. El diseño prioriza tarjetas responsivas y elementos táctiles para facilitar la interacción.
-
-- Al seleccionar un cliente, la aplicación permite consultar el estado de los dispositivos IoT vinculados al proyecto, mostrando información en tiempo real y alertas visuales cuando existen restricciones, errores o problemas de conectividad. Esto facilita una supervisión eficiente y una rápida toma de decisiones desde cualquier ubicación.
-
-Con estos flujos, los prototipos evidencian cómo cada tipo de usuario interactúa con la aplicación, asegurando una navegación coherente y ajustada a sus necesidades.
 
 ## 4.6. Web Applications UX/UI Design
 La sección de Diseño UX/UI de Aplicaciones Web se enfoca en la creación de interfaces y la definición de la experiencia de usuario para las soluciones web de IoBuild. Este proceso abarca desde la conceptualización de las vistas funcionales hasta la definición de flujos de interacción completos, diseñados específicamente para satisfacer las necesidades de nuestros dos segmentos clave: Arquitectos/Ingenieros y Propietarios.
@@ -2009,7 +1923,8 @@ El diagrama de Dashboard and Analytics modela la captura y análisis de métrica
 
 <div style="page-break-before: always;"></div>
 
-## Capítulo V: Product Implementation
+# Capítulo V: Product Implementation
+
 ## 5.1. Software Configuration Management
 
 La gestion de configuracion de software del proyecto IoBuild define y controla el conjunto de herramientas, servicios y convenciones necesarios para asegurar un desarrollo movil consistente, trazable y reproducible.  
@@ -2220,8 +2135,10 @@ El diagrama de despliegue de esta etapa representa:
 ![Deploy Diagram](https://i.ibb.co/WYbfcRR/Deploy-Diagram.png)
 
 ## 5.2. Product Implementation & Deployment
+
 ### 5.2.1. Sprint Backlogs
-## 5.2.1.1. Sprint Backlog 1
+
+#### 5.2.1.1. Sprint Backlog 1
 
 | Story ID | ID Task | Titulo | Descripción | Estimación (Horas) | Assigned To | Status |
 |---|---|---|---|---|---|---|
@@ -2249,7 +2166,7 @@ El diagrama de despliegue de esta etapa representa:
 
 ---
 
-## 5.2.1.2. Sprint Backlog 2
+#### 5.2.1.2. Sprint Backlog 2
 
 | Story ID | ID Task | Titulo | Descripción | Estimación (Horas) | Assigned To | Status |
 |---|---|---|---|---|---|---|
@@ -2277,7 +2194,7 @@ El diagrama de despliegue de esta etapa representa:
 
 ---
 
-## 5.2.1.3. Sprint Backlog 3
+#### 5.2.1.3. Sprint Backlog 3
 
 | Story ID | ID Task | Titulo | Descripción | Estimación (Horas) | Assigned To | Status |
 |---|---|---|---|---|---|---|
@@ -2837,7 +2754,9 @@ Las pruebas de sistema (System / End-to-End Tests) permiten validar el flujo int
 <div style="page-break-after: always;"></div>
 
 # **Capítulo VII: DevOps Practices**
+
 ## **7.1. Continuous Integration**
+
 ### **7.1.1. Tools and Practices**
 
 IoBuild implementa una estrategia de Integración Continua (CI) estructurada para garantizar que cada contribución al código fuente sea verificada de manera automática y sistemática. El objetivo principal de esta fase es detectar problemas de integración de forma temprana, mantener la integridad de la base de código y asegurar que los nuevos desarrollos cumplan con los estándares de calidad antes de avanzar a la etapa de despliegue.

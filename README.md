@@ -2734,15 +2734,15 @@ Los Core Entities Unit Tests son fundamentales para garantizar la calidad y el c
 
 #### Unit Entity Test:
 
-![Unit Entity Test](./Test_1.png)
+<img src="assets/test_1.png" alt="Test 1">
 
 #### Plan Entity Test:
 
-![Plan Entity Test](./Test_2.png)
+<img src="assets/test_2.png" alt="Test 2">
 
 #### Client Entity Test:
 
-![Client Entity Test](./Test_3.png)
+<img src="assets/test_3.png" alt="Test 3">
 
 ### **6.1.2. Core Integration Tests**
 
@@ -2750,19 +2750,19 @@ Las Core Integration Tests son esenciales para verificar que los controladores y
 
 #### IAM Login Controller / API Tests:
 
-![IAM Login Controller Tests](./Test_4.png)
+<img src="assets/test_4.png" alt="Test 4">
 
 #### Project Structure Controller / API Tests:
 
-![Project Structure Controller Tests](./Test_5.png)
+<img src="assets/test_5.png" alt="Test 5">
 
 #### Device Control Controller / API Tests:
 
-![Device Control Controller Tests](./Test_6.png)
+<img src="assets/test_6.png" alt="Test 6">
 
 #### Subscriptions Payment Controller / API Tests:
 
-![Subscriptions Payment Controller Tests](./Test_7.png)
+<img src="assets/test_7.png" alt="Test 7">
 
 ### **6.1.3. Core Behavior-Driven Development**
 

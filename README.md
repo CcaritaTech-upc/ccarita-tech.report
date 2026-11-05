@@ -3075,3 +3075,109 @@ Para descubrir premisas ocultas y asegurar que cada pregunta sea concreta y medi
 | **When** (¿en qué momento del ciclo de uso?) | Durante los primeros 7 días desde el registro. | Durante los primeros 30 días desde el registro. |
 | **Why** (¿por qué importa al negocio?) | Sin un dispositivo vinculado el propietario no recibe valor del panel y es probable que abandone. | La conversión B2B es la principal fuente de ingresos esperada (70 % según los Business Assumptions). |
 | **How** (¿cómo lo mediremos?) | Evento `device_linked` registrado en Firebase/Google Analytics y en el bounded context Devices. | Evento `subscription_purchased` registrado en el bounded context Subscriptions, Plans & Payments. |
+
+### **8.1.4. Question Backlog**
+
+El Question Backlog es una lista priorizada de preguntas, no de funcionalidades. Cada pregunta se evalúa con cuatro criterios en una escala de 1 a 5:
+
+- **Confianza:** qué tan seguros estamos hoy de la respuesta. Una menor confianza eleva la prioridad.
+- **Riesgo:** cuánto perdemos si estamos equivocados.
+- **Impacto:** cuánto afecta al negocio si acertamos.
+- **Interés:** relevancia de la pregunta para los stakeholders.
+
+> **Criterio de puntuación:** la Confianza se invierte para el cálculo (5 − Confianza), ya que mientras menos seguros estamos de la respuesta, más vale la pena experimentar.
+>
+> **Prioridad = (5 − Confianza) + Riesgo + Impacto + Interés.** En caso de empate, se prioriza la pregunta con mayor Riesgo.
+
+| Orden | Pregunta | Tipo | Por qué (motivación) | Confianza | Riesgo | Impacto | Interés | Prioridad |
+|---|---|---|---|:---:|:---:|:---:|:---:|:---:|
+| 1 | Q-03 — Prueba gratuita y conversión B2B | Belief-led | La venta de licencias a constructoras sostiene el modelo de negocio; si la prueba no convierte, la estrategia de adquisición debe replantearse. | 2 | 5 | 5 | 5 | **18** |
+| 2 | Q-01 — Vinculación del primer dispositivo | Belief-led | La vinculación de un dispositivo es el evento de activación del propietario; sin ella el panel no entrega valor. | 2 | 5 | 5 | 4 | **17** |
+| 3 | Q-02 — Alertas y retorno semanal | Belief-led | El retorno recurrente es la base de la meta de retención B2C del 75 %; valida el motor de engagement antes de invertir en más funcionalidades. | 2 | 4 | 5 | 4 | **16** |
+| 4 | Q-06 — Punto de abandono en el onboarding | Exploratoria | Identificar la fricción del flujo de registro y vinculación tiene retorno inmediato y bajo costo de ejecución. | 2 | 3 | 4 | 3 | **13** |
+| 5 | Q-05 — Ayuda contextual y soporte | Belief-led | Reducir las solicitudes de soporte impacta directamente en los costos operativos y en la autonomía del usuario. | 3 | 3 | 4 | 3 | **12** |
+| 6 | Q-04 — Plantillas de escenas | Belief-led | Las escenas son un diferenciador de confort frente a soluciones fragmentadas, pero aún no forman parte del producto implementado. | 3 | 2 | 3 | 4 | **11** |
+| 7 | Q-07 — Módulos del panel más consultados | Exploratoria | Orienta el roadmap del dashboard y de la analítica, pero no es urgente para la viabilidad del producto. | 3 | 2 | 3 | 3 | **10** |
+
+El backlog combina preguntas amplias (*broad*: Q-06 y Q-07), que abren el espacio de conocimiento sobre el comportamiento de los usuarios, con preguntas profundas (*deep*: Q-01, Q-02, Q-03, Q-04 y Q-05), que profundizan en una creencia concreta del negocio. Las tres primeras preguntas se abordan en el siguiente ciclo de experimentación por estar directamente ligadas a la activación, la retención y la generación de ingresos de IoBuild.
+
+### **8.1.5. Experiment Cards**
+
+Cada Experiment Card captura la información esencial de un experimento antes de su ejecución. El **lado frontal** registra la Pregunta, el Por qué, la Hipótesis y el Qué (*Simplest Useful Thing*, la versión más simple de la solución que permite responder la pregunta); el **lado posterior** detalla las Medidas, las Condiciones y la Escala. Se elaboró una tarjeta por cada pregunta Belief-led del Question Backlog, siguiendo su orden de prioridad.
+
+Para todos los experimentos la escala se calculó para una prueba de diferencia de dos proporciones con nivel de significancia α = 5 %, potencia estadística de 80 % y el efecto mínimo detectable (MDE) indicado en cada tarjeta. Las líneas base son estimaciones iniciales del equipo y serán recalibradas con los primeros datos de Google Analytics y Firebase Analytics.
+
+#### Experiment Card EC-01 — Prueba gratuita del plan Professional (Q-03)
+
+| Lado Frontal | Contenido |
+|---|---|
+| **Pregunta** | ¿Ofrecer una prueba gratuita de 14 días del plan Professional incrementa el porcentaje de constructores registrados que contratan una suscripción de pago dentro de sus primeros 30 días? |
+| **Por qué** | El 70 % de los ingresos esperados proviene de licencias B2B. Si los constructores no convierten tras conocer el producto, el modelo de adquisición y la viabilidad financiera de IoBuild quedan en riesgo. |
+| **Hipótesis** | Los constructores que reciben una prueba gratuita de 14 días del plan Professional contratan una suscripción de pago en mayor proporción que quienes acceden directamente al catálogo de planes. Objetivo cuantificable: elevar la conversión a pago en 30 días del 10 % al 18 % (+8 pp). |
+| **Qué (Simplest Useful Thing)** | Activar, mediante un feature flag, un banner en el módulo de Gestión de Suscripciones que habilita el plan Professional durante 14 días sin cobro para el grupo de tratamiento, sin construir aún un flujo completo de pruebas de concepto. |
+
+| Lado Posterior | Contenido |
+|---|---|
+| **Medidas** | Tasa de conversión a pago = % de constructores que contratan un plan de pago en sus primeros 30 días. Como medidas secundarias: plan contratado (Starter, Professional o Enterprise) y número de proyectos creados durante la prueba. |
+| **Condiciones** | Experimental: constructores con acceso a la prueba gratuita de 14 días. Control: constructores con el flujo actual de suscripción. Asignación aleatoria 50/50 al momento del registro. |
+| **Escala** | α = 5 %, potencia = 80 %, MDE = +8 pp sobre una línea base estimada de 10 %. Tamaño ≈ 295 constructores por grupo. Dado que el segmento B2B es reducido, se prevé una duración extendida del experimento hasta alcanzar la muestra. |
+
+#### Experiment Card EC-02 — Asistente guiado de vinculación del primer dispositivo (Q-01)
+
+| Lado Frontal | Contenido |
+|---|---|
+| **Pregunta** | ¿Un asistente guiado de vinculación del primer dispositivo, mostrado tras el registro, incrementa el porcentaje de propietarios nuevos que vinculan al menos un dispositivo durante su primera semana? |
+| **Por qué** | Vincular un dispositivo es el evento de activación del propietario: sin él, el panel de control, la telemetría y las gráficas de consumo no muestran información útil y el usuario no percibe la propuesta de valor. |
+| **Hipótesis** | Los propietarios nuevos que pasan por el asistente guiado vinculan al menos un dispositivo en su primera semana en mayor proporción que quienes siguen el flujo estándar. Objetivo cuantificable: elevar la tasa de activación del 45 % al 57 % (+12 pp) en 7 días. |
+| **Qué (Simplest Useful Thing)** | Al finalizar el paso 2 del registro, mostrar al grupo de tratamiento una pantalla de tres pasos (elegir tipo de dispositivo, asignar nombre y unidad, confirmar conexión) que reutiliza el modal "Add Device" existente. |
+
+| Lado Posterior | Contenido |
+|---|---|
+| **Medidas** | Tasa de activación = % de propietarios nuevos que vinculan ≥ 1 dispositivo en 7 días. Como medida secundaria: tiempo transcurrido entre el registro y la primera vinculación. |
+| **Condiciones** | Experimental: propietarios que ven el asistente guiado. Control: propietarios con el flujo actual (acceso directo al panel). Asignación aleatoria 50/50 a usuarios nuevos con rol Propietario. |
+| **Escala** | α = 5 %, potencia = 80 %, MDE = +12 pp sobre una línea base estimada de 45 %. Tamaño ≈ 272 propietarios por grupo. |
+
+#### Experiment Card EC-03 — Alertas personalizables y retorno semanal (Q-02)
+
+| Lado Frontal | Contenido |
+|---|---|
+| **Pregunta** | ¿Las alertas personalizables de consumo y estado de dispositivos incrementan la tasa de retorno semanal de los propietarios a la plataforma? |
+| **Por qué** | La meta de retención B2C del 75 % en el primer año depende de que los propietarios regresen con frecuencia. Si las alertas no influyen en el retorno, el riesgo de abandono compromete los ingresos recurrentes. |
+| **Hipótesis** | Los propietarios que pueden configurar alertas y reciben notificaciones push presentan una tasa de retorno semanal mayor que quienes no las reciben. Objetivo cuantificable: elevar el retorno a 7 días del 40 % al 48 % (+8 pp). |
+| **Qué (Simplest Useful Thing)** | Habilitar, mediante feature flag, una sección de alertas con dos tipos predefinidos (consumo energético por encima de un umbral y dispositivo desconectado), enviadas mediante Firebase Cloud Messaging, sin construir aún un motor de reglas completo. |
+
+| Lado Posterior | Contenido |
+|---|---|
+| **Medidas** | Tasa de retorno a 7 días (W1 return rate) = % de propietarios que inician al menos una sesión entre los días 1 y 7 posteriores a la activación. Como medidas secundarias: número de sesiones por usuario a la semana y número de alertas configuradas. |
+| **Condiciones** | Experimental: propietarios con la funcionalidad de alertas activada. Control: propietarios sin alertas. Asignación aleatoria 50/50 entre propietarios con al menos un dispositivo vinculado. |
+| **Escala** | α = 5 %, potencia = 80 %, MDE = +8 pp sobre una línea base estimada de 40 %. Tamaño ≈ 604 propietarios por grupo. |
+
+#### Experiment Card EC-04 — Ayuda contextual y solicitudes de soporte (Q-05)
+
+| Lado Frontal | Contenido |
+|---|---|
+| **Pregunta** | ¿La ayuda contextual en las pantallas de vinculación de dispositivos y suscripciones reduce el porcentaje de usuarios que abren una solicitud de soporte durante sus primeros 14 días? |
+| **Por qué** | Los costos de soporte impactan directamente en la rentabilidad operativa, y la dependencia del soporte contradice la promesa de una plataforma sin barreras técnicas. |
+| **Hipótesis** | Los usuarios que ven ayuda contextual abren solicitudes de soporte en sus primeros 14 días en menor proporción que quienes no la ven. Objetivo cuantificable: reducir la tasa de solicitudes de soporte del 20 % al 14 % (−6 pp, equivalente a una reducción relativa del 30 %). |
+| **Qué (Simplest Useful Thing)** | Mostrar al grupo de tratamiento tooltips y una guía breve de tres pasos en las pantallas "Add Device" y "Gestión de Suscripciones", junto con un acceso directo a la sección de Ayuda y Soporte ya implementada. |
+
+| Lado Posterior | Contenido |
+|---|---|
+| **Medidas** | Tasa de solicitudes de soporte = % de usuarios que abren ≥ 1 solicitud de soporte en sus primeros 14 días. Como medida secundaria: tasa de finalización de las tareas de vinculación y cambio de plan. |
+| **Condiciones** | Experimental: usuarios con ayuda contextual activada. Control: usuarios con la interfaz actual. Asignación aleatoria 50/50 a usuarios nuevos de ambos segmentos. |
+| **Escala** | α = 5 %, potencia = 80 %, MDE = −6 pp sobre una línea base estimada de 20 %. Tamaño ≈ 615 usuarios por grupo. |
+
+#### Experiment Card EC-05 — Plantillas de escenas predefinidas (Q-04)
+
+| Lado Frontal | Contenido |
+|---|---|
+| **Pregunta** | ¿Ofrecer plantillas de escenas predefinidas incrementa el porcentaje de propietarios que activan al menos una escena durante su primer mes de uso? |
+| **Por qué** | Las escenas representan el valor de confort y personalización que diferencia a IoBuild de los dispositivos aislados del mercado; validar su adopción antes de construir un editor completo evita invertir en una funcionalidad que los usuarios no utilicen. |
+| **Hipótesis** | Los propietarios a quienes se ofrecen plantillas de escenas predefinidas activan al menos una escena en su primer mes en mayor proporción que quienes deben crearlas desde cero. Objetivo cuantificable: elevar la tasa de adopción de escenas del 25 % al 37 % (+12 pp) en 30 días. |
+| **Qué (Simplest Useful Thing)** | Añadir en el panel del propietario una sección "Escenas" con tres plantillas ("Modo noche", "Modo ahorro" y "Salir de casa") que se activan con un solo toque sobre los dispositivos ya vinculados. El grupo de control ve la sección con un formulario básico de creación manual. |
+
+| Lado Posterior | Contenido |
+|---|---|
+| **Medidas** | Tasa de adopción de escenas = % de propietarios que activan ≥ 1 escena en 30 días. Como medida secundaria: puntuación NPS obtenida mediante una encuesta in-app al día 30. |
+| **Condiciones** | Experimental: propietarios con plantillas de escenas predefinidas. Control: propietarios con creación manual de escenas. Asignación aleatoria 50/50 entre propietarios con al menos dos dispositivos vinculados. |
+| **Escala** | α = 5 %, potencia = 80 %, MDE = +12 pp sobre una línea base estimada de 25 %. Tamaño ≈ 232 propietarios por grupo. |

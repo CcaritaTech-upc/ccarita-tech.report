@@ -3002,3 +3002,76 @@ Al cierre del Sprint 3, IoBuild cuenta con los siguientes entregables en producc
 El producto ya materializa la propuesta de valor central de IoBuild: una única plataforma que centraliza la gestión de proyectos inmobiliarios inteligentes para constructoras y el control de los dispositivos del hogar para los propietarios. Sin embargo, la confianza en que estas funcionalidades generan el comportamiento esperado se apoya hasta ahora en las entrevistas realizadas (sección 2.2), en los supuestos Lean UX y en la experiencia del equipo, no en evidencia experimental.
 
 Actualmente el equipo no dispone de datos de uso recolectados de forma sistemática que confirmen, por ejemplo, que los propietarios logran vincular su primer dispositivo sin asistencia, que regresan a la plataforma de forma recurrente, o que los constructores están dispuestos a pagar una suscripción después de conocer el producto. Además, varias funcionalidades planteadas en los Feature Assumptions —alertas personalizables, escenas o ambientes, pruebas de concepto gratuitas— aún no se han construido. Este resumen constituye el punto de partida del trabajo de experimentación, cuyo foco no es proponer nuevas soluciones por sí mismas, sino formular preguntas que reduzcan la incertidumbre sobre el valor real que IoBuild entrega a sus usuarios y al negocio.
+
+### **8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims**
+
+A continuación se recopila la materia prima que inspira las preguntas de experimentación. Esta proviene de los Lean UX Assumptions y Hypothesis Statements (sección 1.2.2), del análisis de entrevistas (sección 2.2.3) y de la experiencia del equipo durante la implementación.
+
+**Assumptions (Suposiciones)**
+
+| ID | Suposición | Origen |
+|---|---|---|
+| A-01 | Los propietarios pueden vincular y configurar sus dispositivos IoT por sí mismos, sin conocimientos técnicos ni asistencia de soporte. | User Assumption (80 % desea personalizar su entorno sin conocimientos técnicos) |
+| A-02 | Los propietarios adoptarán el panel de control unificado como su herramienta principal de gestión diaria del hogar. | Feature Assumption (80 % lo usará como herramienta principal) |
+| A-03 | Ofrecer una prueba gratuita a constructoras y arquitectos permitirá convertir al menos al 25 % de ellos en clientes de pago. | Business Assumption (prueba de concepto gratuita) |
+| A-04 | Los propietarios están dispuestos a configurar alertas sobre el consumo y la seguridad de su vivienda, y estas los harán volver a la plataforma. | Feature Assumption (50 % configurará al menos 3 alertas en 30 días) |
+| A-05 | Una interfaz de autogestión clara reducirá la dependencia del soporte técnico. | Business Outcome Assumption (reducción del 30 % en costos de soporte) |
+
+**Knowledge Gaps (Brechas de conocimiento)**
+
+| ID | Brecha |
+|---|---|
+| G-01 | Se desconoce qué porcentaje real de propietarios nuevos vincula al menos un dispositivo durante su primera semana. |
+| G-02 | Se desconoce en qué paso del flujo registro (2 pasos) → vinculación de dispositivo → uso del panel se produce el mayor abandono. |
+| G-03 | Se desconoce qué módulos del panel (energía, temperatura, agua, Live Energy, estado del sistema) son los más consultados y cuáles no aportan valor percibido. |
+| G-04 | Se desconoce la tasa actual de conversión de constructores registrados a una suscripción de pago y qué plan eligen al convertirse. |
+| G-05 | Se desconoce el impacto real de las notificaciones y alertas sobre la frecuencia con la que los propietarios regresan a la plataforma. |
+
+**Ideas**
+
+| ID | Idea |
+|---|---|
+| I-01 | Incorporar un asistente guiado (wizard) que acompañe al propietario en la vinculación de su primer dispositivo inmediatamente después del registro. |
+| I-02 | Habilitar alertas personalizables de consumo energético y de estado de dispositivos, enviadas como notificación push mediante Firebase Cloud Messaging. |
+| I-03 | Ofrecer una prueba gratuita de 14 días del plan Professional a los constructores recién registrados. |
+| I-04 | Añadir ayuda contextual (tooltips, guías paso a paso y acceso directo al centro de ayuda) en las pantallas con mayor complejidad. |
+| I-05 | Ofrecer plantillas de escenas predefinidas (por ejemplo, "Modo noche" o "Modo ahorro") que el propietario pueda activar con un solo toque. |
+
+**Claims (Afirmaciones)**
+
+| ID | Afirmación |
+|---|---|
+| C-01 | "Centralizar el control en una única plataforma accesible elimina la fragmentación tecnológica y lleva a una retención de licencias B2C del 75 % en el primer año" (Hypothesis Statement 1). |
+| C-02 | "Una interfaz de autogestión intuitiva y un centro de ayuda integrado reducen las solicitudes de soporte técnico en un 30 %" (Hypothesis Statement 2). |
+| C-03 | "La creación de escenas y rutinas personalizadas sin código aumenta la satisfacción del usuario en un 25 % en NPS" (Hypothesis Statement 3). |
+| C-04 | "Una prueba de concepto digital reduce el riesgo percibido y logra que el 25 % de los proyectos piloto se conviertan en contratos" (Hypothesis Statement B2B). |
+
+### **8.1.3. Experiment-Ready Questions**
+
+A partir de la materia prima se redactan preguntas listas para experimentar, distinguiendo entre preguntas impulsadas por creencias (Belief-led), que ponen a prueba una premisa concreta, y preguntas exploratorias, que recopilan conocimiento donde aún no existe una creencia previa.
+
+**Preguntas Belief-led (prueban una creencia o premisa)**
+
+- **Q-01:** ¿Un asistente guiado de vinculación del primer dispositivo, mostrado tras el registro, incrementa el porcentaje de propietarios nuevos que vinculan al menos un dispositivo durante su primera semana? *(deriva de A-01, G-01, I-01)*
+- **Q-02:** ¿Las alertas personalizables de consumo y estado de dispositivos incrementan la tasa de retorno semanal de los propietarios a la plataforma? *(deriva de A-02, A-04, G-05, I-02, C-01)*
+- **Q-03:** ¿Ofrecer una prueba gratuita de 14 días del plan Professional incrementa el porcentaje de constructores registrados que contratan una suscripción de pago dentro de sus primeros 30 días? *(deriva de A-03, G-04, I-03, C-04)*
+- **Q-04:** ¿Ofrecer plantillas de escenas predefinidas incrementa el porcentaje de propietarios que activan al menos una escena durante su primer mes de uso? *(deriva de I-05, C-03)*
+- **Q-05:** ¿La ayuda contextual en las pantallas de vinculación de dispositivos y suscripciones reduce el porcentaje de usuarios que abren una solicitud de soporte durante sus primeros 14 días? *(deriva de A-05, I-04, C-02)*
+
+**Preguntas exploratorias (recopilan conocimiento donde no hay creencia previa)**
+
+- **Q-06:** ¿En qué paso concreto del flujo registro → creación de perfil → vinculación de dispositivo → primer uso del panel se produce el mayor abandono de los propietarios? *(deriva de G-02)*
+- **Q-07:** ¿Qué módulos del panel de control (energía, temperatura, agua, Live Energy, estado del sistema) son los más consultados por cada segmento y con qué frecuencia? *(deriva de G-03)*
+
+**Técnica de apoyo (5 W + 1 H)**
+
+Para descubrir premisas ocultas y asegurar que cada pregunta sea concreta y medible, el equipo interrogó cada pregunta con la técnica 5 W + 1 H. A continuación se muestra su aplicación sobre las preguntas de mayor prioridad:
+
+| Dimensión | Q-01 (Vinculación del primer dispositivo) | Q-03 (Prueba gratuita Professional) |
+|---|---|---|
+| **Who** (¿qué segmento?) | Propietarios recién registrados. | Constructores, arquitectos e ingenieros recién registrados. |
+| **What** (¿qué comportamiento?) | Vincular al menos un dispositivo IoT. | Contratar una suscripción de pago. |
+| **Where** (¿en qué pantalla o flujo?) | Al finalizar el paso 2 del registro de propietario y en el modal "Add Device". | Módulo de Gestión de Suscripciones. |
+| **When** (¿en qué momento del ciclo de uso?) | Durante los primeros 7 días desde el registro. | Durante los primeros 30 días desde el registro. |
+| **Why** (¿por qué importa al negocio?) | Sin un dispositivo vinculado el propietario no recibe valor del panel y es probable que abandone. | La conversión B2B es la principal fuente de ingresos esperada (70 % según los Business Assumptions). |
+| **How** (¿cómo lo mediremos?) | Evento `device_linked` registrado en Firebase/Google Analytics y en el bounded context Devices. | Evento `subscription_purchased` registrado en el bounded context Subscriptions, Plans & Payments. |

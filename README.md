@@ -2978,3 +2978,27 @@ El pipeline de notificaciones es el último eslabón de la observabilidad. Se en
 -   **Integración de Webhooks:** El sistema utiliza _webhooks_ para conectar las plataformas de orquestación y monitoreo (GitHub Actions, Sentry, UptimeRobot) directamente con las herramientas de mensajería del equipo, como **Slack**, **Discord** o **Microsoft Teams**.
 -   **Notificaciones de Despliegue (Pipeline Status):** GitHub Actions envía notificaciones estructuradas al finalizar cada ejecución del pipeline. Si un despliegue falla en CI o CD, se notifica inmediatamente al canal de desarrollo indicando el _commit_ causante, el autor y un enlace directo a los _logs_. Si el despliegue a producción es exitoso, se envía un resumen de la versión liberada.
 -   **Notificaciones de Incidentes:** Cuando el componente de alertas detecta una falla en producción (ej. caída del servicio o excepción crítica en la app móvil), el sistema de notificaciones envía un mensaje de alta prioridad al canal de operaciones. Este mensaje incluye el contexto del error, la cantidad de usuarios afectados, las etiquetas de la versión y accesos directos para asignar y gestionar la resolución del incidente.
+
+<div style="page-break-before: always;"></div>
+
+# **Capítulo VIII: Experiment-Driven Development**
+
+El presente capítulo aplica el enfoque Experiment-Driven Product Development (XDPD) sobre la plataforma IoBuild. Partiendo del estado actual del producto (As-Is), el equipo recopila la materia prima de incertidumbre (suposiciones, brechas de conocimiento, ideas y afirmaciones), la transforma en preguntas listas para experimentar, las prioriza en un Question Backlog y las traduce en Experiment Cards y en hipótesis formales, falsificables y medibles. El objetivo no es asumir que las funcionalidades implementadas aportan valor, sino someter a prueba las hipótesis de valor del negocio definidas en el proceso Lean UX (sección 1.2.2) y generar aprendizaje continuo a partir de la evidencia.
+
+## **8.1. Experiment Planning**
+
+### **8.1.1. As-Is Summary**
+
+Al cierre del Sprint 3, IoBuild cuenta con los siguientes entregables en producción:
+
+| Componente | Estado actual (As-Is) |
+|---|---|
+| **Landing Page** | Publicada en GitHub Pages, con secciones de Hero, Beneficios, Características, Testimonios, Precios, CTA, Sobre Nosotros y FAQ, además de soporte multilenguaje. |
+| **Aplicación Web** | Desplegada en Render. Incluye inicio de sesión, registro diferenciado por rol (Constructor y Propietario, este último en dos pasos), panel de control del propietario con gráficas de consumo de energía, temperatura y agua, telemetría en tiempo real (Live Energy), estado del sistema y unidades, perfil de usuario, vinculación de dispositivos IoT y gestión de suscripciones (Starter, Professional y Enterprise). Para el segmento constructor se implementaron la gestión de proyectos, la gestión de clientes (listado, búsqueda, ordenamiento, alta y edición) y la visualización de dispositivos y su distribución por tipo. |
+| **Aplicación Móvil** | Desarrollada en Flutter, con login, Builder Dashboard (proyectos activos, dispositivos conectados, distribución de dispositivos y tasa de ocupación), perfil editable y listado de proyectos. |
+| **RESTful API** | Backend desplegado con documentación OpenAPI/Swagger y organizado en los bounded contexts IAM, Publishing, Profiles, Devices, Analytics y Subscriptions, Plans & Payments. |
+| **Calidad y DevOps** | Pruebas unitarias, de integración, BDD y de sistema (Capítulo VI); pipelines de integración, entrega y despliegue continuo con GitHub Actions, y monitoreo con Sentry, Google Analytics y Firebase Analytics (Capítulo VII). |
+
+El producto ya materializa la propuesta de valor central de IoBuild: una única plataforma que centraliza la gestión de proyectos inmobiliarios inteligentes para constructoras y el control de los dispositivos del hogar para los propietarios. Sin embargo, la confianza en que estas funcionalidades generan el comportamiento esperado se apoya hasta ahora en las entrevistas realizadas (sección 2.2), en los supuestos Lean UX y en la experiencia del equipo, no en evidencia experimental.
+
+Actualmente el equipo no dispone de datos de uso recolectados de forma sistemática que confirmen, por ejemplo, que los propietarios logran vincular su primer dispositivo sin asistencia, que regresan a la plataforma de forma recurrente, o que los constructores están dispuestos a pagar una suscripción después de conocer el producto. Además, varias funcionalidades planteadas en los Feature Assumptions —alertas personalizables, escenas o ambientes, pruebas de concepto gratuitas— aún no se han construido. Este resumen constituye el punto de partida del trabajo de experimentación, cuyo foco no es proponer nuevas soluciones por sí mismas, sino formular preguntas que reduzcan la incertidumbre sobre el valor real que IoBuild entrega a sus usuarios y al negocio.

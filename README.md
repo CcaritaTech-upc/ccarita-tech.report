@@ -3492,3 +3492,264 @@ Las métricas anteriores se eligieron porque cumplen los siguientes criterios:
 | `screen_view` (con `module_name`) | Google Analytics / Firebase Analytics (automático) | Q-06, Q-07 |
 
 Con estos nueve eventos el equipo cubre las preguntas del ciclo de experimentación sin instrumentar interacciones irrelevantes. El detalle de las propiedades de cada evento y su implementación en la aplicación web y móvil se documenta en el Web and Mobile Tracking Plan (sección 8.2.8).
+
+
+## **8.3. Experimentation**
+
+Esta sección traduce el diseño experimental (sección 8.2) en trabajo concreto para el equipo de desarrollo. Cada elemento To-Be representa la versión **Simplest Useful Thing** de la solución definida en las Experiment Cards (sección 8.1.5): lo mínimo que hay que construir para ejecutar el experimento con la escala calculada, no la funcionalidad final.
+
+Todas las historias se implementan detrás de **feature flags** gestionados con Firebase Remote Config. De este modo, la variante de tratamiento solo se muestra al grupo asignado y puede apagarse de inmediato. El destino de cada historia depende del resultado del experimento:
+
+- **Se rechaza H0:** la funcionalidad se libera para todos los usuarios y su versión completa se incorpora al Product Backlog.
+- **No se rechaza H0:** la funcionalidad se retira y el aprendizaje se documenta para replantear la solución.
+
+### **8.3.1. To-Be User Stories**
+
+Para agrupar las nuevas historias se agregan cuatro épicas a las definidas en la sección 3.2. Las plantillas de escenas se asocian a la épica existente EP04 (Personalización de espacios inteligentes).
+
+| Epic ID | Título | Descripción |
+|---|---|---|
+| EP12 | Experimentación y analítica de producto | Como equipo de producto, queremos asignar variantes y medir el comportamiento de los usuarios, para tomar decisiones basadas en evidencia. |
+| EP13 | Onboarding y autoservicio | Como usuario nuevo, quiero que la plataforma me guíe en mis primeros pasos, para obtener valor sin depender del soporte técnico. |
+| EP14 | Alertas y notificaciones | Como propietario, quiero recibir alertas sobre el consumo y el estado de mis dispositivos, para reaccionar a tiempo sin revisar el panel constantemente. |
+| EP15 | Suscripciones y prueba gratuita | Como constructor, quiero probar las funcionalidades avanzadas antes de pagar, para decidir con confianza qué plan contratar. |
+
+Las historias se identifican a partir de US41 y TS23 para continuar la numeración del proyecto. En cada historia se indica el experimento al que da soporte.
+
+#### User Stories
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US41</td><td>constructor</td><td>Alta</td><td>EP15</td></tr>
+    <tr><th>Title</th><td colspan="3">Activar prueba gratuita del plan Professional</td></tr>
+    <tr><th>Experiment</th><td colspan="3">EC-01 (Q-03) — grupo de tratamiento</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como constructor recién registrado, quiero activar una prueba gratuita de 14 días del plan Professional, para evaluar sus funcionalidades antes de contratar una suscripción de pago.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Visualiza el banner de prueba</strong><br>Dado que el constructor pertenece al grupo de tratamiento de EC-01 y no tiene una suscripción de pago,<br>Cuando ingresa al módulo de Gestión de Suscripciones,<br>Entonces verá un banner que ofrece 14 días gratis del plan Professional.<br><br><strong>Escenario 2: Activa la prueba</strong><br>Dado que el constructor visualiza el banner de prueba gratuita,<br>Cuando presiona "Activar prueba gratuita",<br>Entonces el plan Professional se habilita sin solicitar datos de pago y se muestra la fecha de vencimiento de la prueba.<br><br><strong>Escenario 3: Usuario del grupo de control</strong><br>Dado que el constructor pertenece al grupo de control de EC-01,<br>Cuando ingresa al módulo de Gestión de Suscripciones,<br>Entonces verá el catálogo de planes actual sin el banner de prueba.</td></tr>
+</table>
+
+---
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US42</td><td>constructor</td><td>Alta</td><td>EP15</td></tr>
+    <tr><th>Title</th><td colspan="3">Recibir aviso de fin de prueba y confirmar contratación</td></tr>
+    <tr><th>Experiment</th><td colspan="3">EC-01 (Q-03) — grupo de tratamiento</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como constructor con una prueba gratuita activa, quiero recibir un aviso antes de que termine la prueba y confirmar explícitamente si deseo contratar un plan, para evitar cobros que no autoricé.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Aviso previo al vencimiento</strong><br>Dado que al constructor le quedan 3 días de prueba gratuita,<br>Cuando inicia sesión en la plataforma,<br>Entonces verá un aviso con los días restantes y un acceso directo para elegir un plan.<br><br><strong>Escenario 2: Fin de la prueba sin confirmación</strong><br>Dado que la prueba gratuita del constructor llegó al día 14,<br>Cuando el constructor no ha confirmado la contratación de un plan,<br>Entonces su cuenta vuelve a su estado anterior sin realizar ningún cobro y sus proyectos se conservan.<br><br><strong>Escenario 3: Confirma la contratación</strong><br>Dado que el constructor está en el periodo de prueba o acaba de terminarlo,<br>Cuando selecciona un plan y confirma el pago,<br>Entonces la suscripción se activa y se registra el evento subscription_purchased.</td></tr>
+</table>
+
+---
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US43</td><td>propietario</td><td>Alta</td><td>EP13</td></tr>
+    <tr><th>Title</th><td colspan="3">Vincular el primer dispositivo con un asistente guiado</td></tr>
+    <tr><th>Experiment</th><td colspan="3">EC-02 (Q-01) — grupo de tratamiento</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como propietario recién registrado, quiero que un asistente me guíe paso a paso en la vinculación de mi primer dispositivo, para empezar a usar el panel de control sin conocimientos técnicos.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Inicio del asistente</strong><br>Dado que el propietario pertenece al grupo de tratamiento de EC-02,<br>Cuando finaliza el paso 2 del registro,<br>Entonces verá un asistente de tres pasos: elegir tipo de dispositivo, asignar nombre y unidad, y confirmar la conexión.<br><br><strong>Escenario 2: Vinculación exitosa</strong><br>Dado que el propietario completó los tres pasos del asistente,<br>Cuando el dispositivo responde a la conexión,<br>Entonces se muestra un mensaje de éxito, se registra el evento device_linked y se redirige al panel con el dispositivo visible.<br><br><strong>Escenario 3: Error de conexión</strong><br>Dado que el propietario está en el paso de confirmación,<br>Cuando el dispositivo no responde,<br>Entonces se muestra un mensaje con posibles causas y la opción de reintentar sin perder los datos ingresados.</td></tr>
+</table>
+
+---
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US44</td><td>propietario</td><td>Media</td><td>EP13</td></tr>
+    <tr><th>Title</th><td colspan="3">Omitir y retomar el asistente de vinculación</td></tr>
+    <tr><th>Experiment</th><td colspan="3">EC-02 (Q-01) — grupo de tratamiento</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como propietario, quiero poder omitir el asistente de vinculación y retomarlo después, para configurar mis dispositivos cuando tenga tiempo.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Omite el asistente</strong><br>Dado que el propietario visualiza el asistente de vinculación,<br>Cuando presiona "Hacerlo más tarde",<br>Entonces accede al panel de control y se registra el evento wizard_skipped.<br><br><strong>Escenario 2: Retoma el asistente</strong><br>Dado que el propietario omitió el asistente y no tiene dispositivos vinculados,<br>Cuando ingresa al panel de control,<br>Entonces verá una tarjeta "Vincula tu primer dispositivo" que abre nuevamente el asistente.</td></tr>
+</table>
+
+---
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US45</td><td>propietario</td><td>Alta</td><td>EP14</td></tr>
+    <tr><th>Title</th><td colspan="3">Configurar alertas predefinidas</td></tr>
+    <tr><th>Experiment</th><td colspan="3">EC-03 (Q-02) — grupo de tratamiento</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como propietario, quiero activar alertas de consumo energético elevado y de dispositivo desconectado, para enterarme de situaciones relevantes en mi vivienda sin revisar el panel constantemente.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Visualiza la sección de alertas</strong><br>Dado que el propietario pertenece al grupo de tratamiento de EC-03 y tiene al menos un dispositivo vinculado,<br>Cuando ingresa a la sección Alertas,<br>Entonces verá dos alertas disponibles: consumo sobre umbral y dispositivo desconectado.<br><br><strong>Escenario 2: Configura el umbral de consumo</strong><br>Dado que el propietario activa la alerta de consumo,<br>Cuando ingresa un umbral en kWh y guarda,<br>Entonces la alerta queda activa con el umbral indicado y se registra el evento alert_configured.<br><br><strong>Escenario 3: Umbral inválido</strong><br>Dado que el propietario configura la alerta de consumo,<br>Cuando ingresa un valor vacío, negativo o no numérico,<br>Entonces se muestra un mensaje de validación y la alerta no se guarda.</td></tr>
+</table>
+
+---
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US46</td><td>propietario</td><td>Alta</td><td>EP14</td></tr>
+    <tr><th>Title</th><td colspan="3">Recibir notificaciones push de alertas</td></tr>
+    <tr><th>Experiment</th><td colspan="3">EC-03 (Q-02) — grupo de tratamiento</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como propietario, quiero recibir una notificación push cuando se cumpla una de mis alertas, para reaccionar a tiempo ante un consumo elevado o un dispositivo desconectado.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Se supera el umbral</strong><br>Dado que el propietario tiene activa la alerta de consumo,<br>Cuando el consumo registrado supera el umbral configurado,<br>Entonces recibe una notificación push con el valor alcanzado y se registra el evento alert_received.<br><br><strong>Escenario 2: Abre la notificación</strong><br>Dado que el propietario recibió una notificación de alerta,<br>Cuando toca la notificación,<br>Entonces la aplicación abre el detalle del dispositivo o del consumo correspondiente.<br><br><strong>Escenario 3: Desactiva las notificaciones</strong><br>Dado que el propietario no desea recibir más alertas,<br>Cuando desactiva las notificaciones desde la sección Alertas,<br>Entonces deja de recibir notificaciones push y se registra el cambio como métrica guardrail.</td></tr>
+</table>
+
+---
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US47</td><td>usuario</td><td>Media</td><td>EP13</td></tr>
+    <tr><th>Title</th><td colspan="3">Consultar ayuda contextual en pantallas complejas</td></tr>
+    <tr><th>Experiment</th><td colspan="3">EC-04 (Q-05) — grupo de tratamiento</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como usuario nuevo, quiero ver tooltips y una guía breve en las pantallas de vinculación de dispositivos y de suscripciones, para completar esas tareas sin abrir una solicitud de soporte.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Guía en el primer ingreso</strong><br>Dado que el usuario pertenece al grupo de tratamiento de EC-04,<br>Cuando ingresa por primera vez a "Add Device" o a "Gestión de Suscripciones",<br>Entonces verá una guía breve de tres pasos que puede cerrar en cualquier momento.<br><br><strong>Escenario 2: Consulta un tooltip</strong><br>Dado que el usuario está en una de las pantallas intervenidas,<br>Cuando pasa el cursor o toca el ícono de ayuda junto a un campo,<br>Entonces verá una explicación corta del campo y un enlace a la sección de Ayuda y Soporte.<br><br><strong>Escenario 3: Usuario del grupo de control</strong><br>Dado que el usuario pertenece al grupo de control de EC-04,<br>Cuando ingresa a las mismas pantallas,<br>Entonces verá la interfaz actual sin tooltips ni guía.</td></tr>
+</table>
+
+---
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US48</td><td>propietario</td><td>Media</td><td>EP04</td></tr>
+    <tr><th>Title</th><td colspan="3">Activar una plantilla de escena predefinida</td></tr>
+    <tr><th>Experiment</th><td colspan="3">EC-05 (Q-04) — grupo de tratamiento</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como propietario, quiero activar con un solo toque escenas predefinidas como "Modo noche", "Modo ahorro" o "Salir de casa", para ajustar varios dispositivos a la vez sin configurarlos uno por uno.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Visualiza las plantillas</strong><br>Dado que el propietario pertenece al grupo de tratamiento de EC-05 y tiene al menos dos dispositivos vinculados,<br>Cuando ingresa a la sección Escenas,<br>Entonces verá las tres plantillas disponibles con la lista de dispositivos que modifica cada una.<br><br><strong>Escenario 2: Activa una escena</strong><br>Dado que el propietario visualiza las plantillas,<br>Cuando toca una de ellas,<br>Entonces los dispositivos asociados cambian a su estado predefinido y se registra el evento scene_activated.<br><br><strong>Escenario 3: Falla un dispositivo</strong><br>Dado que el propietario activó una escena,<br>Cuando uno de los dispositivos no responde,<br>Entonces se muestra cuál dispositivo no pudo ajustarse y el resto de la escena se aplica normalmente.</td></tr>
+</table>
+
+---
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US49</td><td>propietario</td><td>Baja</td><td>EP12</td></tr>
+    <tr><th>Title</th><td colspan="3">Responder una encuesta NPS dentro de la aplicación</td></tr>
+    <tr><th>Experiment</th><td colspan="3">EC-05 (Q-04) — métrica secundaria</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como propietario, quiero responder una encuesta breve sobre mi probabilidad de recomendar IoBuild, para compartir mi nivel de satisfacción con la plataforma.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Se muestra la encuesta</strong><br>Dado que el propietario cumple 30 días desde su asignación al experimento,<br>Cuando inicia sesión,<br>Entonces verá una encuesta de una pregunta con una escala de 0 a 10 y un campo opcional de comentario.<br><br><strong>Escenario 2: Responde u omite</strong><br>Dado que el propietario visualiza la encuesta,<br>Cuando envía su respuesta o la cierra,<br>Entonces la encuesta no vuelve a mostrarse en ese ciclo y, si respondió, se registra la puntuación.</td></tr>
+</table>
+
+---
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US50</td><td>miembro del equipo de producto</td><td>Media</td><td>EP12</td></tr>
+    <tr><th>Title</th><td colspan="3">Consultar el panel de resultados de experimentos</td></tr>
+    <tr><th>Experiment</th><td colspan="3">Todos los experimentos; Q-06 y Q-07</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como miembro del equipo de producto, quiero consultar en un panel el avance y las métricas de cada experimento, junto con el embudo de onboarding y el uso por módulo, para decidir con evidencia cuándo cerrar un experimento y qué hacer con su resultado.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Consulta el avance de un experimento</strong><br>Dado que existe un experimento en ejecución,<br>Cuando el miembro del equipo abre el panel de resultados,<br>Entonces verá el tamaño de muestra alcanzado frente al requerido, la métrica principal por variante y las métricas guardrail.<br><br><strong>Escenario 2: Consulta el embudo de onboarding</strong><br>Dado que existen eventos de registro, perfil, vinculación y primer uso del panel,<br>Cuando selecciona el reporte de embudo,<br>Entonces verá la tasa de paso entre etapas para cada segmento.<br><br><strong>Escenario 3: Muestra incompleta</strong><br>Dado que el experimento aún no alcanza la muestra calculada,<br>Cuando el miembro del equipo consulta el resultado,<br>Entonces el panel indica que el resultado aún no es concluyente y no muestra el valor p.</td></tr>
+</table>
+
+---
+
+#### Technical Stories
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS23</td><td>desarrollador</td><td>Alta</td><td>EP12</td></tr>
+    <tr><th>Title</th><td colspan="3">Asignar variantes de experimento con feature flags</td></tr>
+    <tr><th>Experiment</th><td colspan="3">Todos los experimentos</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como desarrollador, quiero asignar a cada usuario elegible una variante (control o tratamiento) mediante Firebase Remote Config, para ejecutar las pruebas A/B de forma aleatoria, estable y reversible.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Asignación aleatoria</strong><br>Dado que un usuario cumple los criterios de elegibilidad de un experimento activo,<br>Cuando se evalúa el feature flag por primera vez,<br>Entonces se le asigna una variante con probabilidad 50/50 y se registra el evento experiment_assigned con experiment_id y variant.<br><br><strong>Escenario 2: Asignación estable</strong><br>Dado que un usuario ya tiene una variante asignada,<br>Cuando vuelve a iniciar sesión desde la web o la app móvil,<br>Entonces recibe la misma variante que se le asignó la primera vez.<br><br><strong>Escenario 3: Exclusión entre experimentos</strong><br>Dado que un usuario está asignado a un experimento incompatible según la matriz de la sección 8.2.6,<br>Cuando se evalúa su elegibilidad para otro experimento,<br>Entonces no se le asigna al segundo experimento.<br><br><strong>Escenario 4: Apagado de emergencia</strong><br>Dado que el equipo desactiva el flag de un experimento,<br>Cuando un usuario del grupo de tratamiento abre la aplicación,<br>Entonces verá la experiencia de control sin necesidad de publicar una nueva versión.</td></tr>
+</table>
+
+---
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS24</td><td>desarrollador</td><td>Alta</td><td>EP12</td></tr>
+    <tr><th>Title</th><td colspan="3">Registrar los eventos mínimos de experimentación</td></tr>
+    <tr><th>Experiment</th><td colspan="3">Todos los experimentos</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como desarrollador, quiero enviar a Google Analytics y Firebase Analytics los eventos definidos en la sección 8.2.7, para calcular las métricas principales, secundarias y guardrail de cada experimento.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Envío de evento</strong><br>Dado que ocurre una acción instrumentada (por ejemplo, device_linked o subscription_purchased),<br>Cuando la acción se completa con éxito,<br>Entonces se envía el evento con un identificador seudónimo del usuario, el rol, la plataforma y la variante asignada.<br><br><strong>Escenario 2: Sin datos personales</strong><br>Dado que se construye el payload de un evento,<br>Cuando se revisan sus propiedades,<br>Entonces el evento no contiene nombre, correo, teléfono ni dirección del usuario.</td></tr>
+</table>
+
+---
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS25</td><td>desarrollador</td><td>Alta</td><td>EP15</td></tr>
+    <tr><th>Title</th><td colspan="3">Gestionar el ciclo de vida de la prueba gratuita</td></tr>
+    <tr><th>Experiment</th><td colspan="3">EC-01 (Q-03)</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como desarrollador, quiero exponer en el bounded context Subscriptions, Plans & Payments un endpoint para iniciar una prueba gratuita y un proceso que la finalice automáticamente, para soportar el flujo de prueba sin cobros automáticos.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Inicia la prueba</strong><br>Dado que se recibe una solicitud POST de inicio de prueba de un constructor elegible sin pruebas previas,<br>Cuando la API procesa la solicitud,<br>Entonces responde con 201 Created y una suscripción en estado TRIAL con fecha de vencimiento a 14 días.<br><br><strong>Escenario 2: Prueba duplicada</strong><br>Dado que el constructor ya utilizó una prueba gratuita,<br>Cuando se recibe una nueva solicitud de inicio,<br>Entonces la API responde con 409 Conflict.<br><br><strong>Escenario 3: Vencimiento</strong><br>Dado que una suscripción en estado TRIAL alcanza su fecha de vencimiento sin confirmación de pago,<br>Cuando se ejecuta el proceso programado diario,<br>Entonces la suscripción pasa a estado EXPIRED sin generar ningún cargo.</td></tr>
+</table>
+
+---
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS26</td><td>desarrollador</td><td>Alta</td><td>EP14</td></tr>
+    <tr><th>Title</th><td colspan="3">Evaluar alertas y enviar notificaciones push</td></tr>
+    <tr><th>Experiment</th><td colspan="3">EC-03 (Q-02)</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como desarrollador, quiero evaluar periódicamente las alertas configuradas contra la telemetría de los dispositivos y enviar notificaciones mediante Firebase Cloud Messaging, para entregar las alertas a los propietarios del grupo de tratamiento.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Condición cumplida</strong><br>Dado que un propietario tiene una alerta activa,<br>Cuando la telemetría cumple la condición de la alerta (consumo sobre umbral o dispositivo sin señal por más de 10 minutos),<br>Entonces se envía una notificación push al token FCM registrado del usuario.<br><br><strong>Escenario 2: Evita notificaciones repetidas</strong><br>Dado que ya se envió una notificación por la misma condición,<br>Cuando la condición se mantiene en las siguientes evaluaciones,<br>Entonces no se envía otra notificación hasta que la condición se normalice y vuelva a cumplirse.</td></tr>
+</table>
+
+---
+
+<table>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS27</td><td>desarrollador</td><td>Media</td><td>EP04</td></tr>
+    <tr><th>Title</th><td colspan="3">Ejecutar plantillas de escenas sobre los dispositivos</td></tr>
+    <tr><th>Experiment</th><td colspan="3">EC-05 (Q-04)</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4">Como desarrollador, quiero exponer en el bounded context Devices un endpoint que aplique una plantilla de escena sobre los dispositivos vinculados de un propietario, para soportar la activación de escenas con un solo toque.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4"><strong>Escenario 1: Aplica la escena</strong><br>Dado que se recibe una solicitud POST de activación de escena con un templateId válido,<br>Cuando la API aplica el estado predefinido a los dispositivos compatibles del propietario,<br>Entonces responde con 200 OK y el resultado por dispositivo (aplicado o fallido).<br><br><strong>Escenario 2: Plantilla inexistente</strong><br>Dado que se recibe una solicitud con un templateId que no existe,<br>Cuando la API valida la solicitud,<br>Entonces responde con 404 Not Found.</td></tr>
+</table>
+
+### **8.3.2. To-Be Product Backlog**
+
+El To-Be Product Backlog reúne las historias de la sección 8.3.1, ordenadas según las oleadas definidas en la sección 8.2.6. Primero se ubican las historias técnicas de infraestructura de experimentación (TS23 y TS24), sin las cuales ningún experimento puede asignar usuarios ni medir resultados. Luego siguen las historias de cada oleada, respetando el orden del Question Backlog (sección 8.1.4).
+
+Se usa la misma escala de story points de la sección 3.3 (1/2/3/5/8). Los sprints continúan la numeración del proyecto a partir del Sprint 4.
+
+| #Orden | User Story ID | Título | Experimento | Oleada | Sprint | Story Points (1/2/3/5/8) |
+|--------|---------------|--------|-------------|--------|--------|--------------------------|
+| 1 | TS23 | Asignar variantes de experimento con feature flags | Todos | Base | 4 | 8 |
+| 2 | TS24 | Registrar los eventos mínimos de experimentación | Todos | Base | 4 | 5 |
+| 3 | TS25 | Gestionar el ciclo de vida de la prueba gratuita | EC-01 | 1 | 4 | 5 |
+| 4 | US41 | Activar prueba gratuita del plan Professional | EC-01 | 1 | 4 | 3 |
+| 5 | US42 | Recibir aviso de fin de prueba y confirmar contratación | EC-01 | 1 | 4 | 3 |
+| 6 | US43 | Vincular el primer dispositivo con un asistente guiado | EC-02 | 1 | 4 | 5 |
+| 7 | US44 | Omitir y retomar el asistente de vinculación | EC-02 | 1 | 4 | 2 |
+| 8 | US50 | Consultar el panel de resultados de experimentos | Todos / Q-06 / Q-07 | 1 | 4 | 5 |
+| 9 | TS26 | Evaluar alertas y enviar notificaciones push | EC-03 | 2 | 5 | 8 |
+| 10 | US45 | Configurar alertas predefinidas | EC-03 | 2 | 5 | 5 |
+| 11 | US46 | Recibir notificaciones push de alertas | EC-03 | 2 | 5 | 3 |
+| 12 | US47 | Consultar ayuda contextual en pantallas complejas | EC-04 | 3 | 6 | 3 |
+| 13 | TS27 | Ejecutar plantillas de escenas sobre los dispositivos | EC-05 | 3 | 6 | 5 |
+| 14 | US48 | Activar una plantilla de escena predefinida | EC-05 | 3 | 6 | 5 |
+| 15 | US49 | Responder una encuesta NPS dentro de la aplicación | EC-05 | 3 | 6 | 2 |
+
+**Resumen por sprint**
+
+| Sprint | Oleada | Elementos | Story Points |
+|---|---|---|:---:|
+| Sprint 4 | Base + Oleada 1 (EC-01, EC-02) | TS23, TS24, TS25, US41, US42, US43, US44, US50 | 36 |
+| Sprint 5 | Oleada 2 (EC-03) | TS26, US45, US46 | 16 |
+| Sprint 6 | Oleada 3 (EC-04, EC-05) | US47, TS27, US48, US49 | 15 |
+| **Total** | | **15 elementos** | **67** |
+
+**Reglas de gestión del backlog**
+
+1. **Las historias de una oleada se priorizan sobre las de la siguiente**, aunque el sprint anterior haya terminado antes de lo previsto. Así se respeta la regla de no superposición de experimentos.
+2. **Al cerrar cada experimento, el backlog se actualiza según su resultado.** Si se rechaza H0, se agregan las historias de la versión completa (por ejemplo, un motor de reglas de alertas o un editor de escenas). Si no se rechaza H0, se agregan historias para retirar la funcionalidad y limpiar sus feature flags.
+3. **Las métricas guardrail pueden reordenar el backlog.** Si alguna muestra un deterioro (por ejemplo, más errores de vinculación en Sentry o un aumento en la desactivación de notificaciones), la corrección correspondiente pasa al primer lugar del sprint en curso.
+4. **Construir no es lanzar.** Que una historia se complete en un sprint no significa que su experimento comience: el feature flag permanece apagado hasta que inicie su oleada. Por ejemplo, US47 se construye en el Sprint 6, pero EC-04 se lanza solo cuando EC-01 haya terminado.
+5. **El resultado de Q-06 y Q-07 alimenta el backlog.** Los puntos de abandono y los módulos poco usados que se identifiquen se convierten en nuevas preguntas para el Question Backlog o en historias de mejora.

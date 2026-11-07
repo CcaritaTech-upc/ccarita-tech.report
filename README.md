@@ -3313,3 +3313,182 @@ Para cada pregunta Belief-led se redacta una hipótesis falsificable, testeable 
 | **Experimento 5 (EC-05 / Q-04) — Plantillas de escenas** | La tasa de adopción de escenas en 30 días del grupo con plantillas predefinidas es mayor que la del grupo de control (p_tratamiento > p_control). | No existe diferencia en la tasa de adopción de escenas entre ambos grupos (p_tratamiento = p_control). | Elevar la adopción de escenas del 25 % al 37 % (+12 pp) en los primeros 30 días. | 60 % de propietarios con al menos una escena en el primer mes y aumento del 25 % en NPS. |
 
 Si al finalizar cada experimento el valor p de la prueba resulta menor que α = 0.05, se rechazará la hipótesis nula y se considerará que existe evidencia estadística a favor de H1. En caso contrario, no se rechazará H0 y el resultado se documentará igualmente como aprendizaje, ya que permite descartar o replantear la solución antes de invertir en su desarrollo completo.
+
+
+### **8.2.5. Scale Calculations and Decisions**
+
+La escala determina cuánta evidencia se necesita para que el resultado de un experimento sea confiable. En IoBuild se define a partir de dos dimensiones:
+
+- **Certeza:** la probabilidad de error que el equipo está dispuesto a aceptar. Se controla con dos parámetros:
+  - **Nivel de significancia (α):** probabilidad de cometer un **error Tipo I** (falso positivo), es decir, concluir que la solución funciona cuando en realidad no lo hace. Se fija en **α = 5 %**.
+  - **Poder estadístico (1 − β):** probabilidad de detectar un efecto que sí existe, evitando el **error Tipo II** (falso negativo), es decir, descartar una solución que en realidad funciona. Se fija en **80 %** (β = 20 %).
+- **Precisión:** la granularidad del cambio que se quiere detectar, representada por el **Efecto Mínimo Detectable (MDE)**. El MDE no es el efecto que se espera obtener, sino la menor diferencia que tendría valor para el negocio. Una diferencia menor al MDE, aunque exista, no justificaría el costo de construir la funcionalidad completa.
+
+**Criterios para fijar los parámetros**
+
+| Parámetro | Valor | Justificación |
+|---|---|---|
+| α (significancia) | 5 % | Estándar en experimentos de producto. Un falso positivo llevaría a invertir sprints completos en una funcionalidad sin valor real, por lo que no se acepta un α mayor. |
+| 1 − β (poder) | 80 % | Equilibrio entre certeza y tamaño de muestra. Subir el poder a 90 % aumentaría la muestra en ~33 %, algo que el volumen actual de usuarios de IoBuild no puede sostener. |
+| Tipo de prueba | Bilateral | Aunque las hipótesis son direccionales, se usa una prueba de dos colas para detectar también efectos negativos (por ejemplo, que el asistente guiado aumente el abandono) y para mantener un criterio conservador. |
+| MDE | +8 pp a +12 pp (−6 pp en EC-04) | Se fijó en función del valor de negocio de cada métrica: debe ser suficiente para acercarse de forma visible a la meta Lean UX relacionada (sección 8.2.1). |
+| Línea base | Estimación del equipo | Ante la falta de datos históricos, se usan estimaciones basadas en benchmarks de productos SaaS e IoT y en las entrevistas. Se recalibrarán con las dos primeras semanas de datos de Google Analytics y Firebase Analytics. |
+
+**Fórmula utilizada**
+
+Todas las métricas principales son proporciones (usuario convierte / no convierte), por lo que se aplica la fórmula del tamaño de muestra para la diferencia de dos proporciones independientes:
+
+```text
+n por grupo = [ Z(1−α/2) · √(2 · p̄ · (1 − p̄)) + Z(1−β) · √(p1 · (1 − p1) + p2 · (1 − p2)) ]² / (p2 − p1)²
+
+donde:  p1 = línea base (control)      p2 = p1 + MDE (tratamiento)
+        p̄  = (p1 + p2) / 2              Z(1−α/2) = 1.96   Z(1−β) = 0.84
+```
+
+**Cálculo de escala por experimento**
+
+| Experimento | Métrica principal | Línea base (p1) | MDE | Meta (p2) | Cambio relativo | n por grupo | n total |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| EC-01 — Prueba gratuita Professional | Conversión a pago en 30 días | 10 % | +8 pp | 18 % | +80 % | 295 | 590 |
+| EC-02 — Asistente guiado de vinculación | Activación en 7 días | 45 % | +12 pp | 57 % | +26.7 % | 272 | 544 |
+| EC-03 — Alertas personalizables | Retorno a 7 días | 40 % | +8 pp | 48 % | +20 % | 604 | 1 208 |
+| EC-04 — Ayuda contextual | Solicitudes de soporte en 14 días | 20 % | −6 pp | 14 % | −30 % | 615 | 1 230 |
+| EC-05 — Plantillas de escenas | Adopción de escenas en 30 días | 25 % | +12 pp | 37 % | +48 % | 232 | 464 |
+
+**Estimación de duración**
+
+La duración se obtiene dividiendo la muestra total entre el flujo semanal de usuarios elegibles y sumando la ventana de observación de la métrica. Los flujos son supuestos iniciales del equipo, que se reemplazarán por el tráfico real medido.
+
+| Experimento | Población elegible | Flujo semanal estimado | Semanas de captación | Ventana de observación | Duración estimada |
+|---|---|:---:|:---:|:---:|:---:|
+| EC-01 | Constructores recién registrados | ~30 | ~20 | 30 días | ~24 semanas |
+| EC-02 | Propietarios recién registrados | ~120 | ~5 | 7 días | ~6 semanas |
+| EC-03 | Propietarios con ≥ 1 dispositivo vinculado (base actual + nuevos) | ~250 | ~5 | 7 días | ~6 semanas |
+| EC-04 | Usuarios nuevos de ambos segmentos | ~150 | ~8 | 14 días | ~10 semanas |
+| EC-05 | Propietarios con ≥ 2 dispositivos vinculados | ~120 | ~4 | 30 días | ~8 semanas |
+
+**Decisiones de escala**
+
+1. **Se mantienen α = 5 % y poder = 80 % en todos los experimentos.** Si falta tráfico, se ajusta el MDE o la duración, nunca la certeza, para no aumentar el riesgo de tomar decisiones de producto con falsos positivos.
+2. **EC-01 tiene una regla de contingencia.** El segmento B2B es pequeño y la duración estimada supera los cinco meses. Si al cabo de 8 semanas el ritmo de captación proyecta más de 16 semanas, el MDE se elevará a **+10 pp (10 % → 20 %)**, lo que reduce la muestra a **199 constructores por grupo (398 en total)**. Esta decisión es aceptable para el negocio, porque una prueba gratuita que mejore la conversión en menos de 10 pp no compensaría el costo de los 14 días de licencia cedidos.
+3. **No se detienen los experimentos antes de alcanzar la muestra calculada** (*no peeking*). Revisar el valor p cada día y detener la prueba en cuanto sea significativo infla la tasa de falsos positivos. Durante la ejecución solo se monitorean métricas de salud (errores, caídas, quejas) y se detiene el experimento únicamente si alguna de ellas indica daño al usuario.
+4. **Las líneas base se recalibran una sola vez**, con los datos de las dos primeras semanas y antes de que inicie la asignación aleatoria. Si la línea base real difiere en más de 5 pp de la estimada, se recalcula el tamaño de muestra con la misma fórmula.
+5. **La asignación es 50/50.** Maximiza el poder estadístico para un tamaño total dado, y ninguna de las variantes de tratamiento implica un riesgo que justifique exponer a menos usuarios.
+
+### **8.2.6. Methods Selection**
+
+La selección de métodos define **cómo** se responderá cada pregunta. El equipo distingue entre el **objeto de investigación** (la pregunta o la hipótesis que se quiere probar, definida en las secciones 8.1.3 y 8.2.1) y el **método** (la técnica con la que se obtiene la evidencia, por ejemplo una prueba A/B o un análisis de embudo). Una misma pregunta podría responderse con varios métodos; el criterio de elección es el **Simplest Useful Thing**: el método más simple que permite alcanzar la escala calculada en la sección 8.2.5 y cumplir las condiciones definidas para cada experimento, con el menor costo de desarrollo posible.
+
+**Métodos considerados**
+
+| Método | Descripción | Cuándo se usa en IoBuild |
+|---|---|---|
+| **Prueba A/B controlada** | Asignación aleatoria de usuarios a una variante de control y una de tratamiento, comparando una métrica principal con una prueba estadística. | Preguntas Belief-led con hipótesis causal y volumen suficiente para alcanzar la muestra. |
+| **Feature flag con Firebase Remote Config** | Mecanismo que activa la variante de tratamiento sin publicar una nueva versión de la app web o móvil. | Soporte técnico de todas las pruebas A/B, para asignar usuarios y revertir el cambio de inmediato si aparece un problema. |
+| **Análisis de embudo (funnel analysis)** | Medición de la proporción de usuarios que avanza entre pasos consecutivos de un flujo, a partir de eventos ya registrados. | Preguntas exploratorias sobre abandono, sin necesidad de construir variantes. |
+| **Analítica descriptiva de uso** | Conteo y frecuencia de eventos por módulo, segmento y periodo. | Preguntas exploratorias sobre qué partes del producto se usan. |
+| **Pruebas de usabilidad moderadas** | Sesiones de 5 a 8 usuarios realizando tareas mientras verbalizan lo que piensan. | Complemento cualitativo para explicar el *por qué* de lo que muestran los datos cuantitativos. |
+
+**Método seleccionado por pregunta**
+
+| Pregunta / Experimento | Método seleccionado | Simplest Useful Thing | Métodos descartados y motivo |
+|---|---|---|---|
+| Q-03 / EC-01 — Prueba gratuita | Prueba A/B con feature flag en el módulo de Gestión de Suscripciones. | Un banner que habilita el plan Professional durante 14 días sin cobro, reutilizando el modelo de planes existente. | *Fake door* (botón "Prueba gratis" sin funcionalidad real): mide intención, pero no conversión a pago, que es lo que se quiere saber. Construir el flujo completo de pruebas de concepto: demasiado costoso antes de validar la hipótesis. |
+| Q-01 / EC-02 — Asistente guiado | Prueba A/B con feature flag al finalizar el registro del propietario. | Una pantalla de tres pasos que reutiliza el modal "Add Device" ya implementado. | Pruebas de usabilidad aisladas: explican la fricción, pero no permiten medir el efecto sobre la tasa de activación con significancia estadística. |
+| Q-02 / EC-03 — Alertas | Prueba A/B con feature flag y notificaciones push mediante Firebase Cloud Messaging. | Dos alertas predefinidas (consumo sobre umbral y dispositivo desconectado), sin motor de reglas. | Motor de reglas configurable: se construirá solo si la hipótesis se confirma. Encuesta de intención de uso: lo que el usuario declara no predice su comportamiento de retorno. |
+| Q-05 / EC-04 — Ayuda contextual | Prueba A/B con feature flag en las pantallas "Add Device" y "Gestión de Suscripciones". | Tooltips y una guía breve de tres pasos, enlazados a la sección de Ayuda y Soporte existente. | Centro de ayuda completo con buscador: alto costo de contenido y desarrollo para una primera validación. |
+| Q-04 / EC-05 — Plantillas de escenas | Prueba A/B con feature flag en el panel del propietario. | Tres plantillas fijas que se activan con un toque sobre los dispositivos ya vinculados. | Editor visual de escenas y rutinas: es la solución final, no la más simple para validar la adopción. |
+| Q-06 — Punto de abandono | Análisis de embudo en Google Analytics / Firebase Analytics, complementado con 5 pruebas de usabilidad moderadas. | Configurar el embudo registro → perfil → vinculación → primer uso del panel con eventos ya instrumentados. | Prueba A/B: no hay una hipótesis previa que comparar; primero se necesita localizar el problema. |
+| Q-07 — Módulos más consultados | Analítica descriptiva de eventos de visualización por módulo y segmento. | Un reporte semanal en Google Analytics con el conteo de vistas por módulo. | Encuestas de preferencia: lo que el usuario declara no siempre coincide con lo que usa. |
+
+**Regla de no superposición de experimentos**
+
+No se ejecutan al mismo tiempo dos o más experimentos sobre el **mismo tema** que puedan exponer a un mismo usuario a ambos, porque sus efectos se mezclarían y no sería posible atribuir el resultado a una sola causa. A partir de las poblaciones y pantallas de cada experimento se identificaron los siguientes conflictos:
+
+| Par de experimentos | Conflicto | Decisión |
+|---|---|---|
+| EC-02 y EC-04 | Ambos actúan sobre usuarios nuevos en la pantalla "Add Device" y ambos buscan facilitar la vinculación del primer dispositivo. | No se ejecutan en paralelo. |
+| EC-01 y EC-04 | Ambos modifican el módulo de Gestión de Suscripciones para constructores nuevos. | No se ejecutan en paralelo. |
+| EC-03 y EC-05 | Ambos buscan aumentar el engagement de propietarios con dispositivos vinculados; las escenas también pueden influir en el retorno semanal. | No se ejecutan en paralelo. |
+| EC-01 y EC-02 | Poblaciones disjuntas (constructores y propietarios) y pantallas distintas. | Pueden ejecutarse en paralelo. |
+| EC-04 y EC-05 | Temas distintos (soporte y personalización) y pantallas distintas. | Pueden ejecutarse en paralelo. |
+
+Con base en esta matriz, los experimentos se organizan en tres oleadas:
+
+| Oleada | Experimentos | Comentario |
+|---|---|---|
+| **Oleada 1** | EC-01 (constructores) + EC-02 (propietarios nuevos) | Atiende las dos preguntas de mayor prioridad del Question Backlog. EC-01 continúa durante las siguientes oleadas por su mayor duración. |
+| **Oleada 2** | EC-03 | Inicia al cerrar EC-02. La asignación se estratifica según el grupo que tuvo cada usuario en EC-02 para neutralizar efectos residuales. |
+| **Oleada 3** | EC-04 + EC-05 | EC-04 inicia solo cuando EC-01 haya terminado, para no compartir la pantalla de suscripciones. |
+
+Las preguntas exploratorias Q-06 y Q-07 se responden con datos pasivos que no alteran la experiencia del usuario, por lo que se analizan de forma continua desde la oleada 1 sin generar conflicto con ninguna prueba A/B.
+
+**Consideraciones éticas**
+
+El principio rector es **no causar daño** a ningún participante, sea del grupo de control o del de tratamiento:
+
+- **El grupo de control nunca recibe menos que el producto actual.** Las variantes solo agregan ayudas o funcionalidades; no se retira nada de lo que los usuarios ya tienen.
+- **No se ocultan alertas críticas de seguridad.** En EC-03 solo se experimenta con alertas de conveniencia (consumo y desconexión). Cualquier alerta asociada a la seguridad física de la vivienda se mostraría a todos los usuarios por igual.
+- **Sin cobros sorpresa.** En EC-01, la prueba gratuita no se convierte automáticamente en un plan de pago: el constructor debe confirmar la contratación de forma explícita al terminar los 14 días.
+- **Transparencia y privacidad.** Los términos de uso y la política de privacidad informan que IoBuild realiza mejoras continuas con datos de uso anonimizados. Los eventos se registran con identificadores seudónimos, sin datos personales, y se tratan conforme a la Ley N.° 29733 de Protección de Datos Personales del Perú.
+- **Reversibilidad.** Gracias a los feature flags, cualquier variante puede apagarse en minutos si las métricas de salud (errores en Sentry, tickets de soporte, desinstalaciones) muestran un deterioro.
+
+### **8.2.7. Data Analytics: Goals, KPIs and Metrics Selection**
+
+La preparación analítica asegura que los datos recolectados sirvan para tomar decisiones. Se aplica el principio de **economía en el rastreo de datos**: solo se instrumentan los eventos necesarios para calcular las métricas seleccionadas, y cada métrica debe ser lo bastante sensible para detectar el MDE definido en la sección 8.2.5. Rastrear "todo por si acaso" aumenta el costo de implementación, el ruido en los análisis y la exposición de datos de los usuarios.
+
+La selección sigue una jerarquía de tres niveles, de lo estratégico a lo operativo:
+
+- **Meta (Goal):** el resultado de negocio que se busca, alineado con los Business Outcomes de Lean UX (sección 1.2.2).
+- **KPI:** el indicador que resume el avance hacia esa meta y que se reporta a los stakeholders.
+- **Métrica:** el valor concreto y medible en cada experimento, calculado a partir de eventos específicos y con un periodo de observación definido.
+
+**Metas y KPIs**
+
+| Meta de negocio | KPI | Valor meta Lean UX | Experimentos que aportan |
+|---|---|---|---|
+| **G1 — Aumentar los ingresos B2B** | Tasa de conversión de constructores a suscripción de pago | 25 % de proyectos piloto convertidos en contratos | EC-01 |
+| **G2 — Activar a los propietarios desde el primer día** | Tasa de activación B2C (≥ 1 dispositivo vinculado en la primera semana) | 70 % de clientes B2C conectando dispositivos en su primera semana | EC-02, Q-06 |
+| **G3 — Retener a los propietarios** | Tasa de retención B2C | 75 % de retención de licencias B2C en el primer año | EC-03, EC-05, Q-07 |
+| **G4 — Reducir los costos de soporte** | Tasa de solicitudes de soporte por usuario nuevo | −30 % de solicitudes de soporte técnico | EC-04 |
+| **G5 — Aumentar la satisfacción** | Net Promoter Score (NPS) | +25 % en NPS | EC-05 |
+
+**Selección de métricas por experimento**
+
+Para cada experimento se elige **una sola métrica principal**, que decide el resultado de la hipótesis, acompañada de métricas secundarias, que ayudan a interpretarlo, y de métricas de control (*guardrail*), que vigilan que la variante no cause daño en otra parte del producto.
+
+| Experimento | Métrica principal (decisión) | Fórmula | Métricas secundarias | Métricas guardrail |
+|---|---|---|---|---|
+| EC-01 | Conversión a pago en 30 días | Constructores con `subscription_purchased` en ≤ 30 días / constructores asignados | Plan contratado; proyectos creados durante la prueba | Tasa de cancelación en los primeros 60 días; ingreso medio por cuenta |
+| EC-02 | Activación en 7 días | Propietarios con `device_linked` en ≤ 7 días / propietarios asignados | Tiempo hasta la primera vinculación; tasa de finalización del asistente | Tasa de abandono del registro; errores de vinculación en Sentry |
+| EC-03 | Retorno a 7 días | Propietarios con ≥ 1 `session_start` entre los días 1 y 7 / propietarios asignados | Sesiones por usuario a la semana; alertas configuradas | Tasa de desactivación de notificaciones; desinstalaciones de la app móvil |
+| EC-04 | Solicitudes de soporte en 14 días | Usuarios con ≥ 1 `support_ticket_created` en ≤ 14 días / usuarios asignados | Tasa de finalización de las tareas de vinculación y cambio de plan | Tiempo promedio en las pantallas intervenidas |
+| EC-05 | Adopción de escenas en 30 días | Propietarios con ≥ 1 `scene_activated` en ≤ 30 días / propietarios asignados | NPS al día 30 | Errores de ejecución de escenas; dispositivos desvinculados |
+| Q-06 | Tasa de paso entre etapas del onboarding | Usuarios que completan la etapa n+1 / usuarios que completan la etapa n | Tiempo entre etapas | — |
+| Q-07 | Frecuencia de uso por módulo | Vistas por módulo / usuarios activos, por segmento y por semana | Duración media por módulo | — |
+
+**Criterios de selección de las métricas**
+
+Las métricas anteriores se eligieron porque cumplen los siguientes criterios:
+
+1. **Sensibilidad:** cada métrica principal responde directamente al cambio introducido. Por ejemplo, en EC-02 se mide la activación en 7 días y no la retención anual, porque el efecto del asistente se manifiesta de inmediato y una métrica tan lejana diluiría la diferencia, que no podría detectarse con la muestra disponible.
+2. **Precisión y ventana fija:** todas las métricas principales son proporciones con un periodo de observación fijo (7, 14 o 30 días desde la asignación). Esto permite comparar grupos de manera justa y aplicar la fórmula de la sección 8.2.5.
+3. **Una métrica de decisión por experimento:** evaluar varias métricas principales a la vez aumenta la probabilidad de encontrar un resultado significativo por azar. Las métricas secundarias solo se usan para interpretar los resultados, no para decidir.
+4. **Accionabilidad:** cada métrica conduce a una decisión clara (escalar la funcionalidad, iterarla o descartarla) y está vinculada a un KPI de negocio.
+5. **Economía de rastreo:** las cinco métricas principales y sus secundarias se calculan con **un conjunto reducido de eventos**, varios de ellos ya disponibles en Google Analytics, Firebase Analytics y en los bounded contexts de la RESTful API (Devices, Subscriptions, Plans & Payments, IAM).
+
+**Eventos mínimos requeridos**
+
+| Evento | Fuente | Métricas que alimenta |
+|---|---|---|
+| `experiment_assigned` (con `experiment_id` y `variant`) | Firebase Remote Config | Denominador de todas las métricas principales |
+| `sign_up_completed` | IAM / Firebase Analytics | Q-06, EC-02, EC-04 |
+| `device_linked` | Devices / Firebase Analytics | EC-02, Q-06 |
+| `session_start` | Firebase Analytics (automático) | EC-03 |
+| `alert_configured`, `alert_received` | Firebase Cloud Messaging / Analytics | EC-03 (secundarias) |
+| `subscription_purchased`, `subscription_cancelled` | Subscriptions, Plans & Payments | EC-01 |
+| `support_ticket_created` | Módulo de Ayuda y Soporte | EC-04 |
+| `scene_activated` | Firebase Analytics | EC-05 |
+| `screen_view` (con `module_name`) | Google Analytics / Firebase Analytics (automático) | Q-06, Q-07 |
+
+Con estos nueve eventos el equipo cubre las preguntas del ciclo de experimentación sin instrumentar interacciones irrelevantes. El detalle de las propiedades de cada evento y su implementación en la aplicación web y móvil se documenta en el Web and Mobile Tracking Plan (sección 8.2.8).

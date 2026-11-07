@@ -285,6 +285,14 @@ Panta Castro, Fabrizio Martin trabajó junto con Axel Ordoñez en el desarrollo 
 [6.1.2. Core Integration Tests](#612-core-integration-tests)<br>
 [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)<br>
 [6.1.4. Core System Tests](#614-core-system-tests)<br>
+[6.2. Static Testing & Verification](#62-static-testing--verification)<br>
+[6.2.1. Static Code Analysis](#621-static-code-analysis)<br>
+[6.2.1.1. Coding Standards & Code Conventions](#6211-coding-standards--code-conventions)<br>
+[6.2.1.2. Code Quality & Code Security](#6212-code-quality--code-security)<br>
+[6.2.2. Reviews](#622-reviews)<br>
+[6.3. Validation Interviews](#63-validation-interviews)<br>
+[6.3.1. Diseño de Entrevistas](#631-diseño-de-entrevistas)<br>
+[6.3.2. Registro de Entrevistas](#632-registro-de-entrevistas)<br>
 
 [Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices)<br>
 [7.1. Continuous Integration](#71-continuous-integration)<br>
@@ -2750,6 +2758,114 @@ Las pruebas de sistema (System / End-to-End Tests) permiten validar el flujo int
 **Como** usuario, **quiero** ingresar mis credenciales (correo y contraseña), **para** acceder a mi cuenta y utilizar las funciones protegidas.
 
 <img src="assets/US10.jpeg" alt="Test US10">
+
+## **6.2. Static Testing & Verification**
+
+La revisión abarcó la aplicación web IoBuild v2, con un frontend en Vue 3 y un backend en ASP.NET Core. Se ejecutaron controles locales sobre el frontend y se inspeccionaron en el código los flujos de sesión, dispositivos y telemetría. La referencia del análisis es la rama `main`, en el [commit `3c7bcfd`](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/commit/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6).
+
+### **6.2.1. Static Code Analysis**
+
+#### **6.2.1.1. Coding Standards & Code Conventions**
+
+Se contrastaron las convenciones de la sección 5.1.3 con el código del repositorio. En los módulos revisados se observan identificadores en inglés y `camelCase` para funciones JavaScript, `PascalCase` para clases y nombres de archivo en `kebab-case` en la mayoría de componentes Vue. Hay excepciones de nomenclatura dentro de un mismo módulo. [Componente `device-control-panel.vue`](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/frontend/src/devices/presentation/components/device-control-panel.vue), [componente `AddCustomDeviceDialog.vue`](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/frontend/src/devices/presentation/components/AddCustomDeviceDialog.vue).
+
+Para la verificación se usaron ESLint 9.39.5 y `eslint-plugin-vue` 10.12.0 en una configuración de revisión separada del repositorio. Se aplicaron `@eslint/js` recomendado, Vue `flat/essential`, los globales del navegador y una advertencia para complejidad ciclomática superior a 15. Se revisaron **117 archivos `.js` y `.vue` de `frontend/src`**. Hubo **49 errores de reglas y 17 advertencias** en **38 archivos**. [Configuración base de Vue para ESLint](https://eslint.vuejs.org/user-guide/).
+
+| Regla | Hallazgos | Acción propuesta |
+|---|---:|---|
+| `no-unused-vars` | 38 errores | Quitar declaraciones sin uso verificando sus llamadas. En `App.vue`, revisar la variable `t` declarada en el script. [Código](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/frontend/src/App.vue#L1-L15) |
+| `no-empty` | 6 errores | Revisar la intención de los bloques vacíos y manejar o documentar los casos esperados. [Ejemplo en el registro de constructor](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/frontend/src/iam/presentation/views/register-builder.vue#L343-L403) |
+| `vue/multi-word-component-names` | 2 errores | Alinear nombres como `login` y `layout` con la convención de componentes Vue. |
+| `vue/no-mutating-props` y `vue/no-ref-as-operand` | 3 errores | Revisar el flujo de datos de `DeviceControlPanel` y leer `projectsLoaded.value` en el conteo de proyectos. [Control de dispositivos](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/frontend/src/devices/presentation/components/device-control-panel.vue#L128-L192), [conteo de proyectos](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/frontend/src/projects/application/project.store.js#L23-L28) |
+| `complexity` | 17 advertencias | Priorizar los flujos con más ramificaciones y probar sus casos de error al refactorizarlos. |
+
+#### **6.2.1.2. Code Quality & Code Security**
+
+**Calidad.** Las funciones `handleRegister` de propietario y constructor registraron complejidades de **42 y 38**, respectivamente, frente al umbral de **15** usado en la revisión. Ambas concentran validación de campos, registro, inicio de sesión y creación del perfil. La revisión manual también identificó la repetición de validaciones de correo y contraseña en ambos formularios. Se propone reutilizar esas validaciones y conservar por separado las reglas propias de cada rol, como la asignación previa de una unidad al propietario. [Registro de propietario](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/frontend/src/iam/presentation/views/register-owner.vue#L423-L576), [registro de constructor](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/frontend/src/iam/presentation/views/register-builder.vue#L361-L523).
+
+**Seguridad de dependencias.** Se ejecutaron estos comandos desde `frontend` con npm 11.19.1 el 7 de noviembre de 2026. Ambos devolvieron código de salida `1` por los avisos detectados en el archivo de versiones fijadas.
+
+```bash
+npm audit --package-lock-only --json
+npm audit --omit=dev --package-lock-only --json
+```
+
+| Alcance | Críticos | Altos | Moderados | Total |
+|---|---:|---:|---:|---:|
+| Árbol completo | 1 | 18 | 8 | 27 |
+| Árbol sin dependencias de desarrollo | 0 | 11 | 1 | 12 |
+
+El aviso crítico se asoció a `proxy-addr` 2.0.7, dependencia de desarrollo que llega a través de `json-server` y Express. En el árbol sin dependencias de desarrollo, `axios`, `vue` y `vue-i18n` figuraron entre los paquetes directos con alertas altas. Estos resultados describen el árbol de dependencias analizado. Para priorizar la corrección se debe comprobar qué código afectado se usa en la aplicación, actualizar las versiones compatibles, ejecutar las pruebas correspondientes y repetir la auditoría. [Versiones fijadas](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/frontend/package-lock.json), [aviso de `proxy-addr`](https://github.com/advisories/GHSA-jqcg-44mw-7w3h), [documentación de `npm audit`](https://docs.npmjs.com/cli/v11/commands/npm-audit/).
+
+Se consultó también la ejecución de CI asociada al commit. GitHub Actions muestra como completados correctamente los trabajos de CodeQL y auditoría de dependencias. El resultado local de npm corresponde a la consulta indicada arriba. El análisis del backend en esta revisión se apoyó en la inspección de código y en el estado de CI. [CodeQL](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/actions/runs/37359763317/job/111931121093), [auditoría de dependencias](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/actions/runs/37359763317/job/111931120953).
+
+### **6.2.2. Reviews**
+
+Se realizó una revisión estática del código de los recorridos críticos. Para cada caso se dejó la referencia al código, el efecto esperado del defecto y una comprobación que permite cerrar el hallazgo.
+
+| ID y prioridad | Hallazgo y efecto | Corrección propuesta y verificación | Estado |
+|---|---|---|---|
+| RV-01 · Alta | **Origen de la telemetría.** La API admite telemetría HTTP sin autenticar al emisor. El servicio actualiza el estado y guarda las lecturas cuando el dispositivo existe. Esto permite que mediciones de origen no verificado afecten el panel. [Ruta](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/backend/src/IoBuild.Api/Devices/Interfaces/REST/DevicesEndpoints.cs#L121-L126), [servicio](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/backend/src/IoBuild.Api/Devices/Application/Internal/CommandServices/DeviceTelemetryService.cs#L50-L79) | Autenticar al emisor de la integración y comprobar su autorización sobre el dispositivo. Probar que un mensaje sin credenciales se rechaza sin alterar el estado ni guardar lecturas. | Pendiente |
+| RV-02 · Alta | **Proyecto al editar un dispositivo.** La API verifica acceso al dispositivo antes de editarlo. Luego toma `ProjectId` de la solicitud sin comprobar el acceso al proyecto de destino, lo que puede dejar el dispositivo asociado a un proyecto ajeno. [Autorización](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/backend/src/IoBuild.Api/Devices/Interfaces/REST/DevicesEndpoints.cs#L14-L31), [edición](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/backend/src/IoBuild.Api/Devices/Interfaces/REST/DevicesEndpoints.cs#L118) | Validar en el servidor el acceso al proyecto de destino y la consistencia con la unidad asignada. Probar con dos cuentas constructoras que el dispositivo conserva su proyecto ante una solicitud de reasignación a un proyecto ajeno. | Pendiente |
+| RV-03 · Media | **Recuperación de sesión.** El enrutador convierte el perfil guardado en el navegador con `JSON.parse` sin manejar errores en el control principal. Si el token sigue presente y el perfil guardado está dañado, la navegación puede quedar interrumpida. [Control de navegación](https://github.com/CcaritaTech-upc/ccarita-tech.webapp/blob/3c7bcfd2bdaec9ac54f1f64f0e9e3d7bf331e5c6/frontend/src/router.js#L91-L131) | Reutilizar una lectura segura de la sesión y redirigir al inicio de sesión cuando los datos sean inválidos. Probar la recarga con un token presente y un perfil guardado en un formato inválido. | Pendiente |
+
+## **6.3. Validation Interviews**
+
+### **6.3.1. Diseño de Entrevistas**
+
+Las sesiones buscan comprobar si las personas de cada segmento entienden la propuesta de la página de presentación y pueden realizar tareas de su rol en la aplicación web. Se propone una muestra de **tres arquitectos o ingenieros civiles y tres propietarios de departamentos**, con 15 a 20 minutos por sesión. El entorno de prueba debe tener una cuenta de constructor con suscripción activa y proyectos de ejemplo, y una cuenta de propietario con una unidad asignada, dispositivos simulados y datos de consumo. Para una prueba de registro, se prepara además un correo de prueba con una invitación válida. [Página de presentación](https://ccaritatech-upc.github.io/ccarita-tech.website/).
+
+En cada sesión, el moderador solicita permiso para grabar, presenta el objetivo de la tarea e invita a pensar en voz alta. Registra el tiempo de cada tarea, si se completó de forma autónoma, con ayuda o quedó pendiente, y el punto donde surgió la dificultad. Las tareas de planes terminan en la comparación y las de dispositivos se realizan en la unidad de prueba.
+
+| Segmento | Tarea para el participante | Qué se observa | Pregunta de seguimiento |
+|---|---|---|---|
+| Ambos | Explora la página inicial y explica qué podrías hacer con IoBuild. Encuentra dónde iniciar el acceso a la plataforma. | Identifica el beneficio para su rol y el punto de entrada. | ¿Qué información te faltó para decidir si lo usarías? |
+| Arquitectos e ingenieros | Ubica el proyecto de prueba, identifica su estado y encuentra la información de sus unidades. | Localiza el proyecto y distingue su estado del nivel de ocupación. | ¿Qué dato te ayudaría a detectar que el proyecto requiere atención? |
+| Arquitectos e ingenieros | Busca al cliente de prueba, comprueba su proyecto asociado y compara los planes Starter y Professional. | Encuentra el cliente, confirma la asociación y explica qué diferencia entre los planes influye en su decisión. | ¿En qué momento necesitarías conocer la cantidad de dispositivos que admite el plan? |
+| Propietarios | Completa el registro con el correo de prueba asignado a tu departamento e identifica tu unidad al ingresar. | Entiende la relación entre la invitación y su unidad. Si prueba un correo sin asignación, interpreta el mensaje y sabe cómo continuar. | ¿A quién contactarías si la aplicación indica que tu correo todavía no tiene una unidad asignada? |
+| Propietarios | Entra a tu unidad de prueba, añade una luz inteligente de ejemplo y comprueba que aparezca en la lista. | Selecciona el tipo y la unidad correctos y reconoce la confirmación del registro. | ¿Cómo distinguirías que la luz está registrada de que ya se encuentra en línea? |
+| Propietarios | Abre el panel, elige un dispositivo con datos y consulta su consumo de las últimas 24 horas. | Identifica el dispositivo, el rango y el significado de las unidades. | ¿Qué información te ayudaría a distinguir un consumo de cero de una falta de lecturas? |
+
+El cierre recoge tres preguntas comunes. ¿Qué tarea te resultó más fácil? ¿En qué momento dudaste sobre cómo continuar? ¿Qué tendría que quedar más claro para que usaras IoBuild en tu proyecto o departamento?
+
+### **6.3.2. Registro de Entrevistas**
+
+
+#### Segmento 1 · Arquitectos e ingenieros civiles
+
+**SIM-B01 · Daniela Paredes Salvatierra, 34 años, Jesús María.** Arquitecta que coordina el diseño de edificios multifamiliares. En el escenario, identifica en la página inicial que IoBuild centraliza la gestión de proyectos y dispositivos. Abre el proyecto de prueba, pero duda si el porcentaje de la tarjeta indica avance de obra u ocupación. Pregunta «¿Este porcentaje me dice cuántos departamentos están ocupados o cuánto ha avanzado el proyecto?» y «¿Dónde verifico qué unidades se incluyeron en el proyecto?». En una sesión real se observaría si puede distinguir ambos indicadores sin ayuda.
+
+[Enlace simulado SIM-B01](https://iobuild-entrevistas.sharepoint.com/sites/IoBuild/Shared%20Documents/Entrevistas/SIM-B01.mp4)
+
+**SIM-B02 · Luis Huamán Valdivia, 42 años, Santiago de Surco.** Ingeniero civil encargado de la entrega de unidades. En el escenario, busca un cliente de prueba y confirma el proyecto asociado desde la lista. Al encontrar el estado de cuenta, pregunta «¿El estado activo se refiere al cliente o al proyecto?» y «¿Cómo compruebo a qué departamento pertenece antes de cerrar una entrega?». En una sesión real se observaría qué columna usa primero y si necesita abrir el detalle para confirmar la asociación.
+
+[Enlace simulado SIM-B02](https://iobuild-entrevistas.sharepoint.com/sites/IoBuild/Shared%20Documents/Entrevistas/SIM-B02.mp4)
+
+**SIM-B03 · Camila Rojas Mendieta, 29 años, San Miguel.** Arquitecta que evalúa herramientas para una constructora pequeña. En el escenario, localiza los planes desde la página de presentación y abre el comparador en la aplicación. Pregunta «Si mi proyecto tendrá 80 dispositivos, ¿en qué plan entro?» y «¿Dónde reviso qué cambia si paso de Starter a Professional?». En una sesión real se observaría si encuentra el límite de dispositivos y puede justificar su elección.
+
+[Enlace simulado SIM-B03](https://iobuild-entrevistas.sharepoint.com/sites/IoBuild/Shared%20Documents/Entrevistas/SIM-B03.mp4)
+
+#### Segmento 2 · Propietarios de departamentos
+
+**SIM-P01 · Valeria Núñez Carrasco, 31 años, Pueblo Libre.** Propietaria que quiere incorporar una luz inteligente. En el escenario, entra a la unidad de prueba, elige el tipo de dispositivo y lo guarda con un nombre que reconoce. Pregunta «¿Cómo sé que la luz quedó vinculada a mi departamento?» y «Si aparece fuera de línea después de guardarla, ¿ya quedó registrada o tengo que volver a añadirla?». En una sesión real se observaría si distingue el registro del dispositivo de su conectividad.
+
+[Enlace simulado SIM-P01](https://iobuild-entrevistas.sharepoint.com/sites/IoBuild/Shared%20Documents/Entrevistas/SIM-P01.mp4)
+
+**SIM-P02 · Sergio Meza Calderón, 38 años, Magdalena del Mar.** Propietario interesado en entender el consumo del aire acondicionado. En el escenario, abre el panel, elige el dispositivo y alterna entre la lectura reciente y el historial de 24 horas. Pregunta «¿El dato en kWh es de este equipo o de todo el departamento?» y «Si no veo puntos en el gráfico, ¿el consumo fue cero o todavía no hay lecturas?». En una sesión real se observaría si el dispositivo seleccionado, la unidad de medida y el período son visibles durante toda la consulta.
+
+[Enlace simulado SIM-P02](https://iobuild-entrevistas.sharepoint.com/sites/IoBuild/Shared%20Documents/Entrevistas/SIM-P02.mp4)
+
+**SIM-P03 · Mónica Salcedo Villanueva, 46 años, Lince.** Propietaria que recibió acceso a su unidad por parte de la constructora. En el escenario, intenta iniciar el registro con un correo de prueba sin asignación y luego usa el correo invitado. Pregunta «¿Por qué no puedo continuar con mi otro correo?» y «¿Dónde confirmo que la unidad que aparece es la mía?». En una sesión real se observaría si el mensaje de registro le permite identificar a quién pedir ayuda y si reconoce la unidad al ingresar.
+
+[Enlace simulado SIM-P03](https://iobuild-entrevistas.sharepoint.com/sites/IoBuild/Shared%20Documents/Entrevistas/SIM-P03.mp4)
+
+#### Formato para el registro de campo
+
+Al realizar las sesiones, se completará una fila por participante y se resumirán las tareas, dificultades y preguntas observadas. El video consolidado se compartirá mediante un enlace privado de Microsoft Stream, con un cuadro representativo y el minuto de inicio de cada entrevista.
+
+| Código | Nombres y apellidos | Edad y distrito | Segmento | Tareas y resultado | Resumen de observaciones | Captura | Enlace de Stream | Inicio y duración |
+|---|---|---|---|---|---|---|---|---|
+| V-01 a V-06 | Por registrar | Por registrar | Por registrar | Por registrar | Por registrar | Pendiente | Pendiente | Pendiente |
 
 <div style="page-break-after: always;"></div>
 

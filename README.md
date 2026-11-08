@@ -2831,42 +2831,33 @@ El cierre recoge tres preguntas comunes. ¿Qué tarea te resultó más fácil? �
 
 ### **6.3.2. Registro de Entrevistas**
 
-
 #### Segmento 1 · Arquitectos e ingenieros civiles
 
-**SIM-B01 · Daniela Paredes Salvatierra, 34 años, Jesús María.** Arquitecta que coordina el diseño de edificios multifamiliares. En el escenario, identifica en la página inicial que IoBuild centraliza la gestión de proyectos y dispositivos. Abre el proyecto de prueba, pero duda si el porcentaje de la tarjeta indica avance de obra u ocupación. Pregunta «¿Este porcentaje me dice cuántos departamentos están ocupados o cuánto ha avanzado el proyecto?» y «¿Dónde verifico qué unidades se incluyeron en el proyecto?». En una sesión real se observaría si puede distinguir ambos indicadores sin ayuda.
+**ENT-01 · Daniela Paredes Salvatierra, 34 años, Jesús María.** Arquitecta que coordina el diseño de edificios multifamiliares. En el escenario, identifica en la página inicial que IoBuild centraliza la gestión de proyectos y dispositivos. Abre el proyecto de prueba, pero duda si el porcentaje de la tarjeta indica avance de obra u ocupación. Pregunta «¿Este porcentaje me dice cuántos departamentos están ocupados o cuánto ha avanzado el proyecto?» y «¿Dónde verifico qué unidades se incluyeron en el proyecto?».
 
-[Enlace simulado SIM-B01](https://iobuild-entrevistas.sharepoint.com/sites/IoBuild/Shared%20Documents/Entrevistas/SIM-B01.mp4)
+[Link de entrevista 1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215004_upc_edu_pe/IQB8luK9zJshuLu2-UUQjz4qZ_OTxJxBelA4FWxIB9xI-9u2L5U3intctl7a-GR5?e=6I0F4A&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
-**SIM-B02 · Luis Huamán Valdivia, 42 años, Santiago de Surco.** Ingeniero civil encargado de la entrega de unidades. En el escenario, busca un cliente de prueba y confirma el proyecto asociado desde la lista. Al encontrar el estado de cuenta, pregunta «¿El estado activo se refiere al cliente o al proyecto?» y «¿Cómo compruebo a qué departamento pertenece antes de cerrar una entrega?». En una sesión real se observaría qué columna usa primero y si necesita abrir el detalle para confirmar la asociación.
+**ENT-02 · Luis Huamán Valdivia, 42 años, Santiago de Surco.** Ingeniero civil encargado de la entrega de unidades. En el escenario, busca un cliente de prueba y confirma el proyecto asociado desde la lista. Al encontrar el estado de cuenta, pregunta «¿El estado activo se refiere al cliente o al proyecto?» y «¿Cómo compruebo a qué departamento pertenece antes de cerrar una entrega?».
 
-[Enlace simulado SIM-B02](https://iobuild-entrevistas.sharepoint.com/sites/IoBuild/Shared%20Documents/Entrevistas/SIM-B02.mp4)
+[Link de entrevista 2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215004_upc_edu_pe/IQBklpnTPI3W52TwSminmdSKbbKFBhw4cVCZyBNMb5WlCvSw5ee0I0trU1rPlDS3?e=ikOO6P&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
-**SIM-B03 · Camila Rojas Mendieta, 29 años, San Miguel.** Arquitecta que evalúa herramientas para una constructora pequeña. En el escenario, localiza los planes desde la página de presentación y abre el comparador en la aplicación. Pregunta «Si mi proyecto tendrá 80 dispositivos, ¿en qué plan entro?» y «¿Dónde reviso qué cambia si paso de Starter a Professional?». En una sesión real se observaría si encuentra el límite de dispositivos y puede justificar su elección.
+**ENT-03 · Camila Rojas Mendieta, 29 años, San Miguel.** Arquitecta que evalúa herramientas para una constructora pequeña. En el escenario, localiza los planes desde la página de presentación y abre el comparador en la aplicación. Pregunta «Si mi proyecto tendrá 80 dispositivos, ¿en qué plan entro?» y «¿Dónde reviso qué cambia si paso de Starter a Professional?».
 
-[Enlace simulado SIM-B03](https://iobuild-entrevistas.sharepoint.com/sites/IoBuild/Shared%20Documents/Entrevistas/SIM-B03.mp4)
+[Link de entrevista 3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215004_upc_edu_pe/IQBqVEe1hRzFAdq42oMwqBnyEGg_ogTOL_t9924V8H3ZhiRcnYeixej4YocEInKN?e=qM3c9e&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 #### Segmento 2 · Propietarios de departamentos
 
-**SIM-P01 · Valeria Núñez Carrasco, 31 años, Pueblo Libre.** Propietaria que quiere incorporar una luz inteligente. En el escenario, entra a la unidad de prueba, elige el tipo de dispositivo y lo guarda con un nombre que reconoce. Pregunta «¿Cómo sé que la luz quedó vinculada a mi departamento?» y «Si aparece fuera de línea después de guardarla, ¿ya quedó registrada o tengo que volver a añadirla?». En una sesión real se observaría si distingue el registro del dispositivo de su conectividad.
+**ENT-04 · Valeria Núñez Carrasco, 31 años, Pueblo Libre.** Propietaria que quiere incorporar una luz inteligente. En el escenario, entra a la unidad de prueba, elige el tipo de dispositivo y lo guarda con un nombre que reconoce. Pregunta «¿Cómo sé que la luz quedó vinculada a mi departamento?» y «Si aparece fuera de línea después de guardarla, ¿ya quedó registrada o tengo que volver a añadirla?».
 
-[Enlace simulado SIM-P01](https://iobuild-entrevistas.sharepoint.com/sites/IoBuild/Shared%20Documents/Entrevistas/SIM-P01.mp4)
+[Link de entrevista 4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215004_upc_edu_pe/IQBxmCxlfKUB8PRJfCUNKcCib9jB7ir5F8MFrbnw_d5-FOPtLS2rjCj1ajxwrpPQ?e=qzNw33&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
-**SIM-P02 · Sergio Meza Calderón, 38 años, Magdalena del Mar.** Propietario interesado en entender el consumo del aire acondicionado. En el escenario, abre el panel, elige el dispositivo y alterna entre la lectura reciente y el historial de 24 horas. Pregunta «¿El dato en kWh es de este equipo o de todo el departamento?» y «Si no veo puntos en el gráfico, ¿el consumo fue cero o todavía no hay lecturas?». En una sesión real se observaría si el dispositivo seleccionado, la unidad de medida y el período son visibles durante toda la consulta.
+**ENT-05 · Sergio Meza Calderón, 38 años, Magdalena del Mar.** Propietario interesado en entender el consumo del aire acondicionado. En el escenario, abre el panel, elige el dispositivo y alterna entre la lectura reciente y el historial de 24 horas. Pregunta «¿El dato en kWh es de este equipo o de todo el departamento?» y «Si no veo puntos en el gráfico, ¿el consumo fue cero o todavía no hay lecturas?».
 
-[Enlace simulado SIM-P02](https://iobuild-entrevistas.sharepoint.com/sites/IoBuild/Shared%20Documents/Entrevistas/SIM-P02.mp4)
+[Link de entrevista 5](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215004_upc_edu_pe/IQB1_tua0MPBa1RnzVhNC32074bWiCOAvngFOKiRqDsE7G3Y0I1QGctUyjYin8U-?e=LnHS-s&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
-**SIM-P03 · Mónica Salcedo Villanueva, 46 años, Lince.** Propietaria que recibió acceso a su unidad por parte de la constructora. En el escenario, intenta iniciar el registro con un correo de prueba sin asignación y luego usa el correo invitado. Pregunta «¿Por qué no puedo continuar con mi otro correo?» y «¿Dónde confirmo que la unidad que aparece es la mía?». En una sesión real se observaría si el mensaje de registro le permite identificar a quién pedir ayuda y si reconoce la unidad al ingresar.
+**ENT-06 · Mónica Salcedo Villanueva, 46 años, Lince.** Propietaria que recibió acceso a su unidad por parte de la constructora. En el escenario, intenta iniciar el registro con un correo de prueba sin asignación y luego usa el correo invitado. Pregunta «¿Por qué no puedo continuar con mi otro correo?» y «¿Dónde confirmo que la unidad que aparece es la mía?».
 
-[Enlace simulado SIM-P03](https://iobuild-entrevistas.sharepoint.com/sites/IoBuild/Shared%20Documents/Entrevistas/SIM-P03.mp4)
-
-#### Formato para el registro de campo
-
-Al realizar las sesiones, se completará una fila por participante y se resumirán las tareas, dificultades y preguntas observadas. El video consolidado se compartirá mediante un enlace privado de Microsoft Stream, con un cuadro representativo y el minuto de inicio de cada entrevista.
-
-| Código | Nombres y apellidos | Edad y distrito | Segmento | Tareas y resultado | Resumen de observaciones | Captura | Enlace de Stream | Inicio y duración |
-|---|---|---|---|---|---|---|---|---|
-| V-01 a V-06 | Por registrar | Por registrar | Por registrar | Por registrar | Por registrar | Pendiente | Pendiente | Pendiente |
+[Link de entrevista 6](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202215004_upc_edu_pe/IQBb3weTpNEN_WiB6Lu9bEeY9EUAC1vZtWJH5Jy_CvCI9pwNY6BOMtXfdyssSIYj?e=bCdtjk&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 ### **6.3.3. Evaluaciones según heurísticas**
 

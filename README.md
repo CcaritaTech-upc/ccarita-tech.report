@@ -3514,13 +3514,13 @@ Para agrupar las nuevas historias se agregan cuatro épicas a las definidas en l
 | EP14 | Alertas y notificaciones | Como propietario, quiero recibir alertas sobre el consumo y el estado de mis dispositivos, para reaccionar a tiempo sin revisar el panel constantemente. |
 | EP15 | Suscripciones y prueba gratuita | Como constructor, quiero probar las funcionalidades avanzadas antes de pagar, para decidir con confianza qué plan contratar. |
 
-Las historias se identifican a partir de US41 y TS23 para continuar la numeración del proyecto. En cada historia se indica el experimento al que da soporte.
+Las historias se identifican a partir de US11 y TS06, continuando la numeración de las User Stories (US01–US10) y Technical Stories (TS01–TS05) definidas en la sección 3.2. En cada historia se indica el experimento al que da soporte.
 
 #### User Stories
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US41</td><td>constructor</td><td>Alta</td><td>EP15</td></tr>
+    <tr><td>US11</td><td>constructor</td><td>Alta</td><td>EP15</td></tr>
     <tr><th>Title</th><td colspan="3">Activar prueba gratuita del plan Professional</td></tr>
     <tr><th>Experiment</th><td colspan="3">EC-01 (Q-03) — grupo de tratamiento</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3533,7 +3533,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US42</td><td>constructor</td><td>Alta</td><td>EP15</td></tr>
+    <tr><td>US12</td><td>constructor</td><td>Alta</td><td>EP15</td></tr>
     <tr><th>Title</th><td colspan="3">Recibir aviso de fin de prueba y confirmar contratación</td></tr>
     <tr><th>Experiment</th><td colspan="3">EC-01 (Q-03) — grupo de tratamiento</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3546,7 +3546,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US43</td><td>propietario</td><td>Alta</td><td>EP13</td></tr>
+    <tr><td>US13</td><td>propietario</td><td>Alta</td><td>EP13</td></tr>
     <tr><th>Title</th><td colspan="3">Vincular el primer dispositivo con un asistente guiado</td></tr>
     <tr><th>Experiment</th><td colspan="3">EC-02 (Q-01) — grupo de tratamiento</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3559,7 +3559,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US44</td><td>propietario</td><td>Media</td><td>EP13</td></tr>
+    <tr><td>US14</td><td>propietario</td><td>Media</td><td>EP13</td></tr>
     <tr><th>Title</th><td colspan="3">Omitir y retomar el asistente de vinculación</td></tr>
     <tr><th>Experiment</th><td colspan="3">EC-02 (Q-01) — grupo de tratamiento</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3572,7 +3572,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US45</td><td>propietario</td><td>Alta</td><td>EP14</td></tr>
+    <tr><td>US15</td><td>propietario</td><td>Alta</td><td>EP14</td></tr>
     <tr><th>Title</th><td colspan="3">Configurar alertas predefinidas</td></tr>
     <tr><th>Experiment</th><td colspan="3">EC-03 (Q-02) — grupo de tratamiento</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3585,7 +3585,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US46</td><td>propietario</td><td>Alta</td><td>EP14</td></tr>
+    <tr><td>US16</td><td>propietario</td><td>Alta</td><td>EP14</td></tr>
     <tr><th>Title</th><td colspan="3">Recibir notificaciones push de alertas</td></tr>
     <tr><th>Experiment</th><td colspan="3">EC-03 (Q-02) — grupo de tratamiento</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3598,7 +3598,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US47</td><td>usuario</td><td>Media</td><td>EP13</td></tr>
+    <tr><td>US17</td><td>usuario</td><td>Media</td><td>EP13</td></tr>
     <tr><th>Title</th><td colspan="3">Consultar ayuda contextual en pantallas complejas</td></tr>
     <tr><th>Experiment</th><td colspan="3">EC-04 (Q-05) — grupo de tratamiento</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3611,7 +3611,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US48</td><td>propietario</td><td>Media</td><td>EP04</td></tr>
+    <tr><td>US18</td><td>propietario</td><td>Media</td><td>EP04</td></tr>
     <tr><th>Title</th><td colspan="3">Activar una plantilla de escena predefinida</td></tr>
     <tr><th>Experiment</th><td colspan="3">EC-05 (Q-04) — grupo de tratamiento</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3624,7 +3624,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US49</td><td>propietario</td><td>Baja</td><td>EP12</td></tr>
+    <tr><td>US19</td><td>propietario</td><td>Baja</td><td>EP12</td></tr>
     <tr><th>Title</th><td colspan="3">Responder una encuesta NPS dentro de la aplicación</td></tr>
     <tr><th>Experiment</th><td colspan="3">EC-05 (Q-04) — métrica secundaria</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3637,7 +3637,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>US50</td><td>miembro del equipo de producto</td><td>Media</td><td>EP12</td></tr>
+    <tr><td>US20</td><td>miembro del equipo de producto</td><td>Media</td><td>EP12</td></tr>
     <tr><th>Title</th><td colspan="3">Consultar el panel de resultados de experimentos</td></tr>
     <tr><th>Experiment</th><td colspan="3">Todos los experimentos; Q-06 y Q-07</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3652,7 +3652,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS23</td><td>desarrollador</td><td>Alta</td><td>EP12</td></tr>
+    <tr><td>TS06</td><td>desarrollador</td><td>Alta</td><td>EP12</td></tr>
     <tr><th>Title</th><td colspan="3">Asignar variantes de experimento con feature flags</td></tr>
     <tr><th>Experiment</th><td colspan="3">Todos los experimentos</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3665,7 +3665,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS24</td><td>desarrollador</td><td>Alta</td><td>EP12</td></tr>
+    <tr><td>TS07</td><td>desarrollador</td><td>Alta</td><td>EP12</td></tr>
     <tr><th>Title</th><td colspan="3">Registrar los eventos mínimos de experimentación</td></tr>
     <tr><th>Experiment</th><td colspan="3">Todos los experimentos</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3678,7 +3678,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS25</td><td>desarrollador</td><td>Alta</td><td>EP15</td></tr>
+    <tr><td>TS08</td><td>desarrollador</td><td>Alta</td><td>EP15</td></tr>
     <tr><th>Title</th><td colspan="3">Gestionar el ciclo de vida de la prueba gratuita</td></tr>
     <tr><th>Experiment</th><td colspan="3">EC-01 (Q-03)</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3691,7 +3691,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS26</td><td>desarrollador</td><td>Alta</td><td>EP14</td></tr>
+    <tr><td>TS09</td><td>desarrollador</td><td>Alta</td><td>EP14</td></tr>
     <tr><th>Title</th><td colspan="3">Evaluar alertas y enviar notificaciones push</td></tr>
     <tr><th>Experiment</th><td colspan="3">EC-03 (Q-02)</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3704,7 +3704,7 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 <table>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS27</td><td>desarrollador</td><td>Media</td><td>EP04</td></tr>
+    <tr><td>TS10</td><td>desarrollador</td><td>Media</td><td>EP04</td></tr>
     <tr><th>Title</th><td colspan="3">Ejecutar plantillas de escenas sobre los dispositivos</td></tr>
     <tr><th>Experiment</th><td colspan="3">EC-05 (Q-04)</td></tr>
     <tr><th colspan="4">Description</th></tr>
@@ -3715,35 +3715,35 @@ Las historias se identifican a partir de US41 y TS23 para continuar la numeraci�
 
 ### **8.3.2. To-Be Product Backlog**
 
-El To-Be Product Backlog reúne las historias de la sección 8.3.1, ordenadas según las oleadas definidas en la sección 8.2.6. Primero se ubican las historias técnicas de infraestructura de experimentación (TS23 y TS24), sin las cuales ningún experimento puede asignar usuarios ni medir resultados. Luego siguen las historias de cada oleada, respetando el orden del Question Backlog (sección 8.1.4).
+El To-Be Product Backlog reúne las historias de la sección 8.3.1, ordenadas según las oleadas definidas en la sección 8.2.6. Primero se ubican las historias técnicas de infraestructura de experimentación (TS06 y TS07), sin las cuales ningún experimento puede asignar usuarios ni medir resultados. Luego siguen las historias de cada oleada, respetando el orden del Question Backlog (sección 8.1.4).
 
 Se usa la misma escala de story points de la sección 3.3 (1/2/3/5/8). Los sprints continúan la numeración del proyecto a partir del Sprint 4.
 
 | #Orden | User Story ID | Título | Experimento | Oleada | Sprint | Story Points (1/2/3/5/8) |
 |--------|---------------|--------|-------------|--------|--------|--------------------------|
-| 1 | TS23 | Asignar variantes de experimento con feature flags | Todos | Base | 4 | 8 |
-| 2 | TS24 | Registrar los eventos mínimos de experimentación | Todos | Base | 4 | 5 |
-| 3 | TS25 | Gestionar el ciclo de vida de la prueba gratuita | EC-01 | 1 | 4 | 5 |
-| 4 | US41 | Activar prueba gratuita del plan Professional | EC-01 | 1 | 4 | 3 |
-| 5 | US42 | Recibir aviso de fin de prueba y confirmar contratación | EC-01 | 1 | 4 | 3 |
-| 6 | US43 | Vincular el primer dispositivo con un asistente guiado | EC-02 | 1 | 4 | 5 |
-| 7 | US44 | Omitir y retomar el asistente de vinculación | EC-02 | 1 | 4 | 2 |
-| 8 | US50 | Consultar el panel de resultados de experimentos | Todos / Q-06 / Q-07 | 1 | 4 | 5 |
-| 9 | TS26 | Evaluar alertas y enviar notificaciones push | EC-03 | 2 | 5 | 8 |
-| 10 | US45 | Configurar alertas predefinidas | EC-03 | 2 | 5 | 5 |
-| 11 | US46 | Recibir notificaciones push de alertas | EC-03 | 2 | 5 | 3 |
-| 12 | US47 | Consultar ayuda contextual en pantallas complejas | EC-04 | 3 | 6 | 3 |
-| 13 | TS27 | Ejecutar plantillas de escenas sobre los dispositivos | EC-05 | 3 | 6 | 5 |
-| 14 | US48 | Activar una plantilla de escena predefinida | EC-05 | 3 | 6 | 5 |
-| 15 | US49 | Responder una encuesta NPS dentro de la aplicación | EC-05 | 3 | 6 | 2 |
+| 1 | TS06 | Asignar variantes de experimento con feature flags | Todos | Base | 4 | 8 |
+| 2 | TS07 | Registrar los eventos mínimos de experimentación | Todos | Base | 4 | 5 |
+| 3 | TS08 | Gestionar el ciclo de vida de la prueba gratuita | EC-01 | 1 | 4 | 5 |
+| 4 | US11 | Activar prueba gratuita del plan Professional | EC-01 | 1 | 4 | 3 |
+| 5 | US12 | Recibir aviso de fin de prueba y confirmar contratación | EC-01 | 1 | 4 | 3 |
+| 6 | US13 | Vincular el primer dispositivo con un asistente guiado | EC-02 | 1 | 4 | 5 |
+| 7 | US14 | Omitir y retomar el asistente de vinculación | EC-02 | 1 | 4 | 2 |
+| 8 | US20 | Consultar el panel de resultados de experimentos | Todos / Q-06 / Q-07 | 1 | 4 | 5 |
+| 9 | TS09 | Evaluar alertas y enviar notificaciones push | EC-03 | 2 | 5 | 8 |
+| 10 | US15 | Configurar alertas predefinidas | EC-03 | 2 | 5 | 5 |
+| 11 | US16 | Recibir notificaciones push de alertas | EC-03 | 2 | 5 | 3 |
+| 12 | US17 | Consultar ayuda contextual en pantallas complejas | EC-04 | 3 | 6 | 3 |
+| 13 | TS10 | Ejecutar plantillas de escenas sobre los dispositivos | EC-05 | 3 | 6 | 5 |
+| 14 | US18 | Activar una plantilla de escena predefinida | EC-05 | 3 | 6 | 5 |
+| 15 | US19 | Responder una encuesta NPS dentro de la aplicación | EC-05 | 3 | 6 | 2 |
 
 **Resumen por sprint**
 
 | Sprint | Oleada | Elementos | Story Points |
 |---|---|---|:---:|
-| Sprint 4 | Base + Oleada 1 (EC-01, EC-02) | TS23, TS24, TS25, US41, US42, US43, US44, US50 | 36 |
-| Sprint 5 | Oleada 2 (EC-03) | TS26, US45, US46 | 16 |
-| Sprint 6 | Oleada 3 (EC-04, EC-05) | US47, TS27, US48, US49 | 15 |
+| Sprint 4 | Base + Oleada 1 (EC-01, EC-02) | TS06, TS07, TS08, US11, US12, US13, US14, US20 | 36 |
+| Sprint 5 | Oleada 2 (EC-03) | TS09, US15, US16 | 16 |
+| Sprint 6 | Oleada 3 (EC-04, EC-05) | US17, TS10, US18, US19 | 15 |
 | **Total** | | **15 elementos** | **67** |
 
 **Reglas de gestión del backlog**
@@ -3751,5 +3751,5 @@ Se usa la misma escala de story points de la sección 3.3 (1/2/3/5/8). Los sprin
 1. **Las historias de una oleada se priorizan sobre las de la siguiente**, aunque el sprint anterior haya terminado antes de lo previsto. Así se respeta la regla de no superposición de experimentos.
 2. **Al cerrar cada experimento, el backlog se actualiza según su resultado.** Si se rechaza H0, se agregan las historias de la versión completa (por ejemplo, un motor de reglas de alertas o un editor de escenas). Si no se rechaza H0, se agregan historias para retirar la funcionalidad y limpiar sus feature flags.
 3. **Las métricas guardrail pueden reordenar el backlog.** Si alguna muestra un deterioro (por ejemplo, más errores de vinculación en Sentry o un aumento en la desactivación de notificaciones), la corrección correspondiente pasa al primer lugar del sprint en curso.
-4. **Construir no es lanzar.** Que una historia se complete en un sprint no significa que su experimento comience: el feature flag permanece apagado hasta que inicie su oleada. Por ejemplo, US47 se construye en el Sprint 6, pero EC-04 se lanza solo cuando EC-01 haya terminado.
+4. **Construir no es lanzar.** Que una historia se complete en un sprint no significa que su experimento comience: el feature flag permanece apagado hasta que inicie su oleada. Por ejemplo, US17 se construye en el Sprint 6, pero EC-04 se lanza solo cuando EC-01 haya terminado.
 5. **El resultado de Q-06 y Q-07 alimenta el backlog.** Los puntos de abandono y los módulos poco usados que se identifiquen se convierten en nuevas preguntas para el Question Backlog o en historias de mejora.

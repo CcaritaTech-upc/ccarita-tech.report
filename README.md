@@ -293,6 +293,7 @@ Panta Castro, Fabrizio Martin trabajó junto con Axel Ordoñez en el desarrollo 
 [6.3. Validation Interviews](#63-validation-interviews)<br>
 [6.3.1. Diseño de Entrevistas](#631-diseño-de-entrevistas)<br>
 [6.3.2. Registro de Entrevistas](#632-registro-de-entrevistas)<br>
+[6.3.3. Evaluaciones según heurísticas](#633-evaluaciones-según-heurísticas)<br>
 
 [Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices)<br>
 [7.1. Continuous Integration](#71-continuous-integration)<br>
@@ -2867,6 +2868,271 @@ Al realizar las sesiones, se completará una fila por participante y se resumir�
 |---|---|---|---|---|---|---|---|---|
 | V-01 a V-06 | Por registrar | Por registrar | Por registrar | Por registrar | Por registrar | Pendiente | Pendiente | Pendiente |
 
+### **6.3.3. Evaluaciones según heurísticas**
+
+Esta sección documenta la evaluación heurística de usabilidad de IoBuild, realizada con las **10 heurísticas de Nielsen** sobre las interfaces implementadas. Su propósito es detectar problemas de usabilidad antes de ejecutar los experimentos del Capítulo VIII, de modo que las diferencias que se midan después se deban a las variantes experimentales y no a fricciones evitables de la interfaz.
+
+| Aspecto | Detalle |
+|---|---|
+| **Producto evaluado** | IoBuild: aplicación web (Vue 3) desplegada en `iobuild-remix.arroz.dev` y aplicación móvil (Flutter). |
+| **Evidencia revisada** | (1) Capturas de implementación de las secciones 5.2.3 (web) y 5.2.5 (móvil). (2) Revisión del código fuente del repositorio `ccarita-tech.webapp`. (3) Recorrido en vivo de la web desplegada con una cuenta de prueba de Constructor, en escritorio (1366 px) y en móvil (375 px), con medición de contraste sobre los colores calculados. |
+| **Flujos evaluados** | (1) Inicio de sesión. (2) Registro de Constructor y de Propietario. (3) Panel del propietario y telemetría. (4) Vinculación de un dispositivo. (5) Consulta y contratación de suscripción (constructor). (6) Navegación y teclado. (7) Builder Dashboard móvil. |
+| **Alcance y limitación** | No fue posible recorrer en vivo las pantallas del Propietario: el registro de propietario exige que un constructor con suscripción activa le haya asignado antes una unidad a su correo, y la suscripción requiere un pago. Esas pantallas se evaluaron con las capturas del informe y con el código fuente, y así se indica en cada hallazgo. |
+| **Marco de referencia** | 10 heurísticas de usabilidad de Jakob Nielsen. |
+| **Evaluador** | Brayan Ccarita Cruz (Ccarita Tech). |
+
+**Escala de severidad**
+
+| Nivel | Descripción |
+|:---:|---|
+| 1 | **Cosmético.** Se supera con facilidad o ocurre rara vez. Se corrige solo si hay tiempo disponible. |
+| 2 | **Menor.** Genera molestia o demora, pero el usuario completa la tarea. Prioridad baja. |
+| 3 | **Mayor.** Impide o dificulta una tarea importante, o afecta la confianza del usuario. Prioridad alta. |
+| 4 | **Catastrófico.** Impide usar el producto. Debe corregirse antes del lanzamiento. |
+
+**Aspectos positivos**
+
+- La pantalla de inicio de sesión es clara: etiquetas con ícono, botón principal destacado y opción de mostrar u ocultar la contraseña. Ante credenciales incorrectas muestra un mensaje visible ("Invalid email or password.").
+- El registro se divide por rol (Constructor y Propietario) y por pasos, con un indicador de progreso y campos obligatorios marcados con asterisco. Los mensajes de validación son específicos (por ejemplo, "Password must be at least 8 characters." y "Enter a valid phone number (7 to 15 digits).").
+- La pantalla de suscripciones está traducida al español, incluidas las características de cada plan, y presenta una jerarquía clara entre planes con la etiqueta del plan recomendado.
+- El panel del propietario resume el estado del hogar en tarjetas y gráficas fáciles de leer, y el selector de idioma está siempre visible.
+- Los modales ofrecen salidas claras (botón de cierre y "Cancel").
+- En móvil (375 px), el login, el registro y las suscripciones no presentan desplazamiento horizontal.
+- Todos los controles principales del login se alcanzan con la tecla Tab en un orden lógico.
+
+<p align="center">
+  <img src="assets/image.png" alt="Inicio de sesión" width="48%">
+  <img src="assets/image-5.png" alt="Panel del propietario" width="48%">
+</p>
+
+**Checklist de las 10 heurísticas de Nielsen**
+
+| N° | Heurística | Qué se verificó | Cumple | Hallazgos y notas |
+|:---:|---|---|:---:|---|
+| 1 | Visibilidad del estado del sistema | Feedback de carga, estado de datos y estados vacíos. | Parcial | Indicadores que se contradicen (P1). Estados vacíos sin explicación (P4). Registro de propietario bloqueado sin guía (P11). Restricciones de acceso sin aviso (P12). |
+| 2 | Relación entre el sistema y el mundo real | Lenguaje, idioma y unidades. | No | Mezcla de inglés y español, e idioma por defecto en inglés (P2). Precios sin moneda ni impuestos (P9). |
+| 3 | Control y libertad del usuario | Salidas, cancelar, deshacer. | Parcial | Los modales tienen cierre y "Cancel", y el registro tiene "Back". No hay recuperación de contraseña (P5). El menú lateral no se cierra con Escape (P13). |
+| 4 | Consistencia y estándares | Uso uniforme de idioma y componentes. | No | Idioma inconsistente y `lang` fijo (P2). Botones de registro que parecen deshabilitados (P6). Título con la errata "IoBuilt" (P10). |
+| 5 | Prevención de errores | Validaciones y campos obligatorios. | Parcial | Validación clara en el registro. El modal "Add Device" no se deshabilita cuando no hay unidades (P3). |
+| 6 | Reconocer antes que recordar | Opciones visibles. | Parcial | La navegación principal queda oculta tras el ícono de menú en escritorio (P7). |
+| 7 | Flexibilidad y eficiencia de uso | Atajos y filtros. | Parcial | Hay selector de rango (Last Hour / Last 24h) y, según la implementación, búsqueda y orden en clientes. No hay atajos ni acciones rápidas. |
+| 8 | Diseño estético y minimalista | Ruido visual y legibilidad. | Parcial | Diseño limpio y con buena jerarquía. Algunos textos secundarios no alcanzan el contraste mínimo (P8). |
+| 9 | Ayudar a reconocer, diagnosticar y recuperarse de errores | Mensajes claros y con solución. | No | El aviso "No units found…" es pequeño, está en inglés y no indica cómo continuar (P3). La página "no encontrada" no está traducida y no ofrece regreso (P14). |
+| 10 | Ayuda y documentación | Ayuda contextual y guía. | No | No existe una sección de Ayuda y Soporte ni ayuda contextual en las pantallas complejas (P4, P11). |
+
+**Resumen de hallazgos**
+
+| N° | Problema | Pantalla | Severidad | Heurística | Verificación |
+|:---:|---|---|:---:|:---:|---|
+| P1 | Datos que se contradicen entre sí y estado de dispositivo asignado al azar | Panel del propietario / Builder Dashboard móvil | 3 | 1 | Captura y código |
+| P2 | Mezcla de inglés y español; idioma por defecto en inglés | Web y móvil | 3 | 2, 4 | En vivo y código |
+| P3 | "Add Device" no ofrece salida cuando no hay unidades | Vinculación de dispositivos | 3 | 5, 9 | Captura y código |
+| P4 | Estados vacíos sin explicación ni acción siguiente | Telemetría, Estado del sistema, Unidades | 2 | 1, 10 | Captura y código |
+| P5 | No existe recuperación de contraseña | Inicio de sesión | 3 | 3, 9 | En vivo y código |
+| P6 | Botones de registro por rol con apariencia de deshabilitados | Inicio de sesión | 2 | 4, 6 | En vivo |
+| P7 | Navegación principal oculta tras el menú en escritorio | Encabezado de la web | 2 | 6 | En vivo y código |
+| P8 | Texto secundario con contraste insuficiente | Login y suscripciones | 2 | 8 | En vivo (medido) |
+| P9 | Precios sin moneda ni impuestos | Gestión de suscripciones | 3 | 2 | En vivo y código |
+| P10 | Detalles menores (errata "IoBuilt", scroll en el registro, ícono faltante) | Título, registro y panel | 1 | 4, 8 | En vivo y captura |
+| P11 | Registro de propietario por invitación sin explicación del proceso | Registro de Propietario | 2 | 1, 5, 10 | En vivo |
+| P12 | Constructor sin suscripción: rutas restringidas sin explicación | Proyectos, Clientes, Dashboard | 2 | 1, 9 | En vivo |
+| P13 | El menú lateral no se cierra con Escape y el foco de los campos es poco visible | Navegación y formularios | 2 | 3, 4 | En vivo |
+| P14 | Página "no encontrada" sin traducir y sin enlace de regreso | Ruta inexistente | 2 | 9, 4 | En vivo |
+| P15 | Detalles menores en formularios y consola | Registro y login | 1 | 9 | En vivo |
+
+#### Descripción de los problemas
+
+**P1. Datos que se contradicen entre sí y estado de dispositivo asignado al azar**
+
+| | |
+|---|---|
+| **Severidad** | 3 (Mayor) |
+| **Heurística** | 1. Visibilidad del estado del sistema |
+| **Verificación** | Captura del panel del propietario y revisión del código. En vivo solo se verificó el endpoint del constructor, que para una cuenta nueva devuelve ceros y listas vacías. |
+| **Descripción** | En el panel del propietario, "Mis Unidades" y "Mis Dispositivos" muestran 0, pero a la vez aparecen 142.5 kWh de energía, 23.5 °C de temperatura promedio y gráficas con curvas muy regulares. En el Builder Dashboard móvil, "Energy Efficiency" indica 0 % y "Energy Consumption" indica "No hay datos disponibles" mientras se informan 4/4 dispositivos conectados. No se pudo confirmar el origen de esos valores: la tarjeta de energía solo se muestra cuando `energyThisMonth > 0`, es decir, el valor llega del backend. |
+| **Evidencia en el código** | En `device.assembler.js`, cuando un dispositivo llega sin estado, el frontend le asigna al azar "online" u "offline" (`Math.random()`), de modo que el estado mostrado puede no corresponder al real. |
+| **Impacto** | El usuario no puede saber si los valores son reales. Esto afecta la confianza en un producto cuya propuesta de valor es la telemetría confiable. |
+| **Recomendación** | Mantener coherentes los indicadores entre sí y mostrar un estado vacío cuando no hay dispositivos. Si se muestran datos de demostración, etiquetarlos ("Datos de ejemplo"). Mostrar "Estado desconocido" en lugar de asignar un estado aleatorio. |
+
+<img src="assets/image-5.png" alt="P1 - Panel del propietario" width="70%">
+
+**P2. Mezcla de inglés y español; idioma por defecto en inglés**
+
+| | |
+|---|---|
+| **Severidad** | 3 (Mayor) |
+| **Heurística** | 2. Relación entre el sistema y el mundo real · 4. Consistencia y estándares |
+| **Verificación** | En vivo (cuenta de Constructor), código y captura. Las pantallas del Propietario se evaluaron con captura y código. |
+| **Descripción** | El idioma por defecto al abrir la web es el inglés (sin preferencia guardada, la aplicación usa "en"). Con el idioma ES seleccionado, siguen apareciendo en inglés el módulo "Live Energy — Last 10 min", "Auto-refreshes every 30s", "No telemetry data yet", "My Unit Devices", el modal completo "Add Device" y los nombres de plan "Starter", "Professional" y "Enterprise". Las características de los planes sí están traducidas. La aplicación móvil está íntegramente en inglés. |
+| **Evidencia en el código** | Estos textos están escritos directamente en los componentes, sin pasar por `vue-i18n`: `AddCustomDeviceDialog.vue` ("Add Device", "Device Type", "Device Name", "Assign to Unit", "No units found…"), `my-unit-devices.vue` ("My Unit Devices"), `live-energy-chart.component.vue` ("No telemetry data yet") y los dashboards ("Live Energy — Last … min", "Auto-refreshes every 30s"). Además, `index.html` declara `lang="en"` y este atributo no cambia al elegir español (verificado en vivo). |
+| **Impacto** | Rompe la uniformidad y dificulta la comprensión del usuario hispanohablante, que es el segmento objetivo. El selector de idioma pierde credibilidad, y los lectores de pantalla y la traducción automática reciben un idioma incorrecto. |
+| **Recomendación** | Externalizar todas las cadenas en archivos de traducción (es / en), usar el español como idioma por defecto o detectar el idioma del navegador, y actualizar `document.documentElement.lang` al cambiar de idioma. Aplicar el idioma de la sesión también en la app móvil. |
+
+<p align="center">
+  <img src="assets/image-6.png" alt="P2 - Telemetría" width="48%">
+  <img src="assets/image-9.png" alt="P2 - Add Device" width="48%">
+</p>
+
+**P3. "Add Device" no ofrece salida cuando no hay unidades**
+
+| | |
+|---|---|
+| **Severidad** | 3 (Mayor) |
+| **Heurística** | 5. Prevención de errores · 9. Recuperación de errores |
+| **Verificación** | Captura y código. |
+| **Descripción** | El modal permite completar el tipo y el nombre, pero el campo obligatorio "Assign to Unit" queda vacío cuando no hay unidades. Solo aparece un texto pequeño y en naranja: "No units found. Make sure your owner dashboard has loaded." No hay un enlace ni una acción para resolverlo. En el código, el botón "Add Device" solo se deshabilita mientras carga el catálogo, no por falta de unidades. |
+| **Contexto** | Como todo propietario tiene al menos una unidad asignada por un constructor (ver P11), este mensaje no debería aparecer en uso normal: indica que las unidades no cargaron o que la unidad fue liberada, y debe tratarse como un error recuperable. Aun así, el equipo lo encontró en una cuenta de pruebas. |
+| **Impacto** | Bloquea el evento de activación del propietario (vincular el primer dispositivo), justamente el comportamiento que mide el experimento EC-02. |
+| **Recomendación** | Deshabilitar el botón con una explicación en español y ofrecer una acción (reintentar la carga o contactar al constructor). Probar el flujo con cuentas sin unidades. |
+
+<img src="assets/image-9.png" alt="P3 - Add Device" width="70%">
+
+**P4. Estados vacíos sin explicación ni acción siguiente**
+
+| | |
+|---|---|
+| **Severidad** | 2 (Menor) |
+| **Heurística** | 1. Visibilidad del estado · 10. Ayuda y documentación |
+| **Verificación** | Captura y código (cada estado vacío es un párrafo `no-data` sin botón ni enlace). |
+| **Descripción** | Las secciones de telemetría, "Estado de Salud de Dispositivos" y "Resumen de Mis Unidades" muestran un texto gris corto ("No hay datos…") sin explicar la causa ni sugerir qué hacer. En el panel, "Mis Dispositivos: 0" no incluye una invitación a vincular el primer dispositivo. |
+| **Impacto** | Un propietario nuevo ve un panel vacío y no sabe cómo avanzar. Esto afecta la activación y aumenta las consultas a soporte (experimentos EC-02 y EC-04). |
+| **Recomendación** | Reemplazar los textos por estados vacíos con una explicación breve y un botón de acción ("Vincular mi primer dispositivo"). |
+
+<img src="assets/image-7.png" alt="P4 - Estados vacíos" width="70%">
+
+**P5. No existe recuperación de contraseña**
+
+| | |
+|---|---|
+| **Severidad** | 3 (Mayor) |
+| **Heurística** | 3. Control y libertad del usuario · 9. Recuperación de errores |
+| **Verificación** | En vivo y código. |
+| **Descripción** | La pantalla de inicio de sesión solo tiene correo, contraseña, "Sign In" y los enlaces de registro. No existe un enlace de "¿Olvidaste tu contraseña?" ni un flujo equivalente: no aparece en la web desplegada ni en el código. |
+| **Impacto** | El usuario que olvida su contraseña queda sin acceso a su cuenta y a su suscripción de pago, y solo podría resolverlo contactando a alguien del equipo, ya que tampoco hay un canal de soporte (P4). |
+| **Recomendación** | Agregar un flujo de recuperación por correo electrónico. |
+
+**P6. Botones de registro por rol con apariencia de deshabilitados**
+
+| | |
+|---|---|
+| **Severidad** | 2 (Menor) |
+| **Heurística** | 4. Consistencia y estándares · 6. Reconocer antes que recordar |
+| **Verificación** | En vivo (medido). |
+| **Descripción** | "Register as Builder" y "Register as Owner" usan un estilo secundario con borde muy tenue. Son clicables, pero parecen inactivos. El contraste de su texto es de 4.31:1 (gris azulado sobre fondo claro), por debajo del mínimo de 4.5:1 de WCAG 2.1 AA. En móvil, además, cada texto se parte en dos líneas. |
+| **Impacto** | Los usuarios nuevos pueden no reconocerlos como acciones y abandonar el flujo antes de registrarse. |
+| **Recomendación** | Usar un estilo de botón secundario con contraste suficiente y un texto guía ("Crea tu cuenta como…"). |
+
+**P7. Navegación principal oculta tras el menú en escritorio**
+
+| | |
+|---|---|
+| **Severidad** | 2 (Menor) |
+| **Heurística** | 6. Reconocer antes que recordar |
+| **Verificación** | En vivo (1366 px) y código. |
+| **Descripción** | En escritorio, la navegación está cerrada por defecto y solo hay un ícono de menú, sin etiquetas visibles. Al abrirla, un constructor sin suscripción ve únicamente "Profile", "Subscription" y "Log Out". |
+| **Impacto** | El usuario debe recordar dónde está cada módulo (telemetría, estado del sistema, suscripciones). Reduce el descubrimiento de funcionalidades. |
+| **Recomendación** | Mostrar una barra lateral con íconos y etiquetas en escritorio y reservar el menú hamburguesa para móvil. |
+
+**P8. Texto secundario con contraste insuficiente**
+
+| | |
+|---|---|
+| **Severidad** | 2 (Menor) |
+| **Heurística** | 8. Diseño estético y minimalista (legibilidad) |
+| **Verificación** | En vivo (ratios calculados con los colores computados; no se ejecutó Lighthouse). |
+| **Descripción** | No alcanzan el mínimo de 4.5:1 de WCAG 2.1 AA: la nota "Ciclo de facturación mensual" (2.56:1, texto de 11.5 px), el subtítulo del login (4.37:1), el texto "Don't have an account?" (4.37:1) y los botones "Register as…" (4.31:1). Sí cumplen los placeholders (4.76:1), el texto de los pasos del registro (4.76:1), el subtítulo de Suscripciones (4.55:1) y las características de los planes (10.35:1). |
+| **Impacto** | Dificulta la lectura a usuarios con baja visión o en pantallas con poco brillo. |
+| **Recomendación** | Oscurecer los colores secundarios que fallan y aumentar el tamaño mínimo del texto. Ejecutar Lighthouse como verificación final. |
+
+<img src="assets/image-10.png" alt="P8 y P9 - Suscripciones" width="70%">
+
+**P9. Precios sin moneda ni impuestos**
+
+| | |
+|---|---|
+| **Severidad** | 3 (Mayor) |
+| **Heurística** | 2. Relación entre el sistema y el mundo real |
+| **Verificación** | En vivo y código. |
+| **Descripción** | Los planes muestran "$ 299 / mes", "$ 799" y "$ 1299" sin indicar si la moneda es dólares estadounidenses o soles, y sin mencionar impuestos (no aparecen "US$", "S/", "USD", "PEN", "IGV" ni "VAT"). En `plan-card.vue` el símbolo "$" está escrito directamente en la plantilla. Al elegir un plan, el sistema redirige a un pago externo sin un resumen previo de plan, moneda e impuestos. |
+| **Impacto** | Es una decisión de pago recurrente de 299 a 1299 al mes. La falta de moneda genera dudas y desconfianza, y afecta la conversión de constructores (experimento EC-01). |
+| **Recomendación** | Indicar la moneda (por ejemplo, "US$"), si el precio incluye impuestos, y mostrar un resumen de confirmación antes de redirigir al pago. |
+
+**P10. Detalles menores**
+
+| | |
+|---|---|
+| **Severidad** | 1 (Cosmético) |
+| **Heurística** | 4. Consistencia y estándares · 8. Diseño estético y minimalista |
+| **Verificación** | Título: en vivo. Scroll del registro e ícono: solo captura. |
+| **Descripción** | (a) El HTML inicial, la meta descripción y el texto "IoBuilt Dashboard" escriben el nombre como "IoBuilt" (con "t" final); el título de la pestaña cambia a "IoBuild - …" según la ruta. (b) En la captura del paso 2 del registro de propietario aparece una barra de desplazamiento horizontal bajo el indicador de pasos; no pudo reproducirse en vivo porque ese paso no era accesible. (c) En la captura del panel, la tarjeta "Temperatura Promedio" no muestra su ícono. |
+| **Impacto** | Transmiten una imagen de producto inacabado, sin impedir las tareas. |
+| **Recomendación** | Corregir el nombre en `index.html` y en las cadenas de idioma, revisar el contenedor del indicador de pasos y restituir el ícono faltante. |
+
+<img src="assets/image-4.png" alt="P10 - Registro paso 2" width="70%">
+
+**P11. Registro de propietario por invitación sin explicación del proceso**
+
+| | |
+|---|---|
+| **Severidad** | 2 (Menor) |
+| **Heurística** | 1. Visibilidad del estado · 5. Prevención de errores · 10. Ayuda y documentación |
+| **Verificación** | En vivo. |
+| **Descripción** | Por diseño del producto, el orden es siempre el mismo: primero el constructor asigna una unidad y solo entonces el propietario puede registrarse y usar la plataforma. El problema no es esta regla, sino que la interfaz no la explica. Un propietario solo puede registrarse si un constructor le asignó una unidad a su correo. Si no, el registro muestra "The builder must assign a unit to your email before you can register as an owner." y el botón "Next" queda deshabilitado. El mensaje aparece dos veces (bajo el campo de correo y en un banner) y no ofrece contacto ni ayuda. A su vez, el constructor necesita una suscripción activa de pago para usar Proyectos y Clientes, que es donde se asignan las unidades. |
+| **Impacto** | Un propietario que llega por su cuenta no puede crear su cuenta ni sabe qué hacer. Además, define quién puede ser "propietario nuevo" en los experimentos: solo quien fue invitado por un constructor. |
+| **Recomendación** | Explicar el proceso en la pantalla ("Tu constructora debe invitarte"), ofrecer un canal de contacto, mostrar el mensaje una sola vez y evaluar una vista de demostración. |
+
+**P12. Constructor sin suscripción: rutas restringidas sin explicación**
+
+| | |
+|---|---|
+| **Severidad** | 2 (Menor) |
+| **Heurística** | 1. Visibilidad del estado · 9. Recuperación de errores |
+| **Verificación** | En vivo. |
+| **Descripción** | Un constructor sin suscripción activa que entra a `/projects`, `/clients` o al dashboard de analítica es redirigido a Mi Suscripción sin ningún aviso del motivo; el dashboard muestra brevemente "Cargando información de suscripción…". El menú lateral solo muestra "Profile", "Subscription" y "Log Out", sin indicar que las demás opciones están bloqueadas. No existe prueba gratuita ni plan gratuito: hay que pagar antes de ver cualquier funcionalidad. |
+| **Impacto** | El constructor no entiende por qué no puede acceder y no puede evaluar el producto antes de pagar. Afecta la conversión que mide el experimento EC-01. |
+| **Recomendación** | Mostrar un aviso ("Necesitas una suscripción para acceder a Proyectos") y presentar las opciones bloqueadas con un candado. Habilitar la prueba de 14 días que propone EC-01. |
+
+**P13. El menú lateral no se cierra con Escape y el foco es poco visible**
+
+| | |
+|---|---|
+| **Severidad** | 2 (Menor) |
+| **Heurística** | 3. Control y libertad del usuario · 4. Consistencia y estándares |
+| **Verificación** | En vivo. |
+| **Descripción** | Al abrir el menú lateral, la tecla Escape no lo cierra: el panel y la sombra siguen visibles y el foco queda en "Close navigation". En el login, los campos de texto no muestran un contorno de foco (su `outline-color` es transparente) y los botones "Register…" solo muestran un halo muy tenue. No se pudo verificar el cierre de los modales con Escape. |
+| **Impacto** | Dificulta el uso con teclado y lectores de pantalla. |
+| **Recomendación** | Cerrar el menú y los modales con Escape y definir un estilo de foco visible y consistente. |
+
+**P14. Página "no encontrada" sin traducir y sin enlace de regreso**
+
+| | |
+|---|---|
+| **Severidad** | 2 (Menor) |
+| **Heurística** | 9. Recuperación de errores · 4. Consistencia y estándares |
+| **Verificación** | En vivo. |
+| **Descripción** | Una ruta inexistente muestra "page not found" en minúsculas, sin traducir al español y sin un enlace para volver al inicio. |
+| **Impacto** | El usuario queda sin una salida clara tras equivocarse de enlace. |
+| **Recomendación** | Traducir el mensaje y agregar un botón "Volver al inicio". |
+
+**P15. Detalles menores en formularios y consola**
+
+| | |
+|---|---|
+| **Severidad** | 1 (Cosmético) |
+| **Heurística** | 9. Recuperación de errores |
+| **Verificación** | En vivo. |
+| **Descripción** | (a) En "Years in business", un texto como "abc" produce "Years in business is required." en lugar de indicar que debe ser un número. (b) Tras registrar un constructor, la consola muestra la advertencia "iam.store: could not fetch profile immediately after sign in", que sugiere una condición de carrera entre la sesión y la carga del perfil. (c) El banner de error del login no mueve el foco y no se verificó que se anuncie a lectores de pantalla. |
+| **Impacto** | Fricciones menores que no impiden completar las tareas. |
+| **Recomendación** | Mensaje de formato numérico, corregir la secuencia sesión/perfil y marcar los banners con `role="alert"`. |
+
+**Conclusiones de la evaluación**
+
+- Se identificaron **15 problemas**: 5 de severidad mayor (P1, P2, P3, P5, P9), 8 de severidad menor (P4, P6, P7, P8, P11, P12, P13, P14) y 2 cosméticos (P10, P15). No se encontraron problemas catastróficos.
+- Se verificaron en vivo o en el código P2, P5, P6, P7, P8, P9, P11, P12, P13, P14 y P15. Los problemas P1, P3 y P4 y los detalles visuales de P10 se basan en las capturas del informe y el código, porque las pantallas del Propietario no pudieron recorrerse en vivo.
+- Los problemas P1, P3, P4 y P11 afectan la **activación del propietario**, por lo que conviene corregirlos antes de ejecutar los experimentos EC-02 y EC-04; de lo contrario, la fricción actual podría confundirse con el efecto de las variantes.
+- Los problemas P9 y P12 afectan la conversión de constructores y deben resolverse antes de ejecutar el experimento EC-01.
+- La prioridad de corrección sugerida es: P2 → P5 → P3 → P9 → P1 → P11 → P12 → P4 → P7 → P6 → P8 → P13 → P14 → P10 → P15.
+
 <div style="page-break-after: always;"></div>
 
 # **Capítulo VII: DevOps Practices**
@@ -3315,6 +3581,115 @@ Para cada pregunta Belief-led se redacta una hipótesis falsificable, testeable 
 Si al finalizar cada experimento el valor p de la prueba resulta menor que α = 0.05, se rechazará la hipótesis nula y se considerará que existe evidencia estadística a favor de H1. En caso contrario, no se rechazará H0 y el resultado se documentará igualmente como aprendizaje, ya que permite descartar o replantear la solución antes de invertir en su desarrollo completo.
 
 
+### **8.2.2. Domain Business Metrics**
+
+Esta sección define las métricas de negocio del dominio de IoBuild que se usarán para evaluar los experimentos. Todas las Experiment Cards (8.1.5) y las medidas de 8.2.3 solo pueden referirse a las métricas aquí definidas: no se admiten métricas ad hoc ni métricas de vanidad. Cada métrica indica su fórmula, la técnica de recolección y la meta, alineada con las hipótesis de 8.2.1 y con las metas del proceso Lean UX (sección 1.2.2). Las líneas base son estimaciones iniciales del equipo y se recalibrarán con los primeros datos reales.
+
+**Métricas principales (una por experimento)**
+
+| ID | Métrica | Fórmula | Técnica de recolección | Meta del experimento (línea base → meta) | Meta de negocio (Lean UX) | Experimento |
+|:---:|---|---|---|---|---|:---:|
+| M-01 | Tasa de conversión a pago (30 días) | (Constructores que contratan un plan de pago en sus primeros 30 días) ÷ (Constructores registrados en la cohorte) × 100 | Evento `subscription_purchased` en el bounded context Subscriptions, Plans & Payments y en Google Analytics | 10 % → 18 % | 25 % de proyectos piloto convertidos en contratos | EC-01 |
+| M-02 | Tasa de activación de propietarios (7 días) | (Propietarios nuevos que vinculan ≥ 1 dispositivo en 7 días) ÷ (Propietarios nuevos) × 100 | Evento `device_linked` en Google Analytics y en el bounded context Devices | 45 % → 57 % | 70 % de clientes B2C con dispositivos conectados en su primera semana | EC-02 |
+| M-03 | Tasa de retorno a 7 días (W1) | (Propietarios que inician ≥ 1 sesión entre los días 1 y 7 posteriores a su activación) ÷ (Propietarios activados de la cohorte) × 100 | Evento `session_start` en Google Analytics y Firebase Analytics | 40 % → 48 % | Retención de licencias B2C del 75 % en el primer año | EC-03 |
+| M-04 | Tasa de solicitudes de soporte (14 días) | (Usuarios que abren ≥ 1 solicitud de soporte en sus primeros 14 días) ÷ (Usuarios nuevos de la cohorte) × 100 | Evento `support_ticket_created` en Google Analytics y registro del módulo de Ayuda y Soporte | 20 % → 14 % (−6 pp) | Reducción del 30 % en solicitudes de soporte técnico | EC-04 |
+| M-05 | Tasa de adopción de escenas (30 días) | (Propietarios que activan ≥ 1 escena en sus primeros 30 días) ÷ (Propietarios elegibles de la cohorte) × 100 | Evento `scene_activated` en Google Analytics y Firebase Analytics | 25 % → 37 % | 60 % de propietarios con ≥ 1 escena en el primer mes | EC-05 |
+
+**Métricas secundarias**
+
+| ID | Métrica | Fórmula | Técnica de recolección | Meta | Experimento |
+|:---:|---|---|---|---|:---:|
+| M-06 | Puntuación NPS (día 30) | % de promotores (9–10) − % de detractores (0–6) sobre las respuestas de la encuesta in-app | Evento `nps_survey_answered` | +25 % relativo respecto de la línea base | EC-05 |
+| M-07 | Tiempo hasta la primera vinculación | Mediana de (fecha de `device_linked` − fecha de `sign_up_completed`) en horas | Eventos `sign_up_completed` y `device_linked` | Tendencia decreciente | EC-02 |
+| M-08 | Sesiones por usuario por semana | (Sesiones iniciadas en la semana) ÷ (Usuarios activos en la semana) | Evento `session_start` | Tendencia creciente | EC-03 |
+| M-09 | Propietarios con ≥ 3 alertas en 30 días | (Propietarios con ≥ 3 alertas creadas en 30 días) ÷ (Propietarios con la funcionalidad activada) × 100 | Evento `alert_configured` | ≥ 50 % | EC-03 |
+| M-10 | Tasa de finalización de tareas clave | (Intentos de vincular dispositivo o cambiar de plan completados con éxito) ÷ (Intentos iniciados) × 100 | Eventos `task_started` y `task_completed` | Tendencia creciente | EC-04 |
+| M-11 | Proyectos creados por constructor durante la prueba | (Proyectos creados durante la prueba) ÷ (Constructores en la prueba) | Evento `project_created` | Tendencia creciente | EC-01 |
+| M-12 | Distribución del plan contratado | % de contrataciones por plan (Starter, Professional, Enterprise) | Evento `subscription_purchased` (parámetro `plan_id`) | Informativa (cierra la brecha G-04) | EC-01 |
+| M-24 | Tasa de finalización del asistente | (Propietarios que completan los tres pasos del asistente) ÷ (Propietarios que lo ven) × 100 | Eventos `onboarding_wizard_shown` y `onboarding_wizard_step` | Tendencia creciente | EC-02 |
+| M-25 | Tiempo entre etapas del onboarding | Mediana de horas entre etapas consecutivas | Eventos `funnel_step` | Informativa | Q-06 |
+| M-26 | Duración media por módulo | Promedio de segundos de interacción por módulo | Evento `screen_view` y tiempo de interacción de GA4 / Firebase | Informativa | Q-07 |
+
+**Métricas de protección (guardrails)**
+
+Los guardrails verifican que una variante no mejore la métrica principal a costa de dañar otra parte de la experiencia.
+
+| ID | Métrica | Fórmula | Técnica de recolección | Umbral | Experimento |
+|:---:|---|---|---|---|:---:|
+| M-13 | Tasa de abandono del registro | (Registros iniciados y no completados) ÷ (Registros iniciados) × 100 | Eventos `funnel_step` | No debe empeorar respecto del control | EC-02 |
+| M-14 | Tasa de cancelación en los primeros 60 días | (Suscripciones canceladas en 60 días) ÷ (Suscripciones contratadas) × 100 | Evento `subscription_cancelled` y bounded context Subscriptions, Plans & Payments | No debe superar la del control | EC-01 |
+| M-15 | Ingreso medio por cuenta | (Ingresos por suscripciones del grupo) ÷ (Cuentas de constructor del grupo) | Evento `subscription_purchased` (parámetro `price`) | No debe ser menor que el del control | EC-01 |
+| M-16 | Errores de vinculación en Sentry | (Errores de vinculación registrados en Sentry) ÷ (Intentos de vinculación iniciados) × 100 | Sentry y evento `device_link_started` | No debe superar el del control | EC-02 |
+| M-17 | Tasa de desactivación de notificaciones | (Usuarios que desactivan las notificaciones) ÷ (Usuarios con alertas activadas) × 100 | Evento `notification_permission_changed` | No debe superar la del control | EC-03 |
+| M-18 | Desinstalaciones de la app móvil | (Desinstalaciones en la ventana) ÷ (Usuarios con la app instalada) × 100 | Evento `app_remove` (Firebase Analytics) | No debe superar la del control | EC-03 |
+| M-19 | Tiempo promedio en las pantallas intervenidas | Promedio de segundos de interacción en "Add Device" y "Gestión de Suscripciones" | Evento `screen_view` y tiempo de interacción de GA4 / Firebase | No debe aumentar respecto del control | EC-04 |
+| M-20 | Errores de ejecución de escenas | (Ejecuciones de escena con error) ÷ (Escenas activadas) × 100 | Eventos `scene_execution_failed` y `scene_activated`, y Sentry | No debe superar el del control | EC-05 |
+| M-21 | Dispositivos desvinculados | (Dispositivos desvinculados en la ventana) ÷ (Dispositivos vinculados) × 100 | Evento `device_unlinked` | No debe superar el del control | EC-05 |
+
+**Métricas exploratorias**
+
+Estas métricas no tienen meta ni grupo de control. Su propósito es recopilar conocimiento donde aún no existe una creencia previa (Q-06 y Q-07).
+
+| ID | Métrica | Fórmula | Técnica de recolección | Pregunta |
+|:---:|---|---|---|:---:|
+| M-22 | Tasa de paso entre etapas del onboarding | (Usuarios que completan la etapa *n+1*) ÷ (Usuarios que completan la etapa *n*) × 100, para las etapas registro → perfil → vinculación → primer uso del panel | Eventos `funnel_step` | Q-06 |
+| M-23 | Frecuencia de uso por módulo | (Vistas del módulo) ÷ (Usuarios activos), por segmento y por semana | Evento `screen_view` (con `module_name`) | Q-07 |
+
+### **8.2.3. Measures**
+
+Las Medidas son los criterios elegidos para recopilar la evidencia que responde la pregunta de cada experimento. Se seleccionan solo las necesarias y durante el tiempo justo, para mantener un rastreo eficiente y focalizado. Cada experimento tiene una **medida principal** (decide si se rechaza H0), una o más **medidas secundarias** (aportan contexto) y uno o más **guardrails** (protegen otras partes de la experiencia). Las medidas principales y secundarias coinciden con las de las Experiment Cards de 8.1.5, y todas remiten a las métricas definidas en 8.2.2.
+
+| Experimento | Medida principal (primary) | Medidas secundarias | Guardrail (protección) | Ventana de medición |
+|---|---|---|---|---|
+| **EC-01 — Prueba gratuita del plan Professional** (Q-03) | M-01 Tasa de conversión a pago | M-12 Plan contratado · M-11 Proyectos creados durante la prueba | M-14 Cancelación en 60 días · M-15 Ingreso medio por cuenta | 30 días desde el registro |
+| **EC-02 — Asistente guiado de vinculación** (Q-01) | M-02 Tasa de activación (7 días) | M-07 Tiempo hasta la primera vinculación · M-24 Finalización del asistente | M-13 Abandono del registro · M-16 Errores de vinculación en Sentry | 7 días desde el registro |
+| **EC-03 — Alertas personalizables** (Q-02) | M-03 Tasa de retorno a 7 días | M-08 Sesiones por usuario por semana · M-09 Propietarios con ≥ 3 alertas | M-17 Desactivación de notificaciones · M-18 Desinstalaciones de la app móvil | 7 días desde la activación |
+| **EC-04 — Ayuda contextual** (Q-05) | M-04 Tasa de solicitudes de soporte | M-10 Finalización de tareas clave | M-19 Tiempo promedio en las pantallas intervenidas | 14 días desde el registro |
+| **EC-05 — Plantillas de escenas** (Q-04) | M-05 Tasa de adopción de escenas | M-06 Puntuación NPS | M-20 Errores de ejecución de escenas · M-21 Dispositivos desvinculados | 30 días desde el registro |
+| **Q-06 — Abandono en el onboarding** (exploratoria) | M-22 Tasa de paso entre etapas | M-25 Tiempo entre etapas | — | Primeros 14 días desde el registro |
+| **Q-07 — Módulos más consultados** (exploratoria) | M-23 Frecuencia de uso por módulo | M-26 Duración media por módulo | — | 30 días de uso |
+
+**Criterios de uso**
+
+- Una medida principal **no se reemplaza** una vez iniciado el experimento. Cambiarla después de ver los datos invalida la prueba de hipótesis.
+- Las medidas secundarias y los guardrails se reportan siempre, aunque la medida principal no muestre diferencia, porque forman parte del aprendizaje.
+- Si un guardrail empeora de forma significativa respecto del control, el experimento se detiene y se documenta el motivo, aun cuando la medida principal mejore.
+
+### **8.2.4. Conditions**
+
+Las Condiciones identifican el motivo subyacente de una respuesta. Para las preguntas Belief-led se definen dos estados: la **condición experimental**, que busca evidencia a favor de la hipótesis alternativa (H1), y la **condición de control**, que opera bajo el supuesto de que la hipótesis nula (H0) es correcta. Las condiciones coinciden con las de las Experiment Cards de 8.1.5.
+
+| Experimento | Población elegible | Condición experimental | Condición de control | Asignación |
+|---|---|---|---|---|
+| **EC-01 — Prueba gratuita Professional** | Constructores, arquitectos e ingenieros recién registrados. | Acceso al plan Professional durante 14 días sin cobro mediante un banner en Gestión de Suscripciones. | Flujo actual de suscripción (catálogo de planes sin prueba). | Aleatoria 50/50 al registrarse. |
+| **EC-02 — Asistente guiado** | Propietarios nuevos (registrados tras recibir una unidad asignada por un constructor). | Pantalla de tres pasos tras el paso 2 del registro (tipo de dispositivo, nombre y unidad, confirmación). | Flujo actual: acceso directo al panel. | Aleatoria 50/50 al finalizar el registro. |
+| **EC-03 — Alertas personalizables** | Propietarios con ≥ 1 dispositivo vinculado. | Sección de alertas (consumo sobre un umbral y dispositivo desconectado) con notificaciones push. | Sin sección de alertas. | Aleatoria 50/50 tras la primera vinculación. |
+| **EC-04 — Ayuda contextual** | Usuarios nuevos de ambos segmentos. | Tooltips y guía de tres pasos en "Add Device" y "Gestión de Suscripciones", con acceso directo a Ayuda y Soporte. | Interfaz actual, sin ayuda contextual. | Aleatoria 50/50 al registrarse. |
+| **EC-05 — Plantillas de escenas** | Propietarios con ≥ 2 dispositivos vinculados. | Sección "Escenas" con tres plantillas ("Modo noche", "Modo ahorro", "Salir de casa") activables con un toque. | Sección "Escenas" con formulario básico de creación manual. | Aleatoria 50/50 al cumplir el criterio de elegibilidad. |
+
+**Restricciones del producto actual que condicionan los experimentos**
+
+La verificación de la web desplegada (sección 6.3.3) mostró dos reglas que afectan quién puede participar:
+
+- **Registro de propietarios por invitación (regla de diseño del producto).** El constructor asigna primero y el propietario solo puede usar la plataforma después. Un propietario solo puede crear su cuenta si un constructor le asignó antes una unidad a su correo. Por eso, la población de EC-02, EC-03 y EC-05 está formada únicamente por propietarios invitados por un constructor, y el tamaño de muestra depende de cuántos constructores activos asignen unidades.
+- **Suscripción obligatoria para el constructor.** Un constructor sin suscripción activa no puede usar Proyectos ni Clientes, y hoy no existe ninguna prueba gratuita. En EC-01, la condición experimental debe desbloquear esas secciones durante los 14 días de prueba; de lo contrario, el constructor no podría evaluar el producto.
+
+**Condiciones para las preguntas exploratorias**
+
+Las preguntas Q-06 y Q-07 no tienen condición experimental ni de control, ya que no se manipula ninguna variable. Solo se delimita el grupo observado:
+
+| Pregunta | Grupo observado | Período |
+|---|---|---|
+| **Q-06** — ¿En qué paso del onboarding se abandona más? | Propietarios nuevos que inician el registro. | Primeros 14 días desde el registro. |
+| **Q-07** — ¿Qué módulos del panel se consultan más? | Propietarios con ≥ 1 dispositivo vinculado, analizados por segmento. | 30 días de uso. |
+
+**Reglas de ejecución**
+
+1. **Exclusividad.** Un usuario participa en un solo experimento por flujo a la vez. Siguiendo la regla de no superposición de la sección 8.2.6, no se ejecutan en paralelo los pares EC-02 / EC-04 (ambos actúan sobre la pantalla "Add Device" con usuarios nuevos), EC-01 / EC-04 (ambos modifican Gestión de Suscripciones) ni EC-03 / EC-05 (ambos buscan aumentar el engagement). Los experimentos se organizan en las tres oleadas definidas en esa sección.
+2. **Aleatorización y persistencia.** La asignación es aleatoria y persistente: un usuario mantiene su variante durante todo el experimento, y el evento `experiment_assigned` se registra la primera vez que se evalúa el feature flag del usuario, al asignarle su variante.
+3. **Sin daño al usuario.** Ninguna variante degrada funcionalidades esenciales ni oculta información necesaria. Las notificaciones push se pueden desactivar en cualquier momento (Student Outcome 4).
+4. **Cierre.** Al terminar, el grupo de control puede recibir la variante si H1 no se rechaza, y el resultado se documenta como aprendizaje en cualquier caso.
+
 ### **8.2.5. Scale Calculations and Decisions**
 
 La escala determina cuánta evidencia se necesita para que el resultado de un experimento sea confiable. En IoBuild se define a partir de dos dimensiones:
@@ -3493,6 +3868,94 @@ Las métricas anteriores se eligieron porque cumplen los siguientes criterios:
 
 Con estos nueve eventos el equipo cubre las preguntas del ciclo de experimentación sin instrumentar interacciones irrelevantes. El detalle de las propiedades de cada evento y su implementación en la aplicación web y móvil se documenta en el Web and Mobile Tracking Plan (sección 8.2.8).
 
+
+### **8.2.8. Web and Mobile Tracking Plan**
+
+El Tracking Plan especifica los eventos que se deben instrumentar para alimentar las métricas de 8.2.2. Conecta las prácticas de monitoreo (sección 7.4) con el análisis de los experimentos. Se instrumenta la aplicación web con **Google Analytics (GA4)**, la aplicación móvil con **Firebase Analytics**, y los eventos de negocio críticos (conversión y vinculación) también se registran en el **backend** para que no dependan del cliente. Se aplica el principio de rastreo eficiente y focalizado: solo se registran los eventos necesarios para las métricas definidas.
+
+**Estado actual de la instrumentación**
+
+Al revisar el código y el paquete desplegado de la aplicación web (`ccarita-tech.webapp`), no se encontró ningún SDK de analítica (Google Analytics, Firebase, Sentry, PostHog u otro) ni llamadas de seguimiento de eventos. En ejecución solo se detectó el script de Cloudflare Web Analytics, inyectado en el borde, que mide visitas pero no eventos del producto. Los dominios de terceros que se contactan son Google Fonts, el servicio de imágenes del login, Cloudinary (subida de fotos) y Stripe (pagos). Por lo tanto, los eventos de este plan son **eventos por implementar**: deben instrumentarse antes de iniciar cualquiera de los experimentos, y su correcta recepción se verifica con los criterios de calidad que se indican al final de esta sección.
+
+**Relación con los eventos mínimos de la sección 8.2.7.** Los eventos mínimos de la 8.2.7 (`experiment_assigned`, `sign_up_completed`, `device_linked`, `session_start`, `alert_configured`, `alert_received`, `subscription_purchased`, `subscription_cancelled`, `support_ticket_created`, `scene_activated` y `screen_view`) son la base obligatoria y conservan sus nombres. Los demás eventos de este plan son complementarios: alimentan las métricas secundarias, los guardrails y los embudos de 8.2.2, y se implementan después de los mínimos.
+
+**Parámetros comunes a todos los eventos**
+
+| Parámetro | Descripción |
+|---|---|
+| `user_id` | Identificador seudonimizado del usuario (no se envía correo, nombre ni teléfono). |
+| `role` | `constructor` o `propietario`. |
+| `platform` | `web` o `mobile`. |
+| `app_version` | Versión de la aplicación que emite el evento. |
+| `experiment_id` | Identificador del experimento activo (`EC-01` … `EC-05`), si aplica. |
+| `variant` | `control` o `treatment`, según el feature flag del experimento. Permite segmentar cada métrica por condición. |
+
+**Eventos de adquisición y onboarding**
+
+| Evento | Disparador | Parámetros específicos | Plataforma | Métrica / Experimento |
+|---|---|---|---|---|
+| `sign_up_completed` | Registro completado con éxito. | `method` | Web, Mobile | M-07, M-13 · EC-02, EC-04 |
+| `funnel_step` | Avance o abandono en un paso del flujo registro → perfil → vinculación → primer uso del panel. | `step_name` (`register_account`, `register_profile`, `device_link_started`, `device_linked`, `first_dashboard_view`), `completed` (booleano) | Web, Mobile | M-13, M-22, M-25 · Q-06 |
+| `experiment_assigned` | Se asigna una variante al usuario la primera vez que se evalúa el feature flag del experimento (Firebase Remote Config). | `experiment_id`, `variant` | Web, Mobile | Todos los experimentos |
+| `onboarding_wizard_shown` | Se muestra el asistente guiado tras el registro. | `step_total` | Web | EC-02 |
+| `onboarding_wizard_step` | El usuario completa u omite un paso del asistente. | `step_index`, `action` (`completed`, `skipped`) | Web | EC-02 |
+
+**Eventos de vinculación de dispositivos**
+
+| Evento | Disparador | Parámetros específicos | Plataforma | Métrica / Experimento |
+|---|---|---|---|---|
+| `device_link_started` | El usuario abre el asistente o el modal "Add Device". | `entry_point` (`wizard`, `add_device_modal`, `empty_state`) | Web | M-02, M-10, M-16 · EC-02 |
+| `device_linked` | Un dispositivo se vincula con éxito (también se registra en el backend). | `device_type`, `unit_id`, `source` (`wizard`, `modal`), `hours_since_signup` | Web, Backend | M-02, M-07 · EC-02 |
+| `device_unlinked` | Un dispositivo se desvincula de una unidad. | `device_type`, `unit_id`, `days_since_linked` | Web, Backend | M-21 · EC-05 |
+
+**Eventos de uso del panel y retención**
+
+| Evento | Disparador | Parámetros específicos | Plataforma | Métrica / Experimento |
+|---|---|---|---|---|
+| `session_start` | Inicio de sesión de uso (evento automático de GA4 y Firebase). | `session_id` | Web, Mobile | M-03, M-08 · EC-03 |
+| `screen_view` | El usuario consulta un módulo del panel (evento automático de GA4 y Firebase, enriquecido con `module_name`). | `module_name` (`energy`, `temperature`, `water`, `live_energy`, `system_status`, `units`) | Web, Mobile | M-19, M-23 · EC-04, Q-07 |
+| `alert_settings_opened` | El usuario abre la sección de alertas. | `source` | Web, Mobile | EC-03 |
+| `alert_configured` | El usuario crea una alerta. | `alert_type` (`energy_threshold`, `device_offline`) | Web, Mobile | M-09 · EC-03 |
+| `alert_received` | La aplicación móvil recibe una notificación push (FCM). | `notification_type` | Mobile | EC-03 |
+| `alert_opened` | El usuario abre una notificación de alerta. | `notification_type` | Mobile | EC-03 |
+| `notification_permission_changed` | El usuario concede o revoca el permiso de notificaciones. | `granted` (booleano) | Mobile | M-17 · EC-03 |
+| `app_remove` | La app móvil se desinstala (evento automático de Firebase Analytics en Android). | — | Mobile | M-18 · EC-03 |
+
+**Eventos de suscripción y conversión (segmento constructor)**
+
+| Evento | Disparador | Parámetros específicos | Plataforma | Métrica / Experimento |
+|---|---|---|---|---|
+| `plans_viewed` | El constructor abre Gestión de Suscripciones. | `has_active_plan` (booleano) | Web | M-01 · EC-01 |
+| `free_trial_started` | Se activa la prueba gratuita del plan Professional. | `plan_id`, `trial_days` | Web, Backend | EC-01 |
+| `subscription_purchased` | El constructor contrata un plan de pago (también se registra en el backend). | `plan_id`, `price`, `currency`, `billing_cycle`, `days_since_signup` | Web, Backend | M-01, M-12, M-15 · EC-01 |
+| `subscription_cancelled` | El constructor cancela su suscripción. | `plan_id`, `days_since_purchase` | Web, Backend | M-14 · EC-01 |
+| `project_created` | El constructor crea un proyecto. | `project_id`, `in_trial` (booleano) | Web, Mobile | M-11 · EC-01 |
+
+**Eventos de ayuda y soporte**
+
+| Evento | Disparador | Parámetros específicos | Plataforma | Métrica / Experimento |
+|---|---|---|---|---|
+| `help_tooltip_viewed` | Se muestra un tooltip o la guía contextual. | `screen` (`add_device`, `subscriptions`) | Web | EC-04 |
+| `help_center_opened` | El usuario abre la sección de Ayuda y Soporte. | `origin_screen` | Web, Mobile | EC-04 |
+| `support_ticket_created` | El usuario abre una solicitud de soporte. | `origin_screen`, `category`, `days_since_signup` | Web, Mobile | M-04 · EC-04 |
+| `task_started` | Inicia una tarea clave. | `task` (`link_device`, `change_plan`) | Web | M-10 · EC-04 |
+| `task_completed` | Finaliza una tarea clave. | `task`, `success` (booleano), `duration_s` | Web | M-10 · EC-04 |
+
+**Eventos de escenas y satisfacción**
+
+| Evento | Disparador | Parámetros específicos | Plataforma | Métrica / Experimento |
+|---|---|---|---|---|
+| `scene_template_viewed` | Se muestra la sección "Escenas". | `template_count` | Web, Mobile | EC-05 |
+| `scene_activated` | El usuario activa una escena. | `scene_id` (`night`, `saving`, `away`, `custom`), `source` (`template`, `manual`) | Web, Mobile | M-05 · EC-05 |
+| `scene_execution_failed` | Falla la ejecución de una escena (también se captura en Sentry). | `scene_id`, `error_code` | Web, Mobile | M-20 · EC-05 |
+| `nps_survey_answered` | El usuario responde la encuesta in-app del día 30. | `score` (0–10) | Web, Mobile | M-06 · EC-05 |
+
+**Criterios de calidad del tracking**
+
+- **Validación previa.** Antes de iniciar un experimento se verifica en un entorno de pruebas que cada evento llega con sus parámetros (DebugView de Firebase y GA4 DebugView) y que `variant` se registra en todos los eventos del experimento.
+- **Un evento, una fuente de verdad.** Los eventos de conversión (`device_linked`, `subscription_purchased`) se contrastan contra los registros del backend para detectar pérdidas por bloqueadores o conectividad.
+- **Privacidad.** No se envían datos personales en los parámetros de los eventos. Los experimentos respetan el consentimiento de analítica del usuario, y los datos se usan únicamente para evaluar las hipótesis.
+- **Monitoreo.** Los errores de instrumentación se observan junto con el monitoreo continuo de la sección 7.4 (Sentry y Google Analytics / Firebase Analytics).
 
 ## **8.3. Experimentation**
 
